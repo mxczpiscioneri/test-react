@@ -1,0 +1,45 @@
+.full {
+  @util size(100%);
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.alignVertical {
+  display: flex;
+  align-items: center;
+}
+
+.alignVerticalInline {
+  display: inline-flex;
+  align-items: center;
+}
+
+.alignCenterInline {
+  @extend .alignVerticalInline;
+  justify-content: center;
+}
+
+.alignCenter_ {
+  @extend .alignVertical;
+  justify-content: center;
+}
+
+.boxSizing {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  @util clearfix;
+}
+
+.spaceBetween {
+  @extend .alignVertical;
+  display: flex;
+  justify-content: space-between;
+}
