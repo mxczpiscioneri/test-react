@@ -11,14 +11,14 @@ import LoggedOrRedirect from '../Authentication/LoggedOrRedirect'
 import NotLoggedOrRedirect from '../Authentication/NotLoggedOrRedirect'
 import Authenticated from '../Authentication/Authenticated'
 import DefaultLayout from '../Layouts/DefaultLayout'
-import ToDosIndex from '../ToDos/ToDosIndex'
+import Home from '../Home/Home'
 
 const Routes = props => (
   <Router history={history}>
     <Route component={DefaultLayout}>
       <Route component={DefaultLayout}>
         <Route path={routePaths.root.path}>
-          <IndexRoute component={ToDosIndex} />
+          <IndexRoute component={Home} />
         </Route>
       </Route>
     </Route>

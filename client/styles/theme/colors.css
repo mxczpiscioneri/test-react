@@ -1,0 +1,19 @@
+:root {
+  --darken-level: 15%;
+
+  --gray-color: #e5e6ea;
+  --darken-gray-color: color(var(--gray-color) blackness(var(--darken-level)));
+  --red-color: #f3123c;
+  --darken-red-color: color(var(--red-color) blackness(var(--darken-level)));
+  --yellow-color: #ffce35;
+  --text-color: #8b8c99;
+  --strong-text-color: #4D4C59;
+
+  --shadow-color: color(black a(10%));
+  --darken-shadow-color: color(black a(30%));
+
+  --lighten-border-color: #f4f4f4;
+
+  --primary-gradient: linear-gradient(to bottom, transparent 0%, color(#250A3A a(47%)) 29%, #F3123C 100%);
+  --secundary-gradient: linear-gradient(to bottom, transparent 0%, black 100%);
+}

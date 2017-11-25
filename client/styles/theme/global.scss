@@ -1,1 +1,27 @@
 @import '../base/normalize';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import './typography';
+@import './colors';
+
+:root,
+input {
+  @extend .typography;
+}
+
+strong {
+  font-weight: var(--xstrong-text-weight);
+}
+
+input::placeholder {
+  color: #8b8c99;
+}
+
+u {
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 3px solid var(--red-color);
+}
+
+p {
+  line-height: 1.42;
+}

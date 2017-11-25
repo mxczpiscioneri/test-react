@@ -1,0 +1,22 @@
+@import './colors';
+
+:root {
+  --text-font-family: 'Roboto', sans-serif;
+  --xmedium-text-size: 14px;
+  --text-size: 15px;
+  --small-text-size: 12px;
+  --medium-text-size: 19px;
+  --large-text-size: 25px;
+  --xlarge-text-size: 35px;
+  --light-text-weight: 300;
+  --text-weight: 400;
+  --strong-text-weight: 600;
+  --xstrong-text-weight: 700;
+}
+
+.typography {
+  font-family: var(--text-font-family);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  font-weight: var(--text-weight);
+}
