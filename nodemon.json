@@ -1,7 +1,7 @@
 {
-  "verbose": true,
+  "verbose": false,
   "ignore": [
-    "./client/",
+    "./src/client/",
     "./node_modules/"
   ]
 }

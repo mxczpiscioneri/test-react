@@ -2,7 +2,6 @@ module.exports = {
   plugins: [
     require('postcss-utilities'),
     require('postcss-custom-selectors'),
-    require('postcss-custom-properties'),
-    require('postcss-color-function')
+    require('postcss-custom-properties')
   ]
 }
