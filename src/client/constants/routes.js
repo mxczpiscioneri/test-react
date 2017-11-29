@@ -14,5 +14,13 @@ export default {
   faq: {
     path: '/duvidas',
     title: 'Dúvidas'
+  },
+  imInterested: {
+    path: '/tenho-interesse',
+    title: 'Tenho interesse'
+  },
+  result: {
+    path: '/resultado',
+    title: 'Resultado'
   }
 }

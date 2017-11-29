@@ -4,6 +4,13 @@ import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
+import Banner from '../Banner/Banner'
+import WhyBuy from '../WhyBuy/WhyBuy'
+import Video from '../Video/Video'
+import Testimonial from '../Testimonial/Testimonial'
+import LettersCredit from '../LettersCredit/LettersCredit'
+import ListCars from '../ListCars/ListCars'
+import Footer from '../Footer/Footer'
 import styles from './home.css'
 
 class Home extends Component {
@@ -14,13 +21,19 @@ class Home extends Component {
 
         <Menu />
 
-        <Container className={styles.container} gutter={true}>
-          <Row>
-            <Col xs={12}>
-            </Col>
-          </Row>
+        <Banner />
 
-        </Container>
+        <WhyBuy />
+
+        <Video />
+
+        <Testimonial />
+
+        <LettersCredit />
+
+        <ListCars />
+
+        <Footer />
       </div>
     )
   }
