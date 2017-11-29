@@ -1,0 +1,66 @@
+.footer {
+  border: 0;
+  background-color: #4D4F58;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .contentTop {
+    background-color: #4D4F58;    
+  }
+
+  .contentTopContainer {
+    display: flex;
+    align-items: center;
+    min-height: 83px;
+
+    & > .navigation {
+      & > a {
+        display: inline-block;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 0 25px;
+        border-right: 1px solid;
+        text-decoration: none;
+
+        &:hover {
+          color: #F3123C;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  .contentBottom {
+    background-color: #42434B;
+  }
+
+  .contentBottomContainer {
+    display: flex;
+    align-items: center;
+    min-height: 83px;
+    position: relative;
+
+    .copy {
+      color: #ffffff;
+    }
+
+    .company {
+      color: #ffffff;
+      right: 0;
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+
+      .companyImage {
+        margin-left: 10px;
+      }
+    }
+  }
+}

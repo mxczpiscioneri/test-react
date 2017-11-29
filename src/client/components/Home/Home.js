@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
+import Footer from '../Footer/Footer'
 import styles from './home.css'
 
 class Home extends Component {
@@ -21,6 +22,8 @@ class Home extends Component {
           </Row>
 
         </Container>
+
+        <Footer />
       </div>
     )
   }
