@@ -26,5 +26,13 @@ export default {
   attendance: {
     path: '/atendimento',
     title: 'Atendimento'
+  },
+  imInterested: {
+    path: '/tenho-interesse',
+    title: 'Tenho interesse'
+  },
+  result: {
+    path: '/resultado',
+    title: 'Resultado'
   }
 }
