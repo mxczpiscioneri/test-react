@@ -8,13 +8,19 @@
   min-height: 83px;
 }
 
+.navigation {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
 .navigation > a {
   display: inline-block;
   transition: all 0.3s ease;
   color: white;
   font-size: 15px;
   line-height: 18px;
-  padding: 0 25px;
+  padding: 0 20px;
   border-right: 1px solid #ffffff !important;
   text-decoration: none;  
 }
@@ -24,5 +30,27 @@
 }
 
 .navigation > a:last-child {
-  border-right: none;
+  border-right: none !important;
+}
+
+@media (max-width: 720px) {
+  .navigation {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .navigation > a {
+    padding: 0px;
+    border: none !important;
+    width: 45%;
+    margin-bottom: 15px;
+  }
+}
+
+.socialNetworks {
+
+}
+
+.socialNetworksItem {
+
 }

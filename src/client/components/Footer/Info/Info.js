@@ -7,7 +7,7 @@ import logoBank from '../logo-bank-red.svg';
 
 const Footer = props => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <Container gutter={true}>
         <Row>
           <Col xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -43,7 +43,7 @@ Atende também deficientes auditivos e de fala.
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   )
 }
 

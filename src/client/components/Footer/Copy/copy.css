@@ -24,3 +24,9 @@
 .companyImage {
   margin-left: 10px;
 }
+
+@media (max-width: 720px) {
+  .companyName {
+    display: none;
+  }
+}

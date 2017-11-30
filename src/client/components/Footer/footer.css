@@ -1,8 +1,10 @@
 .footer {
   border: 0;
   background-color: #4D4F58;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+}
+
+@media (max-width: 720px) {
+  * {
+    font-size: 12px !important;
+  }
 }
