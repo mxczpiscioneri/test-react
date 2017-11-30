@@ -1,8 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import routePaths from '../../../constants/routes'
-import { Link } from 'react-router'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './info.css'
 import logoBank from '../logo-bank-red.svg';

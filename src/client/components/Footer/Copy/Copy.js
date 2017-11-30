@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 import { Container } from '../../Grid/Grid'
-import routePaths from '../../../constants/routes'
 import styles from './copy.css'
 import logoBankImg from '../logo-bank.svg'
 
