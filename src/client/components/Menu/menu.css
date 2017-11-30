@@ -1,25 +1,28 @@
-.menu {
-  border: 0;
-    background-color: #42434B;
+.transparent {
+  background-color: transparent;
+}
 
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 83px;
+.dark {
+  background-color: #42434B;
+}
 
-    .navagation {
-      & > a {
-        display: inline-block;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 15px;
-        line-height: 18px;
-        padding: 0 25px;
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 83px;
 
-        &:hover {
-          color: #F3123C;
-        }
+  .navagation {
+    & > a {
+      display: inline-block;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 15px;
+      line-height: 18px;
+      padding: 0 25px;
+
+      &:hover {
+        color: #F3123C;
       }
     }
   }

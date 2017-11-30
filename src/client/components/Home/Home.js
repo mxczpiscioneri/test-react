@@ -19,7 +19,7 @@ class Home extends Component {
       <div>
         <Header />
 
-        <Menu />
+        <Menu transparent />
 
         <Banner />
 

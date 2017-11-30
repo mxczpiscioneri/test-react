@@ -1,13 +1,21 @@
 import React from 'react'
 import routePaths from '../../constants/routes'
 import { Link } from 'react-router'
+import classNames from 'classnames'
 import { Container } from '../Grid/Grid'
 import styles from './menu.css'
 import logoImg from './logo.svg'
 
 const Menu = props => {
+  const menuClass = classNames(
+    {
+      [styles.transparent]: props.transparent,
+      [styles.dark]: !props.transparent
+    }
+  )
+
   return (
-    <nav className={styles.menu}>
+    <nav className={menuClass}>
       <Container gutter={true}>
         <div className={styles.content}>
           <Link to={routePaths.root.path}>
