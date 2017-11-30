@@ -1,0 +1,28 @@
+.container {
+  background-color: #4D4F58;    
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  min-height: 83px;
+}
+
+.navigation > a {
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 0 25px;
+  border-right: 1px solid #ffffff !important;
+  text-decoration: none;  
+}
+
+.navigation > a:hover {
+  color: #F3123C;
+}
+
+.navigation > a:last-child {
+  border-right: none;
+}

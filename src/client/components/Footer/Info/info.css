@@ -1,0 +1,20 @@
+.container {
+  min-height: 343px;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  padding-top: 64px;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.text {
+  font-weight: 400;
+  line-height: 28px;
+}

@@ -1,0 +1,26 @@
+.container {
+  background-color: #42434B;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  min-height: 83px;
+  position: relative;
+}
+    
+.text {
+  color: #ffffff;
+}
+
+.company {
+  color: #ffffff;
+  right: 0;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+}
+     
+.companyImage {
+  margin-left: 10px;
+}
