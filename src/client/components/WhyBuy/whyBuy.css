@@ -1,7 +1,7 @@
 .container {
   min-height: 456px;
   background: linear-gradient(0deg, #FFFFFF 0%, #F6F7FA 100%);
-  padding-top: 45px;
+  padding-top: 30px;
 }
 
 .title {
@@ -9,10 +9,13 @@
   text-align: center;
   color: #4D4C59;
   font-weight: 500;
+  font-size: 26px;
 }
 
 .text {
   text-align: justify;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .textFeatured {
