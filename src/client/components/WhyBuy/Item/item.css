@@ -1,0 +1,16 @@
+.container {
+  text-align: center;
+  padding-top: 40px;  
+}
+
+.title {
+  display: block;
+  text-align: center;
+  color: #4D4C59;
+  font-weight: 500;
+}
+
+.img {
+  display: block;
+  text-align: center;
+}

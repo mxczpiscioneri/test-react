@@ -1,0 +1,20 @@
+.container {
+  min-height: 456px;
+  background: linear-gradient(0deg, #FFFFFF 0%, #F6F7FA 100%);
+  padding-top: 45px;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  color: #4D4C59;
+  font-weight: 500;
+}
+
+.text {
+  text-align: justify;
+}
+
+.textFeatured {
+  color: #FF445A;
+}
