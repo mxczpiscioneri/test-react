@@ -8,6 +8,7 @@ import logoImg from './logo.svg'
 
 const Menu = props => {
   const menuClass = classNames(
+    styles.menu,
     {
       [styles.transparent]: props.transparent,
       [styles.dark]: !props.transparent
@@ -22,6 +23,7 @@ const Menu = props => {
             <img
               src={logoImg}
               alt='Santander'
+              className={styles.logo}
             />
           </Link>
           <div className={styles.navagation}>

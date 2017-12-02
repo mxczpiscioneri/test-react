@@ -1,0 +1,119 @@
+.form {
+  height: 180px;	
+  border-radius: 3px;	
+  background-color: rgba(0,0,0,0.4);
+  padding: 15px;
+  display: inline-block;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  .tab {
+    margin-bottom: 20px;
+
+    span {
+      margin-left: 15px;
+      color: #FFFFFF;
+      font-family: Roboto;	
+      font-size: 14px;	
+      line-height: 20px;
+      display: inline-block;
+      width: calc(100% - 410px);
+      vertical-align: middle;
+    }
+  }
+
+  p {
+    color: #FFFFFF;	
+    font-family: Roboto;	
+    font-size: 14px;	
+    line-height: 16px;
+  }
+
+  .radio {
+    display: inline-block;
+  }
+  [type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="radio"] + label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    color: #39AFC2;	
+    font-size: 15px;	
+    line-height: 18px;
+    border-radius: 2px 0 0 2px;	
+    padding: 15px 30px;
+    border: 1px solid #43BCCD;	
+    background-color: #FFFFFF;
+  }
+  .radio + .radio [type="radio"] + label  {
+    border-radius: 0 2px 2px 0;	
+  }
+  [type="radio"]:checked + label {
+    background-color: #43BCCD;
+    color: #FFF;
+  }
+  [type="radio"]:checked + label::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    width: 0;
+    height: 0;
+    border-left: 12.5px solid transparent;
+    border-right: 12.5px solid transparent;
+    border-top: 15px solid #43BCCD;
+    clear: both;
+  }
+  .form_group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 170px);
+
+    label {
+      color: #8B8C99;	
+      font-family: Poppins;	
+      font-size: 12px;
+      line-height: 17px;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+
+      span {
+        color: #F3123C;
+      }
+    }
+    .input {
+      width: 100%;	
+      border-radius: 2px;	
+      background-color: #FFFFFF;
+      color: #4D4C59;	
+      font-family: Poppins;	
+      font-size: 16px;
+      border: none;
+      box-sizing: border-box;
+      padding: 30px 15px 10px 15px;
+    }
+  }
+  .btn_submit {
+    height: 65px;	
+    width: 152px;	
+    border-radius: 3px;	
+    background-color: #F3123C;
+    color: #FFFFFF;	
+    font-family: Roboto;	
+    font-size: 15px;	
+    line-height: 18px;
+    margin-left: 15px;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    outline: none;
+  }
+}

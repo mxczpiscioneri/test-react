@@ -1,3 +1,8 @@
+.menu {
+  z-index: 1;
+  position: relative;
+}
+
 .transparent {
   background-color: transparent;
 }
@@ -12,6 +17,12 @@
   align-items: center;
   min-height: 83px;
 
+  .logo {
+    @media (max-width: 768px){
+      max-width: 90px;
+    }
+  }
+
   .navagation {
     & > a {
       display: inline-block;
@@ -23,6 +34,12 @@
 
       &:hover {
         color: #F3123C;
+      }
+
+      @media (max-width: 768px){
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 10px;
       }
     }
   }
