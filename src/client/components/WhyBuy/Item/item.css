@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+  padding-top: 55px;  
+}
+
+.title {
+  display: block;
+  text-align: center;
+  color: #4D4C59;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+.img {
+  text-align: center;
+  margin-bottom: 30px;
+}
