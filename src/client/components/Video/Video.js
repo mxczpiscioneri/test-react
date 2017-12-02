@@ -6,13 +6,9 @@ import styles from './video.css'
 
 const Video = props => {
   return (
-    <Container>
-      <Row>
-        <Col xs={12}>
-          <h3>Video</h3>
-        </Col>
-      </Row>
-    </Container>
+    <video controls className={styles.video}>
+      <source src={`https://media.w3.org/2010/05/sintel/trailer_hd.mp4`} type='video/mp4'/>
+    </video>
   )
 }
 
