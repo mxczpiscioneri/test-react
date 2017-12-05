@@ -1,4 +1,22 @@
-.video {
-  height: 480px;
+.container {
+  height: 390px;
   width: 100%;
+  text-align: center;
+}
+
+.containerImg {
+  position: relative;
+}
+
+.img {
+  height: 390px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.play {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+  top: 10;
 }
