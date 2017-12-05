@@ -1,0 +1,72 @@
+.title {
+  color: #4D4C59;	
+  font-family: Poppins;	
+  font-size: 26px;	
+  line-height: 36px;
+  font-weight: 400;	
+  text-align: center;
+}
+
+.testimonial {
+  text-align: center;
+
+  .picture {
+    box-sizing: border-box;	
+    height: 90px;	
+    width: 90px;	
+    border-radius: 100%;
+    display: inline-block;
+    margin-top: 30px;
+  }
+  
+  .message {
+    color: #787988;	
+    font-family: Poppins;	
+    font-size: 15px;	
+    line-height: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+  
+  .name {
+    color: #FF445A;	
+    font-family: Poppins;	
+    font-size: 14px;	
+    font-weight: 600;	
+    line-height: 20px;
+  }
+}
+
+:global {
+  .dots {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 30px;
+
+    li {
+      display: inline-block;
+
+        button {
+        height: 2px;	
+        width: 70px;	
+        opacity: 0.4;	
+        border-radius: 50px;	
+        background-color: #C5C6D0;
+        margin: 8px;
+        border: none;
+        color: #FFF;
+        outline: none;
+        cursor: pointer;
+      }
+
+      &.slick-active {
+        button {
+          opacity: 1;
+          background-color: #F3123C;
+        }
+      }
+    }
+  }
+}
+
