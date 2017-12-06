@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M52.5,0 C23.5051307,0 0,23.5051307 0,52.5 C0,81.4948693 23.5051307,105 52.5,105 C81.4948693,105 105,81.4948693 105,52.5 C105,23.5051307 81.4948693,0 52.5,0 Z M70.9818301,54.8221242 L45.414902,72.2269608 C44.5545425,72.8125817 43.440719,72.8745752 42.5206536,72.3880065 C41.6005882,71.9012092 41.0250327,70.9456863 41.0250327,69.9048366 L41.0250327,35.0951634 C41.0250327,34.0543137 41.6005882,33.0987908 42.5206536,32.6119935 C43.440719,32.1254248 44.5545425,32.1871895 45.414902,32.7730392 L70.9818301,50.1778758 C71.7502288,50.7010458 72.2102614,51.5703268 72.2102614,52.5 C72.2102614,53.4296732 71.7504575,54.2989542 70.9818301,54.8221242 Z" id="path-1"></path>
+        <filter x="-14.3%" y="-14.3%" width="128.6%" height="128.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bloco-Galeria" transform="translate(-709.000000, -234.000000)" fill-rule="nonzero">
+            <g id="Trending-Widget" transform="translate(407.000000, 112.000000)">
+                <g id="play-button" transform="translate(312.000000, 132.000000)">
+                    <g id="Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill-opacity="0.7" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

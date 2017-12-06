@@ -1,0 +1,122 @@
+p {
+  line-height: 0;
+}
+
+.container {
+  min-height: 320px;
+  box-shadow: 1px;
+  background-color: #FFFFFF;
+  border-radius: 2px;	
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.container:hover {
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+}
+
+.top {
+  padding: 15px 0 0 15px;
+}
+
+.top > img {
+  width: 16px;
+  height: 16px;
+}
+
+.content {
+  height: 235px;
+  text-align: center;
+  padding-top: 0; 
+}
+
+.retancle {
+  height: 3px;	
+  width: 47px;	
+  background-color: #F3123C;
+  display: inline-block;
+}
+
+.button {
+  position: relative;
+  height: 70px;
+  text-align: center;
+  font-family: Poppins;	
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top: 0.5px solid #eee;
+}
+
+.buttonText {
+  color: #787987;
+  font-size: 14px;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  right: 0;
+}
+
+.buttonSelected {
+  position: relative;
+  height: 72px;
+  background-color: #F3123C;
+  text-align: center;
+  font-family: Poppins;	
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.buttonTextSelected {
+  color: #FFFFFF;
+  font-size: 14px;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  right: 0;
+}
+
+.valueSymbol {
+  color: #707070;	
+  font-family: Poppins;	
+  font-size: 19px;	
+  font-weight: 300;	
+  line-height: 31px;
+}
+
+.value {
+  color: #3C3C49;	
+  font-family: Poppins;	
+  font-size: 32px;	
+  font-weight: bold;	
+  line-height: 53px;
+}
+
+.labels {
+  color: #787988;	
+  font-family: Poppins;	
+  font-size: 14px;	
+  font-weight: 200;	
+  line-height: 19px;
+}
+
+.installment {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.installmentFlex {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  color: #5EBFA8;
+  line-height: 19px;
+}
+
+.deadline {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}

@@ -1,0 +1,29 @@
+.container {
+  background: linear-gradient(0deg, #FFFFFF 0%, #F6F7FA 100%);
+}
+
+.title {
+  color: #4D4C59;	
+  font-family: Poppins;	
+  font-size: 26px;	
+  line-height: 36px;
+  font-weight: 400;	
+  text-align: center;
+}
+
+.button {	
+  box-sizing: border-box;
+  border: 1px solid #BEC0D1;
+  border-radius: 2px;
+  padding: 15px 45px 15px 45px;
+  background-color: transparent;
+  color: #8B8C99;
+  font-family: Poppins;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.buttonContainer {
+  text-align: center;
+  padding: 50px; 
+}
