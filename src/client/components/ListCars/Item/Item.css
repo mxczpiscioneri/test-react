@@ -1,0 +1,56 @@
+.container {
+  border-radius: 3px;	
+  background-color: #FEFEFE;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  }
+
+  &.selected {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  }
+
+  .boxImage {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  .name {
+    color: #4D4C59;	
+    font-family: Poppins;	
+    font-size: 16px;	
+    font-weight: 500;	
+    line-height: 20px;
+    margin: 15px 0 0 0;
+  }
+
+  .value {
+    color: #8B8C9A;	
+    font-family: Poppins;	
+    font-size: 14px;	
+    font-weight: 300;	
+    line-height: 23px;
+    margin: 5px 0 0 0;
+
+    span {
+      font-weight: 600;	
+    }
+  }
+
+  .selected {
+    height: 3px;	
+    background-color: #F3123C;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
