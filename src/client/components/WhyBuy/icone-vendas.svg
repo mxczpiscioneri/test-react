@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="47px" viewBox="0 0 42 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Vantagens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1379.000000, -145.000000)" stroke-linejoin="round">
+        <g transform="translate(404.000000, 146.000000)" id="Page-1" stroke="#F3123C" stroke-width="1.2">
+            <g transform="translate(976.000000, 0.000000)">
+                <polyline id="Stroke-1" stroke-linecap="round" points="31.1111111 12.2727273 15.2777778 25.5681818 10 20.8198052"></polyline>
+                <path d="M0,0 L40,0 L40,14.2121739 C40,27.131087 32.2968421,38.9836957 20,45 C7.69684211,38.9836957 0,27.131087 0,14.2121739 L0,0 Z" id="Stroke-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

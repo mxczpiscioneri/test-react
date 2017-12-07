@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './Item.css'
-import Star from './star.svg';
+import Star from './icone-estrela.svg';
 import StarSelected from './star-selected.svg';
 
 const Item = props => {

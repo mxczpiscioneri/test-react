@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import classNames from 'classnames'
 import { Container } from '../Grid/Grid'
 import styles from './menu.css'
-import logoImg from './logo.svg'
+import logoImg from './logo-wm-white.svg'
 
 const Menu = props => {
   const menuClass = classNames(

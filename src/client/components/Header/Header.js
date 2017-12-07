@@ -5,7 +5,7 @@ import routePaths from '../../constants/routes'
 import { Link } from 'react-router'
 import { Container } from '../Grid/Grid'
 import styles from './header.css'
-import logoImg from './logo.svg'
+import logoImg from './logo-santander-small.svg'
 
 const Header = props => {
   return (

@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './copy.css'
-import logoBankImg from '../logo-bank.svg'
+import logoBankImg from './logo-santander-footer.svg'
 
 const Copy = props => {
   return (

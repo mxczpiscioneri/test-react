@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './info.css'
-import logoBank from '../logo-bank-red.svg';
+import logoBank from './logo-santander-rodape-medium.svg';
 
 const Footer = props => {
   return (

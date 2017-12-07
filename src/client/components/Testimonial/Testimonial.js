@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 import { Container, Row, Col } from '../Grid/Grid'
+import icon from './icone-quote.svg'
 import styles from './testimonial.css'
 
 const Testimonial = props => {
@@ -18,7 +19,7 @@ const Testimonial = props => {
       <img className={styles.picture} src={testimonial.picture} alt={testimonial.name} />
       <p className={styles.message}>"{testimonial.message}"</p>
       <p className={styles.name}>{testimonial.name}</p>
-      <img className={styles.icon} src={testimonial.image} alt={testimonial.title} />
+      <img className={styles.icon} src={icon} alt={testimonial.title} />
     </section>
   ))
 

@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 import routePaths from '../../../constants/routes'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './navigation.css'
-import logoImg from '../logo.svg'
+import logoImg from './logo-wm-white.svg'
 
 const Navigation = props => {
   return (

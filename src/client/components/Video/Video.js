@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
 import YouTube from 'react-youtube'
-import videoImg from './video.png'
-import playImg from './play.svg'
+import videoImg from './bg-thumb-video.png'
+import playImg from './icone-play.svg'
 import styles from './video.css'
 
 class Video extends React.Component {
@@ -39,13 +39,10 @@ class Video extends React.Component {
               />)
             : (
               <div className={styles.containerImg}>
-                  <img
-                    className={styles.play}
-                    src={playImg} 
-                    onClick={(event) => this.setState({ played: true })}/>
                 <img
-                  className={styles.img}
-                  src={videoImg} />
+                  className={styles.play}
+                  src={playImg}
+                  onClick={(event) => this.setState({ played: true })} />
               </div>
             )
         }

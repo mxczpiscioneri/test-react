@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
 import Item from './Item/Item';
-import economy from './economy.svg';
-import bureaucracy from './bureaucracy.svg';
-import freedom from './freedom.svg';
-import sales from './sales.svg';
+import economy from './icone-economia.svg';
+import bureaucracy from './icone-burocracia.svg';
+import freedom from './icone-liberdade.svg';
+import sales from './icone-vendas.svg';
 import styles from './whyBuy.css'
 
 const WhyBuy = props => {
@@ -20,7 +20,7 @@ const WhyBuy = props => {
         </Row>
         <Row>
           <Col xs={12} sm={12} md={3} lg={3}>
-            <Item 
+            <Item
               title='Economia'
               img={economy}>
               <p className={styles.text}>Você não paga taxa de juros!</p>
@@ -28,7 +28,7 @@ const WhyBuy = props => {
             </Item>
           </Col>
           <Col xs={12} sm={12} md={3} lg={3}>
-            <Item 
+            <Item
               title='Liberdade'
               img={freedom}>
               <p className={styles.text}>Poder de negociação de compra à vista!</p>
@@ -36,7 +36,7 @@ const WhyBuy = props => {
             </Item>
           </Col>
           <Col xs={12} sm={12} md={3} lg={3}>
-            <Item 
+            <Item
               title='Sem Burocracia'
               img={bureaucracy}>
               <p className={styles.text}>Rapidez na análise de seu <span className={styles.textFeatured}>crédito</span> e no pagamento do bem!</p>
@@ -44,7 +44,7 @@ const WhyBuy = props => {
             </Item>
           </Col>
           <Col xs={12} sm={12} md={3} lg={3}>
-            <Item 
+            <Item
               title='Pós Vendas'
               img={sales}>
               <p className={styles.text}>Conte com diversos serviços disponíveis <span className={styles.textFeatured}>online</span> pra você!</p>

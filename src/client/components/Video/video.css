@@ -6,12 +6,8 @@
 
 .containerImg {
   position: relative;
-}
-
-.img {
-  height: 390px;
-  width: 100%;
-  cursor: pointer;
+  background-image: url('./bg-thumb-video.png');
+  height: 100%;
 }
 
 .play {
@@ -24,6 +20,7 @@
   margin: auto;
   padding: auto;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .play:hover {
