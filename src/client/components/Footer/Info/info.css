@@ -1,7 +1,6 @@
 .container {
-  min-height: 343px;
+  padding: 65px 0 100px 0;
   background-color: #ffffff;
-  padding-top: 74px;
 }
 
 .logo {
@@ -10,10 +9,19 @@
 }
 
 .title {
-  font-weight: 600;
+  color: #8B8C9A;	
+  font-family: Poppins;	
+  font-size: 13px;	
+  font-weight: 600;	
+  line-height: 30px;
+  margin-bottom: 10px;
 }
 
 .text {
-  font-weight: 400;
-  line-height: 28px;
+  color: #8B8C9A;	
+  font-family: Poppins;	
+  font-size: 13px;	
+  font-weight: 500;	
+  line-height: 27px;
+  margin: 0;
 }

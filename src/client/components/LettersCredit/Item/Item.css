@@ -4,11 +4,12 @@ p {
 
 .container {
   min-height: 320px;
-  box-shadow: 1px;
+  height: auto;
   background-color: #FFFFFF;
   border-radius: 2px;	
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .container:hover {

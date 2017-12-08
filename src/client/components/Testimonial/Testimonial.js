@@ -41,7 +41,7 @@ const Testimonial = props => {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} lg={6} offset={{ lg: 3 }}>
+        <Col xs={12} sm={10} md={8} lg={6} offset={{ sm: 1, md: 2, lg: 3 }}>
           <Slider className={styles.slider} {...settings}>
             {testimonials}
           </Slider>

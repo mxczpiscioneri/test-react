@@ -15,10 +15,7 @@
 
 .company {
   color: #ffffff;
-  right: 0;
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
+  text-align: right;
 }
      
 .companyImage {

@@ -24,7 +24,7 @@ const ListCars = props => {
         <Row>
           {
             cars.map((item, index) =>
-              <Col xs={12} md={3} key={index}>
+              <Col xs={12} sm={6} md={3} key={index}>
                 <Item
                   name={item.name}
                   value={item.value}

@@ -12,7 +12,7 @@ const Navigation = props => {
     <section className={styles.container}>
       <Container gutter={true}>
         <Row>
-          <Col xs={12} sm={12} md={1} lg={1} xl={1}>
+          <Col xs={12} lg={2}>
             <div className={styles.logo}>
               <Link to={routePaths.root.path}>
                 <img
@@ -22,7 +22,7 @@ const Navigation = props => {
               </Link>
             </div>
           </Col>
-          <Col xs={12} sm={12} md={7} lg={7} xl={7}>
+          <Col xs={12} lg={7}>
             <nav className={styles.navigation}>
               <Link to={routePaths.howItWorks.path}>{routePaths.howItWorks.title}</Link>
               <Link to={routePaths.benefits.path}>{routePaths.benefits.title}</Link>
@@ -30,7 +30,7 @@ const Navigation = props => {
               <Link to={routePaths.attendance.path}>{routePaths.attendance.title}</Link>
             </nav>
           </Col>
-          <Col xs={12} sm={12} md={5} lg={5} xl={5}>
+          <Col xs={12} lg={3}>
             <div className={styles.socialNetworks}>
 
             </div>

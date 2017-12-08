@@ -19,7 +19,7 @@ const WhyBuy = props => {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={3} lg={3}>
+          <Col xs={12} sm={6} lg={3}>
             <Item
               title='Economia'
               img={economy}>
@@ -27,7 +27,7 @@ const WhyBuy = props => {
               <p className={styles.text}>Taxa de administração de apenas <span className={styles.textFeatured}>0,19% a.m ou 0,21%</span> a.m (varia de acordo com o plano escolhido).</p>
             </Item>
           </Col>
-          <Col xs={12} sm={12} md={3} lg={3}>
+          <Col xs={12} sm={6} lg={3}>
             <Item
               title='Liberdade'
               img={freedom}>
@@ -35,7 +35,7 @@ const WhyBuy = props => {
               <p className={styles.text}>Após a contemplação você escolhe um veículo novo ou usado com até <span className={styles.textFeatured}>10 anos para carros e 5 anos para motos.</span></p>
             </Item>
           </Col>
-          <Col xs={12} sm={12} md={3} lg={3}>
+          <Col xs={12} sm={6} lg={3}>
             <Item
               title='Sem Burocracia'
               img={bureaucracy}>
@@ -43,7 +43,7 @@ const WhyBuy = props => {
               <p className={styles.text}>Com o Consórcio é muito mais fácil planejar a compra de seu carro.</p>
             </Item>
           </Col>
-          <Col xs={12} sm={12} md={3} lg={3}>
+          <Col xs={12} sm={6} lg={3}>
             <Item
               title='Pós Vendas'
               img={sales}>

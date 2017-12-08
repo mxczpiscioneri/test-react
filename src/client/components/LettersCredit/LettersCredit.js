@@ -24,7 +24,7 @@ const LettersCredit = props => {
         <Row>
           {
             letters.map((item, index) =>
-              <Col xs={12} md={3} key={index}>
+              <Col xs={12} sm={6} md={3} key={index}>
                 <Item
                   value={item.value}
                   installment={item.installment}
@@ -35,7 +35,7 @@ const LettersCredit = props => {
           }
         </Row>
         <Row>
-          <Col className={styles.buttonContainer}>
+          <Col xs={12} className={styles.buttonContainer}>
             <button className={styles.button}>
               Ver mais cartas
             </button>

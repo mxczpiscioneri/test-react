@@ -23,22 +23,18 @@ const Footer = props => {
           <Col xs={12} sm={12} md={4} lg={4} xl={4}>
             <div>
               <p className={styles.title}>CENTRAL DE ATENDIMENTO AO CONSORCIADO</p>
-              <p className={styles.text}>
-                4004 3535 - (Capitais e Regiões Metropolitanas)
-              0800 702 3535 - (Demais Localidades)
-              De segunda a sexta-feira, das 9h às 18h, exceto feriados.
-              Site Santander: www.santander.com.br
-              E-mail: consorcio@santander.com.br
-            </p>
+              <p className={styles.text}>4004 3535 - (Capitais e Regiões Metropolitanas)</p>
+              <p className={styles.text}>0800 702 3535 - (Demais Localidades)</p>
+              <p className={styles.text}>De segunda a sexta-feira, das 9h às 18h, exceto feriados.</p>
+              <p className={styles.text}>Site Santander: www.santander.com.br</p>
+              <p className={styles.text}>E-mail: consorcio@santander.com.br</p>
             </div>
           </Col>
           <Col xs={12} sm={12} md={4} lg={4} xl={4}>
             <div>
               <p className={styles.title}>SAC – Serviço de Atendimento ao Consumidor</p>
-              <p className={styles.text}>
-                Reclamações, Cancelamentos, Sugestões e informações Gerais. 0800 762 7777
-Atende também deficientes auditivos e de fala.
-            </p>
+              <p className={styles.text}>Reclamações, Cancelamentos, Sugestões e informações Gerais. 0800 762 7777</p>
+              <p className={styles.text}>Atende também deficientes auditivos e de fala.</p>
             </div>
           </Col>
         </Row>

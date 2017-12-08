@@ -4,6 +4,8 @@
   padding: 10px 15px;
   position: relative;
   transition: all 0.3s ease;
+  height: auto;
+  margin-bottom: 30px;
   
   &:hover {
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
@@ -18,7 +20,7 @@
 
     img {
       max-width: 100%;
-      display: block;
+      display: inline-block;
     }
   }
 
