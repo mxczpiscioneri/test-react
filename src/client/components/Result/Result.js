@@ -6,6 +6,7 @@ import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Footer from '../Footer/Footer'
 import styles from './result.css'
+import SimulateAgain from './SimulateAgain/SimulateAgain'
 import LettersCredit from '../LettersCredit/LettersCredit'
 
 const Result = props => {
@@ -15,11 +16,7 @@ const Result = props => {
 
       <Menu />
 
-      <Container>
-        <Row>
-          
-        </Row>
-      </Container>
+      <SimulateAgain/>
 
       <LettersCredit title={false} count={3}/>
 
