@@ -6,6 +6,7 @@ import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Footer from '../Footer/Footer'
 import styles from './result.css'
+import LettersCredit from '../LettersCredit/LettersCredit'
 
 const Result = props => {
   return (
@@ -16,11 +17,11 @@ const Result = props => {
 
       <Container>
         <Row>
-          <Col xs={12}>
-            <h3>Result</h3>
-          </Col>
+          
         </Row>
       </Container>
+
+      <LettersCredit title={false} count={3}/>
 
       <Footer />
     </div>

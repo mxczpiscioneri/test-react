@@ -29,7 +29,7 @@ class Home extends Component {
 
         <Testimonial />
 
-        <LettersCredit />
+        <LettersCredit showTitle={true} count={4}/>
 
         <ListCars />
 

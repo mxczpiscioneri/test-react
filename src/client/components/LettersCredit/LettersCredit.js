@@ -8,7 +8,7 @@ import Item from './Item/Item';
 
 const letters = [
   { value: 30.000, installment: 900, installmentFlex: 500, deadline: 72 },
-  { value: 45.000, installment: 900, installmentFlex: 500, deadline: 72, selected: true },
+  { value: 45.000, installment: 900, installmentFlex: 500, deadline: 72 },
   { value: 60.000, installment: 900, installmentFlex: 500, deadline: 72 },
   { value: 90.000, installment: 900, installmentFlex: 500, deadline: 72 }
 ]
@@ -17,8 +17,9 @@ class LettersCredit extends React.Component {
   constructor(props) {
     super(props)
 
+    let lettersToShow = letters.slice(0, props.count)
     this.state = {
-      letters: letters
+      letters: lettersToShow
     }
 
     this._select = this._select.bind(this)
@@ -26,14 +27,13 @@ class LettersCredit extends React.Component {
 
   _seeMore() {
     let currentLetters = this.state.letters
-    currentLetters = currentLetters.concat(_.cloneDeep(letters))
+    currentLetters = currentLetters.concat(_.cloneDeep(letters.slice(0, this.props.count)))
     this.setState({
       letters: currentLetters
     })
   }
 
   _select(item) {
-    debugger
     let currentLetters = this.state.letters
     const index = currentLetters.indexOf(item)
 
@@ -51,15 +51,20 @@ class LettersCredit extends React.Component {
     return (
       <section className={styles.container}>
         <Container>
-          <Row>
-            <Col xs={12}>
-              <h3 className={styles.title}>Veja algumas das nossas cartas de crédito</h3>
-            </Col>
-          </Row>
+          {
+            props.showTitle
+            && (
+              <Row>
+                <Col xs={12}>
+                  <h3 className={styles.title}>Veja algumas das nossas cartas de crédito</h3>
+                </Col>
+              </Row>
+            )
+          }
           <Row>
             {
               this.state.letters.map((item, index) =>
-                <Col xs={12} sm={6} md={3} key={index}>
+                <Col xs={12} md={12/props.count} key={index}>
                   <Item
                     value={item.value}
                     installment={item.installment}

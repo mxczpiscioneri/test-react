@@ -15,6 +15,7 @@ import Home from '../Home/Home'
 import About from '../About/About'
 import Why from '../Why/Why'
 import Faq from '../Faq/Faq'
+import Result from '../Result/Result'
 
 const Routes = props => (
   <Router history={history}>
@@ -26,6 +27,7 @@ const Routes = props => (
         <Route path={routePaths.about.path} component={About} />
         <Route path={routePaths.why.path} component={Why} />
         <Route path={routePaths.faq.path} component={Faq} />
+        <Route path={routePaths.result.path} component={Result} />
       </Route>
     </Route>
   </Router>
