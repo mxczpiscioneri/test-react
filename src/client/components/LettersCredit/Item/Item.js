@@ -4,11 +4,11 @@ import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './Item.css'
 import Star from './icone-estrela.svg';
-import StarSelected from './star-selected.svg';
+import StarSelected from './icone-estrela-selected.svg';
 
 const Item = props => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={props.onClick}>
       <div className={styles.top}>
         <img src={(props.selected) ? StarSelected : Star} />
       </div>
