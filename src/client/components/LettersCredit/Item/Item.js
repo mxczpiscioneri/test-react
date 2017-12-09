@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './Item.css'
 import Star from './icone-estrela.svg';
-import StarSelected from './icone-estrela-selected.svg';
+import StarSelected from './icone-estrela-selecionada.svg';
 
 const Item = props => {
   return (

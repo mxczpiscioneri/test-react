@@ -1,0 +1,29 @@
+.car {
+  text-align: center;
+
+  .picture {
+    height: 175px;	
+    width: 270px;	
+    display: inline-block;
+  }
+  
+  .name {
+    color: #8B8C99;
+    font-family: Poppins;	
+    font-size: 14px;	
+    font-weight: 600;	
+    line-height: 20px;
+    margin: 10px 0 0 0;
+  }
+}
+
+:global {
+  .slick-next:before, .slick-prev:before {
+    color: #eb4b3b;
+  }
+
+  .slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
+    color: #e3e4ec;
+    opacity: 1;
+  }
+}
