@@ -12,6 +12,7 @@ import NotLoggedOrRedirect from '../Authentication/NotLoggedOrRedirect'
 import Authenticated from '../Authentication/Authenticated'
 import DefaultLayout from '../Layouts/DefaultLayout'
 import Home from '../Home/Home'
+import Result from '../Result/Result'
 import About from '../About/About'
 import Why from '../Why/Why'
 import Faq from '../Faq/Faq'
@@ -23,6 +24,7 @@ const Routes = props => (
         <Route path={routePaths.root.path}>
           <IndexRoute component={Home} />
         </Route>
+        <Route path={routePaths.result.path} component={Result} />
         <Route path={routePaths.about.path} component={About} />
         <Route path={routePaths.why.path} component={Why} />
         <Route path={routePaths.faq.path} component={Faq} />

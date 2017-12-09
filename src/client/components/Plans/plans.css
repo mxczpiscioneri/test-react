@@ -1,0 +1,114 @@
+.container {
+  background-color: #f6f7fa;
+  
+  .title {
+    color: #4D4C59;	
+    font-family: Poppins;	
+    font-size: 26px;	
+    line-height: 36px;
+    font-weight: 400;	
+    text-align: center;
+    margin: 30px 0 0 0;
+  }
+  
+  .subTitle {
+    color: #8B8C9A;
+    font-family: Poppins;	
+    font-size: 16px;	
+    line-height: 22px;
+    text-align: center;
+    margin: 10px 0 60px 0;
+  }
+
+  .consortium {
+    color: #FEC52A;	
+    font-family: Poppins;	
+    font-size: 14px;	
+    font-weight: 500;
+    
+    img {
+      margin-right: 10px;
+      vertical-align: sub;
+    }
+  }
+
+  .normal {
+    label {
+      color: #8B8C99;	
+      font-family: Poppins;	
+      font-size: 16px;	
+      font-weight: 300;	
+      line-height: 30px;
+      display: block;
+    }
+
+    span {
+      color: #4D4C59;	
+      font-family: Poppins;	
+      font-size: 32px;	
+      font-weight: bold;	
+      line-height: 36px;
+    }
+  }
+  
+  .flex {
+    label {
+      color: #8B8C99;	
+      font-family: Poppins;	
+      font-size: 16px;	
+      font-weight: 300;	
+      line-height: 30px;
+      display: block;
+    }
+
+    span {
+      color: #64BFA7;	
+      font-family: Poppins;	
+      font-size: 31px;	
+      font-weight: 300;	
+      line-height: 36px;
+    }
+  }
+
+  .btn {
+    padding: 13px 45px;
+    margin: 20px 0;
+    border-radius: 3px;	
+    background-color: #F3123C;
+    color: #FFFFFF;	
+    font-family: Poppins;
+    font-size: 13px;	
+    line-height: 21px;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    outline: none;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .text {	
+    color: #787988;
+    font-family: Poppins;
+    font-size: 14px;	
+    line-height: 19px;	
+    margin: 0;
+  }
+
+  .suggestions {
+    color: #787987;	
+    font-family: Poppins;	
+    font-size: 14px;	
+    line-height: 20px;
+    text-align: center;
+    padding: 0 50px;
+    margin-bottom: 0;
+
+    span {
+      color: #eb4b3b;
+    }
+  }
+}
