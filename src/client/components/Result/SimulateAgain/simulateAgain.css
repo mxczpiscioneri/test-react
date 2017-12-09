@@ -1,0 +1,47 @@
+.container {
+  background-color: #ffffff;
+  height: 90px; 
+  padding-top: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+}
+
+.title {
+  color: #4D4C59;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.block > div {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  height: 44px;
+  border: 1px solid #DFE0E6;
+  border-radius: 2px 0 0 2px;
+  font-family: Poppins;	
+  font-size: 14px;
+  font-weight: 500;	
+  line-height: 44px;
+  cursor: pointer;
+}
+
+.block > div:last-child {
+  border-left: none;
+}
+
+.block > div:hover {
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  opacity: 0.8;
+}
+
+.blockItemSelected {
+  color: #5EBFA8;
+}

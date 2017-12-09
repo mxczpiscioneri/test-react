@@ -9,6 +9,7 @@ import LettersCredit from '../LettersCredit/LettersCredit'
 import ListCars from '../ListCars/ListCars'
 import Footer from '../Footer/Footer'
 import styles from './result.css'
+import SimulateAgain from './SimulateAgain/SimulateAgain' 
 
 const Result = props => {
   return (
@@ -16,6 +17,8 @@ const Result = props => {
       <Header />
 
       <Menu />
+
+      <SimulateAgain/>
 
       <Plans />
 
