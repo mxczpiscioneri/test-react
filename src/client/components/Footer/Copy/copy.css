@@ -26,4 +26,8 @@
   .companyName {
     display: none;
   }
+
+  .companyImage {
+    margin-left: -20px;
+  }
 }

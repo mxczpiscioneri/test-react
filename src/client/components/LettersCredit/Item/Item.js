@@ -8,7 +8,7 @@ import StarSelected from './icone-estrela-selecionada.svg';
 
 const Item = props => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={props.onClick}>
       <div className={styles.top}>
         <img src={(props.selected) ? StarSelected : Star} />
       </div>

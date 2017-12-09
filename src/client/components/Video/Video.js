@@ -43,6 +43,7 @@ class Video extends React.Component {
                   className={styles.play}
                   src={playImg}
                   onClick={(event) => this.setState({ played: true })} />
+                <span className={styles.playTitle}>Saiba mais sobre o Cónsórcio Santander</span>
               </div>
             )
         }

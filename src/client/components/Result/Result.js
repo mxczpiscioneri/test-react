@@ -19,7 +19,7 @@ const Result = props => {
 
       <Plans />
 
-      <LettersCredit />
+      <LettersCredit title={false} count={3} />
 
       <ListCars />
 
