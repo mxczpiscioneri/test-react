@@ -36,6 +36,17 @@
   border-right: none !important;
 }
 
+.socialNetworks {
+  display: inline-flex;
+  align-items: center;
+  text-align: right;
+  width: 100%;
+}
+
+.socialNetwork {
+  width: 16.666666667%;
+}
+
 @media (max-width: 720px) {
   .navigation {
     display: inline-block;
@@ -48,12 +59,9 @@
     width: 45%;
     margin-bottom: 15px;
   }
-}
 
-.socialNetworks {
-
-}
-
-.socialNetworksItem {
-
+  .socialNetworks {
+    text-align: left;
+    margin-bottom: 20px;
+  }
 }
