@@ -22,6 +22,50 @@ const listBanners = [
   },
 ]
 
+const listSteps = [
+  {
+    title: 'Adesão',
+    text: 'Após o pagamento da primeira parcela, você passa a fazer parte de um grupo e recebe o número da sua cota para participar das assembleias.',
+    image: iconeAdesao
+  },
+  {
+    title: 'Contemplação',
+    text: 'Nas assembleias mensais. Você poderá ser sorteado pela Loteria Federal. Se preferir, pode ofertar lances com recursos próprios, lance embutido ou uma combinação entre eles. O lance com maior percentual será o vencedor.',
+    image: iconeContemplacao
+  },
+  {
+    title: 'Análise de Crédito',
+    text: 'É feita a análise do seu crédito. Se estiver tudo certo, você já pode escolher o seu bem.',
+    image: iconeCredito
+  },
+  {
+    title: 'Escolha seu veículo',
+    text: 'Chegou a hora tão esperada!',
+    image: iconeVeiculo
+  },
+  {
+    title: 'Fim do Plano',
+    text: 'Agora é só pagar as parcelas restantes.',
+    image: iconeFim
+  },
+]
+
+const steps = listSteps.map((step, i) => (
+  <Row>
+    <Col xs={12} sm={4} lg={3} xl={2} offset={{ lg: 1, xl: 2 }}>
+      <div className={styles.boxIcon}>
+        <img src={step.image} alt={step.title} />
+        <span>{step.title}</span>
+      </div>
+    </Col>
+    <Col xs={12} sm={8} lg={7} xl={6}>
+      <div className={styles.boxText}>
+        <p>{step.text}</p>
+      </div>
+    </Col>
+  </Row>
+))
+
 const About = props => {
   return (
     <div>
@@ -38,71 +82,9 @@ const About = props => {
               <h3 className={styles.title}>Entenda as etapas para você contratar sua carta de crédito</h3>
             </Col>
           </Row>
-          <Row>
-            <Col xs={12} sm={4} lg={3} xl={2} offset={{ lg: 1, xl: 2 }}>
-              <div className={styles.boxIcon}>
-                <img src={iconeAdesao} alt='Adesão' />
-                <span>Adesão</span>
-              </div>
-            </Col>
-            <Col xs={12} sm={8} lg={7} xl={6}>
-              <div className={styles.boxText}>
-                <p>Após o pagamento da primeira parcela, você passa a fazer parte de um grupo e recebe o número da sua cota para participar das assembleias.</p>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} sm={4} lg={3} xl={2} offset={{ lg: 1, xl: 2 }}>
-              <div className={styles.boxIcon}>
-                <img src={iconeContemplacao} alt='Contemplação' />
-                <span>Contemplação</span>
-              </div>
-            </Col>
-            <Col xs={12} sm={8} lg={7} xl={6}>
-              <div className={styles.boxText}>
-                <p>Nas assembleias mensais. Você poderá ser sorteado pela Loteria Federal. Se preferir, pode ofertar lances com recursos próprios, lance embutido ou uma combinação entre eles. O lance com maior percentual será o vencedor.</p>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} sm={4} lg={3} xl={2} offset={{ lg: 1, xl: 2 }}>
-              <div className={styles.boxIcon}>
-                <img src={iconeCredito} alt='Análise de Crédito' />
-                <span>Análise de Crédito</span>
-              </div>
-            </Col>
-            <Col xs={12} sm={8} lg={7} xl={6}>
-              <div className={styles.boxText}>
-                <p>É feita a análise do seu crédito. Se estiver tudo certo, você já pode escolher o seu bem. </p>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} sm={4} lg={3} xl={2} offset={{ lg: 1, xl: 2 }}>
-              <div className={styles.boxIcon}>
-                <img src={iconeVeiculo} alt='Escolha seu veículo' />
-                <span>Escolha seu veículo</span>
-              </div>
-            </Col>
-            <Col xs={12} sm={8} lg={7} xl={6}>
-              <div className={styles.boxText}>
-                <p>Chegou a hora tão esperada!</p>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} sm={4} lg={3} xl={2} offset={{ lg: 1, xl: 2 }}>
-              <div className={styles.boxIcon}>
-                <img src={iconeFim} alt='Fim do Plano' />
-                <span>Fim do Plano</span>
-              </div>
-            </Col>
-            <Col xs={12} sm={8} lg={7} xl={6}>
-              <div className={styles.boxText}>
-                <p>Agora é só pagar as parcelas restantes.</p>
-              </div>
-            </Col>
-          </Row>
+
+          {steps}
+
         </Container>
       </section>
 
