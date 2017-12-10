@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Icone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="O-que-é-Simulador" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-634.000000, -166.000000)" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-2" transform="translate(568.000000, 146.000000)" stroke="#F3123C">
+            <g id="Group">
+                <g id="Tab-FAQ">
+                    <g id="Icone" transform="translate(67.000000, 21.000000)">
+                        <g id="Group-5">
+                            <polyline id="Stroke-1" points="25.8723404 14.9787234 25.8723404 31.3191489 0 31.3191489 0 2.72340426 19.0638298 2.72340426"></polyline>
+                            <polygon id="Stroke-3" points="16.7818894 18.4535149 10.0428255 21.3416851 12.9309957 14.5998979 27.4712511 0.0610042553 31.3221447 3.91189787"></polygon>
+                        </g>
+                        <path d="M29,7 L25,3" id="Stroke-6"></path>
+                        <path d="M17,18 L13,14" id="Stroke-7"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
