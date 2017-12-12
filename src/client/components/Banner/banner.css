@@ -10,11 +10,6 @@
   max-width: 100%;
 }
 
-.gradient {
-  background: #ccc;
-  z-index: 1;
-}
-
 .action {
   display: flex;
   justify-content: center;
@@ -22,13 +17,16 @@
   text-align: center;
 }
 
-.gradient,
 .action {
   position: absolute;
   width: 100%;
   left: 0;
   top: 0;
-  bottom: 50%;
+  bottom: 0;
+
+  &.banner {
+    bottom: 50%;
+  }
 }
 
 .actionContent {
