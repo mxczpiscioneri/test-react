@@ -23,10 +23,14 @@
   font-family: Poppins;
   font-size: 13px;
   cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+  background-color: #F3123C;
+  border-color: #F3123C;
+  color: #FFFFFF;
 }
 
 .buttonContainer {

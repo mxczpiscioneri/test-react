@@ -79,7 +79,7 @@ class LettersCredit extends React.Component {
             <Col xs={12} className={styles.buttonContainer}>
               <button className={styles.button} onClick={this._seeMore.bind(this)}>
                 Ver mais cartas
-                    </button>
+              </button>
             </Col>
           </Row>
         </Container>

@@ -17,6 +17,7 @@
 
   .boxImage {
     text-align: center;
+    min-height: 155px;
 
     img {
       max-width: 100%;

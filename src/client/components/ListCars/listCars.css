@@ -4,8 +4,8 @@
   .title {
     color: #4D4C59;	
     font-family: Poppins;	
-    font-size: 26px;	
-    line-height: 36px;
+    font-size: 21px;	
+    line-height: 27px;
     font-weight: 400;	
     text-align: center;
     padding: 50px 0;
@@ -17,6 +17,6 @@
     font-size: 14px;	
     line-height: 22px;	
     text-align: center;
-    margin: 90px 0 120px 0;
+    margin: 20px 0 50px 0;
   }
 }

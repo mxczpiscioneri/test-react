@@ -12,6 +12,7 @@
   display: inline-flex;
   align-items: center;
   padding-left: 15px;
+  height: 100%;
 }
 
 .navigation > a {
@@ -39,12 +40,17 @@
 .socialNetworks {
   display: inline-flex;
   align-items: center;
-  text-align: right;
+  justify-content: flex-end;
   width: 100%;
+  height: 100%;
 }
 
 .socialNetwork {
-  width: 16.666666667%;
+  padding: 0 15px;
+
+  &:last-child {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 720px) {

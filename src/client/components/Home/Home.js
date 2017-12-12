@@ -13,12 +13,6 @@ import ListCars from '../ListCars/ListCars'
 import Footer from '../Footer/Footer'
 import styles from './home.css'
 
-const listBanners = [
-  { title: 'Já pensou em comprar seu carro sem juros?', subtitle: 'com o Consórcio Santander você pode!', image: 'https://loremflickr.com/1920/600/car/?random=1' },
-  { title: 'Já pensou em comprar seu carro sem juros?', subtitle: 'com o Consórcio Santander você pode!', image: 'https://loremflickr.com/1920/600/car/?random=2' },
-  { title: 'Já pensou em comprar seu carro sem juros?', subtitle: 'com o Consórcio Santander você pode!', image: 'https://loremflickr.com/1920/600/car/?random=3' },
-]
-
 class Home extends Component {
   render() {
     return (
@@ -27,7 +21,7 @@ class Home extends Component {
 
         <Menu transparent />
 
-        <Banner images={listBanners} form autoplay />
+        <Banner form />
 
         <WhyBuy />
 

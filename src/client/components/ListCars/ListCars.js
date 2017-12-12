@@ -4,21 +4,25 @@ import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
 import styles from './listCars.css'
 import Item from './Item/Item';
+import imgCruze from './cruze.png';
+import imgHb20 from './hb20.png';
+import imgUno from './uno.png';
+import imgUp from './up.png';
 
 const ListCars = props => {
   const cars = [
-    { name: 'Fiat Bravo', value: 35.000, image: 'http://lorempixel.com/230/173/transport/4/' },
-    { name: 'Chevrolet Cruze', value: 60.000, image: 'http://lorempixel.com/230/173/transport/5/', selected: true },
-    { name: 'Fiat Mobi', value: 50.000, image: 'http://lorempixel.com/230/173/transport/8/' },
-    { name: 'Hyundai HB20', value: 40.000, image: 'http://lorempixel.com/230/173/transport/9/' }
+    { name: 'Fiat Bravo', value: 35.000, image: imgUp },
+    { name: 'Chevrolet Cruze', value: 60.000, image: imgCruze, selected: true },
+    { name: 'Fiat Mobi', value: 50.000, image: imgUno },
+    { name: 'Hyundai HB20', value: 40.000, image: imgHb20 }
   ]
 
   return (
     <section className={styles.container}>
       <Container>
         <Row>
-          <Col xs={12}>
-            <h3 className={styles.title}>Confira algumas sugestões de carros que você pode comprar</h3>
+          <Col xs={12} md={6} offset={{ md: 3 }}>
+            <h3 className={styles.title}>Confira algumas sugestões de carros que você pode comprar com a carta escolhida</h3>
           </Col>
         </Row>
         <Row>

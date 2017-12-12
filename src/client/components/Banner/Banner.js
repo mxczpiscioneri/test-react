@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import { Container, Row, Col } from '../Grid/Grid'
 import Form from './Form/Form'
 import styles from './banner.css'
+import bannerDefault from './bg-home.png'
 
 const Banner = props => {
 
@@ -16,7 +17,17 @@ const Banner = props => {
     }
   )
 
-  const banners = props.images.map((banner, i) => (
+  const listBannersDefault = [
+    {
+      title: 'Já pensou em comprar seu carro sem juros?',
+      subtitle: 'com o Consórcio Santander você pode!',
+      image: bannerDefault
+    },
+  ]
+
+  const listBanners = props.images || listBannersDefault
+
+  const banners = listBanners.map((banner, i) => (
     <div key={i}>
       <section className={styles.hero}>
         <img

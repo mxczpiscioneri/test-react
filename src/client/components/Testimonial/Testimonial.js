@@ -37,7 +37,7 @@ const Testimonial = props => {
     <Container>
       <Row>
         <Col xs={12}>
-          <h3 className={styles.title}>Depoimentos de clientes e recomendações</h3>
+          <h3 className={styles.title}>Depoimentos de quem já tem uma <span>carta do Santander</span></h3>
         </Col>
       </Row>
       <Row>

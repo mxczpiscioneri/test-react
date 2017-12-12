@@ -1,24 +1,24 @@
 .container {
-  min-height: 456px;
-  background: linear-gradient(0deg, #FFFFFF 0%, #F6F7FA 100%);
-  padding-top: 30px;
-}
+  background: #FFFFFF;
+  padding-bottom: 50px;
 
-.title {
-  color: #4D4C59;	
-  font-family: Poppins;	
-  font-size: 26px;	
-  line-height: 36px;
-  font-weight: 400;	
-  text-align: center;
-}
+  .title {
+    color: #4D4C59;	
+    font-family: Poppins;	
+    font-size: 21px;	
+    line-height: 27px;
+    font-weight: 400;	
+    text-align: center;
+    margin: 55px 0;
+  }
 
-.text {
-  text-align: justify;
-  font-size: 14px;
-  line-height: 20px;
-}
+  .text {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 20px;
+  }
 
-.textFeatured {
-  color: #FF445A;
+  .textFeatured {
+    color: #FF445A;
+  }
 }
