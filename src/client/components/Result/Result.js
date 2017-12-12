@@ -22,10 +22,13 @@ const Result = props => {
       <Plans />
 
       <LettersCredit 
-        title={false} 
+        title={
+          <h3 className={styles.lettersTitle}>Com base na sua simulação,<br/> preparamos outras opções pra você</h3>
+        } 
         count={3} 
         size={{ xs: 12, md: 10 }} 
-        offset={{ md: 1 }} />
+        offset={{ md: 1 }} 
+        showButton={false}/>
 
       <ListCars />
 

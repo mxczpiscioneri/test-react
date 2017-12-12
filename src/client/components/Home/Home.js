@@ -29,7 +29,9 @@ class Home extends Component {
 
         <Testimonial />
 
-        <LettersCredit showTitle={true} count={4} />
+        <LettersCredit title={
+          <h3 className={styles.lettersTitle}>Veja algumas das nossas cartas de crédito</h3>
+        }/>
 
         <ListCars />
 

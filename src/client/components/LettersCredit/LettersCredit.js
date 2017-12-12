@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import _ from 'lodash'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -52,40 +53,64 @@ class LettersCredit extends React.Component {
       <section className={styles.container}>
         <Container>
           {
-            props.showTitle
+            props.title
             && (
               <Row>
-                <Col xs={12} {...this.props.size} offset={this.props.offset}>
-                  <h3 className={styles.title}>Veja algumas das nossas cartas de crédito</h3>
+                <Col {...this.props.size} offset={this.props.offset}>
+                  {props.title}
                 </Col>
               </Row>
             )
           }
           <Row>
-            {
-              this.state.letters.map((item, index) =>
-                <Col xs={12} md={12 / props.count} key={index}>
-                  <Item
-                    value={item.value}
-                    installment={item.installment}
-                    installmentFlex={item.installmentFlex}
-                    deadline={item.deadline}
-                    selected={item.selected}
-                    onClick={() => this._select(item)} />
-                </Col>)
-            }
-          </Row>
-          <Row>
-            <Col xs={12} className={styles.buttonContainer}>
-              <button className={styles.button} onClick={this._seeMore.bind(this)}>
-                Ver mais cartas
-              </button>
+            <Col {...this.props.size} offset={this.props.offset}>
+              <Row>
+                {
+                  this.state.letters.map((item, index) =>
+                    <Col xs={12} md={12 / props.count} key={index}>
+                      <Item
+                        value={item.value}
+                        installment={item.installment}
+                        installmentFlex={item.installmentFlex}
+                        deadline={item.deadline}
+                        selected={item.selected}
+                        onClick={() => this._select(item)} />
+                    </Col>)
+                }
+              </Row>
             </Col>
           </Row>
+          {
+            this.props.showButton
+            && (
+              <Row>
+                <Col {...this.props.size} offset={this.props.offset} className={styles.buttonContainer}>
+                  <button className={styles.button} onClick={this._seeMore.bind(this)}>
+                    Quero simular agora
+              </button>
+                </Col>
+              </Row>
+            )
+          }
         </Container>
       </section>
     )
   }
+}
+
+LettersCredit.propTypes = {
+  title: PropTypes.element,
+  count: PropTypes.number,
+  size: PropTypes.object,
+  offset: PropTypes.offset,
+  showButton: PropTypes.boolean
+}
+
+LettersCredit.defaultProps = {
+  count: 4,
+  size: { xs: 12, md: 12 },
+  offset: {},
+  showButton: true
 }
 
 const mapStateToProps = state => ({})
