@@ -45,3 +45,8 @@
 .blockItemSelected {
   color: #5EBFA8;
 }
+
+.slider {
+  padding-top: 10px;
+  padding-left: 25px;
+}

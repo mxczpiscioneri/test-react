@@ -1,0 +1,60 @@
+.slider.custom-labels > .value {
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.rangeslider__handle:after {
+  content: none !important;
+}
+
+.rangeslider__handle {
+  box-shadow: none !important;
+}
+
+.rangeslider__handle-label {
+  display: none;
+}
+
+.rangeslider__handle-tooltip {
+  display: none !important;
+}
+
+.rangeslider {
+  background: #DFE0E6 !important;
+  box-shadow: none;
+  margin-bottom: 12px;
+}
+
+.rangeslider__fill {
+  background-color: #F3123C !important;
+  box-shadow: none;
+}
+
+.rangeslider__label-item {
+  opacity: 0.7;
+  color: #000000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  min-width: 60px;
+  top: 0 !important;
+}
+
+.rangeslider__label-item:first-child {
+  left: auto !important;
+  right: 0 !important;
+  text-align: right !important;
+  transform: none !important;
+}
+
+.rangeslider__label-item:last-child {
+  left: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}

@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Container, Row, Col } from '../Grid/Grid'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Plans from '../Plans/Plans'
@@ -9,7 +8,7 @@ import LettersCredit from '../LettersCredit/LettersCredit'
 import ListCars from '../ListCars/ListCars'
 import Footer from '../Footer/Footer'
 import styles from './result.css'
-import SimulateAgain from './SimulateAgain/SimulateAgain' 
+import SimulateAgain from './SimulateAgain/SimulateAgain'
 
 const Result = props => {
   return (
@@ -18,11 +17,15 @@ const Result = props => {
 
       <Menu />
 
-      <SimulateAgain/>
+      <SimulateAgain />
 
       <Plans />
 
-      <LettersCredit title={false} count={3} />
+      <LettersCredit 
+        title={false} 
+        count={3} 
+        size={{ xs: 12, md: 10 }} 
+        offset={{ md: 1 }} />
 
       <ListCars />
 
