@@ -55,7 +55,7 @@ class LettersCredit extends React.Component {
             props.showTitle
             && (
               <Row>
-                <Col xs={12}>
+                <Col xs={12} {...this.props.size} offset={this.props.offset}>
                   <h3 className={styles.title}>Veja algumas das nossas cartas de crédito</h3>
                 </Col>
               </Row>
@@ -64,7 +64,7 @@ class LettersCredit extends React.Component {
           <Row>
             {
               this.state.letters.map((item, index) =>
-                <Col xs={12} md={12/props.count} key={index}>
+                <Col xs={12} md={12 / props.count} key={index}>
                   <Item
                     value={item.value}
                     installment={item.installment}
@@ -79,7 +79,7 @@ class LettersCredit extends React.Component {
             <Col xs={12} className={styles.buttonContainer}>
               <button className={styles.button} onClick={this._seeMore.bind(this)}>
                 Ver mais cartas
-            </button>
+                    </button>
             </Col>
           </Row>
         </Container>
