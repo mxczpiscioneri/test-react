@@ -1,0 +1,43 @@
+.title {
+  margin: 55px 0;
+  color: #4D4C59;	
+  font-family: Poppins;	
+  font-size: 21px;	
+  font-weight: 500;	
+  line-height: 27px;	
+  text-align: center;
+}
+
+.contentConsortium {
+  padding-bottom: 40px;
+}
+
+.contentBank {
+  padding-bottom: 60px;
+  background: #f6f7fa;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+
+  .listItem {
+    margin-bottom: 20px;
+    display: flex;
+
+    img {
+      vertical-align: sub;
+      margin-right: 10px;
+    }
+  }
+}
+
+.imgBox {
+  height: 100%;
+  display: flex;
+
+  img {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
