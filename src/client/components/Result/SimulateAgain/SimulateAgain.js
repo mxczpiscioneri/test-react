@@ -34,7 +34,7 @@ class SimulateAgain extends React.Component {
                 <div className={(props.selected) ? styles.blockItemSelected : ''}>Valor do Bem</div>
               </div>
             </Col>
-            <Col xs={12} md={5}>
+            <Col xs={12} md={6}>
               <div className={styles.slider}>
                 <div className='slider custom-labels'>
                   <Slider
