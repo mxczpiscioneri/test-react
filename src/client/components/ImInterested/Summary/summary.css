@@ -1,0 +1,135 @@
+p {
+  line-height: 0;
+  margin: 8px 0px 8px 0;
+}
+
+.title {
+  font-family: Poppins;
+  font-size: 21px;
+  line-height: 27px;
+  margin-bottom: 15px;
+}
+
+.labels {
+  color: #787988;	
+  font-family: Poppins;	
+  font-size: 14px;	
+  font-weight: 200;	
+  line-height: 19px;
+}
+
+.value {
+  color: #000000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.valueSymbol {
+  color: #000000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.installment {
+  font-weight: 600;
+  font-family: Poppins;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.installmentFlex {
+  color: #70CA7A;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.deadline {
+  font-weight: 600;
+  font-family: Poppins;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.percents {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.info {
+  height: 55px;
+  border-radius: 2px;	
+  background-color: #43BCCD;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 15px;
+}
+
+.infoImg {
+  height: 31px;
+  width: 31px;
+}
+
+.infoText {
+  margin-left: 15px;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.car {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.carInfo {
+  width: 50%;
+}
+
+.carImg {
+  width: 50%;
+}
+
+.carImg > img {
+  height: 119px;
+  width: 200px;
+}
+
+.carReference {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.carModel {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.carAdvice {
+  font-family: Poppins;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 15px;
+}
+
+.advice {
+  font-family: Poppins;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: justify;
+}

@@ -1,0 +1,24 @@
+.container {
+  border-radius: 2px;	
+  background-color: #FFFFFF;	
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  padding: 30px;
+  height: 530px; /** retirar **/
+}
+
+.button {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  border: 1px solid #F3123C;
+  background-color: #F3123C;
+  font-family: Poppins;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}

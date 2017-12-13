@@ -1,3 +1,29 @@
+.slider.custom-labels {
+  position: 'relative';
+}
+
+.slider.custom-labels:before {
+  content: 'min';
+  position: absolute;
+  bottom: 18px;
+  left: 50px;
+  opacity: 0.7;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.slider.custom-labels:after {
+  content: 'max';
+  position: absolute;
+  bottom: 18px;
+  right: 30px;
+  opacity: 0.7;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .slider.custom-labels > .value {
   text-align: center;
   font-family: Poppins;
@@ -36,14 +62,13 @@
 
 .rangeslider__label-item {
   opacity: 0.7;
-  color: #000000;
   font-family: Poppins;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
   text-align: center;
   min-width: 60px;
-  top: 0 !important;
+  top: 4px !important;
 }
 
 .rangeslider__label-item:first-child {

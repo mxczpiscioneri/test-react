@@ -39,13 +39,13 @@
 
 .block > div:hover {
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-  background-color: #5EBFA8;
-  border-color: #5EBFA8;
+  background-color: #53bccd;
+  border-color: #53bccd;
   color: #ffffff; 
 }
 
 .blockItemSelected {
-  color: #5EBFA8;
+  color: #53bccd;
 }
 
 .slider {
