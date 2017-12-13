@@ -102,8 +102,8 @@ LettersCredit.propTypes = {
   title: PropTypes.element,
   count: PropTypes.number,
   size: PropTypes.object,
-  offset: PropTypes.offset,
-  showButton: PropTypes.boolean
+  offset: PropTypes.object,
+  showButton: PropTypes.bool
 }
 
 LettersCredit.defaultProps = {
