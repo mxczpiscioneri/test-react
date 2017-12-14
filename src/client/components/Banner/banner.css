@@ -4,10 +4,24 @@
 
 .hero {
   position: relative;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
 }
 
 .thumbnail {
   max-width: 100%;
+
+  @media (max-width: 768px) {
+    min-height: 200px;
+    max-width: 750px;
+  }
 }
 
 .action {
@@ -15,9 +29,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.action {
   position: absolute;
   width: 100%;
   left: 0;
@@ -78,4 +89,8 @@
 .slider {
   margin-top: -83px;
   z-index: -1;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 }

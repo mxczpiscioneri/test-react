@@ -36,6 +36,8 @@ const Banner = props => {
           alt={banner.title}
         />
 
+        {props.mask && <span className={styles.mask} />}
+
         <div className={actionClass}>
           <div className={styles.actionContent}>
             <div className={styles.text}>

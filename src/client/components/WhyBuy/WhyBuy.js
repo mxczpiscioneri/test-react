@@ -31,7 +31,7 @@ const WhyBuy = props => {
             <Item
               title='Liberdade'
               img={freedom}>
-              <p className={styles.text}>Após a contemplação você escolhe o veículo novo ou usado com até 10 anos.</p>
+              <p className={styles.text}><span>Após a contemplação</span> você escolhe o veículo novo ou usado com até 10 anos.</p>
               <p className={styles.text}>Além disso você tem maior poder de negociação com o vendedor pois comprará o veículo a vista.</p>
             </Item>
           </Col>
@@ -39,7 +39,7 @@ const WhyBuy = props => {
             <Item
               title='Sem Burocracia'
               img={bureaucracy}>
-              <p className={styles.text}>Rapidez na análise de seu crédito  e na disponibilização da sua carta.</p>
+              <p className={styles.text}><span>Rapidez</span> na análise de seu crédito  e na disponibilização da sua carta.</p>
             </Item>
           </Col>
           <Col xs={12} sm={6} lg={3}>
@@ -47,7 +47,7 @@ const WhyBuy = props => {
               title='Pós Vendas'
               img={sales}>
               <p className={styles.text}>Consulte o extrato da sua cota, resultado das assembleias e oferte lances de forma online.</p>
-              <p className={styles.text}>Além disso, conte com o suporte da central de atendimento e chat.</p>
+              <p className={styles.text}>Além disso, conte com o suporte da central de <span>atendimento e chat.</span></p>
             </Item>
           </Col>
         </Row>

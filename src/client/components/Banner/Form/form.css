@@ -50,6 +50,10 @@
     padding: 15px 30px;
     border: 1px solid #43BCCD;	
     background-color: #FFFFFF;
+
+    &:hover {
+      opacity: .95;
+    }
   }
   .radio + .radio [type="radio"] + label  {
     border-radius: 0 2px 2px 0;	
@@ -57,18 +61,6 @@
   [type="radio"]:checked + label {
     background-color: #43BCCD;
     color: #FFF;
-  }
-  [type="radio"]:checked + label::after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -12px;
-    width: 0;
-    height: 0;
-    border-left: 12.5px solid transparent;
-    border-right: 12.5px solid transparent;
-    border-top: 15px solid #43BCCD;
-    clear: both;
   }
   .form_group {
     position: relative;

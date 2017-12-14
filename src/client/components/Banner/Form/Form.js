@@ -37,7 +37,7 @@ class Form extends Component {
             thousandSeparator="." />
         </div>
         <button type="submit" className={styles.btn_submit}>Simular</button>
-        <p>Valor mínimo: R$ 500  |  Valor máximo: R$ 2.000</p>
+        <p>mínimo: R$ 500  |  máximo: R$ 2.000</p>
       </form>
     )
   }

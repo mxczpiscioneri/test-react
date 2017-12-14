@@ -50,8 +50,8 @@ const listSteps = [
   },
 ]
 
-const steps = listSteps.map((step, i) => (
-  <Row>
+const steps = listSteps.map((step, index) => (
+  <Row key={index}>
     <Col xs={12} sm={4} lg={3} xl={2} offset={{ lg: 1, xl: 2 }}>
       <div className={styles.boxIcon}>
         <img src={step.image} alt={step.title} />
