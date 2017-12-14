@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="15px" viewBox="0 0 23 15" version="1.1">
+    
+    <title>Menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="XS/Menu-Mobile" transform="translate(-15.000000, -18.000000)">
+            <g id="Menu" transform="translate(15.000000, 18.000000)">
+                <path d="M0.5,0.5 L22.5,0.5" id="Fill-4" fill-opacity="0" fill="#000000"/>
+                <path d="M0.5,0.5 L22.5,0.5" id="Stroke-5" stroke="#FFFFFF" stroke-linecap="square"/>
+                <path d="M0.5,7.5 L22.5,7.5" id="Fill-6" fill-opacity="0" fill="#000000"/>
+                <path d="M0.5,7.5 L22.5,7.5" id="Stroke-7" stroke="#FFFFFF" stroke-linecap="square"/>
+                <path d="M0.5,14.5 L22.5,14.5" id="Stroke-7" stroke="#FFFFFF" stroke-linecap="square"/>
+            </g>
+        </g>
+    </g>
+</svg>
