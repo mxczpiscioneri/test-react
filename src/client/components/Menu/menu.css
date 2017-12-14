@@ -33,6 +33,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .menu {
+    background-color: #42434B !important;
+  }
+}
+
 @keyframes slide-down {
   0% {
     transform: translateY(-100%);
