@@ -2,8 +2,7 @@
   border-radius: 2px;	
   background-color: #FFFFFF;	
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-  padding: 30px;
-  height: 530px; /** retirar **/
+  padding: 10px 30px 30px 30px;
 }
 
 .button {
@@ -17,6 +16,7 @@
   font-family: Poppins;
   font-size: 13px;
   cursor: pointer;
+  margin-top: 50px;
 }
 
 .button:hover {

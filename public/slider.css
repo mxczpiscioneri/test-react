@@ -39,6 +39,7 @@
 
 .rangeslider__handle {
   box-shadow: none !important;
+  outline: none;
 }
 
 .rangeslider__handle-label {

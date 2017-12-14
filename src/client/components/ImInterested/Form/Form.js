@@ -1,19 +1,57 @@
 import React from 'react'
+import { reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
+// import FormErrorMessage from '../../FormErrorMessage/FormErrorMessage'
+import Input from '../../Input/Input'
+import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
+import RadioButton from '../../RadioButton/RadioButton'
+import Checkbox from '../../Checkbox/Checkbox'
 import styles from './form.css'
+
+const validate = values => {
+  const errors = {}
+
+  // if (!values.email) {
+  //   errors.email = 'Requerido'
+  // } else if (!isEmail(values.email))
+  //   errors.email = 'E-mail inválido'
+
+  // if (!values.password)
+  //   errors.password = 'Requerido'
+
+  return errors
+}
 
 const Form = props => {
   return (
     <section className={styles.container}>
-      <button className={styles.button}>ME LIGUE</button>
+      <form>
+        {/* <FormErrorMessage {...props} /> */}
+
+        <Input label='Nome' name='name' />
+        <Input label='Telefone' name='phone' />
+        <Input label='E-mail' name='email' />
+        <Input label='*CPF' name='cpf' />
+        <RadioButtonGroup name='installment'>
+          <RadioButton value='normal' label='Parcela normal' />
+          <RadioButton value='flex' label='Parcela flex' />
+        </RadioButtonGroup>
+        <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a vadaliação do meu CPF.' />
+        <button className={styles.button}>ME LIGUE</button>
+      </form>
     </section>
   )
 }
+
+const InitializeFromStateForm = reduxForm({
+  validate,
+  form: 'form'
+})(Form)
 
 const mapStateToProps = state => ({})
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form)
+export default connect(mapStateToProps, mapDispatchToProps)(InitializeFromStateForm)
