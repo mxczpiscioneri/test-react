@@ -20,7 +20,15 @@
     background-color: #42434B;
 
     .content {
-      min-height: 60px;
+      min-height: 45px;
+
+      .logo {
+        width: 110px;
+      }
+
+      .navagation a {
+        font-size: 13px;
+      }
     }
   }
 }
@@ -46,6 +54,8 @@
   }
 
   .logo {
+    transition: all 0.3s ease;
+
     @media (max-width: 768px){
       max-width: 83px;
     }
@@ -61,6 +71,7 @@
       transition: all 0.3s ease;
       color: white;
       font-size: 15px;
+      font-weight: 100;
       line-height: 18px;
       padding: 0 25px;
 
@@ -91,11 +102,22 @@
     background: #373a47;
   }
 
+  .bm-burger-button {
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   .bm-cross-button {
     width: 22px !important;
     height: 15px !important;
     right: -37px !important;
     top: 17px !important;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   .bm-menu-wrap {
@@ -103,19 +125,48 @@
   }
 
   .bm-menu {
-    background: #373a47;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
+    background: #696977;
+
+    .bm-item-list {
+
+      img {
+        width: 83px;
+        padding: 17px 20px;
+      }
+
+      a {
+        background: #8B8C99;
+        padding: 17px 20px;
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        margin-bottom: 1px;
+      }
+
+      button {
+        background-color: #F3123C;
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 25px;
+        text-align: center;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        padding: 12px 0;
+        cursor: pointer;
+      }
+    }
   }
 
   .bm-morph-shape {
     fill: #373a47;
   }
 
-  .bm-item-list {
-    color: #b8b7ad;
-    padding: 0.8em;
-  }
+  
 
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);

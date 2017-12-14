@@ -31,10 +31,12 @@ class Menu extends React.Component {
           onStateChange={isMenuOpen}
           customBurgerIcon={<img src={menuImg} />}
           customCrossIcon={<img src={menuImg} />}>
+          <img src={logoImg} alt='webmotors' />
           <Link to={routePaths.root.path}>{routePaths.root.title}</Link>
           <Link to={routePaths.about.path}>{routePaths.about.title}</Link>
           <Link to={routePaths.why.path}>{routePaths.why.title}</Link>
           <Link to={routePaths.faq.path}>{routePaths.faq.title}</Link>
+          <button>SIMULAR CONSÓRCIO</button>
         </MenuMobile>
         <Sticky topOffset={130}>
           {({
@@ -57,7 +59,7 @@ class Menu extends React.Component {
                 <Container>
                   <div className={styles.content}>
                     <Link to={routePaths.root.path}>
-                      <img src={logoImg} alt='Santander' className={styles.logo} />
+                      <img src={logoImg} alt='webmotors' className={styles.logo} />
                     </Link>
                     <div className={styles.navagation}>
                       <Link to={routePaths.about.path}>{routePaths.about.title}</Link>
