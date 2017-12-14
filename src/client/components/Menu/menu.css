@@ -1,14 +1,37 @@
 .menu {
   z-index: 1;
   position: relative;
+  
+  &.transparent {
+    background-color: transparent;
+  }
+    
+  &.dark {
+    background-color: #42434B;
+  }
+      
+  &.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    width: 100%;
+    animation: slide-down 0.7s;
+    transform: translateY(0);
+    background-color: #42434B;
+
+    .content {
+      min-height: 60px;
+    }
+  }
 }
 
-.transparent {
-  background-color: transparent;
-}
-
-.dark {
-  background-color: #42434B;
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .content {

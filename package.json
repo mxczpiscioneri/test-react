@@ -59,6 +59,7 @@
     "react-router-transition": "0.1.1",
     "react-sanfona": "^1.0.6",
     "react-slick": "^0.15.4",
+    "react-sticky": "^6.0.1",
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",

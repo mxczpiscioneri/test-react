@@ -3,6 +3,7 @@ import Routes from '../Routes/Routes'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+import { StickyContainer } from 'react-sticky'
 
 injectTapEventPlugin()
 
@@ -12,7 +13,9 @@ const muiTheme = getMuiTheme({
 
 const App = props => (
   <MuiThemeProvider muiTheme={muiTheme}>
-    <Routes />
+    <StickyContainer>
+      <Routes />
+    </StickyContainer>
   </MuiThemeProvider>
 )
 
