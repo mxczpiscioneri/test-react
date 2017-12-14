@@ -33,7 +33,7 @@
       padding: 0 25px;
 
       &:hover {
-        color: #F3123C;
+        opacity: .5;
       }
 
       @media (max-width: 768px){

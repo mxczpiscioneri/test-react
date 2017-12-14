@@ -8,22 +8,36 @@ p {
   background-color: #FFFFFF;
   border-radius: 2px;	
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-  cursor: pointer;
   margin-bottom: 30px;
   transition: all 0.3s ease;
 }
 
 .container:hover {
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2)
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+
+  .top > span {
+    background-image: url('./icone-estrela-selecionada.svg');
+  }
+
+  .button {
+    background-color: #F3123C;
+  }
+  
+  .buttonText {
+    color: #FFFFFF;
+  }
 }
 
 .top {
   padding: 15px 0 0 15px;
-}
 
-.top > img {
-  width: 16px;
-  height: 16px;
+  span {
+    background-image: url('./icone-estrela.svg');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
 }
 
 .content {
@@ -47,6 +61,8 @@ p {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   border-top: 0.5px solid #eee;
+  cursor: pointer;  
+  transition: all 0.3s ease;
 }
 
 .buttonText {
@@ -56,25 +72,7 @@ p {
   top: 27px;
   left: 0;
   right: 0;
-}
-
-.buttonSelected {
-  position: relative;
-  height: 72px;
-  background-color: #F3123C;
-  text-align: center;
-  font-family: Poppins;	
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-.buttonTextSelected {
-  color: #FFFFFF;
-  font-size: 14px;
-  position: absolute;
-  top: 27px;
-  left: 0;
-  right: 0;
+  transition: all 0.3s ease;
 }
 
 .valueSymbol {

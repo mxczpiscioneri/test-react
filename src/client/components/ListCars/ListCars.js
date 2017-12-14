@@ -12,7 +12,7 @@ import imgUp from './up.png';
 const ListCars = props => {
   const cars = [
     { name: 'Fiat Bravo', value: 35.000, image: imgUp },
-    { name: 'Chevrolet Cruze', value: 60.000, image: imgCruze, selected: true },
+    { name: 'Chevrolet Cruze', value: 60.000, image: imgCruze },
     { name: 'Fiat Mobi', value: 50.000, image: imgUno },
     { name: 'Hyundai HB20', value: 40.000, image: imgHb20 }
   ]
@@ -32,8 +32,7 @@ const ListCars = props => {
                 <Item
                   name={item.name}
                   value={item.value}
-                  image={item.image}
-                  selected={item.selected} />
+                  image={item.image} />
               </Col>
             )
           }

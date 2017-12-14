@@ -30,7 +30,7 @@
 }
 
 .navigation > a:hover {
-  color: #F3123C;
+  opacity: .5;
 }
 
 .navigation > a:last-child {
@@ -50,6 +50,14 @@
 
   &:last-child {
     padding-right: 0;
+  }
+
+  a {
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: .5;
+    }
   }
 }
 

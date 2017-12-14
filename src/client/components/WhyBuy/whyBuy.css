@@ -16,6 +16,10 @@
     text-align: justify;
     font-size: 14px;
     line-height: 20px;
+
+    span {
+      font-weight: 500;
+    }
   }
 
   .textFeatured {

@@ -21,7 +21,7 @@ class Home extends Component {
 
         <Menu transparent />
 
-        <Banner form />
+        <Banner form mask />
 
         <WhyBuy />
 
@@ -31,7 +31,7 @@ class Home extends Component {
 
         <LettersCredit title={
           <h3 className={styles.lettersTitle}>Veja algumas das nossas cartas de crédito</h3>
-        }/>
+        } />
 
         <ListCars />
 

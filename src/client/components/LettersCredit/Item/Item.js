@@ -3,14 +3,12 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './Item.css'
-import Star from './icone-estrela.svg';
-import StarSelected from './icone-estrela-selecionada.svg';
 
 const Item = props => {
   return (
-    <div className={styles.container} onClick={props.onClick}>
+    <div className={styles.container}>
       <div className={styles.top}>
-        <img src={(props.selected) ? StarSelected : Star} />
+        <span className={styles.star} />
       </div>
       <div className={styles.content}>
         <div className={styles.retancle}></div>
@@ -31,8 +29,8 @@ const Item = props => {
           <span className={styles.deadline}>{props.deadline} Meses</span>
         </p>
       </div>
-      <div className={(props.selected) ? styles.buttonSelected : styles.button}>
-        <span className={(props.selected) ? styles.buttonTextSelected : styles.buttonText}>TENHO INTERESSE</span>
+      <div className={styles.button} onClick={props.onClick}>
+        <span className={styles.buttonText}>TENHO INTERESSE</span>
       </div>
     </div>
   )

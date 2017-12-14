@@ -6,14 +6,6 @@
   transition: all 0.3s ease;
   height: auto;
   margin-bottom: 30px;
-  
-  &:hover {
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-  }
-
-  &.selected {
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-  }
 
   .boxImage {
     text-align: center;
@@ -45,15 +37,5 @@
     span {
       font-weight: 600;	
     }
-  }
-
-  .selected {
-    height: 3px;	
-    background-color: #F3123C;
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
   }
 }
