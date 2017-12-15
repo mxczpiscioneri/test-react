@@ -842,9 +842,43 @@ body.stop-scrolling {
 .sweet-alert {
   border-radius: 2px;
   background-color: #FFFFFF;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.21);  
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.21);
+  height: 395px;
+  width: 700px;
+  margin-left: -350px;
+  padding: 0;
 }
 
+.sa-confirm-button-container > .confirm {
+  border: 1px solid #BEC0D1 !important;
+  border-radius: 2px !important;
+  background-color: #ffffff !important;
+  box-sizing: border-box !important;
+  font-family: Poppins !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 21px !important;
+  text-align: center !important;
+  color: #787988 !important;
+  padding: 12px 32px;
+}
+
+.sa-confirm-button-container > .confirm:hover {
+  background-color: #BEC0D1 !important;
+  color: #ffffff !important;
+}
+
+@media(max-width: 768px) {
+  .sweet-alert {
+    width: 90%;
+    margin-left: 1%;
+    height: 213px;
+  }
+
+  .sa-confirm-button-container > .confirm {
+    margin-top: 10px;
+  }
+}
 
 /*
  * Animation

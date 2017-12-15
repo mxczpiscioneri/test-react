@@ -18,7 +18,6 @@ const content = props => {
         <p className={styles.title}>Obrigado, <span className={styles.userName}>Nome do Usuário</span></p>
         <p className={styles.subTitle}>Em breve entraremos em contato com você, aguarde :)</p>
       </div>
-      <button type='button' className={styles.button} onClick={props.onConfirm}>Voltar para home</button>
     </div>
   )
 }
@@ -29,7 +28,9 @@ const Alert = props => {
       show={props.show}
       title={``}
       html
-      showConfirmButton={false}
+      showConfirmButton={true}
+      confirmButtonText={'Voltar para home'}
+      onConfirm={props.onConfirm}
       text={renderToStaticMarkup(content(props))}/>
   )
 }

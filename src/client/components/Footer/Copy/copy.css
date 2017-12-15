@@ -5,12 +5,16 @@
 .content {
   display: flex;
   align-items: center;
-  min-height: 83px;
+  min-height: 73px;
   position: relative;
 }
     
 .text {
   color: #ffffff;
+  font-size: 12px !important;
+  line-height: 22px !important;
+  font-weight: 500 !important;
+  font-family: Poppins;
 }
 
 .company {
@@ -23,6 +27,12 @@
 }
 
 @media (max-width: 720px) {
+  .company {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
   .companyName {
     display: none;
   }

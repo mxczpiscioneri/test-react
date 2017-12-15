@@ -2,7 +2,6 @@ import React from 'react'
 import { reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Redirect } from 'react-router'
 import { Container, Row, Col } from '../../Grid/Grid'
 import Input from '../../Input/Input'
 import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
@@ -38,8 +37,7 @@ class Form extends React.Component {
     super(props)
 
     this.state = {
-      alert: false,
-      confirmed: false
+      alert: false
     }
   }
 
@@ -65,16 +63,8 @@ class Form extends React.Component {
           <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a vadaliação do meu CPF.' />
           <button type='submit' className={styles.button}>ME LIGUE</button>
           <Alert show={this.state.alert} onConfirm={() => {
-            this.setState({ confirmed: true })
+            window.location = '/'
           }} />
-
-          {
-            this.state.confirmed
-            && (
-              <Redirect to='/' />
-            )
-          }
-
         </form>
       </section>
     )

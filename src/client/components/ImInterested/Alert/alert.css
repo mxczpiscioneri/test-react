@@ -1,5 +1,5 @@
 .container {
-  
+  padding-top: 45px;
 }
 
 .titleContainer {
@@ -45,4 +45,27 @@
 .button:hover {
   background-color: #BEC0D1 !important;
   color: #ffffff !important;
+}
+
+@media(max-width: 768px) {
+  .container {
+    padding-top: 15px; 
+  }
+
+  .container > img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .titleContainer {
+    margin-top: 15px !important;
+  }
+
+  .title {
+    font-size: 16px !important;
+  }
+
+  .subTitle {
+    display: none;
+  }
 }
