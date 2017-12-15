@@ -71,6 +71,7 @@
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "sweetalert-react": "^0.4.11",
     "uglify-js": "^2.8.29",
     "url-loader": "^0.5.9",
     "webpack": "^3.8.1",

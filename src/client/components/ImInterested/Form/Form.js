@@ -2,47 +2,83 @@ import React from 'react'
 import { reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { Redirect } from 'react-router'
 import { Container, Row, Col } from '../../Grid/Grid'
-// import FormErrorMessage from '../../FormErrorMessage/FormErrorMessage'
 import Input from '../../Input/Input'
 import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
+import Alert from '../Alert/Alert'
 import styles from './form.css'
 
 const validate = values => {
   const errors = {}
 
-  // if (!values.email) {
-  //   errors.email = 'Requerido'
-  // } else if (!isEmail(values.email))
-  //   errors.email = 'E-mail inválido'
+  if (!values.name) {
+    errors.name = 'Preencha seu nome'
+  }
 
-  // if (!values.password)
-  //   errors.password = 'Requerido'
+  if (!values.phone) {
+    errors.phone = 'Preencha seu telefone'
+  }
+
+  if (!values.email) {
+    errors.email = 'Preencha seu e-mail'
+  }
+
+  if (!values.cpf) {
+    errors.cpf = 'Preencha seu CPF'
+  }
 
   return errors
 }
 
-const Form = props => {
-  return (
-    <section className={styles.container}>
-      <form>
-        {/* <FormErrorMessage {...props} /> */}
+class Form extends React.Component {
+  constructor(props) {
+    super(props)
 
-        <Input label='Nome' name='name' />
-        <Input label='Telefone' name='phone' />
-        <Input label='E-mail' name='email' />
-        <Input label='*CPF' name='cpf' />
-        <RadioButtonGroup name='installment'>
-          <RadioButton value='normal' label='Parcela normal' />
-          <RadioButton value='flex' label='Parcela flex' />
-        </RadioButtonGroup>
-        <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a vadaliação do meu CPF.' />
-        <button className={styles.button}>ME LIGUE</button>
-      </form>
-    </section>
-  )
+    this.state = {
+      alert: false,
+      confirmed: false
+    }
+  }
+
+  _submit = (event) => {
+    event.preventDefault()
+    this.setState({ alert: true })
+  }
+
+  render() {
+    const props = this.props
+
+    return (
+      <section className={styles.container}>
+        <form onSubmit={this._submit}>
+          <Input label='Nome' name='name' />
+          <Input label='Telefone' name='phone' />
+          <Input label='E-mail' name='email' />
+          <Input label='*CPF' name='cpf' />
+          <RadioButtonGroup name='installment'>
+            <RadioButton value='normal' label='Parcela normal' />
+            <RadioButton value='flex' label='Parcela flex' />
+          </RadioButtonGroup>
+          <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a vadaliação do meu CPF.' />
+          <button type='submit' className={styles.button}>ME LIGUE</button>
+          <Alert show={this.state.alert} onConfirm={() => {
+            this.setState({ confirmed: true })
+          }} />
+
+          {
+            this.state.confirmed
+            && (
+              <Redirect to='/' />
+            )
+          }
+
+        </form>
+      </section>
+    )
+  }
 }
 
 const InitializeFromStateForm = reduxForm({

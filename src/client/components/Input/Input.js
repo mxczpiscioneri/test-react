@@ -29,21 +29,25 @@ const styles = {
   },
   underlineFocusStyle: {
     borderColor: '#F3123C'
+  },
+  errorStyle: {
+    color: '#F3123C',
+    bottom: '10px'
   }
 }
 
 const Input = (props) => {
   return (
     <Field component={TextField}
-      name={props.name}
-      floatingLabelText={props.label}
       {...props}
+      floatingLabelText={props.label}
       style={styles.style}
       inputStyle={styles.inputStyle}
       floatingLabelStyle={styles.floatingLabelStyle}
       floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
       underlineStyle={styles.underlineStyle}
-      underlineFocusStyle={styles.underlineFocusStyle} />
+      underlineFocusStyle={styles.underlineFocusStyle} 
+      errorStyle={styles.errorStyle}/>
   )
 }
 
