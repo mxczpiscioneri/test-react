@@ -63,8 +63,7 @@
 
 @media (max-width: 720px) {
   .navigation {
-    display: inline-block;
-    padding: 0;
+    display: none;
   }
 
   .navigation > a {
@@ -77,5 +76,7 @@
   .socialNetworks {
     text-align: left;
     margin-bottom: 20px;
+    padding: 0;
+    justify-content: center;
   }
 }
