@@ -7,6 +7,12 @@
   text-align: center;
   margin: 50px 0;
 
+  @media (max-width: 768px) {
+    margin: 35px 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   span {
     font-weight: 600;
   }
@@ -21,6 +27,11 @@
     width: 90px;	
     border-radius: 100%;
     display: inline-block;
+
+    @media (max-width: 768px) {
+      height: 64px;	
+      width: 64px;	
+    }
   }
   
   .message {
@@ -31,6 +42,12 @@
     font-weight: 300;
     margin-top: 20px;
     padding: 0 15px;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+      line-height: 22px;
+      text-align: left;
+    }
   }
   
   .name {
@@ -39,10 +56,25 @@
     font-size: 14px;	
     font-weight: 600;	
     line-height: 20px;
+
+    @media (max-width: 768px) {
+      color: #4D4C59;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0 0 0 15px;
+      float: left;
+    }
   }
 
   .icon {
     display: inline-block;
+
+    @media (max-width: 768px) {
+      float: left;
+      margin-left: 10px;
+      margin-top: -3px;
+      width: 24px;
+    }
   }
 }
 

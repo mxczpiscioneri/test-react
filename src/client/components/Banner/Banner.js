@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 import classNames from 'classnames'
-import { Container, Row, Col } from '../Grid/Grid'
+import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import Form from './Form/Form'
 import styles from './banner.css'
 import bannerDefault from './bg-home.png'
@@ -45,7 +45,15 @@ const Banner = props => {
                 <Row>
                   <Col xs={12} lg={8} offset={{ lg: 2 }}>
                     <p className={styles.title}>{banner.title}</p>
-                    <p className={styles.subTitle}>{banner.subtitle}</p>
+                    {
+                      props.hiddenSubTitleXS
+                        ?
+                        <Hidden xs>
+                          <p className={styles.subTitle}>{banner.subtitle}</p>
+                        </Hidden>
+                        :
+                        <p className={styles.subTitle}>{banner.subtitle}</p>
+                    }
                   </Col>
                 </Row>
               </Container>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Container, Row, Col } from '../Grid/Grid'
+import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
@@ -33,18 +33,18 @@ const Why = props => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h3 className={styles.title}>Vantagens do Cónsórcio</h3>
+              <h3 className={styles.title}>Vantagens do <span>Cónsórcio</span></h3>
             </Col>
           </Row>
           <Row>
-            <Col xs={12} sm={6} md={5} offset={{ md: 1 }}>
+            <Col xs={10} sm={6} md={5} offset={{ xs: 1, md: 1 }}>
               <ul className={styles.list}>
-                <li className={styles.listItem}><img src={iconChecked} /> Você não paga juros apenas uma taxa de administração</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Parcela em até 72x, sem precisar dar entrada</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Poder comprar à vista</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Pode ser contemplado por sorteio ou lances mensais</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Na contemplação você escolhe o carro que quiser, dentro da sua carta de crédito</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Oportunidade de formar e ampliar seu patrimônio</li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Você não paga <span>juros apenas uma taxa de administração</span></p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Parcela em até <span>72x</span>, sem precisar dar entrada</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Poder <span>comprar</span> à vista</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Pode ser contemplado por <span>sorteio</span> ou <span>lances</span> mensais</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Na <span>contemplação</span> você escolhe o carro que quiser, dentro da sua carta de crédito</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Oportunidade de formar e ampliar seu <span>patrimônio</span></p></li>
               </ul>
             </Col>
             <Col xs={12} sm={6} md={5}>
@@ -61,24 +61,32 @@ const Why = props => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h3 className={styles.title}>Vantagens do Banco Santander</h3>
+              <h3 className={styles.title}>Vantagens do <span>Banco Santander</span></h3>
             </Col>
           </Row>
           <Row>
-
-            <Col xs={12} sm={5} md={4} offset={{ sm: 1, md: 2 }}>
-              <div className={styles.imgBox}>
-                <img src={imgMacbook} alt={'Vantagens do Banco Santander'} />
-              </div>
-            </Col>
-            <Col xs={12} sm={5} md={4}>
+            <Hidden xs>
+              <Col xs={12} sm={5} md={4} offset={{ sm: 1, md: 2 }}>
+                <div className={styles.imgBox}>
+                  <img src={imgMacbook} alt={'Vantagens do Banco Santander'} />
+                </div>
+              </Col>
+            </Hidden>
+            <Col xs={10} sm={5} md={4} offset={{ xs: 1 }}>
               <ul className={styles.list}>
-                <li className={styles.listItem}><img src={iconChecked} /> Taxa de Administração mais baixa: 0,19% e 0,21% a.m., dependendo do valor da carta de crédito.</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Utilize até 30% da carta de crédito para dar o lance embutido</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Reduza até 30% do valor da sua parcela com o Plano Flex</li>
-                <li className={styles.listItem}><img src={iconChecked} /> Escolha um veículo novo ou usado com até 10 anos de uso.</li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Taxa de Administração mais baixa: 0,19% e 0,21% a.m., dependendo do valor da carta de crédito.</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Utilize até 30% da carta de crédito para dar o lance embutido</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Reduza até 30% do valor da sua parcela com o Plano Flex</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Escolha um veículo novo ou usado com até 10 anos de uso.</p></li>
               </ul>
             </Col>
+            <Hidden sm md lg xl>
+              <Col xs={12}>
+                <div className={styles.imgBox}>
+                  <img src={imgMacbook} alt={'Vantagens do Banco Santander'} />
+                </div>
+              </Col>
+            </Hidden>
           </Row>
         </Container>
       </section>

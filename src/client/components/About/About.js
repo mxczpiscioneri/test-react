@@ -79,7 +79,7 @@ const About = props => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h3 className={styles.title}>Entenda as etapas para você contratar sua carta de crédito</h3>
+              <h3 className={styles.title}>Entenda as etapas para você contratar sua <span>carta de crédito</span></h3>
             </Col>
           </Row>
 

@@ -118,7 +118,7 @@
   .bm-cross-button {
     width: 22px !important;
     height: 15px !important;
-    right: -37px !important;
+    right: 17px !important;
     top: 17px !important;
 
     @media (min-width: 768px) {

@@ -3,10 +3,19 @@
   width: 100%;
   text-align: center;
 
+  @media (max-width: 768px) {
+    height: 170px;
+  }
+
   .containerImg {
     position: relative;
     background-image: url('./bg-thumb-video.png');
     height: 100%;
+
+    @media (max-width: 768px) {
+      background-position: top;
+      background-size: cover;
+    }
 
     .content {
       display: flex;
@@ -18,6 +27,10 @@
       .play {
         cursor: pointer;
         transition: all 0.3s ease;
+
+        @media (max-width: 768px) {
+          width: 32px;
+        }
       
         &:hover {
           opacity: 0.8;
@@ -30,6 +43,12 @@
         font-size: 26px;
         line-height: 45px;
         text-align: center;
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 20px;
+          padding: 0 70px;
+        }
       
         span {
           font-weight: 600;

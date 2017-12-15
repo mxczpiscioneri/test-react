@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Container, Row, Col } from '../Grid/Grid'
+import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import styles from './listCars.css'
 import Item from './Item/Item';
 import imgCruze from './cruze.png';
@@ -22,13 +22,13 @@ const ListCars = props => {
       <Container>
         <Row>
           <Col xs={12} md={6} offset={{ md: 3 }}>
-            <h3 className={styles.title}>Confira algumas sugestões de carros que você pode comprar com a carta escolhida</h3>
+            <h3 className={styles.title}>Confira algumas sugestões de carros que você pode <span>comprar</span> com a carta escolhida</h3>
           </Col>
         </Row>
         <Row>
           {
             cars.map((item, index) =>
-              <Col xs={12} sm={6} md={3} key={index}>
+              <Col xs={6} md={3} key={index}>
                 <Item
                   name={item.name}
                   value={item.value}
@@ -37,11 +37,13 @@ const ListCars = props => {
             )
           }
         </Row>
-        <Row>
-          <Col xs={12}>
-            <p className={styles.text}>*Veículos para sugestão de compra baseados na carta de crédito escolhida. O Consósrcio Santander.</p>
-          </Col>
-        </Row>
+        <Hidden xs>
+          <Row>
+            <Col xs={12}>
+              <p className={styles.text}>*Veículos para sugestão de compra baseados na carta de crédito escolhida. O Consósrcio Santander.</p>
+            </Col>
+          </Row>
+        </Hidden>
       </Container>
     </section>
   )

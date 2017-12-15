@@ -3,7 +3,8 @@ import classNames from 'classnames'
 import {
   Container as DefaultContainer,
   Col as DefaultCol,
-  Row as DefaultRow
+  Row as DefaultRow,
+  Hidden as DefaultHidden
 } from 'react-grid-system'
 import styles from './grid.scss'
 
@@ -81,5 +82,18 @@ export const Col = props => {
     >
       {children}
     </DefaultCol>
+  )
+}
+
+export const Hidden = props => {
+  const {
+    children,
+    ...rest
+  } = props
+
+  return (
+    <DefaultHidden {...rest}>
+      {children}
+    </DefaultHidden>
   )
 }

@@ -18,6 +18,11 @@ class Menu extends React.Component {
     }
   }
 
+  goResult = (e) => {
+    e.preventDefault()
+    window.location = '/resultado'
+  }
+
   render() {
     const isMenuOpen = function (state) {
       return state.isOpen;
@@ -36,7 +41,7 @@ class Menu extends React.Component {
           <Link to={routePaths.about.path}>{routePaths.about.title}</Link>
           <Link to={routePaths.why.path}>{routePaths.why.title}</Link>
           <Link to={routePaths.faq.path}>{routePaths.faq.title}</Link>
-          <button>SIMULAR CONSÓRCIO</button>
+          <button onClick={this.goResult}>SIMULAR CONSÓRCIO</button>
         </MenuMobile>
         <Sticky topOffset={130}>
           {({

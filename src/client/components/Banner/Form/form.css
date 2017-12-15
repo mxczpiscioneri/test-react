@@ -10,6 +10,11 @@
   right: 0;
   margin: 0 auto;
 
+  @media (max-width: 768px) {
+    top: -120px;
+    background: none;
+  }
+
   .tab {
     margin-bottom: 20px;
 
@@ -51,6 +56,12 @@
     border: 1px solid #43BCCD;	
     background-color: #FFFFFF;
 
+    @media (max-width: 768px) {
+      font-size: 13px;
+      line-height: 16px;
+      padding: 11px 30px;
+    }
+
     &:hover {
       opacity: .95;
     }
@@ -62,11 +73,25 @@
     background-color: #43BCCD;
     color: #FFF;
   }
+
+  .form_content {
+    @media (max-width: 768px) {
+      padding: 20px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+      background: #FFF;
+      border-radius: 2px;
+    }
+  }
+
   .form_group {
     position: relative;
     display: inline-block;
     vertical-align: middle;
     width: calc(100% - 170px);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     label {
       color: #8B8C99;	
@@ -108,7 +133,19 @@
     vertical-align: middle;
     outline: none;
     cursor: pointer;
-    
+
+    @media (max-width: 768px) {
+      width: calc(100% - 60px);
+      height: 48px;
+      margin: 0;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      margin: 0 30px;
+    }
+
     &:hover {
       opacity: .9;
     }

@@ -7,9 +7,17 @@
   height: auto;
   margin-bottom: 30px;
 
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
+
   .boxImage {
     text-align: center;
     min-height: 155px;
+
+    @media (max-width: 768px) {
+      min-height: 80px;
+    }
 
     img {
       max-width: 100%;
@@ -24,15 +32,23 @@
     font-weight: 500;	
     line-height: 20px;
     margin: 15px 0 0 0;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .value {
     color: #8B8C9A;	
     font-family: Poppins;	
     font-size: 14px;	
-    font-weight: 300;	
+    font-weight: 100;	
     line-height: 23px;
     margin: 5px 0 0 0;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
 
     span {
       font-weight: 600;	

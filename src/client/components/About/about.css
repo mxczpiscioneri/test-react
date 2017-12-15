@@ -2,6 +2,10 @@
   background-color: #f6f7fa;
   padding-bottom: 40px;
 
+  @media (max-width: 768px) {
+    padding-bottom: 15px;
+  }
+
   .title {
     color: #4D4C59;	
     font-family: Poppins;	
@@ -10,6 +14,16 @@
     line-height: 27px;	
     text-align: center;
     margin: 50px 0 65px 0;
+
+    @media (max-width: 768px) {
+      margin: 35px 0;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    span {
+      font-weight: 600;
+    }
   }
 
   .boxIcon {
@@ -21,6 +35,12 @@
     padding: 20px 0 15px 0;
     box-sizing: border-box;
 
+    @media (max-width: 768px) {
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+      border-radius: 4px 4px 0 0;
+      border-bottom: 0.5px solid rgba(140, 160, 179, 0.3);
+    }
+
     img {
       display: inline-block;
     }
@@ -30,7 +50,7 @@
       color: #787987;	
       font-family: Poppins;	
       font-size: 14px;	
-      font-weight: 500;	
+      font-weight: 600;	
       line-height: 20px;
       margin-top: 8px;
     }
@@ -48,11 +68,23 @@
     margin-bottom: 30px;
     padding: 0 20px;
 
+    @media (max-width: 768px) {
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+      border-radius: 0 0 4px 4px;
+      border: none;
+      margin-bottom: 20px;
+    }
+
     p {
       color: #8B8C9A;	
       font-family: Poppins;	
       font-size: 14px;	
       line-height: 18px;
+
+      @media (max-width: 768px) {
+        font-size: 13px;
+        line-height: 22px;
+      }
     }
   }
 }
