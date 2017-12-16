@@ -8,7 +8,7 @@ import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
 import Alert from '../Alert/Alert'
-import styles from './form.css'
+import styles from './formMobile.css'
 
 const validate = values => {
   const errors = {}
@@ -32,7 +32,7 @@ const validate = values => {
   return errors
 }
 
-class Form extends React.Component {
+class FormMobile extends React.Component {
   constructor(props) {
     super(props)
 
@@ -50,22 +50,25 @@ class Form extends React.Component {
     const props = this.props
 
     return (
-      <section className={styles.container}>
-        <form onSubmit={this._submit} name="form">
-          <Input label='Nome' name='name' />
-          <Input label='Telefone' name='phone' />
-          <Input label='E-mail' name='email' />
-          <Input label='*CPF' name='cpf' />
-          <RadioButtonGroup name='installment'>
-            <RadioButton value='normal' label='Parcela normal' />
-            <RadioButton value='flex' label='Parcela flex' />
-          </RadioButtonGroup>
-          <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a vadaliação do meu CPF.' />
-          <button type='submit' className={styles.button}>ME LIGUE</button>
-          <Alert show={this.state.alert} onConfirm={() => {
-            window.location = '/'
-          }} />
-        </form>
+      <section>
+        <div className={styles.container}>
+          <h4 className={styles.formOrientation}>Preencha os campos do formulário abaixo:</h4>
+          <form onSubmit={this._submit} name='formMobile'>
+            <Input label='Seu nome' name='name' />
+            <Input label='Seu telefone' name='phone' />
+            <Input label='Seu e-mail' name='email' />
+            <Input label='*CPF' name='cpf' />
+            <RadioButtonGroup name='installment'>
+              <RadioButton value='normal' label='Parcela normal' />
+              <RadioButton value='flex' label='Parcela flex' />
+            </RadioButtonGroup>
+            <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
+            <Alert show={this.state.alert} onConfirm={() => {
+              window.location = '/'
+            }} />
+          </form>
+        </div>
+        <button type='submit' className={styles.button}>ME LIGUE</button>
       </section>
     )
   }
@@ -73,8 +76,8 @@ class Form extends React.Component {
 
 const InitializeFromStateForm = reduxForm({
   validate,
-  form: 'form'
-})(Form)
+  form: 'formMobile'
+})(FormMobile)
 
 const mapStateToProps = state => ({})
 

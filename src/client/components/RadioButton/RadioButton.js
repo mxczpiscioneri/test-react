@@ -26,8 +26,7 @@ const RadioButton = (props) => {
       component={Radio}
       {...props}
       labelStyle={style.labelStyle}
-      iconStyle={style.iconStyle}
-      style={labelStyle} />
+      iconStyle={style.iconStyle} />
   )
 }
 
