@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  fill="#8b8c99" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_atencao</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Simulador-Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-494.000000, -172.000000)" stroke-linejoin="round">
+        <g id="Legenda" transform="translate(370.000000, 151.000000)" stroke="#FFFFFF">
+            <g fill="#8b8c99" id="ic_atencao" transform="translate(133.000000, 30.000000) scale(1, -1) translate(-133.000000, -30.000000) translate(125.000000, 22.000000)">
+                <path d="M15.74885,7.8662 C15.82285,12.14645 12.28025,15.67705 8,15.7517 C3.72045,15.8257 0.32515,12.4163 0.25115,8.13605 C0.17645,3.8565 3.72045,0.3252 8,0.2512 C12.27955,0.1765 15.6749,3.58735 15.74885,7.8662 Z" id="Stroke-1" stroke-linecap="round"></path>
+                <path d="M8,9.0572 L8,4.1252" id="Stroke-2" stroke-linecap="round"></path>
+                <path d="M8.3523,11.5232 C8.3523,11.71765 8.19445,11.87545 8,11.87545 C7.80555,11.87545 7.64775,11.71765 7.64775,11.5232 C7.64775,11.3287 7.80555,11.1709 8,11.1709 C8.19445,11.1709 8.3523,11.3287 8.3523,11.5232 Z" id="Stroke-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>
