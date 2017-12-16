@@ -12,6 +12,10 @@ p {
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    min-height: auto;	
+  }
 }
 
 .container:hover {
@@ -42,6 +46,10 @@ p {
 
 .container:hover::after {
   transform: scaleY(1);
+
+  @media (max-width: 768px) {
+    transform: scaleY(0);
+  }
 }
 
 .top {
@@ -60,6 +68,11 @@ p {
   height: 235px;
   text-align: center;
   padding-top: 0; 
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 0 20px 20px 20px;
+  }
 }
 
 .retancle {
@@ -79,6 +92,10 @@ p {
   border-top: 0.5px solid #eee;
   cursor: pointer;  
   transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .buttonText {
@@ -97,6 +114,11 @@ p {
   font-size: 19px;	
   font-weight: 300;	
   line-height: 31px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 26px;	
+  }
 }
 
 .value {
@@ -105,14 +127,23 @@ p {
   font-size: 32px;	
   font-weight: bold;	
   line-height: 53px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .labels {
   color: #787988;	
   font-family: Poppins;	
   font-size: 14px;	
-  font-weight: 200;	
+  font-weight: 300;	
   line-height: 19px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;	
+  }
 }
 
 .installment {
@@ -120,6 +151,10 @@ p {
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;	
+  }
 }
 
 .installmentFlex {

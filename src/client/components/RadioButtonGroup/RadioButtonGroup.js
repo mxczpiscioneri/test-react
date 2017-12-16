@@ -7,7 +7,6 @@ import { Field } from 'redux-form'
 
 const styles = {
   style: {
-    width: '50%',
     display: 'flex',
     marginTop: '50px'
   }

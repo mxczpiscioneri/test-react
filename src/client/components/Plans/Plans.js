@@ -15,6 +15,11 @@ class Plans extends React.Component {
     }
   }
 
+  submitForm = (e) => {
+    e.preventDefault()
+    window.location = '/tenho-interesse'
+  }
+
   render() {
     return (
       <section className={styles.container}>
@@ -44,7 +49,7 @@ class Plans extends React.Component {
               </Row>
               <Row>
                 <Col xs={12}>
-                  <button className={styles.btn}>TENHO INTERESSE</button>
+                  <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
                 </Col>
               </Row>
               <Row>
