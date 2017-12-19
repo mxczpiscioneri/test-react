@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import Input from '../../Input/Input'
+import InputPhone from '../../InputPhone/InputPhone'
 import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
@@ -53,7 +54,7 @@ class Form extends React.Component {
       <section className={styles.container}>
         <form onSubmit={this._submit} name="form">
           <Input label='Nome' name='name' />
-          <Input label='Telefone' name='phone' />
+          <InputPhone label='Telefone' name='phone' />
           <Input label='E-mail' name='email' />
           <Input label='*CPF' name='cpf' />
           <RadioButtonGroup name='installment'>
