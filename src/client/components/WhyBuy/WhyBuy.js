@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Container, Row, Col } from '../Grid/Grid'
+import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import Item from './Item/Item';
 import economy from './icone-economia.svg';
 import bureaucracy from './icone-burocracia.svg';
@@ -15,7 +15,12 @@ const WhyBuy = props => {
       <Container>
         <Row>
           <Col xs={12} sm={8} offset={{ sm: 2 }}>
-            <h3 className={styles.title}>O Consórcio Santander é a união de um grupo de pessoas que planeja a compra do veículo pagando bem menos.</h3>
+            <Hidden xs>
+              <h3 className={styles.title}>O Consórcio Santander é a união de um grupo de pessoas que planeja a compra do veículo pagando bem menos.</h3>
+            </Hidden>
+            <Hidden sm md lg xl>
+              <h3 className={styles.title}>Por que adiquirir o <span className={styles.strong}>Consórcio Santander?</span></h3>
+            </Hidden>
           </Col>
         </Row>
         <Row>

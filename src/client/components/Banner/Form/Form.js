@@ -34,9 +34,16 @@ class Form extends Component {
         </div>
         <div className={styles.form_content}>
           <div className={styles.form_group}>
-            <InputDecimal
-              name='value'
-              label={<label>Quanto você pode <span>pagar</span> na parcela?'</label>} />
+            <Hidden xs>
+              <InputDecimal
+                name='value'
+                label={<label>Quanto você pode <span>pagar</span> na parcela?</label>} />
+            </Hidden>
+            <Hidden sm md lg xl>
+              <InputDecimal
+                name='value'
+                label={<label>Quanto você pode pagar na parcela?</label>} />
+            </Hidden>
           </div>
           <button type="submit" className={styles.btn_submit}>Simular</button>
         </div>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {
   TextField
 } from 'redux-form-material-ui'
+import { Hidden } from '../Grid/Grid'
 import { Field } from 'redux-form'
 
 const styles = {
@@ -41,6 +42,25 @@ const styles = {
   }
 }
 
+const stylesXs = {
+  inputStyle: {
+    width: '100%',
+    borderRadius: '2px',
+    backgroundColor: '#FFFFFF',
+    color: '#4D4C59',
+    fontFamily: 'Poppins',
+    fontSize: '18px',
+    border: 'none',
+    boxSizing: 'border-box',
+    padding: '0px 15px 10px 15px',
+    marginTop: '4px',
+    height: '100px',
+    paddingLeft: '0px'
+  },
+  underlineStyle: {
+  },
+}
+
 const makeMask = (value) => {
   if (!value) {
     return value
@@ -77,7 +97,7 @@ const makeMask = (value) => {
 
 const leftPad = (value, length, replacement) => {
   let result = (value || '').toString()
-  
+
   while (result.length < length) {
     result = replacement + result;
   }
@@ -87,17 +107,34 @@ const leftPad = (value, length, replacement) => {
 
 const InputDecimal = (props) => {
   return (
-    <Field component={TextField}
-      {...props}
-      floatingLabelText={props.label}
-      style={styles.style}
-      inputStyle={styles.inputStyle}
-      floatingLabelStyle={styles.floatingLabelStyle}
-      floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
-      underlineStyle={styles.underlineStyle}
-      underlineFocusStyle={styles.underlineFocusStyle}
-      errorStyle={styles.errorStyle}
-      normalize={makeMask}/>
+    <div>
+      <Hidden xs>
+        <Field component={TextField}
+          {...props}
+          floatingLabelText={props.label}
+          style={styles.style}
+          inputStyle={styles.inputStyle}
+          floatingLabelStyle={styles.floatingLabelStyle}
+          floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
+          underlineStyle={styles.underlineStyle}
+          underlineFocusStyle={styles.underlineFocusStyle}
+          errorStyle={styles.errorStyle}
+          normalize={makeMask} />
+      </Hidden>
+      <Hidden sm md lg xl>
+        <Field component={TextField}
+          {...props}
+          floatingLabelText={props.label}
+          style={styles.style}
+          inputStyle={stylesXs.inputStyle}
+          floatingLabelStyle={styles.floatingLabelStyle}
+          floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
+          underlineStyle={stylesXs.underlineStyle}
+          underlineFocusStyle={styles.underlineFocusStyle}
+          errorStyle={styles.errorStyle}
+          normalize={makeMask} />
+      </Hidden>
+    </div>
   )
 }
 
