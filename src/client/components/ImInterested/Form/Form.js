@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import Input from '../../Input/Input'
 import InputPhone from '../../InputPhone/InputPhone'
+import InputCpf from '../../InputCpf/InputCpf'
 import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
@@ -56,7 +57,7 @@ class Form extends React.Component {
           <Input label='Nome' name='name' />
           <InputPhone label='Telefone' name='phone' />
           <Input label='E-mail' name='email' />
-          <Input label='*CPF' name='cpf' />
+          <InputCpf label='*CPF' name='cpf' />
           <RadioButtonGroup name='installment'>
             <RadioButton value='normal' label='Parcela normal' />
             <RadioButton value='flex' label='Parcela flex' />

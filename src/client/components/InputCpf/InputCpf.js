@@ -46,10 +46,8 @@ const makeMask = (value) => {
     onlyNums = onlyNums.substr(0, 11)
   }
  
-  if (onlyNums.length === 10) {
-    return `(${onlyNums.substr(0, 2)}) ${onlyNums.substr(2, 4)}-${onlyNums.substr(6, 4)}`
-  } else if (onlyNums.length === 11) {
-    return `(${onlyNums.substr(0, 2)}) ${onlyNums.substr(2, 5)}-${onlyNums.substr(7, 4)}`
+  if (onlyNums.length === 11) {
+    return `${onlyNums.substr(0, 3)}.${onlyNums.substr(3, 3)}.${onlyNums.substr(6, 3)}-${onlyNums.substr(9, 2)}`
   }
   
   return onlyNums
