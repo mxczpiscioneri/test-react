@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import CurrencyInput from 'react-currency-input';
 import styles from './form.css'
 import { Hidden } from '../../Grid/Grid';
+import InputDecimal from '../../InputDecimal/InputDecimal'
+import { reduxForm } from 'redux-form';
 
 class Form extends Component {
   constructor() {
@@ -17,7 +18,7 @@ class Form extends Component {
 
   render() {
     return (
-      <form className={styles.form} onSubmit={this.submitForm}>
+      <form className={styles.form} onSubmit={this.submitForm} name="form">
         <div className={styles.tab}>
           <div className={styles.radio}>
             <input type="radio" id="option1" name="radio-group" defaultChecked />
@@ -33,23 +34,36 @@ class Form extends Component {
         </div>
         <div className={styles.form_content}>
           <div className={styles.form_group}>
-            <label>Quanto você pode <span>pagar</span> na parcela ?</label>
-            <CurrencyInput
-              className={styles.input}
-              prefix="R$ "
-              decimalSeparator=","
-              thousandSeparator="." />
+            <Hidden xs>
+              <InputDecimal
+                name='value'
+                label={<label>Quanto você pode <span>pagar</span> na parcela?</label>} />
+            </Hidden>
+            <Hidden sm md lg xl>
+              <InputDecimal
+                name='value'
+                label={<label>Quanto você pode pagar na parcela?</label>} />
+            </Hidden>
           </div>
           <button type="submit" className={styles.btn_submit}>Simular</button>
         </div>
-        <p>mínimo: R$ 500  |  máximo: R$ 2.000</p>
+        <Hidden xs>
+          <p>mínimo: R$ 500  |  máximo: R$ 2.000</p>
+        </Hidden>
       </form>
     )
   }
 }
 
+const validate = (values) => { }
+
+const InitializeFromStateForm = reduxForm({
+  validate,
+  form: 'form'
+})(Form)
+
 const mapStateToProps = state => ({})
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form)
+export default connect(mapStateToProps, mapDispatchToProps)(InitializeFromStateForm)

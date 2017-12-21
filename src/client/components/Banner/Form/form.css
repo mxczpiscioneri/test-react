@@ -80,6 +80,8 @@
       box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
       background: #FFF;
       border-radius: 2px;
+      padding-top: 10px;
+      padding-bottom: 40px; 
     }
   }
 
@@ -96,26 +98,21 @@
     label {
       color: #8B8C99;	
       font-family: Poppins;	
-      font-size: 12px;
+      font-size: 16px;
       line-height: 17px;
       position: absolute;
-      top: 10px;
-      left: 15px;
+      top: -20px;
+      width: 100%;
+      left: 8px;
 
       span {
         color: #F3123C;
       }
-    }
-    .input {
-      width: 100%;	
-      border-radius: 2px;	
-      background-color: #FFFFFF;
-      color: #4D4C59;	
-      font-family: Poppins;	
-      font-size: 16px;
-      border: none;
-      box-sizing: border-box;
-      padding: 30px 15px 10px 15px;
+
+      @media (max-width: 768px) {
+        left: 0px;
+        font-size: 14px;
+      }
     }
   }
   .btn_submit {
@@ -140,7 +137,7 @@
       margin: 0;
       text-transform: uppercase;
       position: absolute;
-      bottom: -10px;
+      bottom: -20px;
       left: 0;
       right: 0;
       margin: 0 30px;
@@ -149,5 +146,23 @@
     &:hover {
       background-color: #f75977;
     }
+  }
+}
+
+@media(max-width: 768px) {
+  .radio {
+    width: 50%;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .radio > label {
+    width: 100%;
+    display: flex !important;
+    padding: 0 !important;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
   }
 }

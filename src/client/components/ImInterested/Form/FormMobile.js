@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import Input from '../../Input/Input'
+import InputPhone from '../../InputPhone/InputPhone'
+import InputCpf from '../../InputCpf/InputCpf'
 import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
@@ -55,9 +57,9 @@ class FormMobile extends React.Component {
           <h4 className={styles.formOrientation}>Preencha os campos do formulário abaixo:</h4>
           <form onSubmit={this._submit} name='formMobile'>
             <Input label='Seu nome' name='name' />
-            <Input label='Seu telefone' name='phone' />
+            <InputPhone label='Seu telefone' name='phone' />
             <Input label='Seu e-mail' name='email' />
-            <Input label='*CPF' name='cpf' />
+            <InputCpf label='*CPF' name='cpf' />
             <RadioButtonGroup name='installment'>
               <RadioButton value='normal' label='Parcela normal' />
               <RadioButton value='flex' label='Parcela flex' />
