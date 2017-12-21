@@ -9,5 +9,6 @@ const {
 export default {
   ...environments[config.env],
   env,
-  paths
+  paths,
+  allowedIps: []
 }

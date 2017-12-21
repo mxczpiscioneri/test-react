@@ -7,6 +7,11 @@ import preRender from 'prerender-node'
 import config from './config'
 import logger from './lib/logger'
 import apiRoutes from './api/routes'
+import {
+  ipFilter,
+  handleIpDenied
+} from './services/restrictIps'
+
 const app = express()
 
 app.use(helmet())
@@ -47,6 +52,8 @@ if (config.env == 'development') {
     res.end()
   })
 } else {
+  app.use(ipFilter)
+  app.use(handleIpDenied)
   app.use(preRender)
   app.use(express.static(`${config.paths.dist}`))
   app.get('/*', (req, res) => {

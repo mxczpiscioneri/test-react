@@ -31,6 +31,7 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.28.4",
     "express": "^4.15.4",
+    "express-ipfilter": "^0.3.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "faker": "^4.1.0",
     "helmet": "^3.8.1",
