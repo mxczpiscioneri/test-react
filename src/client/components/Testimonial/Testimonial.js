@@ -4,14 +4,17 @@ import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 import { Container, Row, Col } from '../Grid/Grid'
 import icon from './icone-quote.svg'
+import imgUser01 from './user01.png'
+import imgUser02 from './user02.png'
+import imgUser03 from './user03.png'
 import styles from './testimonial.css'
 
 const Testimonial = props => {
 
   const listTestimonial = [
-    { name: "Miguel Alves Barros", picture: "http://lorempixel.com/90/90/people/1", message: "Eu fui muito bem atendido e a proposta oferecida foi muito boa. Eu recomendo e faria novamente." },
-    { name: "Douglas Cavalcanti Souza", picture: "http://lorempixel.com/90/90/people/7", message: "Eu fui muito bem atendido e a proposta oferecida foi muito boa. Eu recomendo e faria novamente." },
-    { name: "Raissa Fernandes Pereira", picture: "http://lorempixel.com/90/90/people/9", message: "Eu fui muito bem atendido e a proposta oferecida foi muito boa. Eu recomendo e faria novamente." },
+    { name: "Miguel Alves Barros", picture: imgUser01, message: "Eu fui muito bem atendido e a proposta oferecida foi muito boa. Eu recomendo e faria novamente." },
+    { name: "Douglas Cavalcanti Souza", picture: imgUser02, message: "Eu fui muito bem atendido e a proposta oferecida foi muito boa. Eu recomendo e faria novamente." },
+    { name: "Raissa Fernandes Pereira", picture: imgUser03, message: "Eu fui muito bem atendido e a proposta oferecida foi muito boa. Eu recomendo e faria novamente." },
   ]
 
   const testimonials = listTestimonial.map((testimonial, i) => (
