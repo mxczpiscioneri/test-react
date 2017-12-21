@@ -5,13 +5,14 @@ import Slider from 'react-slick'
 import styles from './cars.css'
 import ArrowLeft from './ArrowLeft'
 import ArrowRight from './ArrowRight'
+import imgCar from './car01.png'
 
 const Cars = props => {
 
   const listCars = [
-    { name: "Fiat Mobi", picture: "http://lorempixel.com/270/175/transport/4" },
-    { name: "Hyundai HB20", picture: "http://lorempixel.com/270/175/transport/5" },
-    { name: "Chevrolet Cruze", picture: "http://lorempixel.com/270/175/transport/8" },
+    { name: "Fiat Mobi", picture: imgCar },
+    { name: "Hyundai HB20", picture: imgCar },
+    { name: "Chevrolet Cruze", picture: imgCar },
   ]
 
   const cars = listCars.map((car, i) => (

@@ -2,16 +2,17 @@
   text-align: center;
 
   .picture {
-    height: 175px;	
-    width: 270px;	
+    max-width: 100%;
     display: inline-block;
+    padding: 0 50px;
+    box-sizing: border-box;
   }
   
   .name {
     color: #8B8C99;
     font-family: Poppins;	
     font-size: 14px;	
-    font-weight: 600;	
+    font-weight: 500;	
     line-height: 20px;
     margin: 10px 0 0 0;
   }
@@ -19,11 +20,30 @@
 
 :global {
   .slick-next:before, .slick-prev:before {
-    color: #eb4b3b;
+    opacity: 1 !important;
   }
 
-  .slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
-    color: #e3e4ec;
-    opacity: 1;
+  .slick-next:before {
+    content: url('./arrow-right.svg');
+  }
+   
+  .slick-prev:before {
+    content: url('./arrow-left.svg');
+  }
+
+  .slick-next.slick-disabled:before {
+    content: url('./arrow-right-disabled.svg');
+  }
+  .slick-prev.slick-disabled:before {
+    content: url('./arrow-left-disabled.svg');
+  }
+
+  .slick-prev {
+    left: 0;
+    z-index: 1;
+  }
+
+  .slick-next {
+    right: 0;
   }
 }
