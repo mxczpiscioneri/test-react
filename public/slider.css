@@ -93,4 +93,14 @@
   .slider.custom-labels:after {
     content: none;
   }
+
+  .rangeslider__handle-tooltip {
+    display: block !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px !important;
+    padding: 0;
+    top: -40px !important;
+  }
 }
