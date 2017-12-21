@@ -26,44 +26,18 @@ class Plans extends React.Component {
         <Container>
           <Row>
             <Col xs={12}>
-              <h3 className={styles.title}>Já consigo ter uma ideia do que você precisa  :)</h3>
-              <p className={styles.subTitle}>Veja abaixo alguns planos que separei pra você!</p>
+              <h3 className={styles.title}>Resultado da sua simulação</h3>
             </Col>
           </Row>
           <Row>
             <Col xs={12} sm={5} offset={{ sm: 1 }}>
-              <Row>
-                <Col xs={12}>
-                  <p className={styles.consortium}><img src={Star} alt='Consórcio Escolhido' /> Consórcio Escolhido</p>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} sm={5} className={styles.normal}>
-                  <label>Parcela normal</label>
-                  <span>R$ 1.200</span>
-                </Col>
-                <Col xs={12} sm={5} className={styles.flex}>
-                  <label>Parcela flex</label>
-                  <span>R$ 700,00</span>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12}>
-                  <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} sm={6}>
-                  <p className={styles.text}>Valor do veículo <strong>R$ 45.000</strong></p>
-                </Col>
-                <Col xs={12} sm={6}>
-                  <p className={styles.text}>Prazo <strong>72 Meses</strong></p>
-                </Col>
-              </Row>
-
+              <p className={styles.textResult}>Você terá uma carta de crédito de R$ <span>45.000,00</span> pagando apenas <span>R$ 1.200</span> por <span>72</span> meses.</p>
+              <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ 700</span> nos primeiros meses, não deixe de optar pelo plano Flex!</p>
+              <p className={styles.textResult}>Valor do veículo R$ 45.000 <span className={styles.light}>Prazo 72 Meses</span></p>
+              <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
             </Col>
             <Col xs={12} sm={4}>
-              <p className={styles.suggestions}>Sugestão de <span>veículos</span> que você poderá comprar *</p>
+              <p className={styles.suggestions}>Sugestão de <span>veículos</span> que você poderá comprar com a carta escolhida.</p>
               <Cars />
             </Col>
           </Row>

@@ -3,7 +3,6 @@ p {
 }
 
 .container {
-  min-height: 320px;
   height: auto;
   background-color: #FFFFFF;
   border-radius: 2px;	
@@ -12,10 +11,6 @@ p {
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
-
-  @media (max-width: 768px) {
-    min-height: auto;	
-  }
 }
 
 .container:hover {
@@ -65,12 +60,10 @@ p {
 }
 
 .content {
-  height: 235px;
   text-align: center;
   padding-top: 0; 
 
   @media (max-width: 768px) {
-    height: auto;
     padding: 0 20px 20px 20px;
   }
 }
@@ -92,6 +85,7 @@ p {
   border-top: 0.5px solid #eee;
   cursor: pointer;  
   transition: all 0.3s ease;
+  margin-top: 20px;
 
   @media (max-width: 768px) {
     display: none;

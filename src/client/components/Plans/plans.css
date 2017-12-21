@@ -4,11 +4,15 @@
   .title {
     color: #4D4C59;	
     font-family: Poppins;	
-    font-size: 26px;	
-    line-height: 36px;
+    font-size: 21px;	
+    line-height: 27px;
     font-weight: 400;	
     text-align: center;
-    margin: 30px 0 0 0;
+    margin: 60px 0 50px 0;
+
+    @media (max-width: 768px) {
+      margin: 35px 0;
+    }
   }
   
   .subTitle {
@@ -71,22 +75,26 @@
   }
 
   .btn {
-    padding: 13px 45px;
-    margin: 20px 0;
-    border-radius: 3px;	
+    padding: 13px 0;
+    border-radius: 2px;	
     background-color: #F3123C;
     color: #FFFFFF;	
     font-family: Poppins;
     font-size: 13px;	
     line-height: 21px;
     border: none;
-    display: inline-block;
     vertical-align: middle;
     outline: none;
     cursor: pointer;
+    width: calc(100% - 30px);
     
     &:hover {
-      opacity: .8;
+      background-color: #f75977;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 50px;
     }
   }
 
@@ -99,16 +107,45 @@
   }
 
   .suggestions {
+    border-radius: 1px;	
+    background-color: #FFFFFF;	
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+    padding: 8px;
     color: #787987;	
     font-family: Poppins;	
-    font-size: 14px;	
-    line-height: 20px;
-    text-align: center;
-    padding: 0 50px;
-    margin-bottom: 0;
+    font-size: 13px;	
+    line-height: 17px;
+    margin-bottom: 40px;
 
     span {
-      color: #eb4b3b;
+      color: #53bccd;
+    }
+  }
+
+  .textResult {
+    color: #4D4C59;	
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    padding-right: 30px;
+
+    span {
+      font-weight: 600;
+    }
+
+    .green {
+      color: #53bccd;
+    }
+
+    .light{
+      font-weight: 300;
+      margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0;
     }
   }
 }
