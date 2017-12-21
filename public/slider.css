@@ -101,6 +101,10 @@
     align-items: center;
     width: 100px !important;
     padding: 0;
-    top: -40px !important;
+    top: -40px !important ;
+  }
+
+  .slider.custom-labels > .value {
+    display: none;
   }
 }
