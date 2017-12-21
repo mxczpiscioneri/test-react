@@ -85,6 +85,14 @@
   transform: none !important;
 }
 
+.rangeslider-horizontal .rangeslider__handle {
+  background: url('btn-simulador.svg');
+  border: none;
+  border-radius: 0;
+  width: 45px;
+  height: 45px;
+}
+
 @media(max-width: 750px) {
   .slider.custom-labels:before {
     content: none;
