@@ -15,6 +15,10 @@
   }
 }
 
+.smaller {
+  max-height: 400px;
+}
+
 .thumbnail {
   max-width: 100%;
 

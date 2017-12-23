@@ -10,6 +10,13 @@ import bannerDefault from './bg-home.png'
 
 const Banner = props => {
 
+  const heroClass = classNames(
+    styles.hero,
+    {
+      [styles.smaller]: !props.form
+    }
+  )
+
   const actionClass = classNames(
     styles.action,
     {
@@ -29,7 +36,7 @@ const Banner = props => {
 
   const banners = listBanners.map((banner, i) => (
     <div key={i}>
-      <section className={styles.hero}>
+      <section className={heroClass}>
         <img
           className={styles.thumbnail}
           src={banner.image}
