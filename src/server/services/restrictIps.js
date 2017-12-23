@@ -12,5 +12,5 @@ export const handleIpDenied = (err, req, res, next) => {
   else
     res.status(err.status || 500)
 
-  res.send('Under construction')
+  res.send('Access Denied')
 }
