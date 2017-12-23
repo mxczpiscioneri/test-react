@@ -20,6 +20,8 @@ const ListCars = props => {
 
   return (
     <section className={styles.container}>
+    {
+      (cars && cars.length > 0) &&
       <Container>
         <Row>
           <Col xs={12} md={6} offset={{ md: 3 }}>
@@ -43,6 +45,8 @@ const ListCars = props => {
           </Row>
         </Hidden>
       </Container>
+    }
+     
     </section>
   )
 }
