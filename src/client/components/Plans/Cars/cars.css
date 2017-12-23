@@ -19,6 +19,10 @@
 }
 
 :global {
+  .slick-next:not(.slick-disabled):hover, .slick-prev:not(.slick-disabled):hover {
+    opacity: .7;
+  }
+
   .slick-next:before, .slick-prev:before {
     opacity: 1 !important;
   }

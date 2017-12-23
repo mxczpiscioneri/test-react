@@ -109,16 +109,16 @@
   .suggestions {
     border-radius: 1px;	
     background-color: #FFFFFF;	
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
     padding: 8px;
     color: #787987;	
     font-family: Poppins;	
     font-size: 13px;	
+    font-weight: 300;
     line-height: 17px;
     margin-bottom: 40px;
 
     span {
-      color: #53bccd;
+      color: #43BCCD;
     }
   }
 
@@ -132,11 +132,11 @@
     padding-right: 30px;
 
     span {
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .green {
-      color: #53bccd;
+      color: #68C1A9;
     }
 
     .light{

@@ -19,10 +19,6 @@ class SimulateAgain extends React.Component {
     }
   }
 
-  _changeType = () => {
-
-  }
-
   format = value => `R$ ${value.toFixed(2)}`
 
   render() {
@@ -34,7 +30,7 @@ class SimulateAgain extends React.Component {
           <Row>
             <Col xs={12} md={4} offset={{ md: 1 }}>
               <div className={styles.title}>QUERO SIMULAR OUTRO</div>
-              <div className={styles.titleXs}>Já consigo ter uma ideia<br/> do que 
+              <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
                 <span className={styles.titleXsStrong}> você precisa :)</span></div>
               <div className={styles.block}>
                 <div

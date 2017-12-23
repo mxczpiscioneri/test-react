@@ -9,7 +9,7 @@
   color: #4D4C59;
   font-family: Poppins;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 300;
   height: auto;
   margin-bottom: 10px;
 }
@@ -53,14 +53,12 @@
 }
 
 .block > div:hover {
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-  background-color: #53bccd;
-  border-color: #53bccd;
-  color: #ffffff; 
+  opacity: .8;
 }
 
 .blockItemSelected {
-  color: #53bccd;
+  background-color: #43BCCD;
+  color: #FFF;
 }
 
 .slider {
