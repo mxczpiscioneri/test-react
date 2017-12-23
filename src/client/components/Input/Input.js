@@ -21,17 +21,17 @@ const styles = {
     top: '50px'
   },
   floatingLabelFocusStyle: {
-    color: '#F3123C',
+    color: '#00bcd4',
     top: '50px'
   },
   underlineStyle: {
     bottom: '-4px'
   },
   underlineFocusStyle: {
-    borderColor: '#F3123C'
+    borderColor: '#00bcd4'
   },
   errorStyle: {
-    color: '#F3123C',
+    color: '#f44336',
     bottom: '10px'
   }
 }
@@ -46,8 +46,8 @@ const Input = (props) => {
       floatingLabelStyle={styles.floatingLabelStyle}
       floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
       underlineStyle={styles.underlineStyle}
-      underlineFocusStyle={styles.underlineFocusStyle} 
-      errorStyle={styles.errorStyle}/>
+      underlineFocusStyle={styles.underlineFocusStyle}
+      errorStyle={styles.errorStyle} />
   )
 }
 

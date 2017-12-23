@@ -10,6 +10,7 @@ import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
 import Alert from '../Alert/Alert'
+import { isEmail } from 'validator'
 import styles from './form.css'
 
 const validate = values => {
@@ -25,6 +26,8 @@ const validate = values => {
 
   if (!values.email) {
     errors.email = 'Preencha seu e-mail'
+  } else if (!isEmail(values.email)) {
+    errors.email = 'E-mail inválido'
   }
 
   if (!values.cpf) {

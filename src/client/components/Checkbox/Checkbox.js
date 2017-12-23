@@ -16,7 +16,7 @@ const styles = {
     lineHeight: '18px'
   },
   iconStyle: {
-    fill: '#F3123C'
+    fill: '#00bcd4'
   }
 }
 

@@ -21,17 +21,17 @@ const styles = {
     top: '50px'
   },
   floatingLabelFocusStyle: {
-    color: '#F3123C',
+    color: '#00bcd4',
     top: '50px'
   },
   underlineStyle: {
     bottom: '-4px'
   },
   underlineFocusStyle: {
-    borderColor: '#F3123C'
+    borderColor: '#00bcd4'
   },
   errorStyle: {
-    color: '#F3123C',
+    color: '#f44336',
     bottom: '10px'
   }
 }
@@ -45,13 +45,13 @@ const makeMask = (value) => {
   if (onlyNums.length > 11) {
     onlyNums = onlyNums.substr(0, 11)
   }
- 
+
   if (onlyNums.length === 10) {
     return `(${onlyNums.substr(0, 2)}) ${onlyNums.substr(2, 4)}-${onlyNums.substr(6, 4)}`
   } else if (onlyNums.length === 11) {
     return `(${onlyNums.substr(0, 2)}) ${onlyNums.substr(2, 5)}-${onlyNums.substr(7, 4)}`
   }
-  
+
   return onlyNums
 }
 

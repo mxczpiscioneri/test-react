@@ -15,8 +15,6 @@ const style = {
   },
   iconStyle: {
     fill: '#F3123C',
-    color: '#F3123C',
-    backgroundColor: '#F3123C'
   }
 }
 

@@ -1,5 +1,5 @@
-svg {
-  fill: #F3123C !important;
+[type="radio"] + div > div > div > svg {
+  fill: #00bcd4 !important;
 }
 
 label {

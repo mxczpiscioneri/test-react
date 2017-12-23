@@ -27,17 +27,17 @@ const styles = {
     top: '50px'
   },
   floatingLabelFocusStyle: {
-    color: '#F3123C',
+    color: '#00bcd4',
     top: '50px'
   },
   underlineStyle: {
     display: 'none'
   },
   underlineFocusStyle: {
-    borderColor: '#F3123C'
+    borderColor: '#00bcd4'
   },
   errorStyle: {
-    color: '#F3123C',
+    color: '#f44336',
     bottom: '10px'
   }
 }
