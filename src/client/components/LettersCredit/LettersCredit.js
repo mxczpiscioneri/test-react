@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import _ from 'lodash'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import scrollToElement from 'scroll-to-element'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import ListDesktop from './ListDesktop'
 import ListMobile from './ListMobile'
@@ -25,12 +26,8 @@ class LettersCredit extends React.Component {
     }
   }
 
-  _seeMore() {
-    let currentLetters = this.state.letters
-    currentLetters = currentLetters.concat(_.cloneDeep(letters.slice(0, this.props.count)))
-    this.setState({
-      letters: currentLetters
-    })
+  _simulateNow() {
+    scrollToElement("#Banner", { offset: 55, duration: 700 })
   }
 
   render() {
@@ -64,9 +61,7 @@ class LettersCredit extends React.Component {
             && (
               <Row>
                 <Col {...this.props.size} offset={this.props.offset} className={styles.buttonContainer}>
-                  <button className={styles.button} onClick={this._seeMore.bind(this)}>
-                    Quero simular agora
-              </button>
+                  <button className={styles.button} onClick={this._simulateNow.bind(this)}>Quero simular agora</button>
                 </Col>
               </Row>
             )

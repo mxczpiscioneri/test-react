@@ -76,7 +76,7 @@ const Banner = props => {
   }
 
   return (
-    <div className={styles.banner}>
+    <div id='Banner' className={styles.banner}>
       <Slider className={styles.slider} {...settings}>
         {banners}
       </Slider>

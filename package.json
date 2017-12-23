@@ -70,6 +70,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
+    "scroll-to-element": "^2.0.0",
     "style-loader": "^0.18.2",
     "sweetalert-react": "^0.4.11",
     "uglify-js": "^2.8.29",
