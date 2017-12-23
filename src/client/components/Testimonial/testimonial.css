@@ -68,6 +68,9 @@
 
   .icon {
     display: inline-block;
+    width: auto;
+    height: auto;
+    border-radius: 0;
 
     @media (max-width: 768px) {
       float: left;
