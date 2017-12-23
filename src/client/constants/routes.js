@@ -15,18 +15,6 @@ export default {
     path: '/duvidas',
     title: 'Dúvidas'
   },
-  howItWorks: {
-    path: '/como-funciona',
-    title: 'Como funciona'
-  },
-  benefits: {
-    path: '/vantagens-contemplacao',
-    title: 'Vantagens e contemplação'
-  },
-  attendance: {
-    path: '/atendimento',
-    title: 'Atendimento'
-  },
   imInterested: {
     path: '/tenho-interesse',
     title: 'Tenho interesse'

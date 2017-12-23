@@ -30,10 +30,9 @@ const Navigation = props => {
           </Col>
           <Col xs={12} lg={6}>
             <nav className={styles.navigation}>
-              <Link to={routePaths.howItWorks.path}>{routePaths.howItWorks.title}</Link>
-              <Link to={routePaths.benefits.path}>{routePaths.benefits.title}</Link>
+              <Link to={routePaths.about.path}>{routePaths.about.title}</Link>
+              <Link to={routePaths.why.path}>{routePaths.why.title}</Link>
               <Link to={routePaths.faq.path}>{routePaths.faq.title}</Link>
-              <Link to={routePaths.attendance.path}>{routePaths.attendance.title}</Link>
             </nav>
           </Col>
           <Col xs={12} lg={4}>
