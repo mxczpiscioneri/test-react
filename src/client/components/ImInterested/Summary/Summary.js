@@ -49,7 +49,7 @@ const Summary = props => {
           className={styles.infoImg}
           src={InfoImg}
           alt={'info'} />
-        <span className={styles.infoText}>Leia todos os detalhes das taxas e juros</span>
+        <span className={styles.infoText}>Leia todos os detalhes das taxas e seguros</span>
       </div>
 
       <div className={styles.car}>
