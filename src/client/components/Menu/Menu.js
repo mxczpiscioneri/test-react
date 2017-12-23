@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import { Sticky } from 'react-sticky'
 import BurgerMenu from 'react-burger-menu'
 import { Container } from '../Grid/Grid'
+import ProgressLinear from '../ProgressLoading/ProgressLinear'
 import styles from './menu.css'
 import logoImg from './logo-wm-white.svg'
 import menuImg from './menu.svg'
@@ -61,6 +62,8 @@ class Menu extends React.Component {
             )
             return (
               <nav className={menuClass}>
+                <ProgressLinear />
+
                 <Container>
                   <div className={styles.content}>
                     <Link to={routePaths.root.path}>
