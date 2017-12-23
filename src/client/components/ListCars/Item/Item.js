@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
 import styles from './Item.css'
+import iconPrice from './price.svg'
 
 const Item = props => {
   return (
@@ -11,7 +12,7 @@ const Item = props => {
         <img src={props.image} alt={props.name} />
       </div>
       <p className={styles.name}>{props.name}</p>
-      <p className={styles.value}>Preço: <span>R$ {props.value.toFixed(3)}</span></p>
+      <p className={styles.value}><img src={iconPrice} /> Preço: <span>R$ {props.value.toFixed(3)}</span></p>
     </div>
   )
 }

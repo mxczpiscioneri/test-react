@@ -46,7 +46,7 @@
     color: #8B8C9A;	
     font-family: Poppins;	
     font-size: 14px;	
-    font-weight: 100;	
+    font-weight: 300;	
     line-height: 23px;
     margin: 5px 0 0 0;
 
@@ -54,8 +54,13 @@
       font-size: 12px;
     }
 
+    img {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
     span {
-      font-weight: 600;	
+      font-weight: 500;	
     }
   }
 }
