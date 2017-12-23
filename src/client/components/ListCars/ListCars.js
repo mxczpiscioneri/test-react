@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import styles from './listCars.css'
-import Item from './Item/Item';
-import imgCruze from './cruze.png';
-import imgHb20 from './hb20.png';
-import imgUno from './uno.png';
-import imgUp from './up.png';
+import ListDesktop from './ListDesktop'
+import ListMobile from './ListMobile'
+import imgCruze from './cruze.png'
+import imgHb20 from './hb20.png'
+import imgUno from './uno.png'
+import imgUp from './up.png'
 
 const ListCars = props => {
   const cars = [
@@ -25,18 +26,15 @@ const ListCars = props => {
             <h3 className={styles.title}>Confira algumas sugestões de carros que você pode <span>comprar</span> com a carta escolhida</h3>
           </Col>
         </Row>
-        <Row>
-          {
-            cars.map((item, index) =>
-              <Col xs={6} md={3} key={index}>
-                <Item
-                  name={item.name}
-                  value={item.value}
-                  image={item.image} />
-              </Col>
-            )
-          }
-        </Row>
+
+        <Hidden xs>
+          <ListDesktop list={cars} />
+        </Hidden>
+
+        <Hidden sm md lg xl>
+          <ListMobile list={cars} />
+        </Hidden>
+
         <Hidden xs>
           <Row>
             <Col xs={12}>
