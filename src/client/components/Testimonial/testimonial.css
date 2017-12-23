@@ -3,7 +3,7 @@
   font-family: Poppins;	
   font-size: 21px;	
   line-height: 27px;
-  font-weight: 400;	
+  font-weight: 300;	
   text-align: center;
   margin: 50px 0;
 
@@ -14,7 +14,7 @@
   }
 
   span {
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 

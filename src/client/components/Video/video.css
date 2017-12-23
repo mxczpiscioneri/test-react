@@ -41,6 +41,7 @@
         color: #FFFFFF;
         font-family: Poppins;
         font-size: 26px;
+        font-weight: 300;	
         line-height: 45px;
         text-align: center;
 
@@ -51,7 +52,7 @@
         }
       
         span {
-          font-weight: 600;
+          font-weight: 500;
         }
       }
     }

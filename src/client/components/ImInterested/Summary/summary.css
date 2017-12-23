@@ -6,6 +6,7 @@ p {
 .title {
   font-family: Poppins;
   font-size: 21px;
+  font-weight: 300;	
   line-height: 27px;
   margin-bottom: 15px;
 }

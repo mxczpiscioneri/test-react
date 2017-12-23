@@ -114,6 +114,13 @@
         left: 0px;
         font-size: 14px;
       }
+
+      i {
+        font-style: normal;
+        font-weight: 300;
+        color: #8B8C99;
+        animation: blink 1s infinite;
+      }
     }
   }
   .btn_submit {
@@ -166,5 +173,14 @@
     align-items: center;
     justify-content: center;
     height: 38px;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #8B8C99;
   }
 }
