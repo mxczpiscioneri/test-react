@@ -9,6 +9,10 @@ import { reduxForm } from 'redux-form';
 class Form extends Component {
   constructor() {
     super()
+
+    this.state = {
+      valueChecked: 'plotValue',
+    }
   }
 
   submitForm = (e) => {
@@ -16,16 +20,20 @@ class Form extends Component {
     window.location = '/resultado'
   }
 
+  handleOptionChange = (changeEvent) => {
+    this.setState({ valueChecked: changeEvent.target.value })
+  }
+
   render() {
     return (
       <form className={styles.form} onSubmit={this.submitForm} name="form">
         <div className={styles.tab}>
           <div className={styles.radio}>
-            <input type="radio" id="option1" name="radio-group" defaultChecked />
+            <input type="radio" id="option1" name="radio-group" value="plotValue" onChange={this.handleOptionChange} defaultChecked />
             <label htmlFor="option1">Valor da Parcela</label>
           </div>
           <div className={styles.radio}>
-            <input type="radio" id="option2" name="radio-group" />
+            <input type="radio" id="option2" name="radio-group" value="vehicleValue" onChange={this.handleOptionChange} />
             <label htmlFor="option2">Valor do Veículo</label>
           </div>
           <Hidden xs>
@@ -34,16 +42,13 @@ class Form extends Component {
         </div>
         <div className={styles.form_content}>
           <div className={styles.form_group}>
-            <Hidden xs>
-              <InputDecimal
-                name='value'
-                label={<label>Quanto você pode <span>pagar</span> na parcela?</label>} />
-            </Hidden>
-            <Hidden sm md lg xl>
-              <InputDecimal
-                name='value'
-                label={<label>Quanto você pode pagar na parcela?</label>} />
-            </Hidden>
+            <InputDecimal
+              name='value'
+              label={
+                this.state.valueChecked === "plotValue" ?
+                  <label>Quanto você pode <span>pagar</span> na parcela?</label> :
+                  <label>Quanto você pode <span>pagar</span> no veículo?</label>
+              } />
           </div>
           <button type="submit" className={styles.btn_submit}>Simular</button>
         </div>

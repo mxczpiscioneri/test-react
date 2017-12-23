@@ -105,10 +105,11 @@
       width: 100%;
       left: 8px;
 
-      span {
-        color: #F3123C;
+      @media (min-width: 768px) {
+        span {
+          color: #F3123C;
+        }
       }
-
       @media (max-width: 768px) {
         left: 0px;
         font-size: 14px;
@@ -130,6 +131,7 @@
     vertical-align: middle;
     outline: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 
     @media (max-width: 768px) {
       width: calc(100% - 60px);
