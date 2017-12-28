@@ -1,5 +1,6 @@
 p {
   line-height: 0;
+  position: relative;
 }
 
 .container {
@@ -164,4 +165,9 @@ p {
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
+}
+
+.info {
+  position: absolute;
+  margin-left: 5px;
 }

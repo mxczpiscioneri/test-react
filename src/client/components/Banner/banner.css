@@ -48,6 +48,7 @@
   position: relative;
   width: 100%;
   z-index: 3;
+  margin-top: 65px; 
 
   & > *:first-child {
     cursor: pointer;
@@ -97,4 +98,12 @@
   @media (max-width: 768px) {
     margin-top: 0;
   }
+}
+
+.legend {
+  font-family: Poppins;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 20px;
+  display: block;
 }

@@ -4,7 +4,9 @@ import { bindActionCreators } from 'redux'
 import styles from './form.css'
 import { Hidden } from '../../Grid/Grid';
 import InputDecimal from '../../InputDecimal/InputDecimal'
-import { reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form'
+import Info from '../../Info/Info'
+import IconInfo from './info.svg'
 
 class Form extends Component {
   constructor() {
@@ -37,7 +39,10 @@ class Form extends Component {
             <label htmlFor="option2">Valor do Veículo</label>
           </div>
           <Hidden xs>
-            <span>Sabia que você pode contratar mais de uma carta de crédito?</span>
+            <span className={styles.infoContainer}>
+              Sabia que você pode contratar mais de uma carta de crédito?
+              <Info icon={IconInfo} alt={'info'} className={styles.info}/>
+            </span>
           </Hidden>
         </div>
         <div className={styles.form_content}>

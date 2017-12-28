@@ -184,3 +184,12 @@
     color: #8B8C99;
   }
 }
+
+.infoContainer {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  margin-left: 5px !important;
+}

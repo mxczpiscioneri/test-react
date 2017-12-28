@@ -93,6 +93,7 @@ const Banner = props => {
           <Row>
             <Col xs={12} lg={8} offset={{ lg: 2 }}>
               <Form />
+              <div className={styles.legend}>* No consórcio você paga apenas taxa de administração, que varia conforme o plano contratado.</div>
             </Col>
           </Row>
         </Container>
