@@ -53,7 +53,7 @@ class SimulateFast extends React.Component {
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <div className={styles.slider}>
+              <div className={(this.props.padding) ? styles.sliderPadding : styles.slider}>
                 <div className='slider custom-labels'>
                   <Slider
                     min={500}

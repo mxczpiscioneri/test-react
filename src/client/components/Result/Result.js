@@ -17,7 +17,7 @@ const Result = props => {
 
       <Menu />
 
-      <SimulateFast showTitle />
+      <SimulateFast showTitle padding />
 
       <Plans />
 

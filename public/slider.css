@@ -92,6 +92,10 @@
   width: 45px;
   height: 45px;
 }
+.rangeslider-horizontal {
+  margin-top: 0;
+}
+
 
 @media(max-width: 750px) {
   .slider.custom-labels:before {
