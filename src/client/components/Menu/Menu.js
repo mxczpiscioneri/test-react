@@ -6,6 +6,7 @@ import { Sticky } from 'react-sticky'
 import BurgerMenu from 'react-burger-menu'
 import { Container } from '../Grid/Grid'
 import ProgressLinear from '../ProgressLoading/ProgressLinear'
+import SimulateFast from '../SimulateFast/SimulateFast'
 import styles from './menu.css'
 import logoImg from './logo-wm-white.svg'
 import menuImg from './menu.svg'
@@ -76,6 +77,11 @@ class Menu extends React.Component {
                     </div>
                   </div>
                 </Container>
+
+                {
+                  isSticky &&
+                  <SimulateFast />
+                }
               </nav>
             )
           }}

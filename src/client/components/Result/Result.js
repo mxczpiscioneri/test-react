@@ -8,7 +8,7 @@ import LettersCredit from '../LettersCredit/LettersCredit'
 import ListCars from '../ListCars/ListCars'
 import Footer from '../Footer/Footer'
 import styles from './result.css'
-import SimulateAgain from './SimulateAgain/SimulateAgain'
+import SimulateFast from '../SimulateFast/SimulateFast'
 
 const Result = props => {
   return (
@@ -17,18 +17,18 @@ const Result = props => {
 
       <Menu />
 
-      <SimulateAgain />
+      <SimulateFast showTitle />
 
       <Plans />
 
-      <LettersCredit 
+      <LettersCredit
         title={
-          <h3 className={styles.lettersTitle}>Com base na sua simulação,<br/> preparamos outras opções pra você</h3>
-        } 
-        count={3} 
-        size={{ xs: 12, md: 10 }} 
-        offset={{ md: 1 }} 
-        showButton={false}/>
+          <h3 className={styles.lettersTitle}>Com base na sua simulação,<br /> preparamos outras opções pra você</h3>
+        }
+        count={3}
+        size={{ xs: 12, md: 10 }}
+        offset={{ md: 1 }}
+        showButton={false} />
 
       <ListCars />
 

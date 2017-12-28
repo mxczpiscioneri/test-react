@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Container, Row, Col, Hidden } from '../../Grid/Grid'
 import Slider from 'react-rangeslider'
-import styles from './simulateAgain.css'
+import { Container, Row, Col } from '../Grid/Grid'
+import styles from './simulateFast.css'
 
-class SimulateAgain extends React.Component {
+class SimulateFast extends React.Component {
   constructor(props) {
     super(props)
 
@@ -25,13 +25,20 @@ class SimulateAgain extends React.Component {
     const props = this.props
 
     return (
-      <section className={styles.container}>
+      <section className={styles.simulateFast}>
         <Container>
           <Row>
             <Col xs={12} md={4} offset={{ md: 1 }}>
-              <div className={styles.title}>QUERO SIMULAR OUTRO</div>
-              <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
-                <span className={styles.titleXsStrong}> você precisa :)</span></div>
+              {
+                this.props.showTitle &&
+                <div>
+                  <div className={styles.title}>QUERO SIMULAR OUTRO</div>
+                  <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
+                    <span className={styles.titleXsStrong}> você precisa :)</span>
+                  </div>
+                </div>
+              }
+
               <div className={styles.block}>
                 <div
                   className={(this.state.type === 1) ? styles.blockItemSelected : ''}
@@ -74,4 +81,4 @@ const mapStateToProps = state => ({})
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(SimulateAgain)
+export default connect(mapStateToProps, mapDispatchToProps)(SimulateFast)
