@@ -7,6 +7,7 @@ const Info = (props) => {
     <span className={props.className} onClick={() => Modal.open(props.title, props.body)}>
       <span className={styles.container}>
         <img src={props.icon}
+          title={props.alt}
           alt={props.alt} />
       </span>
     </span>

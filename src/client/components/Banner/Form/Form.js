@@ -38,10 +38,10 @@ class Form extends Component {
             <input type="radio" id="option2" name="radio-group" value="vehicleValue" onChange={this.handleOptionChange} />
             <label htmlFor="option2">Valor do Veículo</label>
           </div>
-          <Hidden xs>
+          <Hidden xs sm>
             <span className={styles.infoContainer}>
               Sabia que você pode contratar mais de uma carta de crédito?
-              <Info icon={IconInfo} alt={'info'} className={styles.info}/>
+              <Info icon={IconInfo} alt={'clique aqui e veja os detalhes'} className={styles.info} />
             </span>
           </Hidden>
         </div>
@@ -57,7 +57,7 @@ class Form extends Component {
           </div>
           <button type="submit" className={styles.btn_submit}>Simular</button>
         </div>
-        <Hidden xs>
+        <Hidden xs sm>
           <p>mínimo: R$ 500  |  máximo: R$ 2.000</p>
         </Hidden>
       </form>
