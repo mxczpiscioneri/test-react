@@ -4,10 +4,29 @@ import {
   IpDeniedError
 } from 'express-ipfilter'
 
-export const ipFilter = IpFilter(config.allowedIps, { mode: 'allow' })
+const customDetection = req => {
+  let ipAddress
+
+  const forwardedIpsStr = req.header('x-forwarded-for')
+
+  if (forwardedIpsStr) {
+    const forwardedIps = forwardedIpsStr.split(',')
+    ipAddress = forwardedIps[0]
+    console.log('===========\n', forwardedIps, '\n ==========')
+  }
+  if (!ipAddress)
+    ipAddress = req.connection.remoteAddress
+
+  return ipAddress
+}
+
+export const ipFilter = IpFilter(config.allowedIps, {
+  mode: 'allow',
+  detectIp: customDetection
+})
 
 export const handleIpDenied = (err, req, res, next) => {
-  if(err instanceof IpDeniedError)
+  if (err instanceof IpDeniedError)
     res.status(401)
   else
     res.status(err.status || 500)
