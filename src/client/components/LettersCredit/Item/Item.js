@@ -25,12 +25,26 @@ const Item = props => {
         <p>
           <span className={styles.labels}>Parcela Flex </span>
           <span className={styles.installmentFlex}>R$ {props.installmentFlex}</span>
-          <Info icon={IconInfo} alt='parcela flex' className={styles.info} title='Parcela flex' body='Parcela flex'/>
+          <Info
+            icon={IconInfo}
+            alt='clique aqui e veja os detalhes'
+            className={styles.info}
+            title='Parcela flex'
+            body={
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            } /> 
         </p>
         <p>
           <span className={styles.labels}>Prazo </span>
           <span className={styles.deadline}>{props.deadline} Meses </span>
-          <Info icon={IconInfo} alt='prazo' className={styles.info} title='Prazo' body='Prazo'/> 
+          <Info 
+            icon={IconInfo} 
+            alt='clique aqui e veja os detalhes' 
+            className={styles.info} 
+            title='Prazo' 
+            body={
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            } /> 
         </p>
       </div>
       <div className={styles.button} onClick={props.onClick}>

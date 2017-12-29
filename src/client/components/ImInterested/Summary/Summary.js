@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
+import Info from '../../Info/Info'
 import styles from './summary.css'
 import InfoImg from './info.svg'
 import CarImg from './car.png'
@@ -44,12 +45,35 @@ const Summary = props => {
         <span className={styles.percents}>{letterCredit.insurance.toFixed(2)}% am</span>
       </p>
 
-      <div className={styles.info}>
-        <img
-          className={styles.infoImg}
-          src={InfoImg}
-          alt={'info'} />
-        <span className={styles.infoText}>Leia todos os detalhes das taxas e seguros</span>
+      <div className={styles.info} title='clique aqui e veja os detalhes'>
+        <Info 
+          icon={InfoImg} 
+          alt={'clique aqui e veja os detalhes'} 
+          classImg={styles.infoImg} 
+          title='Leia todos os detalhes das taxas e seguros' 
+          body={
+            <div>
+              <h4 className={styles.modalSubtitle}>Valor da Parcela</h4>
+              <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+
+              <h4 className={styles.modalSubtitle}>Valor da Parcela Flex</h4>
+              <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+
+              <h4 className={styles.modalSubtitle}>Prazo</h4>
+              <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+
+              <h4 className={styles.modalSubtitle}>Taxa de administração</h4>
+              <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+
+              <h4 className={styles.modalSubtitle}>Fundo de reserva</h4>
+              <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+
+              <h4 className={styles.modalSubtitle}>Seguro Prestamista</h4>
+              <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+            </div>
+          }>
+          <span className={styles.infoText}>Leia todos os detalhes das taxas e seguros</span>
+        </Info>
       </div>
 
       <div className={styles.car}>
