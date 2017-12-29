@@ -19,6 +19,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .linkImg {
@@ -30,8 +31,8 @@
   width: 60%;
   text-align: left;
   font-family: Poppins;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 13px !important;
+  font-weight: 500;
   line-height: 18px;
 }
 
@@ -80,8 +81,9 @@
     }
 
     .react-sanfona-item {
-      border: 1px solid #BEC0D1 !important;
+      border: 1px solid #BEC0D1;
       position: relative;
+      border-radius: 2px;
     }
 
     .react-sanfona-item-body-wrapper {
@@ -92,25 +94,41 @@
       position: relative;
     }
 
-    .react-sanfona-item-title:after {
+    .react-sanfona-item > div:after {
       transition: all 0.3s ease;
       position: absolute;
       content: url('./triangle-down.svg');
-      right: 15px;
-      top: 20px;
+      right: 17px;
+      top: 30px;
+    }
+    .react-sanfona-item-expanded > div:after {
+      transition: all 0.3s ease;
+      position: absolute;
+      content: url('./triangle-up.svg');
+      right: 17px;
+      top: 30px;
     }
   }
 
   .linkContainer {
-    padding: 10px 0 8px 0;
+    padding: 16px 16px 13px 16px;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
   }
 
   .linkImg {
-    width: 17%;
+    width: auto;
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .linkName {
-    width: 76%;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .section {    
@@ -128,10 +146,6 @@
 
     .react-sanfona-item {
       margin-bottom: 30px;
-
-      @media (max-width: 768px) {
-        margin-bottom: 20px;
-      }
 
       .react-sanfona-item-title {
         position: relative;
