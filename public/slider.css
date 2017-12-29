@@ -119,4 +119,9 @@
   .slider.custom-labels > .value {
     display: none;
   }
+
+  .rangeslider-horizontal {
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
 }
