@@ -45,18 +45,16 @@ const SummaryMobile = props => {
         <span className={styles.labelsLight}>Valor da carta de crédito total </span>
         <span className={styles.value}>R$ {letterCredit.value.toFixed(3)}</span>
       </p>
-      <p>
-        <div className={styles.valuesContainer}>
-          <div className={styles.reserveFundContainer}>
-            <span className={styles.labelsLight}>Fundo de reserva </span>
-            <span className={styles.value}>{letterCredit.reserveFund.toFixed(2)}% am</span>
-          </div>
-          <div className={styles.insuranceContainer}>
-            <span className={styles.labelsLight}>Seguro </span>
-            <span className={styles.value}>{letterCredit.insurance.toFixed(2)}% am</span>
-          </div>
+      <div className={styles.valuesContainer}>
+        <div className={styles.reserveFundContainer}>
+          <span className={styles.labelsLight}>Fundo de reserva </span>
+          <span className={styles.value}>{letterCredit.reserveFund.toFixed(2)}% am</span>
         </div>
-      </p>
+        <div className={styles.insuranceContainer}>
+          <span className={styles.labelsLight}>Seguro </span>
+          <span className={styles.value}>{letterCredit.insurance.toFixed(2)}% am</span>
+        </div>
+      </div>
       <p>
         <span className={styles.labelsLight}>Taxa de gestão </span>
         <span className={styles.value}>{letterCredit.rate.toFixed(2)}% am</span>

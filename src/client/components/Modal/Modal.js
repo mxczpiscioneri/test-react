@@ -1,7 +1,8 @@
 import React from 'react'
 import eventBus from 'eventing-bus'
-import styles from './modal.css'
 import classNames from 'classnames'
+import styles from './modal.css'
+import InfoImg from './info.svg'
 
 export default class Modal extends React.Component {
   constructor() {
@@ -53,12 +54,15 @@ export default class Modal extends React.Component {
         <div className={styles.modalDialog}>
           <div className={styles.modalContent}>
             <div className={styles.modalHeader}>
-              {this.state.title}
-              <span className={styles.modalClose} onClick={this.close.bind(this)}>&times;</span>
+              <span className={styles.iconTitle}>
+                <img src={InfoImg} />
+              </span>
+              <h3 className={styles.title}>{this.state.title}</h3>
             </div>
             <div className={styles.modalBody}>
               {this.state.body}
             </div>
+            <span className={styles.modalClose} onClick={this.close.bind(this)}>Fechar</span>
           </div>
         </div>
       </div>      

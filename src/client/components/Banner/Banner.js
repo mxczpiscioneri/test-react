@@ -55,7 +55,7 @@ const Banner = props => {
                     {
                       props.hiddenSubTitleXS
                         ?
-                        <Hidden xs>
+                        <Hidden xs sm>
                           <p className={styles.subTitle}>{banner.subtitle}</p>
                         </Hidden>
                         :
@@ -93,7 +93,9 @@ const Banner = props => {
           <Row>
             <Col xs={12} lg={8} offset={{ lg: 2 }}>
               <Form />
-              <div className={styles.legend}>* No consórcio você paga apenas taxa de administração, que varia conforme o plano contratado.</div>
+              <Hidden xs sm>
+                <div className={styles.legend}>* No consórcio você paga apenas taxa de administração, que varia conforme o plano contratado.</div>
+              </Hidden>
             </Col>
           </Row>
         </Container>

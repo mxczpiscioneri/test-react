@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 import styles from './cars.css'
-import ArrowLeft from './ArrowLeft'
-import ArrowRight from './ArrowRight'
 import imgCar from './car01.png'
 
 const Cars = props => {
@@ -23,10 +21,9 @@ const Cars = props => {
   ))
 
   const settings = {
-    dots: false,
-    arrows: true,
-    nextArrow: <ArrowRight />,
-    prevArrow: <ArrowLeft />,
+    dots: true,
+    dotsClass: 'dots',
+    arrows: false,
     infinite: false,
     speed: 500,
     slidesToShow: 1,

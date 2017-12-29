@@ -140,3 +140,27 @@ p {
   line-height: 18px;
   text-align: justify;
 }
+
+.infoImg {
+  width: 32px;
+  vertical-align: middle;
+}
+
+.modalSubtitle {
+  color: #4D4C59;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  margin: 0;
+}
+
+.modalText {
+  color: #8B8C99;
+  font-family: Poppins;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
