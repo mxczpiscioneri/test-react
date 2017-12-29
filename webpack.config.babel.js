@@ -22,7 +22,7 @@ export default merge({}, envConfig, {
       {
         test: /\.(png|jpg|svg)$/,
         exclude: /node_modules/,
-        loaders: 'url-loader'
+        loaders: 'file-loader'
       }
     ]
   }
