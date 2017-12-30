@@ -28,7 +28,7 @@ const validate = values => {
   }
 
   if (!values.cpf) {
-    errors.cpf = 'Preencha seu CPF'
+    errors.cpf = 'Preencha seu CPF/CNPJ'
   }
 
   return errors
@@ -59,7 +59,7 @@ class FormMobile extends React.Component {
             <Input label='Seu nome' name='name' />
             <InputPhone label='Seu telefone' name='phone' />
             <Input label='Seu e-mail' name='email' />
-            <InputCpf label='*CPF' name='cpf' />
+            <InputCpf label='*CPF/CNPJ' name='cpf' />
             <RadioButtonGroup name='installment'>
               <RadioButton value='normal' label='Parcela normal' />
               <RadioButton value='flex' label='Parcela flex' />

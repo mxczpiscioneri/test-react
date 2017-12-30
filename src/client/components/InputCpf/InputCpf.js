@@ -42,12 +42,16 @@ const makeMask = (value) => {
   }
 
   let onlyNums = value.replace(/[^\d]/g, '').toString()
-  if (onlyNums.length > 11) {
-    onlyNums = onlyNums.substr(0, 11)
+  if (onlyNums.length > 14) {
+    onlyNums = onlyNums.substr(0, 14)
   }
 
   if (onlyNums.length === 11) {
     return `${onlyNums.substr(0, 3)}.${onlyNums.substr(3, 3)}.${onlyNums.substr(6, 3)}-${onlyNums.substr(9, 2)}`
+  }
+
+  if (onlyNums.length === 14) {
+    return `${onlyNums.substr(0, 2)}.${onlyNums.substr(2, 3)}.${onlyNums.substr(5, 3)}/${onlyNums.substr(8, 4)}-${onlyNums.substr(12, 2)}`
   }
 
   return onlyNums
