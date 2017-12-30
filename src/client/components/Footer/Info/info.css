@@ -72,6 +72,21 @@
   font-weight: 600;
 }
 
+.textDisclaimer {
+  color: #8B8C9A;	
+  font-family: Poppins;	
+  font-size: 14px;	
+  font-weight: 400;	
+  line-height: 27px;	
+  text-align: justify;
+  margin-top: 0;
+  padding: 0 30px;
+
+  span {
+    font-weight: 500;	
+  }
+}
+
 @media(max-width: 750px) {
   :global {
     .react-sanfona { 
@@ -118,10 +133,6 @@
     align-items: center;
   }
 }
-
-
-
-
 
 :global {
   .react-sanfona {

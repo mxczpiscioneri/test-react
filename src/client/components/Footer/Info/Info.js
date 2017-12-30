@@ -199,6 +199,12 @@ const Footer = props => {
                 </Col>
               </Row>
 
+              <Row>
+                <Col xs={12}>
+                  <p className={styles.textDisclaimer}>Planos de Consórcio administrados por <span>Santander Brasil Administradora de Consórcio Ltda</span>, CNPJ nº 55.942.312/0001-06. Sujeito à análise de crédito no momento da contemplação e demais condições do produto. Leia o contrato e o regulamento antes da adesão</p>
+                </Col>
+              </Row>
+
             </Col>
           </Hidden>
 
