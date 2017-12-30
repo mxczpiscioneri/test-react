@@ -54,7 +54,8 @@ class Plans extends React.Component {
               <Col xs={12} sm={5} offset={{ sm: 1 }}>
                 <p className={styles.textResult}>Você terá uma carta de crédito de R$ <span>45.000,00</span> pagando apenas <span>R$ 1.200</span> por <span>72</span> meses.</p>
                 <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ 700</span> nos primeiros meses, não deixe de optar pelo plano Flex!</p>
-                <p className={styles.textResult}>Valor do veículo R$ 45.000 <span className={styles.light}>Prazo 72 Meses</span></p>             
+                <p className={styles.textResult}>Valor do veículo R$ 45.000 <span className={styles.light}>Prazo 72 Meses</span></p>
+                <p className={styles.textResult}>Parcela Normal com seguro R$ <span>450</span><br />Parcela Flex com seguro R$ <span>350</span></p>
                 <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
               </Col>
               <Col xs={12} sm={4}>
