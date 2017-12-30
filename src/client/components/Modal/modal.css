@@ -39,6 +39,8 @@
   background-color: #fff;
   max-width: 640px;
   width: 50%;
+  max-height: 600px;
+  overflow-y: auto;
   border-radius: 3px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.21);
 }
