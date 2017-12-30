@@ -34,6 +34,7 @@
   font-size: 13px;
   font-weight: 600;
   line-height: 18px;
+  z-index: 1;
 }
 
 .section {
@@ -93,6 +94,19 @@
       position: relative;
     }
 
+    .react-sanfona-item > div:after {
+      transition: all 0.3s ease;
+      position: absolute;
+      content: url('./arrow-footer-down.svg');
+      right: 17px;
+      top: 28px;
+    }
+
+
+    .react-sanfona-item-expanded.react-sanfona-item > div:after {
+      content: url('./arrow-footer-up.svg');
+    }
+
     .react-sanfona-item-body-wrapper {
       border: none !important;
     }
@@ -100,18 +114,11 @@
     .react-sanfona-item-title {
       position: relative;
     }
-
-    .react-sanfona-item-title:after {
-      transition: all 0.3s ease;
-      position: absolute;
-      content: url('./triangle-down.svg');
-      right: 15px;
-      top: 20px;
-    }
   }
 
   .linkContainer {
     padding: 10px 0 8px 0;
+    margin-bottom: 0;
   }
 
   .linkImg {
@@ -155,19 +162,6 @@
           font-size: 13px;
           padding: 18px 45px 18px 15px;
         }
-
-        &:after {
-          transition: all 0.3s ease;
-          position: absolute;
-          content: url('./triangle-down.svg');
-          right: 32px;
-          top: 25px;
-          
-          @media (max-width: 768px) {
-            right: 15px;
-            top: 20px;
-          }
-        }
       }
 
       .react-sanfona-item-body-wrapper {
@@ -188,18 +182,6 @@
 
         p {
           margin: 0;
-        }
-      }
-    }
-
-    .react-sanfona-item-expanded {
-
-      .react-sanfona-item-title {
-        border-radius: 4px 4px 0 0;
-        box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
-      
-        &:after {
-          content: url('./triangle-up.svg');
         }
       }
     }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="13px" viewBox="0 0 24 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="XS/Atendomento-Santander" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-320.000000, -44.000000)">
+        <g id="Panel-1-Mobile" transform="translate(15.000000, 15.000000)" fill="#F3123C" fill-rule="nonzero">
+            <g id="Icon-Aplicativo">
+                <g id="Group">
+                    <path d="M328.754437,29.2512077 C328.423653,28.9162641 327.886129,28.9162641 327.555345,29.2512077 L317.0116,39.9484702 L306.447181,29.2512077 C306.116397,28.9162641 305.578872,28.9162641 305.248088,29.2512077 C304.917304,29.5861514 304.917304,30.1304348 305.248088,30.4653784 L316.391379,41.7487923 C316.556772,41.9162641 316.763512,42 316.990926,42 C317.197666,42 317.42508,41.9162641 317.590472,41.7487923 L328.733763,30.4653784 C329.085222,30.1304348 329.085222,29.5861514 328.754437,29.2512077 Z" id="Shape" transform="translate(317.000000, 35.500000) rotate(-180.000000) translate(-317.000000, -35.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
