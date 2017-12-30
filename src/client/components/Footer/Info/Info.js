@@ -185,8 +185,6 @@ const Footer = props => {
                 </Col>
               </Row>
 
-              <div className={styles.separator}></div>
-
               <Row>
                 <Col xs={12} md={4}>
                   <Central />
