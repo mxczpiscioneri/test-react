@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import classNames from 'classnames'
 import Slider from 'react-rangeslider'
 import { Container, Row, Col } from '../Grid/Grid'
 import styles from './simulateFast.css'
@@ -22,6 +23,13 @@ class SimulateFast extends React.Component {
   format = value => `R$ ${value.toFixed(2)}`
 
   render() {
+    const blockClass = classNames(
+      styles.block,
+      {
+        [styles.blockMargin]: !this.props.padding,
+      }
+    )
+
     const props = this.props
 
     return (
@@ -39,7 +47,7 @@ class SimulateFast extends React.Component {
                 </div>
               }
 
-              <div className={styles.block}>
+              <div className={blockClass}>
                 <div
                   className={(this.state.type === 1) ? styles.blockItemSelected : ''}
                   onClick={() => this.setState({ type: 1 })}>
