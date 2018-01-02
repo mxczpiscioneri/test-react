@@ -20,10 +20,11 @@
 }
 
 .thumbnail {
-  min-height: 600px;
+  max-height: 600px;
 
   @media (max-width: 768px) {
-    min-height: 200px;
+    max-height: 235px;
+    min-height: auto;
     max-width: 750px;
   }
 }

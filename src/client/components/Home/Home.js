@@ -21,7 +21,7 @@ class Home extends Component {
 
         <Menu transparent />
 
-        <Banner form mask hiddenSubTitleXS />
+        <Banner form mask hiddenSubTitleXS type='home' />
 
         <WhyBuy />
 
