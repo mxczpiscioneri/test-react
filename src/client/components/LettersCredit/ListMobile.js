@@ -12,8 +12,6 @@ const ListMobile = props => {
     centerMode: true,
     infinite: false,
     arrows: false,
-    // dots: true,
-    // dotsClass: 'dots',
     centerPadding: '0',
     slidesToShow: 1,
     speed: 500
@@ -24,11 +22,11 @@ const ListMobile = props => {
       {
         props.list.map((item, index) =>
           <Item
-            key={index}
-            value={item.value}
-            installment={item.installment}
-            installmentFlex={item.installmentFlex}
-            deadline={item.deadline}
+            key={item.id}
+            value={item.full_value}
+            installment={item.regular_installment_value}
+            installmentFlex={item.flex_installment_value}
+            deadline={item.duration}
             selected={item.selected}
             onClick={() => null} />
         )

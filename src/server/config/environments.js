@@ -2,7 +2,8 @@ export default {
   development: {
     port: 4000,
     api: {
-      baseURL: 'http://localhost:3000'
+      baseURL: 'http://consorcio-api-stg.herokuapp.com'
+      // baseURL: 'http://localhost:3000'
     }
   },
   production: {

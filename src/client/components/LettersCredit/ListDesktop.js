@@ -6,16 +6,17 @@ import { Row, Col } from '../Grid/Grid'
 import Item from './Item/Item'
 
 const ListDesktop = props => {
+  console.log(props.list)
   return (
     <Row>
       {
         props.list.map((item, index) =>
-          <Col xs={12} md={12 / props.count} key={index}>
+          <Col xs={12} md={12 / (props.list.length < props.count ? props.list.length : props.count)} key={item.id}>
             <Item
-              value={item.value}
-              installment={item.installment}
-              installmentFlex={item.installmentFlex}
-              deadline={item.deadline}
+              value={item.full_value}
+              installment={item.regular_installment_value}
+              installmentFlex={item.flex_installment_value}
+              deadline={item.duration}
               selected={item.selected}
               onClick={() => null} />
           </Col>

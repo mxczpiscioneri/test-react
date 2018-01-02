@@ -5,30 +5,18 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import scrollToElement from 'scroll-to-element'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
-import { fetchLettersCredit } from '../../actions/lettersCreditActions'
+import { getLettersCredit } from '../../actions/lettersCreditActions'
 import ListDesktop from './ListDesktop'
 import ListMobile from './ListMobile'
 import styles from './lettersCredit.css'
 
-const letters = [
-  { value: 30.000, installment: 900, installmentFlex: 500, deadline: 72 },
-  { value: 45.000, installment: 900, installmentFlex: 500, deadline: 72 },
-  { value: 60.000, installment: 900, installmentFlex: 500, deadline: 72 },
-  { value: 90.000, installment: 900, installmentFlex: 500, deadline: 72 }
-]
-
 class LettersCredit extends React.Component {
   constructor(props) {
     super(props)
-
-    let lettersToShow = letters.slice(0, props.count)
-    this.state = {
-      letters: lettersToShow
-    }
   }
 
-  componentDidMount () {
-    this.props.fetchLettersCredit()
+  componentWillMount () {
+    this.props.getLettersCredit()
   }
 
   _simulateNow() {
@@ -53,13 +41,13 @@ class LettersCredit extends React.Component {
           <Hidden xs>
             <Row>
               <Col {...this.props.size} offset={this.props.offset}>
-                <ListDesktop list={this.state.letters} count={this.props.count} />
+                <ListDesktop list={this.props.lettersCredit} count={this.props.count} />
               </Col>
             </Row>
           </Hidden>
 
           <Hidden sm md lg xl>
-            <ListMobile list={this.state.letters} />
+            <ListMobile list={this.props.lettersCredit} />
           </Hidden>
           {
             this.props.showButton
@@ -93,13 +81,10 @@ LettersCredit.defaultProps = {
 }
 
 const mapStateToProps = store => ({
-  lettersCredit: store.lettersCreditReducer.lettersCredit
+  lettersCredit: store.lettersCreditReducer.lettersCredit.content
 })
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchLettersCredit: bindActionCreators(fetchLettersCredit, dispatch)
-  }
-}
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ getLettersCredit }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(LettersCredit)
