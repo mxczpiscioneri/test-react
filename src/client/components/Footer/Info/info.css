@@ -19,11 +19,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   box-sizing: border-box;
-=======
-  margin-bottom: 20px;
->>>>>>> 15c5e88422e90a0dd1351d7b89892988e5f27dc2
 }
 
 .linkImg {
@@ -119,7 +115,6 @@
     .react-sanfona-item-title {
       position: relative;
     }
-<<<<<<< HEAD
 
     .react-sanfona-item > div:after {
       transition: all 0.3s ease;
@@ -143,13 +138,6 @@
     text-align: left;
     position: relative;
     cursor: pointer;
-=======
-  }
-
-  .linkContainer {
-    padding: 10px 0 8px 0;
-    margin-bottom: 0;
->>>>>>> 15c5e88422e90a0dd1351d7b89892988e5f27dc2
   }
 
   .linkImg {

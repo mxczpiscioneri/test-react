@@ -8,19 +8,11 @@ import Banner from '../Banner/Banner'
 import Testimonial from '../Testimonial/Testimonial'
 import Footer from '../Footer/Footer'
 import styles from './about.css'
-import bgAbout from './bg-about.png';
-import iconeAdesao from './icone-adesao.svg';
-import iconeContemplacao from './icone-contemplacao.svg';
-import iconeCredito from './icone-credito.svg';
-import iconeVeiculo from './icone-chaves.svg';
-import iconeFim from './icone-medalha.svg';
-
-const listBanners = [
-  {
-    subtitle: 'O Consórcio Santander é a união de um grupo de pessoas que planeja a compra do seu carro pagando bem menos.',
-    image: bgAbout
-  },
-]
+import iconeAdesao from './icone-adesao.svg'
+import iconeContemplacao from './icone-contemplacao.svg'
+import iconeCredito from './icone-credito.svg'
+import iconeVeiculo from './icone-chaves.svg'
+import iconeFim from './icone-medalha.svg'
 
 const listSteps = [
   {
@@ -73,7 +65,7 @@ const About = props => {
 
       <Menu transparent />
 
-      <Banner images={listBanners} />
+      <Banner type='o_que_eh' />
 
       <section className={styles.content}>
         <Container>

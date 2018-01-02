@@ -8,17 +8,9 @@ import Banner from '../Banner/Banner'
 import Testimonial from '../Testimonial/Testimonial'
 import Footer from '../Footer/Footer'
 import styles from './why.css'
-import bgWhy from './bg-why.png'
 import imgCars from './img-carros.svg'
 import imgMacbook from './img-macbook.svg'
 import iconChecked from './icon-check-red.svg'
-
-const listBanners = [
-  {
-    subtitle: 'Descubra os principais benefícios e diferenciais do Consórcio Santander',
-    image: bgWhy
-  },
-]
 
 const Why = props => {
   return (
@@ -27,7 +19,7 @@ const Why = props => {
 
       <Menu transparent />
 
-      <Banner images={listBanners} />
+      <Banner type='porque_vale_a_pena' />
 
       <section className={styles.contentConsortium}>
         <Container>
