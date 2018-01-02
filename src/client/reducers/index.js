@@ -5,6 +5,7 @@ import toDoReducer from './toDoReducer'
 import testimonialReducer from './testimonialReducer'
 import bannerReducer from './bannerReducer'
 import progressLinearReducer from './progressLinearReducer'
+import lettersCreditReducer from './lettersCreditReducer'
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   bannerReducer,
   routing: routerReducer,
   progressLinearReducer,
+  lettersCreditReducer,
 })
 
 export default rootReducer

@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import scrollToElement from 'scroll-to-element'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
+import { fetchLettersCredit } from '../../actions/lettersCreditActions'
 import ListDesktop from './ListDesktop'
 import ListMobile from './ListMobile'
 import styles from './lettersCredit.css'
@@ -24,6 +25,10 @@ class LettersCredit extends React.Component {
     this.state = {
       letters: lettersToShow
     }
+  }
+
+  componentDidMount () {
+    this.props.fetchLettersCredit()
   }
 
   _simulateNow() {
@@ -87,8 +92,14 @@ LettersCredit.defaultProps = {
   showButton: true
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = store => ({
+  lettersCredit: store.lettersCreditReducer.lettersCredit
+})
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchLettersCredit: bindActionCreators(fetchLettersCredit, dispatch)
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(LettersCredit)

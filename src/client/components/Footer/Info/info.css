@@ -31,8 +31,8 @@
   width: 60%;
   text-align: left;
   font-family: Poppins;
-  font-size: 13px !important;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
   line-height: 18px;
   z-index: 1;
 }
@@ -90,9 +90,8 @@
     }
 
     .react-sanfona-item {
-      border: 1px solid #BEC0D1;
+      border: 1px solid #BEC0D1 !important;
       position: relative;
-      border-radius: 2px;
     }
 
     .react-sanfona-item > div:after {
@@ -141,16 +140,11 @@
   }
 
   .linkImg {
-    width: auto;
-    margin-right: 12px;
-    display: inline-block;
-    vertical-align: middle;
+    width: 17%;
   }
 
   .linkName {
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
+    width: 76%;
   }
 
   .section {    
@@ -164,6 +158,10 @@
 
     .react-sanfona-item {
       margin-bottom: 30px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
 
       .react-sanfona-item-title {
         position: relative;
