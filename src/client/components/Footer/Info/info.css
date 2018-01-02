@@ -19,7 +19,11 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+  box-sizing: border-box;
+=======
   margin-bottom: 20px;
+>>>>>>> 15c5e88422e90a0dd1351d7b89892988e5f27dc2
 }
 
 .linkImg {
@@ -31,8 +35,8 @@
   width: 60%;
   text-align: left;
   font-family: Poppins;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 13px !important;
+  font-weight: 500;
   line-height: 18px;
   z-index: 1;
 }
@@ -90,8 +94,9 @@
     }
 
     .react-sanfona-item {
-      border: 1px solid #BEC0D1 !important;
+      border: 1px solid #BEC0D1;
       position: relative;
+      border-radius: 2px;
     }
 
     .react-sanfona-item > div:after {
@@ -114,19 +119,50 @@
     .react-sanfona-item-title {
       position: relative;
     }
+<<<<<<< HEAD
+
+    .react-sanfona-item > div:after {
+      transition: all 0.3s ease;
+      position: absolute;
+      content: url('./arrow-footer-down.svg');
+      right: 17px;
+      top: 30px;
+    }
+    .react-sanfona-item-expanded > div:after {
+      transition: all 0.3s ease;
+      position: absolute;
+      content: url('./arrow-footer-up.svg');
+      right: 17px;
+      top: 30px;
+    }
+  }
+
+  .linkContainer {
+    padding: 16px 16px 13px 16px;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+=======
   }
 
   .linkContainer {
     padding: 10px 0 8px 0;
     margin-bottom: 0;
+>>>>>>> 15c5e88422e90a0dd1351d7b89892988e5f27dc2
   }
 
   .linkImg {
-    width: 17%;
+    width: auto;
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .linkName {
-    width: 76%;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .section {    
@@ -140,10 +176,6 @@
 
     .react-sanfona-item {
       margin-bottom: 30px;
-
-      @media (max-width: 768px) {
-        margin-bottom: 20px;
-      }
 
       .react-sanfona-item-title {
         position: relative;

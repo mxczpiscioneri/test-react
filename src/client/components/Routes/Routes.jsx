@@ -19,7 +19,7 @@ import Faq from '../Faq/Faq'
 import ImInterested from '../ImInterested/ImInterested'
 
 const Routes = props => (
-  <Router history={history}>
+  <Router history={history} onUpdate={() => window.scrollTo(0, 0)}>
     <Route component={RouteTransition} >
       <Route component={DefaultLayout}>
         <Route path={routePaths.root.path}>
