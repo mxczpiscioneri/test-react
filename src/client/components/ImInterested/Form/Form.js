@@ -31,7 +31,7 @@ const validate = values => {
   }
 
   if (!values.cpf) {
-    errors.cpf = 'Preencha seu CPF'
+    errors.cpf = 'Preencha seu CPF/CNPJ'
   }
 
   return errors
@@ -60,7 +60,7 @@ class Form extends React.Component {
           <Input label='Nome' name='name' />
           <InputPhone label='Telefone' name='phone' />
           <Input label='E-mail' name='email' />
-          <InputCpf label='*CPF' name='cpf' />
+          <InputCpf label='*CPF/CNPJ' name='cpf' />
           <RadioButtonGroup name='installment'>
             <RadioButton value='normal' label='Parcela normal' />
             <RadioButton value='flex' label='Parcela flex' />

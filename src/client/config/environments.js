@@ -1,17 +1,17 @@
 export default {
   development: {
     api: {
-      baseURL: 'http://localhost:3000'
+      baseURL: 'https://demo0597703.mockable.io'
     }
   },
   production: {
     api: {
-      baseURL: ''
+      baseURL: 'https://demo0597703.mockable.io'
     }
   },
   stage: {
     api: {
-      baseURL: ''
+      baseURL: 'https://demo0597703.mockable.io'
     }
   }
 }

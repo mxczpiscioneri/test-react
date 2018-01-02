@@ -76,7 +76,7 @@
 }
 
 .title {
-  font-size: 32px;	
+  font-size: 30px;	
   font-weight: 600;	
   line-height: 53px;
 
@@ -114,7 +114,8 @@
   font-family: Poppins;
   color: #ffffff;
   font-size: 13px;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 20px;
   display: block;
+  text-align: center;
 }
