@@ -1,20 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import classNames from 'classnames'
 import Slider from 'react-rangeslider'
 import { Container, Row, Col } from '../Grid/Grid'
 import styles from './simulateFast.css'
+import { searchLettersCredit } from '../../actions/lettersCreditActions'
 
-class SimulateFast extends React.Component {
+class SimulateFast extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      value: 1500,
-      labels: {
-        0: 'R$ 500',
-        10: 'R$ 3.000'
+      fullValue: {
+        value: 50000,
+        min: 10000,
+        max: 90000,
+        labels: {
+          0: 'R$ 10.000',
+          10: 'R$ 90.000'
+        }
+      },
+      installmentValue: {
+        value: 1500,
+        min: 500,
+        max: 3000,
+        labels: {
+          0: 'R$ 500',
+          10: 'R$ 3.000'
+        }
       },
       type: 1
     }
@@ -64,17 +78,32 @@ class SimulateFast extends React.Component {
               <div className={(this.props.padding) ? styles.sliderPadding : styles.slider}>
                 <div className='slider custom-labels'>
                   <Slider
-                    min={500}
-                    max={3000}
-                    value={this.state.value}
-                    labels={this.state.labels}
+                    min={(this.state.type === 1) ? this.state.installmentValue.min : this.state.fullValue.min}
+                    max={(this.state.type === 1) ? this.state.installmentValue.max : this.state.fullValue.max}
+                    value={(this.state.type === 1) ? this.state.installmentValue.value : this.state.fullValue.value}
+                    labels={(this.state.type === 1) ? this.state.installmentValue.labels : this.state.fullValue.labels}
                     format={this.format}
-                    handleLabel={this.state.value.toString()}
+                    handleLabel={(this.state.type === 1) ? this.state.installmentValue.value.toString() : this.state.fullValue.value.toString()}
                     onChange={(value) => {
-                      this.setState({ value })
+                      if(this.state.type === 1){
+                        let installmentValueCopy = this.state.installmentValue
+                        installmentValueCopy.value = value
+                        this.setState({ installmentValue: installmentValueCopy }) 
+                      } else {
+                        let fullValueCopy = this.state.fullValue
+                        fullValueCopy.value = value
+                        this.setState({ fullValue: fullValueCopy }) 
+                      }
+                    }}
+                    onChangeComplete={() => {
+                      if (this.state.type === 1) {
+                        this.props.searchLettersCredit('installment', this.state.installmentValue.value, 4)
+                      } else {
+                        this.props.searchLettersCredit('value', this.state.fullValue.value, 4)
+                      }
                     }}
                   />
-                  <div className='value'>{this.format(this.state.value)}</div>
+                  <div className='value'>{this.format((this.state.type === 1) ? this.state.installmentValue.value : this.state.fullValue.value)}</div>
                 </div>
               </div>
             </Col>
@@ -87,6 +116,7 @@ class SimulateFast extends React.Component {
 
 const mapStateToProps = state => ({})
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ searchLettersCredit }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(SimulateFast)

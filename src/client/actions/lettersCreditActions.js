@@ -1,5 +1,6 @@
 import api from '../lib/api'
 import _ from 'lodash'
+import { push } from 'react-router-redux'
 import { 
   FETCH_LETTERS_CREDIT,
   RECEIVE_LETTERS_CREDIT,
@@ -81,6 +82,20 @@ export const getLetterCreditById = id => {
         }
 
         return dispatch(fetchLetterCreditById(false))
+      })
+  }
+}
+
+export const searchLettersCredit = (type, value, limit = 4) => {
+  return dispatch => {
+    api.get(`letters_of_credit?${type}=${value}&limit=${limit}`)
+      .then(result => {
+        dispatch(receiveLettersCredit(result.data))
+        dispatch(push(`/resultado/${result.data[0].id}`))
+      })
+      .catch(err => {
+        console.error(err)
+        dispatch(fetchLettersCredit(false))
       })
   }
 }

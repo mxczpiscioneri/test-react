@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getLetterCreditById } from '../../actions/lettersCreditActions'
@@ -11,35 +11,39 @@ import Footer from '../Footer/Footer'
 import styles from './result.css'
 import SimulateFast from '../SimulateFast/SimulateFast'
 
-const Result = props => {
-  if (props.params) {
-    props.getLetterCreditById(props.params.id)
+class Result extends Component {
+  componentWillMount() {
+    if (this.props.params) {
+      this.props.getLetterCreditById(this.props.params.id)
+    }
   }
+  
+  render() {
+    return (
+      <div>
+        <Header />
 
-  return (
-    <div>
-      <Header />
+        <Menu />
 
-      <Menu />
+        <SimulateFast showTitle padding />
 
-      <SimulateFast showTitle padding />
+        <Plans letterCredit={this.props.letterCredit}/>
 
-      <Plans letterCredit={props.letterCredit}/>
+        <LettersCredit
+          title={
+            <h3 className={styles.lettersTitle}>Com base na sua simulação,<br /> preparamos outras opções pra você</h3>
+          }
+          count={3}
+          size={{ xs: 12, md: 10 }}
+          offset={{ md: 1 }}
+          showButton={false} />
 
-      <LettersCredit
-        title={
-          <h3 className={styles.lettersTitle}>Com base na sua simulação,<br /> preparamos outras opções pra você</h3>
-        }
-        count={3}
-        size={{ xs: 12, md: 10 }}
-        offset={{ md: 1 }}
-        showButton={false} />
+        <ListCars />
 
-      <ListCars />
-
-      <Footer />
-    </div>
-  )
+        <Footer />
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = store => ({
