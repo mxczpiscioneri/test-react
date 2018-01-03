@@ -1,22 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import scrollToElement from 'scroll-to-element'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
-import { getLettersCredit } from '../../actions/lettersCreditActions'
 import ListDesktop from './ListDesktop'
 import ListMobile from './ListMobile'
 import styles from './lettersCredit.css'
 
-class LettersCredit extends React.Component {
+export default class LettersCredit extends React.Component {
   constructor(props) {
     super(props)
-  }
-
-  componentWillMount () {
-    this.props.getLettersCredit()
   }
 
   _simulateNow() {
@@ -41,13 +34,13 @@ class LettersCredit extends React.Component {
           <Hidden xs>
             <Row>
               <Col {...this.props.size} offset={this.props.offset}>
-                <ListDesktop list={this.props.lettersCredit} count={this.props.count} />
+                <ListDesktop list={this.props.list} count={this.props.count} />
               </Col>
             </Row>
           </Hidden>
 
           <Hidden sm md lg xl>
-            <ListMobile list={this.props.lettersCredit} />
+            <ListMobile list={this.props.list} />
           </Hidden>
           {
             this.props.showButton
@@ -66,6 +59,7 @@ class LettersCredit extends React.Component {
 }
 
 LettersCredit.propTypes = {
+  list: PropTypes.array,
   title: PropTypes.element,
   count: PropTypes.number,
   size: PropTypes.object,
@@ -74,17 +68,9 @@ LettersCredit.propTypes = {
 }
 
 LettersCredit.defaultProps = {
+  list: [],
   count: 4,
   size: { xs: 12, md: 12 },
   offset: {},
   showButton: true
 }
-
-const mapStateToProps = store => ({
-  lettersCredit: store.lettersCreditReducer.lettersCredit.content
-})
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ getLettersCredit }, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(LettersCredit)

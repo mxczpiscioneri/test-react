@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
+import { getLettersCredit } from '../../actions/lettersCreditActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
@@ -14,6 +15,10 @@ import Footer from '../Footer/Footer'
 import styles from './home.css'
 
 class Home extends Component {
+  componentWillMount () {
+    this.props.getLettersCredit()
+  }
+
   render() {
     return (
       <div>
@@ -31,7 +36,8 @@ class Home extends Component {
 
         <LettersCredit title={
           <h3 className={styles.lettersTitle}>Veja algumas das nossas cartas de crédito</h3>
-        } />
+        } 
+        list={this.props.lettersCredit}/>
 
         <ListCars />
 
@@ -41,8 +47,12 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = store => ({
+  lettersCredit: store.lettersCreditReducer.lettersCredit.content
+})
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  getLettersCredit
+}, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
