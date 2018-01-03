@@ -2,7 +2,9 @@ import api from '../lib/api'
 import _ from 'lodash'
 import { 
   FETCH_LETTERS_CREDIT,
-  RECEIVE_LETTERS_CREDIT 
+  RECEIVE_LETTERS_CREDIT,
+  FETCH_LETTER_CREDIT_BY_ID,
+  RECEIVE_LETTER_CREDIT_BY_ID
 } from '../constants/actionTypes'
 import {
   receiveProgressLinear,
@@ -25,6 +27,22 @@ const receiveLettersCredit = data => [
   }
 ]
 
+const fetchLetterCreditById = (value = true) => [
+  value ? receiveProgressLinear() : forceFinished(),
+  {
+    type: FETCH_LETTER_CREDIT_BY_ID,
+    payload: value
+  }
+]
+
+const receiveLetterCreditById = data => [
+  forceFinished(),
+  {
+    type: RECEIVE_LETTER_CREDIT_BY_ID,
+    payload: data
+  }
+]
+
 const getLetterCredit = id => {
   return api.get(`/letters_of_credit/${id}`)
     .then(result => result.data)
@@ -33,8 +51,6 @@ const getLetterCredit = id => {
 
 export const getLettersCredit = () => {
   return dispatch => {
-    const token = localStorage.accessToken
-
     api.get('/config_pages?page=home&config_type=highlighted_letter_of_credits')
       .then(config => {
         const ids = config.data[0].references_id
@@ -52,6 +68,19 @@ export const getLettersCredit = () => {
       .catch(err => {
         console.error(err)
         dispatch(fetchLettersCredit(false))
+      })
+  }
+}
+
+export const getLetterCreditById = id => {
+  return dispatch => {
+    getLetterCredit(id)
+      .then(result => {
+        if (result) {
+          return dispatch(receiveLetterCreditById(result))
+        }
+
+        return dispatch(fetchLetterCreditById(false))
       })
   }
 }

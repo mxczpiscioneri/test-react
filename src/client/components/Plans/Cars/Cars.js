@@ -6,20 +6,13 @@ import { Hidden } from '../../Grid/Grid'
 import ArrowLeft from './ArrowLeft'
 import ArrowRight from './ArrowRight'
 import styles from './cars.css'
-import imgCar from './car01.png'
 
 const Cars = props => {
 
-  const listCars = [
-    { name: "Fiat Mobi", picture: imgCar },
-    { name: "Hyundai HB20", picture: imgCar },
-    { name: "Chevrolet Cruze", picture: imgCar },
-  ]
-
-  const cars = listCars.map((car, i) => (
+  const cars = props.vehicles.map((car, i) => (
     <section key={i} className={styles.car}>
-      <img className={styles.picture} src={car.picture} alt={car.name} />
-      <p className={styles.name}>{car.name}</p>
+      <img className={styles.picture} src={car.Fotos[0].caminho} alt={car.Modelo.nome} />
+      <p className={styles.name}>{car.car.Modelo.nome}</p>
     </section>
   ))
 

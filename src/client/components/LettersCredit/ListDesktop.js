@@ -6,7 +6,6 @@ import { Row, Col } from '../Grid/Grid'
 import Item from './Item/Item'
 
 const ListDesktop = props => {
-  console.log(props.list)
   return (
     <Row>
       {
@@ -18,7 +17,7 @@ const ListDesktop = props => {
               installmentFlex={item.flex_installment_value}
               deadline={item.duration}
               selected={item.selected}
-              onClick={() => null} />
+              onClick={() => location = `/resultado/${item.id}`} />
           </Col>
         )
       }

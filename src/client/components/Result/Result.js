@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { getLetterCreditById } from '../../actions/lettersCreditActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Plans from '../Plans/Plans'
@@ -11,6 +12,10 @@ import styles from './result.css'
 import SimulateFast from '../SimulateFast/SimulateFast'
 
 const Result = props => {
+  if (props.params) {
+    props.getLetterCreditById(props.params.id)
+  }
+
   return (
     <div>
       <Header />
@@ -19,7 +24,7 @@ const Result = props => {
 
       <SimulateFast showTitle padding />
 
-      <Plans />
+      <Plans letterCredit={props.letterCredit}/>
 
       <LettersCredit
         title={
@@ -37,8 +42,12 @@ const Result = props => {
   )
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = store => ({
+  letterCredit: store.lettersCreditReducer.letterCredit.content
+})
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  getLetterCreditById
+}, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Result)

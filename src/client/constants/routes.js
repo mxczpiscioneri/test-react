@@ -16,11 +16,11 @@ export default {
     title: 'Dúvidas'
   },
   imInterested: {
-    path: '/tenho-interesse',
+    path: '/tenho-interesse/:id',
     title: 'Tenho interesse'
   },
   result: {
-    path: '/resultado',
+    path: '/resultado/:id',
     title: 'Resultado'
   }
 }
