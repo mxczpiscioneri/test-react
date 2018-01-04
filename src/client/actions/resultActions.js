@@ -8,9 +8,7 @@ import {
   FETCH_LETTER_CREDIT_BY_ID_RESULT,
   RECEIVE_LETTER_CREDIT_BY_ID_RESULT,
   FETCH_VEHICLES_BY_IDS_RESULT,
-  RECEIVE_VEHICLES_BY_IDS_RESULT,
-  FETCH_VEHICLE_BY_ID_RESULT,
-  RECEIVE_VEHICLE_BY_ID_RESULT
+  RECEIVE_VEHICLES_BY_IDS_RESULT
 } from '../constants/actionTypes'
 import {
   receiveProgressLinear,
@@ -111,22 +109,6 @@ const receiveVehiclesByIds = (data, others) => [
   }
 ]
 
-const fetchVehicleById = (value = true) => [
-  value ? receiveProgressLinear() : forceFinished(),
-  {
-    type: FETCH_VEHICLE_BY_ID_RESULT,
-    payload: value
-  }
-]
-
-const receiveVehicleById = data => [
-  forceFinished(),
-  {
-    type: RECEIVE_VEHICLE_BY_ID_RESULT,
-    payload: data
-  }
-]
-
 const getVehicle = id => {
   return axios.get(`http://demo9732885.mockable.io/version/specification/${id}`)
     .then(result => result.data)
@@ -148,19 +130,6 @@ export const getVehiclesByIds = (ids, others = false) => {
         }
 
         return dispatch(fetchVehiclesByIds(false))
-      })
-  }
-}
-
-export const getVehicleById = id => {
-  return dispatch => {
-    getVehicle(id)
-      .then(result => {
-        if (result) {
-          return dispatch(receiveVehicleById(result))
-        }
-
-        return dispatch(fetchVehicleById(false))
       })
   }
 }

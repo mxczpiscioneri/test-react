@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
-import { getLettersCredit } from '../../actions/homeActions'
+import { 
+  getLettersCredit,
+  getVehicles
+} from '../../actions/homeActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
@@ -17,6 +20,7 @@ import styles from './home.css'
 class Home extends Component {
   componentWillMount() {
     this.props.getLettersCredit()
+    this.props.getVehicles()
   }
 
   render() {
@@ -41,7 +45,7 @@ class Home extends Component {
           onClick={(id) => this.props.router.push(`/resultado/${id}`)}
         />
 
-        <ListCars />
+        <ListCars vehicles={this.props.vehicles}/>
 
         <Footer />
       </div>
@@ -50,11 +54,13 @@ class Home extends Component {
 }
 
 const mapStateToProps = store => ({
-  lettersCredit: store.homeReducer.lettersCredit.content
+  lettersCredit: store.homeReducer.lettersCredit.content,
+  vehicles: store.homeReducer.vehicles.content
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getLettersCredit
+  getLettersCredit,
+  getVehicles
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

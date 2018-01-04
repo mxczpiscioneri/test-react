@@ -4,9 +4,7 @@ import {
   FETCH_LETTER_CREDIT_BY_ID_RESULT,
   RECEIVE_LETTER_CREDIT_BY_ID_RESULT,
   FETCH_VEHICLES_BY_IDS_RESULT,
-  RECEIVE_VEHICLES_BY_IDS_RESULT,
-  RECEIVE_VEHICLE_BY_ID_RESULT,
-  FETCH_VEHICLE_BY_ID_RESULT
+  RECEIVE_VEHICLES_BY_IDS_RESULT
 } from '../constants/actionTypes'
 import { merge } from 'lodash'
 
@@ -101,23 +99,6 @@ export default (state = INITIAL_STATE, action) => {
           action.payload.content,
           false,
           true))
-
-    case FETCH_VEHICLE_BY_ID_RESULT:
-      return merge({}, state, {
-        vehicle: {
-          fetching: action.payload,
-          received: !action.payload
-        }
-      })
-
-    case RECEIVE_VEHICLE_BY_ID_RESULT:
-      return merge({}, state, {
-        vehicle: {
-          fetching: false,
-          received: true,
-          content: action.payload
-        }
-      })
     
       default:
       return state
