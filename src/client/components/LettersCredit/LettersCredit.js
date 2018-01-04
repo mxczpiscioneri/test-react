@@ -1,22 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import scrollToElement from 'scroll-to-element'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
-import { getLettersCredit } from '../../actions/lettersCreditActions'
 import ListDesktop from './ListDesktop'
 import ListMobile from './ListMobile'
 import styles from './lettersCredit.css'
 
-class LettersCredit extends React.Component {
+export default class LettersCredit extends React.Component {
   constructor(props) {
     super(props)
-  }
-
-  componentWillMount () {
-    this.props.getLettersCredit()
   }
 
   _simulateNow() {
@@ -27,64 +20,64 @@ class LettersCredit extends React.Component {
     const props = this.props
     return (
       <section className={styles.container}>
-        <Container>
-          {
-            props.title
-            && (
-              <Row>
-                <Col {...this.props.size} offset={this.props.offset}>
-                  {props.title}
-                </Col>
-              </Row>
-            )
-          }
-          <Hidden xs>
-            <Row>
-              <Col {...this.props.size} offset={this.props.offset}>
-                <ListDesktop list={this.props.lettersCredit} count={this.props.count} />
-              </Col>
-            </Row>
-          </Hidden>
+        {
+          (props.list && props.list.length > 0)
+            ? (
+              <Container>
+                {
+                  props.title
+                  && (
+                    <Row>
+                      <Col {...props.size} offset={props.offset}>
+                        {props.title}
+                      </Col>
+                    </Row>
+                  )
+                }
+                <Hidden xs>
+                  <Row>
+                    <Col {...props.size} offset={props.offset}>
+                      <ListDesktop list={props.list} count={props.count} onClick={props.onClick} />
+                    </Col>
+                  </Row>
+                </Hidden>
 
-          <Hidden sm md lg xl>
-            <ListMobile list={this.props.lettersCredit} />
-          </Hidden>
-          {
-            this.props.showButton
-            && (
-              <Row>
-                <Col {...this.props.size} offset={this.props.offset} className={styles.buttonContainer}>
-                  <button className={styles.button} onClick={this._simulateNow.bind(this)}>Quero simular agora</button>
-                </Col>
-              </Row>
+                <Hidden sm md lg xl>
+                  <ListMobile list={props.list} onClick={props.onClick} />
+                </Hidden>
+                {
+                  this.props.showButton
+                  && (
+                    <Row>
+                      <Col {...props.size} offset={props.offset} className={styles.buttonContainer}>
+                        <button className={styles.button} onClick={this._simulateNow.bind(this)}>Quero simular agora</button>
+                      </Col>
+                    </Row>
+                  )
+                }
+              </Container>
             )
-          }
-        </Container>
+            : <br />
+        }
       </section>
     )
   }
 }
 
 LettersCredit.propTypes = {
+  list: PropTypes.array,
   title: PropTypes.element,
   count: PropTypes.number,
   size: PropTypes.object,
   offset: PropTypes.object,
-  showButton: PropTypes.bool
+  showButton: PropTypes.bool,
+  onClick: PropTypes.func.isRequired
 }
 
 LettersCredit.defaultProps = {
+  list: [],
   count: 4,
   size: { xs: 12, md: 12 },
   offset: {},
   showButton: true
 }
-
-const mapStateToProps = store => ({
-  lettersCredit: store.lettersCreditReducer.lettersCredit.content
-})
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ getLettersCredit }, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(LettersCredit)

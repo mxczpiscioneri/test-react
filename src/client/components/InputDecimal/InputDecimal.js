@@ -67,8 +67,8 @@ const makeMask = (value) => {
   }
 
   let onlyNums = parseInt(value.replace(/[^\d]/g, ''))
-  if (onlyNums.toString().length > 6) {
-    onlyNums = onlyNums.toString().substr(0, 6)
+  if (onlyNums.toString().length > 8) {
+    onlyNums = onlyNums.toString().substr(0, 8)
   }
 
   if (onlyNums > 0) {

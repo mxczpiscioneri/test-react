@@ -48,7 +48,7 @@ const receiveVehicleById = data => [
 ]
 
 const getVehicle = id => {
-  return axios.get(`https://catalogo.webmotors.com.br/api/version/specification/${id}`)
+  return axios.get(`http://demo9732885.mockable.io/version/specification/${id}`)
     .then(result => result.data)
     .catch(err => console.log(err))
 }

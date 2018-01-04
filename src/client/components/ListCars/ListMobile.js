@@ -23,9 +23,9 @@ const ListMobile = props => {
         props.list.map((item, index) =>
           <Item
             key={index}
-            name={item.name}
-            value={item.value}
-            image={item.image} />
+            name={item.Modelo.nome}
+            value={item.DadosPreco.ValorMedio}
+            image={item.Fotos[0].caminho} />
         )
       }
     </Slider>

@@ -20,7 +20,7 @@ export default {
     title: 'Tenho interesse'
   },
   result: {
-    path: '/resultado/:id',
+    path: '/resultado(/:id)',
     title: 'Resultado'
   }
 }

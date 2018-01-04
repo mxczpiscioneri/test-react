@@ -17,7 +17,7 @@ const ListDesktop = props => {
               installmentFlex={item.flex_installment_value}
               deadline={item.duration}
               selected={item.selected}
-              onClick={() => location = `/resultado/${item.id}`} />
+              onClick={() => props.onClick(item.id)} />
           </Col>
         )
       }
@@ -28,6 +28,7 @@ const ListDesktop = props => {
 ListDesktop.propTypes = {
   list: PropTypes.array.isRequired,
   count: PropTypes.number,
+  onClick: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({})

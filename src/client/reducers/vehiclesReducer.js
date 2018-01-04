@@ -15,13 +15,14 @@ const INITIAL_STATE = {
   otherVehicles: {
     fetching: false,
     received: true,
-    content: {}
+    content: []
   }
 }
 
 const makeResult = (name, content, fetching, received) => {
   let result = {}
   result[name] = {
+    content,
     fetching,
     received
   }

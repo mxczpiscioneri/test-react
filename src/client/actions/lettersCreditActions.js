@@ -1,7 +1,7 @@
 import api from '../lib/api'
 import _ from 'lodash'
 import { push } from 'react-router-redux'
-import { 
+import {
   FETCH_LETTERS_CREDIT,
   RECEIVE_LETTERS_CREDIT,
   FETCH_LETTER_CREDIT_BY_ID,
@@ -56,13 +56,13 @@ export const getLettersCredit = () => {
       .then(config => {
         const ids = config.data[0].references_id
         let promises = [];
-        
+
         _.forEach(ids, id => {
           promises.push(getLetterCredit(id))
         })
 
         Promise.all(promises)
-          .then(result => { 
+          .then(result => {
             dispatch(receiveLettersCredit(result))
           })
       })
@@ -86,16 +86,32 @@ export const getLetterCreditById = id => {
   }
 }
 
-export const searchLettersCredit = (type, value, limit = 4) => {
+export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) => {
   return dispatch => {
     api.get(`letters_of_credit?${type}=${value}&limit=${limit}`)
       .then(result => {
-        dispatch(receiveLettersCredit(result.data))
-        dispatch(push(`/resultado/${result.data[0].id}`))
+        let letters = result.data
+        
+        if (idToRemove) {
+          const index = _.findIndex(letters, x => x.id === parseInt(idToRemove))
+          if (index > -1) {
+            letters.splice(index, 1)
+          }
+        } else {
+          letters.splice(0, 1)
+        }
+        
+        dispatch(receiveLettersCredit(letters))
       })
       .catch(err => {
         console.error(err)
         dispatch(fetchLettersCredit(false))
       })
+  }
+}
+
+export const redirect = url => {
+  return dispatch => {
+    dispatch(push(url))
   }
 }
