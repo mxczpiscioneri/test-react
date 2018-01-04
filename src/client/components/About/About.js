@@ -65,7 +65,7 @@ const About = props => {
 
       <Menu transparent />
 
-      <Banner type='o_que_eh' />
+      <Banner type={'o_que_eh'} />
 
       <section className={styles.content}>
         <Container>
@@ -80,7 +80,7 @@ const About = props => {
         </Container>
       </section>
 
-      <Testimonial />
+      <Testimonial type={'o_que_eh'} />
 
       <Footer />
     </div>

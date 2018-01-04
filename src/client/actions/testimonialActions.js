@@ -35,12 +35,12 @@ const getTestimonial = (id) => {
     })
 }
 
-export const getTestimonials = () => {
+export const getTestimonials = type => {
   return dispatch => {
     dispatch(fetchTestimonials())
 
     api
-      .get('/config_pages?page=home&config_type=highlighted_testimonials')
+      .get(`/config_pages?page=${type}&config_type=highlighted_testimonials`)
       .then(res => {
         const idTestimonials = res.data[0].references_id
 

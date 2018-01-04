@@ -19,7 +19,7 @@ const Why = props => {
 
       <Menu transparent />
 
-      <Banner type='porque_vale_a_pena' />
+      <Banner type={'porque_vale_a_pena'} />
 
       <section className={styles.contentConsortium}>
         <Container>
@@ -83,7 +83,7 @@ const Why = props => {
         </Container>
       </section>
 
-      <Testimonial />
+      <Testimonial type={'porque_vale_a_pena'} />
 
       <Footer />
     </div>

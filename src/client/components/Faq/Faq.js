@@ -58,7 +58,7 @@ const Faq = props => {
         </Container>
       </section>
 
-      <Testimonial />
+      <Testimonial type={'o_que_eh'} />
 
       <Footer />
     </div>
