@@ -46,15 +46,17 @@ const makeResult = (name, content, fetching, received) => {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case FETCH_LETTERS_CREDIT_RESULT:
-      return merge({}, state, {
+    case FETCH_LETTERS_CREDIT_RESULT: {
+      let result = merge({}, state, {
         lettersCredit: {
           fetching: action.payload,
-          received: !action.payload,
-          content: []
+          received: !action.payload
         }
       })
-
+      
+      result.lettersCredit.content = []
+      return result
+    } 
     case RECEIVE_LETTERS_CREDIT_RESULT:
       return merge({}, state, {
         lettersCredit: {
@@ -64,15 +66,17 @@ export default (state = INITIAL_STATE, action) => {
         }
       })
 
-    case FETCH_LETTER_CREDIT_BY_ID_RESULT:
-      return merge({}, state, {
+    case FETCH_LETTER_CREDIT_BY_ID_RESULT: {
+      const result = merge({}, state, {
         letterCredit: {
           fetching: action.payload,
-          received: !action.payload,
-          content: {}
+          received: !action.payload
         }
       })
 
+      result.letterCredit.content = {}
+      return result
+    }
     case RECEIVE_LETTER_CREDIT_BY_ID_RESULT:
       return merge({}, state, {
         letterCredit: {

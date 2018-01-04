@@ -20,7 +20,15 @@ export default {
     title: 'Tenho interesse'
   },
   result: {
-    path: '/resultado(/:id)',
+    path: '/resultado/:id',
+    title: 'Resultado'
+  },
+  resultValue: {
+    path: '/resultado/veiculo/:value',
+    title: 'Resultado'
+  },
+  resultInstallment: {
+    path: '/resultado/parcela/:value',
     title: 'Resultado'
   }
 }

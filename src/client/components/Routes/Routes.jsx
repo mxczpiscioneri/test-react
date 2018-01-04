@@ -26,6 +26,8 @@ const Routes = props => (
           <IndexRoute component={Home} />
         </Route>
         <Route path={routePaths.result.path} component={Result} />
+        <Route path={routePaths.resultValue.path} component={Result} />
+        <Route path={routePaths.resultInstallment.path} component={Result} />
         <Route path={routePaths.about.path} component={About} />
         <Route path={routePaths.why.path} component={Why} />
         <Route path={routePaths.faq.path} component={Faq} />

@@ -17,18 +17,11 @@ import SimulateFast from '../SimulateFast/SimulateFast'
 
 class Result extends Component {
   componentWillMount() {
-    let id;
-    let type;
-    let value;
-
-    if (this.props.params) {
-      id = this.props.params.id
-    }
-
-    if (this.props.location && this.props.location.query) {
-      type = this.props.location.query.type;
-      value = this.props.location.query.value;
-    }
+    const { id, value } = this.props.params;
+    const type = 
+      (this.props.location.pathname.indexOf('/veiculo/') > -1)
+        ? 'value'
+        : (this.props.location.pathname.indexOf('/parcela/') > -1) ? 'installment' : '';
 
     if (id) {
       this.props.getLetterCreditById(id)

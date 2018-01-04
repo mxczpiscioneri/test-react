@@ -45,7 +45,7 @@ export default class Plans extends React.Component {
             <Row>
               <Col xs={12} sm={5} offset={{ sm: 1 }}>
                 <p className={styles.textResult}>Você terá uma carta de crédito de R$ <span>{letterCredit.full_value}</span> pagando apenas <span>R$ {letterCredit.regular_installment_value}</span> por <span>{letterCredit.duration}</span> meses.</p>
-                <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ ${letterCredit.flex_installment_value}</span> nos primeiros meses, não deixe de optar pelo plano Flex!</p>
+                <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ {letterCredit.flex_installment_value}</span> nos primeiros meses, não deixe de optar pelo plano Flex!</p>
                 <p className={styles.textResult}>Valor do veículo R$ {letterCredit.full_value} <span className={styles.light}>Prazo {letterCredit.duration} Meses</span></p>
                 <p className={styles.textResult}>Parcela Normal com seguro R$ <span>{letterCredit.regular_installment_safe_value}</span><br />Parcela Flex com seguro R$ <span>${letterCredit.flex_installment_safe_value}</span></p>
                 <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>

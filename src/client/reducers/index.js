@@ -5,7 +5,6 @@ import toDoReducer from './toDoReducer'
 import testimonialReducer from './testimonialReducer'
 import bannerReducer from './bannerReducer'
 import progressLinearReducer from './progressLinearReducer'
-import vehiclesReducer from './vehiclesReducer'
 import homeReducer from './homeReducer'
 import resultReducer from './resultReducer'
 
@@ -16,7 +15,6 @@ const rootReducer = combineReducers({
   bannerReducer,
   routing: routerReducer,
   progressLinearReducer,
-  vehiclesReducer,
   homeReducer,
   resultReducer,
 })
