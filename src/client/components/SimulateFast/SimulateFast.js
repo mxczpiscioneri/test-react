@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import Slider from 'react-rangeslider'
 import { Container, Row, Col } from '../Grid/Grid'
 import styles from './simulateFast.css'
-import { searchLettersCredit } from '../../actions/lettersCreditActions'
+import { redirect } from '../../actions/lettersCreditActions'
 
 class SimulateFast extends Component {
   constructor(props) {
@@ -22,12 +22,12 @@ class SimulateFast extends Component {
         }
       },
       installmentValue: {
-        value: 1500,
+        value: 1250,
         min: 500,
-        max: 3000,
+        max: 2000,
         labels: {
           0: 'R$ 500',
-          10: 'R$ 3.000'
+          10: 'R$ 2.000'
         }
       },
       type: 1
@@ -43,8 +43,6 @@ class SimulateFast extends Component {
         [styles.blockMargin]: !this.props.padding,
       }
     )
-
-    const props = this.props
 
     return (
       <section className={styles.simulateFast}>
@@ -85,21 +83,21 @@ class SimulateFast extends Component {
                     format={this.format}
                     handleLabel={(this.state.type === 1) ? this.state.installmentValue.value.toString() : this.state.fullValue.value.toString()}
                     onChange={(value) => {
-                      if(this.state.type === 1){
+                      if (this.state.type === 1) {
                         let installmentValueCopy = this.state.installmentValue
                         installmentValueCopy.value = value
-                        this.setState({ installmentValue: installmentValueCopy }) 
+                        this.setState({ installmentValue: installmentValueCopy })
                       } else {
                         let fullValueCopy = this.state.fullValue
                         fullValueCopy.value = value
-                        this.setState({ fullValue: fullValueCopy }) 
+                        this.setState({ fullValue: fullValueCopy })
                       }
                     }}
                     onChangeComplete={() => {
                       if (this.state.type === 1) {
-                        this.props.searchLettersCredit('installment', this.state.installmentValue.value, 4)
+                        this.props.redirect(`/resultado/parcela/${this.state.installmentValue.value}`)
                       } else {
-                        this.props.searchLettersCredit('value', this.state.fullValue.value, 4)
+                        this.props.redirect(`/resultado/veiculo/${this.state.fullValue.value}`)
                       }
                     }}
                   />
@@ -117,6 +115,6 @@ class SimulateFast extends Component {
 const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ searchLettersCredit }, dispatch)
+  bindActionCreators({ redirect }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(SimulateFast)
