@@ -1,22 +1,13 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
-import { getVehiclesByIds } from '../../actions/vehiclesActions'
 import Cars from './Cars/Cars'
 import styles from './plans.css'
 import Star from './icone-estrela.svg';
 
-class Plans extends React.Component {
+export default class Plans extends React.Component {
   submitForm = (e) => {
     e.preventDefault()
-    window.location = `/tenho-interesse/${this.props.letterCredit.id}`
-  }
-
-  componentWillReceiveProps (nextProps) {
-    if ((this.props.letterCredit !== nextProps.letterCredit) && nextProps.letterCredit) {
-      this.props.getVehiclesByIds(nextProps.letterCredit.catalog_info.vehicles_referenceds.top)
-    }
+    this.props.onSubmit(this.props.letterCredit.id)
   }
 
   render() {
@@ -41,7 +32,7 @@ class Plans extends React.Component {
               </Col>
               <Col xs={12}>
                 <h3 className={styles.titleSuggestions}>Sugestões de veículos que você poderá <span>comprar</span>*</h3>
-                <Cars />
+                <Cars vehicles={this.props.vehicles}/>
               </Col>
             </Row>
           </Hidden>
@@ -70,13 +61,3 @@ class Plans extends React.Component {
     )
   }
 }
-
-const mapStateToProps = store => ({
-  vehicles: store.vehiclesReducer.vehicles.content
-})
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getVehiclesByIds
-}, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(Plans)

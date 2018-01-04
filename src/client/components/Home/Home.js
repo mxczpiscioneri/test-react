@@ -15,7 +15,7 @@ import Footer from '../Footer/Footer'
 import styles from './home.css'
 
 class Home extends Component {
-  componentWillMount () {
+  componentWillMount() {
     this.props.getLettersCredit()
   }
 
@@ -36,8 +36,10 @@ class Home extends Component {
 
         <LettersCredit title={
           <h3 className={styles.lettersTitle}>Veja algumas das nossas cartas de crédito</h3>
-        } 
-        list={this.props.lettersCredit}/>
+        }
+          list={this.props.lettersCredit}
+          onClick={(id) => this.props.router.push(`/resultado/${id}`)}
+        />
 
         <ListCars />
 

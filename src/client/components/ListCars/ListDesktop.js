@@ -12,9 +12,10 @@ const ListDesktop = props => {
         props.list.map((item, index) =>
           <Col xs={6} md={3} key={index}>
             <Item
-              name={item.name}
-              value={item.value}
-              image={item.image} />
+              key={index}
+              name={item.Modelo.nome}
+              value={item.DadosPreco.ValorMedio}
+              image={item.Fotos[0].caminho} />
           </Col>
         )
       }

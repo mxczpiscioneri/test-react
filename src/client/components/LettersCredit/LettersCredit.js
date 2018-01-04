@@ -20,39 +20,45 @@ export default class LettersCredit extends React.Component {
     const props = this.props
     return (
       <section className={styles.container}>
-        <Container>
-          {
-            props.title
-            && (
-              <Row>
-                <Col {...this.props.size} offset={this.props.offset}>
-                  {props.title}
-                </Col>
-              </Row>
-            )
-          }
-          <Hidden xs>
-            <Row>
-              <Col {...this.props.size} offset={this.props.offset}>
-                <ListDesktop list={this.props.list} count={this.props.count} />
-              </Col>
-            </Row>
-          </Hidden>
+        {
+          (props.list && props.list.length > 0)
+            ? (
+              <Container>
+                {
+                  props.title
+                  && (
+                    <Row>
+                      <Col {...props.size} offset={props.offset}>
+                        {props.title}
+                      </Col>
+                    </Row>
+                  )
+                }
+                <Hidden xs>
+                  <Row>
+                    <Col {...props.size} offset={props.offset}>
+                      <ListDesktop list={props.list} count={props.count} onClick={props.onClick} />
+                    </Col>
+                  </Row>
+                </Hidden>
 
-          <Hidden sm md lg xl>
-            <ListMobile list={this.props.list} />
-          </Hidden>
-          {
-            this.props.showButton
-            && (
-              <Row>
-                <Col {...this.props.size} offset={this.props.offset} className={styles.buttonContainer}>
-                  <button className={styles.button} onClick={this._simulateNow.bind(this)}>Quero simular agora</button>
-                </Col>
-              </Row>
+                <Hidden sm md lg xl>
+                  <ListMobile list={props.list} onClick={props.onClick} />
+                </Hidden>
+                {
+                  this.props.showButton
+                  && (
+                    <Row>
+                      <Col {...props.size} offset={props.offset} className={styles.buttonContainer}>
+                        <button className={styles.button} onClick={this._simulateNow.bind(this)}>Quero simular agora</button>
+                      </Col>
+                    </Row>
+                  )
+                }
+              </Container>
             )
-          }
-        </Container>
+            : <br />
+        }
       </section>
     )
   }
@@ -64,7 +70,8 @@ LettersCredit.propTypes = {
   count: PropTypes.number,
   size: PropTypes.object,
   offset: PropTypes.object,
-  showButton: PropTypes.bool
+  showButton: PropTypes.bool,
+  onClick: PropTypes.func.isRequired
 }
 
 LettersCredit.defaultProps = {

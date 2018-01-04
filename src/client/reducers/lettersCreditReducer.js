@@ -25,7 +25,8 @@ export default (state = INITIAL_STATE, action) => {
       return merge({}, state, {
         lettersCredit: {
           fetching: action.payload,
-          received: !action.payload
+          received: !action.payload,
+          content: []
         }
       })
 
@@ -42,7 +43,8 @@ export default (state = INITIAL_STATE, action) => {
       return merge({}, state, {
         letterCredit: {
           fetching: action.payload,
-          received: !action.payload
+          received: !action.payload,
+          content: {}
         }
       })
 
