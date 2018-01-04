@@ -1,22 +1,11 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import styles from './listCars.css'
 import ListDesktop from './ListDesktop'
 import ListMobile from './ListMobile'
-import imgCruze from './cruze.png'
-import imgHb20 from './hb20.png'
-import imgUno from './uno.png'
-import imgUp from './up.png'
 
 const ListCars = props => {
-  const cars = [
-    { name: 'Fiat Bravo', value: 35.000, image: imgUp },
-    { name: 'Chevrolet Cruze', value: 60.000, image: imgCruze },
-    { name: 'Fiat Mobi', value: 50.000, image: imgUno },
-    { name: 'Hyundai HB20', value: 40.000, image: imgHb20 }
-  ]
+  const cars = props.vehicles
 
   return (
     <section className={styles.container}>
@@ -51,8 +40,4 @@ const ListCars = props => {
   )
 }
 
-const mapStateToProps = state => ({})
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(ListCars)
+export default ListCars

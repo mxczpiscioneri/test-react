@@ -28,7 +28,7 @@ const ListMobile = props => {
             installmentFlex={item.flex_installment_value}
             deadline={item.duration}
             selected={item.selected}
-            onClick={() => null} />
+            onClick={() => props.onClick(item.id)} />
         )
       }
     </Slider>
@@ -36,7 +36,8 @@ const ListMobile = props => {
 }
 
 ListMobile.propTypes = {
-  list: PropTypes.array.isRequired
+  list: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({})

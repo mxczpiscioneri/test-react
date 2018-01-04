@@ -86,12 +86,22 @@ export const getLetterCreditById = id => {
   }
 }
 
-export const searchLettersCredit = (type, value, limit = 4) => {
+export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) => {
   return dispatch => {
     api.get(`letters_of_credit?${type}=${value}&limit=${limit}`)
       .then(result => {
-        dispatch(receiveLettersCredit(result.data))
-        dispatch(push(`/resultado/${result.data[0].id}`))
+        let letters = result.data
+        
+        if (idToRemove) {
+          const index = _.findIndex(letters, x => x.id === parseInt(idToRemove))
+          if (index > -1) {
+            letters.splice(index, 1)
+          }
+        } else {
+          letters.splice(0, 1)
+        }
+        
+        dispatch(receiveLettersCredit(letters))
       })
       .catch(err => {
         console.error(err)

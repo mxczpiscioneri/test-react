@@ -1,6 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 import { Hidden } from '../../Grid/Grid'
 import ArrowLeft from './ArrowLeft'
@@ -12,7 +10,7 @@ const Cars = props => {
   const cars = props.vehicles.map((car, i) => (
     <section key={i} className={styles.car}>
       <img className={styles.picture} src={car.Fotos[0].caminho} alt={car.Modelo.nome} />
-      <p className={styles.name}>{car.car.Modelo.nome}</p>
+      <p className={styles.name}>{car.Modelo.nome}</p>
     </section>
   ))
 
@@ -53,8 +51,4 @@ const Cars = props => {
   )
 }
 
-const mapStateToProps = state => ({})
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(Cars)
+export default Cars
