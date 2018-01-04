@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
-import { getLettersCredit } from '../../actions/lettersCreditActions'
+import { getLettersCredit } from '../../actions/homeActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
@@ -50,7 +50,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = store => ({
-  lettersCredit: store.lettersCreditReducer.lettersCredit.content
+  lettersCredit: store.homeReducer.lettersCredit.content
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

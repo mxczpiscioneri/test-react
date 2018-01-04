@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {
   getLetterCreditById,
-  searchLettersCredit
-} from '../../actions/lettersCreditActions'
-import { getVehiclesByIds } from '../../actions/vehiclesActions'
+  searchLettersCredit,
+  getVehiclesByIds
+} from '../../actions/resultActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Plans from '../Plans/Plans'
@@ -63,7 +63,7 @@ class Result extends Component {
 
         <Plans
           letterCredit={this.props.letterCredit}
-          vehicles={this.props.vehicles}
+          vehicles={this.props.topVehicles}
           onSubmit={(id) =>
             this.props.router.push(`/tenho-interesse/${id}`)
           }
@@ -91,10 +91,10 @@ class Result extends Component {
 }
 
 const mapStateToProps = store => ({
-  letterCredit: store.lettersCreditReducer.letterCredit.content,
-  lettersCredit: store.lettersCreditReducer.lettersCredit.content,
-  vehicles: store.vehiclesReducer.vehicles.content,
-  otherVehicles: store.vehiclesReducer.otherVehicles.content
+  letterCredit: store.resultReducer.letterCredit.content,
+  lettersCredit: store.resultReducer.lettersCredit.content,
+  topVehicles: store.resultReducer.topVehicles.content,
+  otherVehicles: store.resultReducer.otherVehicles.content
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

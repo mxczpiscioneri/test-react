@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import Slider from 'react-rangeslider'
 import { Container, Row, Col } from '../Grid/Grid'
 import styles from './simulateFast.css'
-import { redirect } from '../../actions/lettersCreditActions'
+import { redirect } from '../../actions/resultActions'
 
 class SimulateFast extends Component {
   constructor(props) {

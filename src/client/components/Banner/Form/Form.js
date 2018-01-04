@@ -7,7 +7,7 @@ import InputDecimal from '../../InputDecimal/InputDecimal'
 import { reduxForm } from 'redux-form'
 import Info from '../../Info/Info'
 import IconInfo from './info.svg'
-import { redirect } from '../../../actions/lettersCreditActions'
+import { redirect } from '../../../actions/resultActions'
 
 class Form extends Component {
   constructor() {

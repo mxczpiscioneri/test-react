@@ -18,6 +18,7 @@ export default class LettersCredit extends React.Component {
 
   render() {
     const props = this.props
+
     return (
       <section className={styles.container}>
         {
