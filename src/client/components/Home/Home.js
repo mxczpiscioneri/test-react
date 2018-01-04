@@ -21,13 +21,13 @@ class Home extends Component {
 
         <Menu transparent />
 
-        <Banner form mask hiddenSubTitleXS type='home' />
+        <Banner form mask hiddenSubTitleXS type={'home'} />
 
         <WhyBuy />
 
         <Video />
 
-        <Testimonial />
+        <Testimonial type={'home'} />
 
         <LettersCredit title={
           <h3 className={styles.lettersTitle}>Veja algumas das nossas cartas de crédito</h3>

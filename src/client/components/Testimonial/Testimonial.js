@@ -11,7 +11,7 @@ import { getTestimonials } from '../../actions/testimonialActions'
 
 class Testimonial extends Component {
   componentWillMount() {
-    this.props.getTestimonials()
+    this.props.getTestimonials(this.props.type)
   }
 
   render() {
