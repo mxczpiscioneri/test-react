@@ -14,7 +14,7 @@ const ListDesktop = props => {
             <Item
               key={index}
               name={item.Modelo.nome}
-              value={item.DadosPreco.ValorMedio}
+              value={item.DadosPreco.ValorFipe}
               image={item.Fotos[0].caminho} />
           </Col>
         )
