@@ -11,6 +11,7 @@ import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
 import Alert from '../Alert/Alert'
 import styles from './formMobile.css'
+import { sendForm, closeAlert, redirect } from '../../../actions/interestedActions'
 
 const validate = values => {
   const errors = {}
@@ -19,8 +20,8 @@ const validate = values => {
     errors.name = 'Preencha seu nome'
   }
 
-  if (!values.phone) {
-    errors.phone = 'Preencha seu telefone'
+  if (!values.telephone) {
+    errors.telephone = 'Preencha seu telefone'
   }
 
   if (!values.email) {
@@ -31,46 +32,62 @@ const validate = values => {
     errors.cpf = 'Preencha seu CPF/CNPJ'
   }
 
+  if (!values.choice_of_plan) {
+    errors.choice_of_plan = 'Escolha um plano'
+  }
+
+  if (!values.validate) {
+    errors.validate = 'Aceite o termo'
+  }
+
   return errors
 }
 
 class FormMobile extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      alert: false
-    }
-  }
-
   _submit = (event) => {
     event.preventDefault()
-    this.setState({ alert: true })
+
+    const form = {
+      letter_of_credit_id: this.props.letter_of_credit_id,
+      name: event.target.name.value,
+      telephone: event.target.telephone.value,
+      email: event.target.email.value,
+      cpf: event.target.cpf.value,
+      cnpj: event.target.cpf.value,
+      choice_of_plan: event.target.choice_of_plan.value,
+    }
+
+    if (event.target.cpf.value.length === 14) {
+      delete form.cnpj
+    } else {
+      delete form.cpf
+    }
+
+    this.props.sendForm(form)
   }
 
   render() {
-    const props = this.props
-
     return (
       <section>
         <div className={styles.container}>
           <h4 className={styles.formOrientation}>Preencha os campos do formulário abaixo:</h4>
           <form onSubmit={this._submit} name='formMobile'>
             <Input label='Seu nome' name='name' />
-            <InputPhone label='Seu telefone' name='phone' />
+            <InputPhone label='Seu telefone' name='telephone' />
             <Input label='Seu e-mail' name='email' />
             <InputCpf label='*CPF/CNPJ' name='cpf' />
-            <RadioButtonGroup name='installment'>
+            <RadioButtonGroup name='choice_of_plan'>
               <RadioButton value='normal' label='Parcela normal' />
               <RadioButton value='flex' label='Parcela flex' />
             </RadioButtonGroup>
             <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
-            <Alert show={this.state.alert} onConfirm={() => {
-              window.location = '/'
+            <Alert show={this.props.formResult.send} onConfirm={() => {
+              this.props.closeAlert()
+              this.props.redirect('/')
             }} />
+            <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
           </form>
         </div>
-        <button type='submit' className={styles.button}>ME LIGUE</button>
       </section>
     )
   }
@@ -81,8 +98,13 @@ const InitializeFromStateForm = reduxForm({
   form: 'formMobile'
 })(FormMobile)
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => {
+  return {
+    formResult: state.interestedReducer.form
+  }
+}
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ sendForm, closeAlert, redirect }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(InitializeFromStateForm)
