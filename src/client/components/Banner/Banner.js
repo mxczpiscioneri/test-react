@@ -78,7 +78,7 @@ class Banner extends Component {
     return (
       <div id='Banner' className={styles.banner}>
         {
-          this.props.banners &&
+          (this.props.banners && this.props.banners.length > 0) &&
           <Slider className={styles.slider} {...settings}>
             {banners}
           </Slider>
