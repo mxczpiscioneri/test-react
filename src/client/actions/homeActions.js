@@ -36,6 +36,8 @@ const getLetterCredit = id => {
 
 export const getLettersCredit = () => {
   return dispatch => {
+    dispatch(fetchLettersCredit())
+
     api.get('/config_pages?page=home&config_type=highlighted_letter_of_credits')
       .then(config => {
         const ids = config.data[0].references_id
@@ -81,6 +83,8 @@ const getVehicle = id => {
 
 export const getVehicles = () => {
   return dispatch => {
+    dispatch(fetchVehicles())
+
     axios.get('http://demo9732885.mockable.io/config_pages?page=home&config_type=highlighted_vehicles')
       .then(config => {
         const ids = config.data[0].references_id
