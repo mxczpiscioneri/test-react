@@ -7,16 +7,18 @@ import bannerReducer from './bannerReducer'
 import progressLinearReducer from './progressLinearReducer'
 import homeReducer from './homeReducer'
 import resultReducer from './resultReducer'
+import interestedReducer from './interestedReducer'
 
 const rootReducer = combineReducers({
   form: formReducer,
   toDoReducer,
-  testimonialReducer,
-  bannerReducer,
   routing: routerReducer,
   progressLinearReducer,
+  testimonialReducer,
+  bannerReducer,
   homeReducer,
   resultReducer,
+  interestedReducer,
 })
 
 export default rootReducer

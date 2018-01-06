@@ -12,6 +12,7 @@ import Checkbox from '../../Checkbox/Checkbox'
 import Alert from '../Alert/Alert'
 import { isEmail } from 'validator'
 import styles from './form.css'
+import { sendForm, closeAlert, redirect } from '../../../actions/interestedActions'
 
 const validate = values => {
   const errors = {}
@@ -20,8 +21,8 @@ const validate = values => {
     errors.name = 'Preencha seu nome'
   }
 
-  if (!values.phone) {
-    errors.phone = 'Preencha seu telefone'
+  if (!values.telephone) {
+    errors.telephone = 'Preencha seu telefone'
   }
 
   if (!values.email) {
@@ -34,41 +35,57 @@ const validate = values => {
     errors.cpf = 'Preencha seu CPF/CNPJ'
   }
 
+  if (!values.choice_of_plan) {
+    errors.choice_of_plan = 'Escolha um plano'
+  }
+
+  if (!values.validate) {
+    errors.validate = 'Aceite o termo'
+  }
+
   return errors
 }
 
 class Form extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      alert: false
-    }
-  }
-
   _submit = (event) => {
     event.preventDefault()
-    this.setState({ alert: true })
+
+    const form = {
+      letter_of_credit_id: this.props.letter_of_credit_id,
+      name: event.target.name.value,
+      telephone: event.target.telephone.value,
+      email: event.target.email.value,
+      cpf: event.target.cpf.value,
+      cnpj: event.target.cpf.value,
+      choice_of_plan: event.target.choice_of_plan.value,
+    }
+
+    if (event.target.cpf.value.length === 14) {
+      delete form.cnpj
+    } else {
+      delete form.cpf
+    }
+
+    this.props.sendForm(form)
   }
 
   render() {
-    const props = this.props
-
     return (
       <section className={styles.container}>
         <form onSubmit={this._submit} name="form">
           <Input label='Nome' name='name' />
-          <InputPhone label='Telefone' name='phone' />
+          <InputPhone label='Telefone' name='telephone' />
           <Input label='E-mail' name='email' />
           <InputCpf label='*CPF/CNPJ' name='cpf' />
-          <RadioButtonGroup name='installment'>
+          <RadioButtonGroup name='choice_of_plan'>
             <RadioButton value='normal' label='Parcela normal' />
             <RadioButton value='flex' label='Parcela flex' />
           </RadioButtonGroup>
           <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a vadaliação do meu CPF.' />
-          <button type='submit' className={styles.button}>ME LIGUE</button>
-          <Alert show={this.state.alert} onConfirm={() => {
-            window.location = '/'
+          <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
+          <Alert show={this.props.formResult.send} onConfirm={() => {
+            this.props.closeAlert()
+            this.props.redirect('/')
           }} />
         </form>
       </section>
@@ -81,8 +98,13 @@ const InitializeFromStateForm = reduxForm({
   form: 'form'
 })(Form)
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => {
+  return {
+    formResult: state.interestedReducer.form
+  }
+}
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ sendForm, closeAlert, redirect }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(InitializeFromStateForm)

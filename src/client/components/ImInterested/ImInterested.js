@@ -52,7 +52,7 @@ const ImInterested = props => {
                     <Summary letterCredit={letterCredit} />
                   </Col>
                   <Col xs={12} md={6}>
-                    <Form />
+                    <Form letter_of_credit_id={1} />
                   </Col>
                 </Row>
               </Col>
@@ -61,7 +61,7 @@ const ImInterested = props => {
               <Col xs={12} md={10} offset={{ md: 1 }}>
                 <Row>
                   <Col xs={12} md={6}>
-                    <FormMobile />
+                    <FormMobile letter_of_credit_id={1} />
                   </Col>
                   <Col xs={12} md={6}>
                     <SummaryMobile letterCredit={letterCredit} />
