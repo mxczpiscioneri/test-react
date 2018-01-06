@@ -15,24 +15,21 @@ class Testimonial extends Component {
   }
 
   render() {
-    const listTestimonials = this.props.testimonials.map((testimonial, i) => {
-      {
-        testimonial &&
-        <section key={i} className={styles.testimonial}>
-          <ImageFallback
-            src={testimonial.picture}
-            fallbackImage={imgFallback}
-            alt={testimonial.name}
-            title={testimonial.name}
-            useLayerForClickAway={true}
-          />
+    const listTestimonials = this.props.testimonials.map((testimonial, i) => (
+      <section key={i} className={styles.testimonial}>
+        <ImageFallback
+          src={testimonial.picture}
+          fallbackImage={imgFallback}
+          alt={testimonial.name}
+          title={testimonial.name}
+          useLayerForClickAway={true}
+        />
 
-          <p className={styles.message}>"{testimonial.message}"</p>
-          <p className={styles.name}>{testimonial.name}</p>
-          <img className={styles.icon} src={icon} alt={testimonial.name} />
-        </section>
-      }
-    })
+        <p className={styles.message}>"{testimonial.message}"</p>
+        <p className={styles.name}>{testimonial.name}</p>
+        <img className={styles.icon} src={icon} alt={testimonial.name} />
+      </section>
+    ))
 
     const settings = {
       dots: true,
@@ -47,7 +44,7 @@ class Testimonial extends Component {
     return (
       <Container>
         {
-          this.props.testimonials.length > 0 &&
+          (this.props.testimonials && this.props.testimonials.length > 0) &&
           <div>
             <Row>
               <Col xs={12}>
