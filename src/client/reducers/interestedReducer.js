@@ -9,7 +9,7 @@ const INITIAL_STATE = {
   interested: {
     fetching: false,
     received: true,
-    content: []
+    content: {}
   },
   form: {
     send: false,

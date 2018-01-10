@@ -1,3 +1,4 @@
+import axios from 'axios'
 import api from '../lib/api'
 import { push } from 'react-router-redux'
 import {
@@ -54,17 +55,44 @@ export const sendForm = (form) => {
 }
 
 export const closeAlert = url => {
-    return dispatch => {
-        const data = {
-            send: false,
-            error: ''
-        }
-        dispatch(receiveForm(data))
+  return dispatch => {
+    const data = {
+      send: false,
+      error: ''
     }
+    dispatch(receiveForm(data))
+  }
 }
 
 export const redirect = url => {
-    return dispatch => {
-        dispatch(push(url))
-    }
+  return dispatch => {
+    dispatch(push(url))
+  }
+}
+
+const getVehicle = id => {
+  return axios.get(`http://demo9732885.mockable.io/version/specification/${id}`)
+    .then(result => result.data)
+    .catch(err => console.log(err))
+}
+
+export const getLetterCreditById = id => {
+  return dispatch => {
+    dispatch(fetchInterested())
+
+    api.get(`/letters_of_credit/${id}`)
+      .then(result => result.data)
+      .then(letterCredit => {
+        getVehicle(letterCredit.catalog_info.vehicle_automodel_id)
+          .then(vehicle => {            
+            letterCredit.vehicle = vehicle
+
+            return dispatch(receiveInterested(letterCredit))
+          })
+      })
+      .catch(err => {
+        console.log(err)
+        return dispatch(fetchInterested(false))
+      })
+  }
 }
