@@ -12,7 +12,6 @@ const customDetection = req => {
   if (forwardedIpsStr) {
     const forwardedIps = forwardedIpsStr.split(',')
     ipAddress = forwardedIps[0]
-    console.log('===========\n', forwardedIps, '\n ==========')
   }
   if (!ipAddress)
     ipAddress = req.connection.remoteAddress
@@ -26,7 +25,7 @@ export const ipFilter = IpFilter(config.allowedIps, {
 })
 
 export const handleIpDenied = (err, req, res, next) => {
-  if (err instanceof IpDeniedError)
+  if(err instanceof IpDeniedError)
     res.status(401)
   else
     res.status(err.status || 500)

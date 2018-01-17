@@ -96,6 +96,7 @@ p {
 .buttonText {
   color: #787987;
   font-size: 14px;
+  font-weight: 500;
   position: absolute;
   top: 27px;
   left: 0;

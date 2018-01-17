@@ -28,7 +28,10 @@ const getTestimonial = (id) => {
   return api
     .get(`/testimonials/${id}`)
     .then(res => {
-      return res.data[0]
+      if (Array.isArray(res.data)) {
+        return res.data[0]
+      }
+      return res.data
     })
     .catch(err => {
       console.log(err)

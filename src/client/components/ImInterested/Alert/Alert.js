@@ -11,13 +11,10 @@ import styles from './alert.css'
 const content = props => {
   return (
     <div className={styles.container}>
-      <img
-        src={CheckImg}
-        alt='check' />
-      <div className={styles.titleContainer}>
-        <p className={styles.title}>Obrigado, <span className={styles.userName}>Nome do Usuário</span></p>
-        <p className={styles.subTitle}>Em breve entraremos em contato com você, aguarde :)</p>
-      </div>
+      <p className={styles.title}>Obrigado, <span className={styles.userName}>Nome do Usuário</span></p>
+      <p className={styles.text}>Nos falaremos neste telefone, agora é só aguardar um pouquinho.</p>
+      <p className={styles.text}>Veja agora o período que ligaremos:</p>
+      <p className={styles.text}>Segunda à Sexta - 9hs às 21hs<br />Sábado - 10hs às 14hs</p>
     </div>
   )
 }
@@ -29,9 +26,12 @@ const Alert = props => {
       title={``}
       html
       showConfirmButton={true}
-      confirmButtonText={'Voltar para home'}
+      confirmButtonText={'Enquanto isso, Você pode ir procurando seu carro :)'}
+      showCancelButton={true}
+      cancelButtonText={'×'}
       onConfirm={props.onConfirm}
-      text={renderToStaticMarkup(content(props))}/>
+      onCancel={props.onCancel}
+      text={renderToStaticMarkup(content(props))} />
   )
 }
 

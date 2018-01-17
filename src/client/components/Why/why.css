@@ -70,7 +70,6 @@
 
 .imgBox {
   height: 100%;
-  display: flex;
 
   img {
     max-width: 100%;

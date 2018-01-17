@@ -38,32 +38,32 @@ const Navigation = props => {
           <Col xs={12} lg={4}>
             <div className={styles.socialNetworks}>
               <div className={styles.socialNetwork}>
-                <Link to={`https://www.facebook.com/`}>
+                <Link target="blank" to={`https://www.facebook.com/webmotors`}>
                   <img src={logoFacebook} alt={'facebook'} />
                 </Link>
               </div>
               <div className={styles.socialNetwork}>
-                <Link to={`https://twitter.com/`}>
+                <Link target="blank" to={`https://twitter.com/webmotors`}>
                   <img src={logoTwitter} alt={'twitter'} />
                 </Link>
               </div>
               <div className={styles.socialNetwork}>
-                <Link to={`https://www.youtube.com/`}>
+                <Link target="blank" to={`https://youtube.com/webmotors`}>
                   <img src={logoYouTube} alt={'youtube'} />
                 </Link>
               </div>
               <div className={styles.socialNetwork}>
-                <Link to={`https://www.linkedin.com/`}>
+                <Link target="blank" to={`https://www.linkedin.com/company/webmotors`}>
                   <img src={logoLinkedin} alt={'linkedin'} />
                 </Link>
               </div>
               <div className={styles.socialNetwork}>
-                <Link to={`https://plus.google.com`}>
+                <Link target="blank" to={`https://plus.google.com/+webmotors/posts`}>
                   <img src={logoGPlus} alt={'google plus'} />
                 </Link>
               </div>
               <div className={styles.socialNetwork}>
-                <Link to={`https://www.instagram.com/`}>
+                <Link target="blank" to={`http://instagram.com/webmotors`}>
                   <img src={logoInstagram} alt={'instagram'} />
                 </Link>
               </div>

@@ -58,22 +58,22 @@ const Summary = props => {
                 body={
                   <div>
                     <h4 className={styles.modalSubtitle}>Valor da Parcela</h4>
-                    <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+                    <p className={styles.modalText}></p>
 
                     <h4 className={styles.modalSubtitle}>Valor da Parcela Flex</h4>
-                    <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+                    <p className={styles.modalText}>Você pode reduzir o valor das suas parcelas em até 30%. Vale até a contemplação ou até a metade do plano (o que ocorrer primeiro). Após isso, suas parcelas serão reajustadas somando-se o valor que você pagou a menos.</p>
 
                     <h4 className={styles.modalSubtitle}>Prazo</h4>
-                    <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+                    <p className={styles.modalText}></p>
 
                     <h4 className={styles.modalSubtitle}>Taxa de administração</h4>
-                    <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+                    <p className={styles.modalText}>É a remuneração da administradora, responsável pelos serviços prestados na formação, organização e administração, desde o início do grupo até o seu encerramento.</p>
 
                     <h4 className={styles.modalSubtitle}>Fundo de reserva</h4>
-                    <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+                    <p className={styles.modalText}>É uma garantia para bom funcionamento do grupo, em caso de inadimplência de outras cotas. No fim do plano, caso não seja utilizado na totalidade, ele é devolvido proporcionalmente a cada consorciado. </p>
 
                     <h4 className={styles.modalSubtitle}>Seguro Prestamista</h4>
-                    <p className={styles.modalText}>Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora.</p>
+                    <p className={styles.modalText}>Garante o pagamento do saldo devedor do consorciado em caso de imprevistos, como morte ou invalidez permanente, evitando que a dívida seja repassada à família.</p>
                   </div>
                 }>
                 <span className={styles.infoText}>Leia todos os detalhes das taxas e seguros</span>
@@ -84,7 +84,7 @@ const Summary = props => {
               <div className={styles.carInfo}>
                 <p className={styles.carReference}>Veículo de referência</p>
                 <p className={styles.carModel}>{`${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`}</p>
-                <p className={styles.carAdvice}>*O veículo é referência do bem adquirido. </p>
+                <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
               </div>
               <div className={styles.carImg}>
                 <img
@@ -94,8 +94,8 @@ const Summary = props => {
             </div>
 
             <p className={styles.advice}>
-              Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora, ela será reajustada. Isso garante que a carta de crédito que você esta comprando hoje tenha a valorização até a contemplação. *
-          </p>
+              Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora, ela será reajustada. Isso garante que a carta de crédito que você esta comprando hoje tenha a valorização até a contemplação.
+            </p>
           </div>
         )
       }

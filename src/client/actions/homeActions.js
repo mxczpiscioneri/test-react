@@ -76,7 +76,7 @@ const receiveVehicles = (data, others) => [
 ]
 
 const getVehicle = id => {
-  return axios.get(`http://demo9732885.mockable.io/version/specification/${id}`)
+  return axios.get(`https://catalogo.webmotors.com.br/api/version/specification/${id}`)
     .then(result => result.data)
     .catch(err => console.log(err))
 }
@@ -85,7 +85,7 @@ export const getVehicles = () => {
   return dispatch => {
     dispatch(fetchVehicles())
 
-    axios.get('http://demo9732885.mockable.io/config_pages?page=home&config_type=highlighted_vehicles')
+    axios.get('/config_pages?page=home&config_type=highlighted_vehicles')
       .then(config => {
         const ids = config.data[0].references_id
         let promises = [];

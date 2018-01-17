@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
-import { 
+import {
   getLettersCredit,
   getVehicles
 } from '../../actions/homeActions'
@@ -28,7 +28,7 @@ class Home extends Component {
       <div>
         <Header />
 
-        <Menu transparent />
+        <Menu transparent notSticky />
 
         <Banner form mask hiddenSubTitleXS type={'home'} />
 
@@ -45,7 +45,7 @@ class Home extends Component {
           onClick={(id) => this.props.router.push(`/resultado/${id}`)}
         />
 
-        <ListCars vehicles={this.props.vehicles}/>
+        <ListCars vehicles={this.props.vehicles} />
 
         <Footer />
       </div>

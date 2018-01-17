@@ -16,7 +16,8 @@ const WhyBuy = props => {
         <Row>
           <Col xs={12} sm={8} offset={{ sm: 2 }}>
             <Hidden xs>
-              <h3 className={styles.title}>O Consórcio Santander é a união de um grupo de pessoas que planeja a compra do veículo pagando bem menos.</h3>
+              <h3 className={styles.title}>Por que escolher o Consórcio do Santander?</h3>
+              <h3 className={styles.subTitle}>Entenda o que a gente pode fazer hoje para você comprar o seu carro novo!</h3>
             </Hidden>
             <Hidden sm md lg xl>
               <h3 className={styles.title}>Por que adiquirir o <span className={styles.strong}>Consórcio Santander?</span></h3>
@@ -28,8 +29,7 @@ const WhyBuy = props => {
             <Item
               title='Economia'
               img={economy}>
-              <p className={styles.text}>Você paga taxa de administração a partir de 0,19%  ou 0,21% a.m,</p>
-              <p className={styles.text}>(dependendo do valor escolhido) que são menores do que os juros cobrados em outras modalidades de crédito.</p>
+              <p className={styles.text}>Você paga taxa de administração a partir de 0,19%  ou 0,21% a.m, (dependendo do valor escolhido) que são menores do que as taxas de juros praticadas em outras modalidades de crédito.</p>
             </Item>
           </Col>
           <Col xs={12} sm={6} lg={3}>
@@ -49,7 +49,7 @@ const WhyBuy = props => {
           </Col>
           <Col xs={12} sm={6} lg={3}>
             <Item
-              title='Pós Vendas'
+              title='Atendimento'
               img={sales}>
               <p className={styles.text}>Consulte o extrato da sua cota, resultado das assembleias e oferte lances de forma online.</p>
               <p className={styles.text}>Além disso, conte com o suporte da central de <span>atendimento e chat.</span></p>

@@ -9,7 +9,7 @@ export default {
   },
   why: {
     path: '/vale-a-pena',
-    title: 'Vale a Pena?'
+    title: 'Por que vale a pena?'
   },
   faq: {
     path: '/duvidas',

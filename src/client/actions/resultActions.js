@@ -72,10 +72,10 @@ export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) =
   return dispatch => {
     dispatch(fetchLettersCredit())
 
-    api.get(`letters_of_credit?${type}=${value}&limit=${limit}`)
+    api.get(`/letters_of_credit?${type}=${value}&limit=${limit}`)
       .then(result => {
         let letters = result.data
-        
+
         if (idToRemove) {
           const index = _.findIndex(letters, x => x.id === parseInt(idToRemove))
           if (index > -1) {
@@ -84,7 +84,7 @@ export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) =
         } else {
           letters.splice(0, 1)
         }
-        
+
         dispatch(receiveLettersCredit(letters))
       })
       .catch(err => {
@@ -114,7 +114,7 @@ const receiveVehiclesByIds = (data, others) => [
 ]
 
 const getVehicle = id => {
-  return axios.get(`http://demo9732885.mockable.io/version/specification/${id}`)
+  return axios.get(`https://catalogo.webmotors.com.br/api/version/specification/${id}`)
     .then(result => result.data)
     .catch(err => console.log(err))
 }

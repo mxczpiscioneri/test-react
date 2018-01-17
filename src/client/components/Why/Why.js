@@ -8,8 +8,8 @@ import Banner from '../Banner/Banner'
 import Testimonial from '../Testimonial/Testimonial'
 import Footer from '../Footer/Footer'
 import styles from './why.css'
-import imgCars from './img-carros.svg'
-import imgMacbook from './img-macbook.svg'
+import imgCars from './img-carros.png'
+import imgMacbook from './img-macbook.png'
 import iconChecked from './icon-check-red.svg'
 
 const Why = props => {
@@ -31,9 +31,9 @@ const Why = props => {
           <Row>
             <Col xs={10} sm={6} md={5} offset={{ xs: 1, md: 1 }}>
               <ul className={styles.list}>
-                <li className={styles.listItem}><img src={iconChecked} /> <p>Você não paga <span>juros apenas uma taxa de administração</span></p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Você não paga <span>juros, apenas uma taxa de administração</span></p></li>
                 <li className={styles.listItem}><img src={iconChecked} /> <p>Parcela em até <span>72x</span>, sem precisar dar entrada</p></li>
-                <li className={styles.listItem}><img src={iconChecked} /> <p>Poder <span>comprar</span> à vista</p></li>
+                <li className={styles.listItem}><img src={iconChecked} /> <p>Poder de <span>compra</span> à vista</p></li>
                 <li className={styles.listItem}><img src={iconChecked} /> <p>Pode ser contemplado por <span>sorteio</span> ou <span>lances</span> mensais</p></li>
                 <li className={styles.listItem}><img src={iconChecked} /> <p>Na <span>contemplação</span> você escolhe o carro que quiser, dentro da sua carta de crédito</p></li>
                 <li className={styles.listItem}><img src={iconChecked} /> <p>Oportunidade de formar e ampliar seu <span>patrimônio</span></p></li>

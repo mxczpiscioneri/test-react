@@ -79,7 +79,7 @@ class Menu extends React.Component {
                 </Container>
 
                 {
-                  isSticky &&
+                  !this.props.notSticky && isSticky &&
                   <SimulateFast />
                 }
               </nav>

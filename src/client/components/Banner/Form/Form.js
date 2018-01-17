@@ -16,12 +16,16 @@ class Form extends Component {
     this.state = {
       valueChecked: 'installmentValue',
       fullValue: {
-        min: 'R$ 10.000',
-        max: 'R$ 90.000',
+        min_label: 'R$ 15.394,59',
+        max_label: 'R$ 134.870,00',
+        min: 15394.59,
+        max: 134870.00,
       },
       installmentValue: {
-        min: 'R$ 500',
-        max: 'R$ 2.000',
+        min_label: 'R$ 191,36',
+        max_label: 'R$ 2.201,00',
+        min: 191.36,
+        max: 2201.00,
       },
     }
   }
@@ -32,9 +36,15 @@ class Form extends Component {
     let value = e.target.value.value
     value = value.replace('R$ ', '').replace('.', '').replace(',', '.')
 
+    if (!value) return false
+
     if (this.state.valueChecked === "installmentValue") {
+      if (value < this.state.installmentValue.min) value = this.state.installmentValue.min
+      if (value > this.state.installmentValue.max) value = this.state.installmentValue.max
       this.props.redirect(`/resultado/parcela/${value}`)
     } else {
+      if (value < this.state.fullValue.min) value = this.state.fullValue.min
+      if (value > this.state.fullValue.max) value = this.state.fullValue.max
       this.props.redirect(`/resultado/veiculo/${value}`)
     }
   }
@@ -64,7 +74,7 @@ class Form extends Component {
                 className={styles.info}
                 title='Sabia que você pode contratar mais de uma carta de crédito?'
                 body={
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>O valor máximo para cada cota de auto é de R$ 134.870,00, porém, você pode ter mais de uma cota desde que não ultrapasse o valor de R$ 680.000,00. Para comprar um veículo, é possível juntar até 5 cotas contempladas.</p>
                 } />
             </span>
           </Hidden>
@@ -75,14 +85,14 @@ class Form extends Component {
               name='value'
               label={
                 this.state.valueChecked === "installmentValue" ?
-                  <label>Quanto você pode <span>pagar</span> na parcela?</label> :
-                  <label>Quanto você pode <span>pagar</span> no veículo?</label>
+                  <label>Quanto você quer <span>pagar</span> na parcela?</label> :
+                  <label>Quanto você quer <span>pagar</span> no veículo?</label>
               } />
           </div>
           <button type="submit" className={styles.btn_submit}>Simular</button>
         </div>
         <Hidden xs sm>
-          <p>mínimo: {(this.state.valueChecked === "installmentValue") ? this.state.installmentValue.min : this.state.fullValue.min}  |  máximo: {(this.state.valueChecked === "installmentValue") ? this.state.installmentValue.max : this.state.fullValue.max}</p>
+          <p>mínimo: {(this.state.valueChecked === "installmentValue") ? this.state.installmentValue.min_label : this.state.fullValue.min_label}  |  máximo: {(this.state.valueChecked === "installmentValue") ? this.state.installmentValue.max_label : this.state.fullValue.max_label}</p>
         </Hidden>
       </form>
     )

@@ -13,21 +13,21 @@ class SimulateFast extends Component {
 
     this.state = {
       fullValue: {
-        value: 50000,
-        min: 10000,
-        max: 90000,
+        value: 59737.70,
+        min: 15394.59,
+        max: 134870.00,
         labels: {
-          0: 'R$ 10.000',
-          10: 'R$ 90.000'
+          0: 'R$ 15.394,59',
+          10: 'R$ 134.870,00'
         }
       },
       installmentValue: {
-        value: 1250,
-        min: 500,
-        max: 2000,
+        value: 1004.82,
+        min: 191.36,
+        max: 2201.00,
         labels: {
-          0: 'R$ 500',
-          10: 'R$ 2.000'
+          0: 'R$ 191,36',
+          10: 'R$ 2.201,00'
         }
       },
       type: 1
@@ -68,7 +68,7 @@ class SimulateFast extends Component {
                 <div
                   className={(this.state.type === 2) ? styles.blockItemSelected : ''}
                   onClick={() => this.setState({ type: 2 })}>
-                  Valor do Bem
+                  Valor do Veículo
                 </div>
               </div>
             </Col>

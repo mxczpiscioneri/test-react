@@ -868,6 +868,25 @@ body.stop-scrolling {
   color: #ffffff !important;
 }
 
+.sa-button-container button.cancel {
+  background-color: transparent;
+  color: #BEC0D1;
+  position: absolute;
+  top: -25px;
+  right: -15px;
+  font-size: 32px;
+}
+
+.sa-button-container button.cancel:hover {
+  background-color: transparent;
+  color: #BEC0D1;
+  opacity: .8;
+}
+
+.sa-button-container button.cancel:focus {
+  box-shadow: none !important;
+}
+
 @media(max-width: 768px) {
   .sweet-alert {
     width: 90%;

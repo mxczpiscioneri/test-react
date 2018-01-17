@@ -52,8 +52,8 @@ if (config.env == 'development') {
     res.end()
   })
 } else {
-  //app.use(ipFilter)
-  //app.use(handleIpDenied)
+  app.use(ipFilter)
+  app.use(handleIpDenied)
   app.use(preRender)
   app.use(express.static(`${config.paths.dist}`))
   app.get('/*', (req, res) => {

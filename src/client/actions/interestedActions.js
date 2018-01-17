@@ -71,7 +71,7 @@ export const redirect = url => {
 }
 
 const getVehicle = id => {
-  return axios.get(`http://demo9732885.mockable.io/version/specification/${id}`)
+  return axios.get(`https://catalogo.webmotors.com.br/api/version/specification/${id}`)
     .then(result => result.data)
     .catch(err => console.log(err))
 }
@@ -84,7 +84,7 @@ export const getLetterCreditById = id => {
       .then(result => result.data)
       .then(letterCredit => {
         getVehicle(letterCredit.catalog_info.vehicle_automodel_id)
-          .then(vehicle => {            
+          .then(vehicle => {
             letterCredit.vehicle = vehicle
 
             return dispatch(receiveInterested(letterCredit))

@@ -77,16 +77,26 @@ class Form extends React.Component {
           <InputPhone label='Telefone' name='telephone' />
           <Input label='E-mail' name='email' />
           <InputCpf label='*CPF/CNPJ' name='cpf' />
+          <label className={styles.conditions}>Escolha as condições de sua parcela:</label>
           <RadioButtonGroup name='choice_of_plan'>
             <RadioButton value='normal' label='Parcela normal' />
             <RadioButton value='flex' label='Parcela flex' />
           </RadioButtonGroup>
-          <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a vadaliação do meu CPF.' />
-          <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
-          <Alert show={this.props.formResult.send} onConfirm={() => {
-            this.props.closeAlert()
-            this.props.redirect('/')
-          }} />
+          <RadioButtonGroup name='insurance'>
+            <RadioButton value={true} label='Com seguro' />
+            <RadioButton value={false} label='Sem seguro' />
+          </RadioButtonGroup>
+          <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
+          <button type='submit' className={styles.button}>ME LIGUE</button>
+          <Alert
+            show={this.props.formResult.send}
+            onConfirm={() => {
+              this.props.closeAlert()
+              this.props.redirect('https://www.webmotors.com.br')
+            }}
+            onCancel={() => {
+              window.location = '/'
+            }} />
         </form>
       </section>
     )
@@ -95,7 +105,8 @@ class Form extends React.Component {
 
 const InitializeFromStateForm = reduxForm({
   validate,
-  form: 'form'
+  form: 'form',
+  initialValues: { validate: true, choice_of_plan: 'normal', insurance: true }
 })(Form)
 
 const mapStateToProps = state => {

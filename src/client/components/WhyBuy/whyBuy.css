@@ -14,7 +14,7 @@
     line-height: 27px;
     font-weight: 300;
     text-align: center;
-    margin: 55px 0;
+    margin: 55px 0 0 0;
 
     @media (max-width: 768px) {
       font-size: 16px;
@@ -27,8 +27,18 @@
     }
   }
 
+  .subTitle {
+    color: #8B8C9A;	
+    font-family: Poppins;	
+    font-size: 16px;	
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    margin: 10px 0 55px 0;
+  }
+
   .text {
-    text-align: justify;
+    text-align: center;
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;

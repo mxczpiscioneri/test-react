@@ -1,17 +1,17 @@
 export default {
   development: {
     api: {
-      baseURL: 'https://demo0597703.mockable.io'
+      baseURL: 'http://consorcio-api-stg.herokuapp.com'
     }
   },
   production: {
     api: {
-      baseURL: 'https://demo0597703.mockable.io'
+      baseURL: 'http://consorcio-api-stg.herokuapp.com'
     }
   },
   stage: {
     api: {
-      baseURL: 'https://demo0597703.mockable.io'
+      baseURL: 'http://consorcio-api-stg.herokuapp.com'
     }
   }
 }

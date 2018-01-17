@@ -5,7 +5,6 @@ import { Container, Row, Col } from '../Grid/Grid'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
-import Testimonial from '../Testimonial/Testimonial'
 import Footer from '../Footer/Footer'
 import styles from './about.css'
 import iconeAdesao from './icone-adesao.svg'
@@ -22,7 +21,7 @@ const listSteps = [
   },
   {
     title: 'Contemplação',
-    text: 'Nas assembleias mensais. Você poderá ser sorteado pela Loteria Federal. Se preferir, pode ofertar lances com recursos próprios, lance embutido ou uma combinação entre eles. O lance com maior percentual será o vencedor.',
+    text: 'Nas assembleias mensais, você poderá ser sorteado pela Loteria Federal. Se preferir, pode ofertar lances com recursos próprios, lance embutido ou uma combinação entre eles. O lance com maior percentual será o vencedor.',
     image: iconeContemplacao
   },
   {
@@ -79,8 +78,6 @@ const About = props => {
 
         </Container>
       </section>
-
-      <Testimonial type={'o_que_eh'} />
 
       <Footer />
     </div>

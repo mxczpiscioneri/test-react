@@ -32,22 +32,22 @@ const Item = props => {
               className={styles.info}
               title='Parcela flex'
               body={
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              } /> 
+                <p>Você pode reduzir o valor das suas parcelas em até 30%. Este desconto vale até a contemplação ou até a metade do seu plano (o que ocorrer primeiro). Depois disso, suas parcelas serão reajustadas somando-se o valor do desconto.</p>
+              } />
           </Hidden>
         </p>
         <p>
           <span className={styles.labels}>Prazo </span>
           <span className={styles.deadline}>{props.deadline} Meses </span>
           <Hidden xs>
-            <Info 
-              icon={IconInfo} 
-              alt='clique aqui e veja os detalhes' 
-              className={styles.info} 
-              title='Prazo' 
+            <Info
+              icon={IconInfo}
+              alt='clique aqui e veja os detalhes'
+              className={styles.info}
+              title='Prazo'
               body={
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              } /> 
+                <p>Prazo igual a 72 meses: trata-se de um grupo em formação, onde ainda não foi inaugurado. No prazo máximo de 90 dias, será inaugurado e você poderá ofertar lances e participar dos sorteios mensais. Prazo menor que 72 meses: são grupos em andamento, onde já ocorrem assembleias para oferta de lances e sorteios mensais.</p>
+              } />
           </Hidden>
         </p>
       </div>
