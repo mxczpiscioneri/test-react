@@ -31,12 +31,15 @@ export const getBanners = (type) => {
     api
       .get(`/banners?page=${type}`)
       .then(res => {
-        let listBanners = null
-        if (Array.isArray(res.data)) {
-          listBanners = res.data
-        } else {
-          listBanners = new Array()
-          listBanners.push(res.data)
+        let listBanners = []
+
+        if (res.data) {
+          if (Array.isArray(res.data)) {
+            listBanners = res.data
+          } else {
+            listBanners = new Array()
+            listBanners.push(res.data)
+          }
         }
 
         dispatch(receiveBanners(listBanners))
