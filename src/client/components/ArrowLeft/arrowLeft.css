@@ -1,0 +1,22 @@
+:global {
+  .slick-prev:not(.slick-disabled):hover {
+    opacity: .7;
+  }
+
+  .slick-prev:before {
+    opacity: 1 !important;
+  }
+ 
+  .slick-prev:before {
+    content: url('./arrow-left.svg');
+  }
+
+  .slick-prev.slick-disabled:before {
+    content: url('./arrow-left-disabled.svg');
+  }
+
+  .slick-prev {
+    left: 0;
+    z-index: 1;
+  }
+}

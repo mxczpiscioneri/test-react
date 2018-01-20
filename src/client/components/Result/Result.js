@@ -6,6 +6,11 @@ import {
   searchLettersCredit,
   getVehiclesByIds
 } from '../../actions/resultActions'
+import {
+  changeType,
+  changeFullValue,
+  changeInstallmentValue
+} from '../../actions/simulateFastActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Plans from '../Plans/Plans'
@@ -18,14 +23,21 @@ import SimulateFast from '../SimulateFast/SimulateFast'
 class Result extends Component {
   componentWillMount() {
     const { id, value } = this.props.params;
-    const type = 
-      (this.props.location.pathname.indexOf('/veiculo/') > -1)
-        ? 'value'
-        : (this.props.location.pathname.indexOf('/parcela/') > -1) ? 'installment' : '';
 
     if (id) {
       this.props.getLetterCreditById(id)
     } else {
+      let type = ''
+      if(this.props.location.pathname.indexOf('/veiculo/') > -1) {
+        type = 'value'
+        this.props.changeType(2)
+        this.props.changeFullValue(value)
+      } else {
+        type = 'installment'
+        this.props.changeType(1)       
+        this.props.changeInstallmentValue(value)               
+      }
+
       this.props.searchLettersCredit(type, value, 4)
     }
   }
@@ -93,7 +105,10 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   getLetterCreditById,
   searchLettersCredit,
-  getVehiclesByIds
+  getVehiclesByIds,
+  changeType,
+  changeFullValue,
+  changeInstallmentValue,
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Result)

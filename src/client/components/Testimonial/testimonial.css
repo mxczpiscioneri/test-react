@@ -111,5 +111,20 @@
       }
     }
   }
+
+  .slick-arrow {
+    &.slick-prev {
+      left: -50px;
+      @media (max-width: 768px) {
+        display: none !important;
+      }
+    }
+    &.slick-next {
+      right: -50px;
+      @media (max-width: 768px) {
+        display: none !important;
+      }
+    }
+  }
 }
 

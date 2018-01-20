@@ -1,8 +1,8 @@
 import React from 'react'
 import Slider from 'react-slick'
 import { Hidden } from '../../Grid/Grid'
-import ArrowLeft from './ArrowLeft'
-import ArrowRight from './ArrowRight'
+import ArrowLeft from '../../ArrowLeft/ArrowLeft'
+import ArrowRight from '../../ArrowRight/ArrowRight'
 import styles from './cars.css'
 
 const Cars = props => {
@@ -38,14 +38,18 @@ const Cars = props => {
   return (
     <div>
       <Hidden xs>
-        <Slider className={styles.slider} {...settings}>
-          {cars}
-        </Slider>
+        {cars.length > 0 &&
+          <Slider className={styles.slider} {...settings}>
+            {cars}
+          </Slider>
+        }
       </Hidden>
       <Hidden sm md lg xl>
-        <Slider className={styles.slider} {...settingsMobile}>
-          {cars}
-        </Slider>
+        {cars.length > 0 &&
+          <Slider className={styles.slider} {...settingsMobile}>
+            {cars}
+          </Slider>
+        }
       </Hidden>
     </div>
   )

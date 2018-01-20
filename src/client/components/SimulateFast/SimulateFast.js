@@ -5,36 +5,12 @@ import classNames from 'classnames'
 import Slider from 'react-rangeslider'
 import { Container, Row, Col } from '../Grid/Grid'
 import styles from './simulateFast.css'
+import { changeType, changeFullValue, changeInstallmentValue } from '../../actions/simulateFastActions'
 import { redirect } from '../../actions/resultActions'
 
 class SimulateFast extends Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      fullValue: {
-        value: 59737.70,
-        min: 15394.59,
-        max: 134870.00,
-        labels: {
-          0: 'R$ 15.394,59',
-          10: 'R$ 134.870,00'
-        }
-      },
-      installmentValue: {
-        value: 1004.82,
-        min: 191.36,
-        max: 2201.00,
-        labels: {
-          0: 'R$ 191,36',
-          10: 'R$ 2.201,00'
-        }
-      },
-      type: 1
-    }
-  }
-
-  format = value => `R$ ${value.toFixed(2)}`
+  format = value => `R$ ${value.toLocaleString('pt-BR')}`
 
   render() {
     const blockClass = classNames(
@@ -43,6 +19,8 @@ class SimulateFast extends Component {
         [styles.blockMargin]: !this.props.padding,
       }
     )
+
+    const simulateFast = this.props.simulateFast
 
     return (
       <section className={styles.simulateFast}>
@@ -61,13 +39,13 @@ class SimulateFast extends Component {
 
               <div className={blockClass}>
                 <div
-                  className={(this.state.type === 1) ? styles.blockItemSelected : ''}
-                  onClick={() => this.setState({ type: 1 })}>
+                  className={(simulateFast.type === 1) ? styles.blockItemSelected : ''}
+                  onClick={() => this.props.changeType(1)}>
                   Valor da Parcela
                 </div>
                 <div
-                  className={(this.state.type === 2) ? styles.blockItemSelected : ''}
-                  onClick={() => this.setState({ type: 2 })}>
+                  className={(simulateFast.type === 2) ? styles.blockItemSelected : ''}
+                  onClick={() => this.props.changeType(2)}>
                   Valor do Veículo
                 </div>
               </div>
@@ -76,32 +54,31 @@ class SimulateFast extends Component {
               <div className={(this.props.padding) ? styles.sliderPadding : styles.slider}>
                 <div className='slider custom-labels'>
                   <Slider
-                    min={(this.state.type === 1) ? this.state.installmentValue.min : this.state.fullValue.min}
-                    max={(this.state.type === 1) ? this.state.installmentValue.max : this.state.fullValue.max}
-                    value={(this.state.type === 1) ? this.state.installmentValue.value : this.state.fullValue.value}
-                    labels={(this.state.type === 1) ? this.state.installmentValue.labels : this.state.fullValue.labels}
+                    min={(simulateFast.type === 1) ? simulateFast.installmentValue.min : simulateFast.fullValue.min}
+                    max={(simulateFast.type === 1) ? simulateFast.installmentValue.max : simulateFast.fullValue.max}
+                    value={(simulateFast.type === 1) ? parseFloat(simulateFast.installmentValue.value) : parseFloat(simulateFast.fullValue.value)}
+                    labels={(simulateFast.type === 1) ? simulateFast.installmentValue.labels : simulateFast.fullValue.labels}
                     format={this.format}
-                    handleLabel={(this.state.type === 1) ? this.state.installmentValue.value.toString() : this.state.fullValue.value.toString()}
+                    step={10}
+                    handleLabel={(simulateFast.type === 1) ? this.format(simulateFast.installmentValue.value) : this.format(simulateFast.fullValue.value)}
                     onChange={(value) => {
-                      if (this.state.type === 1) {
-                        let installmentValueCopy = this.state.installmentValue
-                        installmentValueCopy.value = value
-                        this.setState({ installmentValue: installmentValueCopy })
+                      // value = value.toFixed(2)
+                      value = parseFloat(value.toFixed(2))
+                      if (simulateFast.type === 1) {
+                        this.props.changeInstallmentValue(value)
                       } else {
-                        let fullValueCopy = this.state.fullValue
-                        fullValueCopy.value = value
-                        this.setState({ fullValue: fullValueCopy })
+                        this.props.changeFullValue(value)
                       }
                     }}
                     onChangeComplete={() => {
-                      if (this.state.type === 1) {
-                        this.props.redirect(`/resultado/parcela/${this.state.installmentValue.value}`)
+                      if (simulateFast.type === 1) {
+                        this.props.redirect(`/resultado/parcela/${simulateFast.installmentValue.value}`)
                       } else {
-                        this.props.redirect(`/resultado/veiculo/${this.state.fullValue.value}`)
+                        this.props.redirect(`/resultado/veiculo/${simulateFast.fullValue.value}`)
                       }
                     }}
                   />
-                  <div className='value'>{this.format((this.state.type === 1) ? this.state.installmentValue.value : this.state.fullValue.value)}</div>
+                  <div className='value'>{this.format((simulateFast.type === 1) ? simulateFast.installmentValue.value : simulateFast.fullValue.value)}</div>
                 </div>
               </div>
             </Col>
@@ -112,9 +89,13 @@ class SimulateFast extends Component {
   }
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => {
+  return {
+    simulateFast: state.simulateFastReducer.simulateFast
+  }
+}
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ redirect }, dispatch)
+  bindActionCreators({ changeType, changeFullValue, changeInstallmentValue, redirect }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(SimulateFast)

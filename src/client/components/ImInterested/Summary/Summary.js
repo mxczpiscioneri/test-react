@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import NumberFormat from 'react-number-format'
 import { Container, Row, Col } from '../../Grid/Grid'
 import Info from '../../Info/Info'
 import styles from './summary.css'
 import InfoImg from './info.svg'
-import CarImg from './car.png'
 
 const Summary = props => {
   const letterCredit = props.letterCredit
@@ -22,15 +22,15 @@ const Summary = props => {
             </p>
             <p>
               <span className={styles.valueSymbol}>R$ </span>
-              <span className={styles.value}>{letterCredit.full_value.toFixed(3)}</span>
+              <span className={styles.value}><NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <p>
               <span className={styles.labels}>Valor da parcela </span>
-              <span className={styles.installment}>R$ {letterCredit.regular_installment_value.toFixed(2)}</span>
+              <span className={styles.installment}>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <p>
               <span className={styles.labels}>Valor da parcela flex </span>
-              <span className={styles.installmentFlex}>R$ {letterCredit.flex_installment_value.toFixed(2)}</span>
+              <span className={styles.installmentFlex}>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <p>
               <span className={styles.labels}>Prazo </span>
@@ -38,15 +38,15 @@ const Summary = props => {
             </p>
             <p>
               <span className={styles.labels}>Taxa de administração </span>
-              <span className={styles.percents}>{letterCredit.administration_fee.toFixed(2)}% am</span>
+              <span className={styles.percents}><NumberFormat value={letterCredit.administration_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% am</span>
             </p>
             <p>
               <span className={styles.labels}>Fundo de reserva </span>
-              <span className={styles.percents}>{letterCredit.reserve_fee.toFixed(2)}% am</span>
+              <span className={styles.percents}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% am</span>
             </p>
             <p>
               <span className={styles.labels}>Seguro prestamista (opcional) </span>
-              <span className={styles.percents}>{letterCredit.insurance_fee.toFixed(2)}% am</span>
+              <span className={styles.percents}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% am</span>
             </p>
 
             <div className={styles.info} title='clique aqui e veja os detalhes'>
@@ -83,13 +83,17 @@ const Summary = props => {
             <div className={styles.car}>
               <div className={styles.carInfo}>
                 <p className={styles.carReference}>Veículo de referência</p>
-                <p className={styles.carModel}>{`${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`}</p>
+                {letterCredit.vehicle && letterCredit.vehicle.Marca && letterCredit.vehicle.Marca.nome &&
+                  <p className={styles.carModel}>{letterCredit.vehicle.Marca.nome} {letterCredit.vehicle.Modelo.nome}</p>
+                }
                 <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
               </div>
               <div className={styles.carImg}>
-                <img
-                  src={letterCredit.vehicle.Fotos[0].caminho}
-                  alt={'veiculo'} />
+                {letterCredit.vehicle && letterCredit.Fotos && letterCredit.vehicle.Fotos[0].caminho &&
+                  <img
+                    src={letterCredit.vehicle.Fotos[0].caminho}
+                    alt={'veiculo'} />
+                }
               </div>
             </div>
 

@@ -17,37 +17,3 @@
     margin: 10px 0 0 0;
   }
 }
-
-:global {
-  .slick-next:not(.slick-disabled):hover, .slick-prev:not(.slick-disabled):hover {
-    opacity: .7;
-  }
-
-  .slick-next:before, .slick-prev:before {
-    opacity: 1 !important;
-  }
-
-  .slick-next:before {
-    content: url('./arrow-right.svg');
-  }
-   
-  .slick-prev:before {
-    content: url('./arrow-left.svg');
-  }
-
-  .slick-next.slick-disabled:before {
-    content: url('./arrow-right-disabled.svg');
-  }
-  .slick-prev.slick-disabled:before {
-    content: url('./arrow-left-disabled.svg');
-  }
-
-  .slick-prev {
-    left: 0;
-    z-index: 1;
-  }
-
-  .slick-next {
-    right: 0;
-  }
-}

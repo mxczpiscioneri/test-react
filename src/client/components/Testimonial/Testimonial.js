@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 import ImageFallback from 'react-image-fallback'
 import { Container, Row, Col } from '../Grid/Grid'
+import ArrowLeft from '../ArrowLeft/ArrowLeft'
+import ArrowRight from '../ArrowRight/ArrowRight'
 import icon from './icone-quote.svg'
 import imgFallback from './userDefault.png'
 import styles from './testimonial.css'
@@ -34,7 +36,9 @@ class Testimonial extends Component {
     const settings = {
       dots: true,
       dotsClass: 'dots',
-      arrows: false,
+      arrows: true,
+      nextArrow: <ArrowRight />,
+      prevArrow: <ArrowLeft />,
       infinite: true,
       speed: 500,
       slidesToShow: 1,

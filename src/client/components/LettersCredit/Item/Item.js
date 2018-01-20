@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import NumberFormat from 'react-number-format'
 import { Container, Row, Col, Hidden } from '../../Grid/Grid'
 import styles from './Item.css'
 import Info from '../../Info/Info'
@@ -16,15 +17,15 @@ const Item = props => {
         <div className={styles.retancle}></div>
         <p>
           <span className={styles.valueSymbol}>R$ </span>
-          <span className={styles.value}>{props.value.toFixed(3)}</span>
+          <span className={styles.value}><NumberFormat value={props.value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
         </p>
         <p>
           <span className={styles.labels}>Valor da Parcela </span>
-          <span className={styles.installment}>R$ {props.installment}</span>
+          <span className={styles.installment}>R$ <NumberFormat value={props.installment} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
         </p>
         <p>
           <span className={styles.labels}>Parcela Flex </span>
-          <span className={styles.installmentFlex}>R$ {props.installmentFlex}</span>
+          <span className={styles.installmentFlex}>R$ <NumberFormat value={props.installmentFlex} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
           <Hidden xs>
             <Info
               icon={IconInfo}

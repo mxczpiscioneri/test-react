@@ -8,6 +8,7 @@ import progressLinearReducer from './progressLinearReducer'
 import homeReducer from './homeReducer'
 import resultReducer from './resultReducer'
 import interestedReducer from './interestedReducer'
+import simulateFastReducer from './simulateFastReducer'
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   homeReducer,
   resultReducer,
   interestedReducer,
+  simulateFastReducer,
 })
 
 export default rootReducer

@@ -1,4 +1,5 @@
 import React from 'react'
+import NumberFormat from 'react-number-format'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import Cars from './Cars/Cars'
 import styles from './plans.css'
@@ -20,11 +21,11 @@ export default class Plans extends React.Component {
             <Row>
               <Col xs={6} className={styles.normal}>
                 <label>Parcela normal</label>
-                <span>${letterCredit.duration} x R$ {letterCredit.regular_installment_value}</span>
+                <span>${letterCredit.duration} x R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
               </Col>
               <Col xs={6} className={styles.flex}>
                 <label>Parcela flex</label>
-                <span>{letterCredit.duration} x R$ {letterCredit.flex_installment_value}</span>
+                <span>{letterCredit.duration} x R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
               </Col>
               <Col xs={12}>
                 <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
@@ -32,7 +33,7 @@ export default class Plans extends React.Component {
               </Col>
               <Col xs={12}>
                 <h3 className={styles.titleSuggestions}>Sugestões de veículos que você poderá <span>comprar</span>*</h3>
-                <Cars vehicles={this.props.vehicles}/>
+                <Cars vehicles={this.props.vehicles} />
               </Col>
             </Row>
           </Hidden>
@@ -44,15 +45,15 @@ export default class Plans extends React.Component {
             </Row>
             <Row>
               <Col xs={12} sm={5} offset={{ sm: 1 }}>
-                <p className={styles.textResult}>Você terá uma carta de crédito de R$ <span>{letterCredit.full_value}</span> pagando apenas <span>R$ {letterCredit.regular_installment_value}</span> por <span>{letterCredit.duration}</span> meses.</p>
-                <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ {letterCredit.flex_installment_value}</span> nos primeiros meses, não deixe de optar pelo plano Flex!</p>
-                <p className={styles.textResult}>Valor do veículo R$ {letterCredit.full_value} <span className={styles.light}>Prazo {letterCredit.duration} Meses</span></p>
-                <p className={styles.textResult}>Parcela Normal com seguro R$ <span>{letterCredit.regular_installment_safe_value}</span><br />Parcela Flex com seguro R$ <span>${letterCredit.flex_installment_safe_value}</span></p>
+                <p className={styles.textResult}>Você terá uma carta de crédito de <span>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> pagando apenas <span>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> por <span>{letterCredit.duration}</span> meses.</p>
+                <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> nos primeiros meses, não deixe de optar pelo plano Flex!</p>
+                <p className={styles.textResult}>Valor do veículo <span>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> <span className={styles.light}>Prazo {letterCredit.duration} Meses</span></p>
+                <p className={styles.textResult}>Parcela Normal com seguro <span>R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span><br />Parcela Flex com seguro <span>R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></p>
                 <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
               </Col>
               <Col xs={12} sm={4}>
                 <p className={styles.suggestions}>Sugestão de <span>veículos</span> que você poderá comprar com a carta escolhida.</p>
-                <Cars vehicles={this.props.vehicles}/>
+                <Cars vehicles={this.props.vehicles} />
               </Col>
             </Row>
           </Hidden>

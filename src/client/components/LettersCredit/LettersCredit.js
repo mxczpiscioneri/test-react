@@ -58,7 +58,7 @@ export default class LettersCredit extends React.Component {
                 }
               </Container>
             )
-            : <br />
+            : null
         }
       </section>
     )
