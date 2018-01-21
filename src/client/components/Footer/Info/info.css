@@ -25,6 +25,7 @@
 .linkImg {
   width: 20%;
   text-align: left;
+  display: inline;
 }
 
 .linkName {
@@ -35,12 +36,17 @@
   font-weight: 600;
   line-height: 18px;
   z-index: 1;
+  display: inline;
+  position: absolute;
+  top: 30px;
+  left: 70px;
 }
 
 .section {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 400px;
 }
 
 .sectionContainer {
@@ -82,7 +88,7 @@
   }
 }
 
-@media(max-width: 750px) {
+/* @media(max-width: 750px) { */
   :global {
     .react-sanfona { 
       padding-left: 10px;
@@ -151,7 +157,7 @@
     justify-content: left;
     align-items: center;
   }
-}
+/* } */
 
 :global {
   .react-sanfona {
@@ -187,7 +193,7 @@
         font-family: Poppins;
         font-size: 14px;
         line-height: 22px;
-        padding: 22px 32px;
+        padding: 0px 15px 10px 15px !important;
         background: #FFF;
         border-top: 1px solid rgba(223, 224, 230, .55);
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);

@@ -93,10 +93,58 @@ const Footer = props => {
           <h3 className={styles.title}>Estamos conectados 24 horas por dia, 7 dias por semana</h3>
         </Hidden>
 
-        <Row>
+        <Hidden sm md lg xl>
+          <Col xs={12} md={10} offset={{ md: 1 }}>
+            <Accordion>
+              <AccordionItem title={
+                <div className={styles.linkContainer}>
+                  <div className={styles.linkImg}>
+                    <img
+                      src={ImgApp}
+                      alt='app' />
+                  </div>
+                  <div className={styles.linkName}>
+                    APLICATIVO SANTANDER
+                  </div>
+                </div>
+              } expanded>
+                <Central />
+              </AccordionItem>
+              <AccordionItem title={
+                <div className={styles.linkContainer}>
+                  <div className={styles.linkImg}>
+                    <img
+                      src={ImgSite}
+                      alt='site' />
+                  </div>
+                  <div className={styles.linkName}>
+                    SANTANDER.COM.BR
+                    </div>
+                </div>
+              }>
+                <SAC />
+              </AccordionItem>
+              <AccordionItem title={
+                <div className={styles.linkContainer}>
+                  <div className={styles.linkImg}>
+                    <img
+                      src={ImgChat}
+                      alt='chat' />
+                  </div>
+                  <div className={styles.linkName}>
+                    CHAT NO SITE
+                    </div>
+                </div>
+              }>
+                <Ouvidoria />
+              </AccordionItem>
+            </Accordion>
+          </Col>
+        </Hidden>
 
-          <Hidden sm md lg xl>
-            <Col xs={12} md={10} offset={{ md: 1 }}>
+        <Hidden xs>
+          <Row>
+            <Col sm={4}>
               <Accordion>
                 <AccordionItem title={
                   <div className={styles.linkContainer}>
@@ -109,9 +157,13 @@ const Footer = props => {
                       APLICATIVO SANTANDER
                   </div>
                   </div>
-                } expanded>
+                }>
                   <Central />
                 </AccordionItem>
+              </Accordion>
+            </Col>
+            <Col sm={4}>
+              <Accordion>
                 <AccordionItem title={
                   <div className={styles.linkContainer}>
                     <div className={styles.linkImg}>
@@ -126,6 +178,10 @@ const Footer = props => {
                 }>
                   <SAC />
                 </AccordionItem>
+              </Accordion>
+            </Col>
+            <Col sm={4} md={4}>
+              <Accordion>
                 <AccordionItem title={
                   <div className={styles.linkContainer}>
                     <div className={styles.linkImg}>
@@ -142,10 +198,8 @@ const Footer = props => {
                 </AccordionItem>
               </Accordion>
             </Col>
-          </Hidden>
 
-          <Hidden xs>
-            <Col xs={12} md={10} offset={{ md: 1 }}>
+            {/* < Col xs={12} md={10} offset={{ md: 1 }}>
               <Row>
                 <Col xs={12} md={4}>
                   <div className={styles.linkContainer}>
@@ -203,12 +257,12 @@ const Footer = props => {
                 </Col>
               </Row>
 
-            </Col>
-          </Hidden>
+            </Col> */}
+          </Row >
+        </Hidden >
 
-        </Row>
-      </Container>
-    </section>
+      </Container >
+    </section >
   )
 }
 
