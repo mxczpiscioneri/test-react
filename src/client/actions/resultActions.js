@@ -53,43 +53,47 @@ const getLetterCredit = id => {
     .catch(err => console.log(err))
 }
 
-export const getLetterCreditById = id => {
-  return dispatch => {
-    dispatch(fetchLetterCreditById())
-
-    getLetterCredit(id)
-      .then(result => {
-        if (result) {
-          return dispatch(receiveLetterCreditById(result))
-        }
-
-        return dispatch(fetchLetterCreditById(false))
-      })
-  }
-}
-
-export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) => {
+export const searchLettersCredit = (type, value, limit = 4, mainId = null) => {
   return dispatch => {
     dispatch(fetchLettersCredit())
-    api.get(`/letters_of_credit?${type}=${value}&limit=${limit}`)
-      .then(result => {
-        let letters = result.data
 
-        if (idToRemove) {
-          const index = _.findIndex(letters, x => x.id === parseInt(idToRemove))
-          if (index > -1) {
-            letters.splice(index, 1)
+    let promise;
+
+    if (mainId) {
+      promise = getLetterCredit(mainId)
+    } else {
+      promise = new Promise(resolve => resolve())
+    }
+    
+    promise.then((letter) => {
+      if (letter) {
+        type = 'value'
+        value = letter.full_value
+
+        dispatch(receiveLetterCreditById(letter))
+      }
+
+      api.get(`/letters_of_credit?${type}=${value}&limit=${limit}`)
+        .then(result => {
+          let letters = result.data
+
+          if (mainId) {
+            const index = _.findIndex(letters, x => x.id === parseInt(mainId))
+            if (index > -1) {
+              letters.splice(index, 1)
+            }
+          } else {
+            letters[0].hide = true
+            dispatch(receiveLetterCreditById(letters[0]))
           }
-        } else {
-          letters[0].hide = true
-        }
 
-        dispatch(receiveLettersCredit(letters))
-      })
-      .catch(err => {
-        console.log(err)
-        dispatch(fetchLettersCredit(false))
-      })
+          dispatch(receiveLettersCredit(letters))
+        })
+        .catch(err => {
+          console.log(err)
+          dispatch(fetchLettersCredit(false))
+        })
+    })
   }
 }
 

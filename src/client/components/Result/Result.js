@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {
-  getLetterCreditById,
   searchLettersCredit,
   getVehiclesByIds
 } from '../../actions/resultActions'
@@ -25,7 +24,7 @@ class Result extends Component {
     const { id, value } = this.props.params;
 
     if (id) {
-      this.props.getLetterCreditById(id)
+      this.props.searchLettersCredit(null, null, 4, id)
     } else {
       let type = ''
       if (this.props.location.pathname.indexOf('/veiculo/') > -1) {
@@ -49,12 +48,6 @@ class Result extends Component {
         this.props.getVehiclesByIds(nextProps.letterCredit.catalog_info.vehicles_referenceds.top)
         this.props.getVehiclesByIds(nextProps.letterCredit.catalog_info.vehicles_referenceds.others, true)
       }
-      if (nextProps.params.id) {
-        this.props.searchLettersCredit('value', nextProps.letterCredit.full_value, 4, nextProps.params.id)
-      }
-    } else if (!nextProps.params.id && (nextProps.lettersCredit && nextProps.lettersCredit.length > 0)
-      && this.props.lettersCredit !== nextProps.lettersCredit) {
-      this.props.getLetterCreditById(nextProps.lettersCredit[0].id)
     }
   }
 
@@ -104,7 +97,6 @@ const mapStateToProps = store => ({
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getLetterCreditById,
   searchLettersCredit,
   getVehiclesByIds,
   changeType,
