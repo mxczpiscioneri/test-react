@@ -41,7 +41,7 @@
   border: 1px solid #DFE0E6;
   border-radius: 2px 0 0 2px;
   font-family: Poppins;	
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;	
   line-height: 44px;
   cursor: pointer;
@@ -74,8 +74,35 @@
   padding-left: 25px;
 }
 
+.button {
+  padding: 13px 0;
+  border-radius: 4px;
+  background-color: #F3123C;
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 13px;
+  line-height: 21px;
+  border: none;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+  width: calc(100% - 30px);
+  margin-top: 6px;
+}
+
+.button:hover {
+  background-color: #f75977
+}
+
+.buttonTitle {
+  margin-top: 13px;
+}
 
 @media(max-width: 750px) {
+  .button {
+    width: 100%;
+  }
+
   .title {
     display: none;
   }

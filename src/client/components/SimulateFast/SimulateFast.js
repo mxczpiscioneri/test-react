@@ -20,13 +20,20 @@ class SimulateFast extends Component {
       }
     )
 
+    const buttonClass = classNames(
+      styles.button,
+      {
+        [styles.buttonTitle]: this.props.padding
+      }
+    )
+
     const simulateFast = this.props.simulateFast
 
     return (
       <section className={styles.simulateFast}>
         <Container>
           <Row>
-            <Col xs={12} md={4} offset={{ md: 1 }}>
+            <Col xs={12} md={3} offset={{ md: 1 }}>
               {
                 this.props.showTitle &&
                 <div>
@@ -50,7 +57,7 @@ class SimulateFast extends Component {
                 </div>
               </div>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={5}>
               <div className={(this.props.padding) ? styles.sliderPadding : styles.slider}>
                 <div className='slider custom-labels'>
                   <Slider
@@ -70,17 +77,19 @@ class SimulateFast extends Component {
                         this.props.changeFullValue(value)
                       }
                     }}
-                    onChangeComplete={() => {
-                      if (simulateFast.type === 1) {
-                        this.props.redirect(`/resultado/parcela/${simulateFast.installmentValue.value}`)
-                      } else {
-                        this.props.redirect(`/resultado/veiculo/${simulateFast.fullValue.value}`)
-                      }
-                    }}
                   />
                   <div className='value'>{this.format((simulateFast.type === 1) ? simulateFast.installmentValue.value : simulateFast.fullValue.value)}</div>
                 </div>
               </div>
+            </Col>
+            <Col xs={12} md={2}>
+              <button className={buttonClass} onClick={() => {
+                if (simulateFast.type === 1) {
+                  this.props.redirect(`/resultado/parcela/${simulateFast.installmentValue.value}`)
+                } else {
+                  this.props.redirect(`/resultado/veiculo/${simulateFast.fullValue.value}`)
+                }
+              }}>SIMULAR</button>
             </Col>
           </Row>
         </Container>
