@@ -71,7 +71,7 @@ export const getLetterCreditById = id => {
 export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) => {
   return dispatch => {
     dispatch(fetchLettersCredit())
-
+    debugger
     api.get(`/letters_of_credit?${type}=${value}&limit=${limit}`)
       .then(result => {
         let letters = result.data
@@ -82,7 +82,7 @@ export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) =
             letters.splice(index, 1)
           }
         } else {
-          letters.splice(0, 1)
+          letters[0].hide = true
         }
 
         dispatch(receiveLettersCredit(letters))

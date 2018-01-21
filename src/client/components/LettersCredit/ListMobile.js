@@ -21,14 +21,16 @@ const ListMobile = props => {
     <Slider {...settings}>
       {
         props.list.map((item, index) =>
-          <Item
-            key={item.id}
-            value={item.full_value}
-            installment={item.regular_installment_value}
-            installmentFlex={item.flex_installment_value}
-            deadline={item.duration}
-            selected={item.selected}
-            onClick={() => props.onClick(item.id)} />
+          !item.hide && (
+            <Item
+              key={item.id}
+              value={item.full_value}
+              installment={item.regular_installment_value}
+              installmentFlex={item.flex_installment_value}
+              deadline={item.duration}
+              selected={item.selected}
+              onClick={() => props.onClick(item.id)} />
+          )
         )
       }
     </Slider>
