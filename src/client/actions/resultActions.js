@@ -88,7 +88,7 @@ export const searchLettersCredit = (type, value, limit = 4, idToRemove = null) =
         dispatch(receiveLettersCredit(letters))
       })
       .catch(err => {
-        console.error(err)
+        console.log(err)
         dispatch(fetchLettersCredit(false))
       })
   }

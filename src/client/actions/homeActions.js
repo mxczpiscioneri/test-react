@@ -57,7 +57,7 @@ export const getLettersCredit = () => {
         }
       })
       .catch(err => {
-        console.error(err)
+        console.log(err)
         dispatch(fetchLettersCredit(false))
       })
   }
@@ -89,7 +89,7 @@ export const getVehicles = () => {
   return dispatch => {
     dispatch(fetchVehicles())
 
-    axios.get('/config_pages?page=home&config_type=highlighted_vehicles')
+    api.get('/config_pages?page=home&config_type=highlighted_vehicles')
       .then(config => {
         const ids = config.data[0].references_id
         let promises = [];
@@ -104,7 +104,7 @@ export const getVehicles = () => {
           })
       })
       .catch(err => {
-        console.error(err)
+        console.log(err)
         dispatch(fetchVehicles(false))
       })
   }

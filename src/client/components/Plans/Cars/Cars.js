@@ -9,8 +9,12 @@ const Cars = props => {
 
   const cars = props.vehicles.map((car, i) => (
     <section key={i} className={styles.car}>
-      <img className={styles.picture} src={car.Fotos[0].caminho} alt={car.Modelo.nome} />
-      <p className={styles.name}>{car.Modelo.nome}</p>
+      {car && car.Fotos &&
+        <img className={styles.picture} src={car.Fotos[0].caminho} alt={car.Modelo.nome} />
+      }
+      {car && car.Modelo &&
+        <p className={styles.name}>{car.Modelo.nome}</p>
+      }
     </section>
   ))
 

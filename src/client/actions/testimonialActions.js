@@ -60,7 +60,7 @@ export const getTestimonials = type => {
           })
       })
       .catch(err => {
-        console.error(err)
+        console.log(err)
         dispatch(fetchTestimonials(false))
       })
   }

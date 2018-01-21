@@ -83,7 +83,7 @@ export const getLetterCreditById = id => {
     api.get(`/letters_of_credit/${id}`)
       .then(result => result.data)
       .then(letterCredit => {
-        getVehicle(letterCredit.catalog_info.vehicle_automodel_id)
+        getVehicle(letterCredit.catalog_info.vehicle_id)
           .then(vehicle => {
             letterCredit.vehicle = vehicle
 

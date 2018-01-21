@@ -45,7 +45,7 @@ export const getBanners = (type) => {
         dispatch(receiveBanners(listBanners))
       })
       .catch(err => {
-        console.error(err)
+        console.log(err)
         dispatch(fetchBanners(false))
       })
   }

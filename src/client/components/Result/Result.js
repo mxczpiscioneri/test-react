@@ -28,14 +28,14 @@ class Result extends Component {
       this.props.getLetterCreditById(id)
     } else {
       let type = ''
-      if(this.props.location.pathname.indexOf('/veiculo/') > -1) {
+      if (this.props.location.pathname.indexOf('/veiculo/') > -1) {
         type = 'value'
         this.props.changeType(2)
         this.props.changeFullValue(value)
       } else {
         type = 'installment'
-        this.props.changeType(1)       
-        this.props.changeInstallmentValue(value)               
+        this.props.changeType(1)
+        this.props.changeInstallmentValue(value)
       }
 
       this.props.searchLettersCredit(type, value, 4)
@@ -45,9 +45,10 @@ class Result extends Component {
   componentWillReceiveProps(nextProps) {
     if ((this.props.letterCredit && nextProps.letterCredit)
       && (this.props.letterCredit.id !== nextProps.letterCredit.id)) {
-      this.props.getVehiclesByIds(nextProps.letterCredit.catalog_info.vehicles_referenceds.top)
-      this.props.getVehiclesByIds(nextProps.letterCredit.catalog_info.vehicles_referenceds.others, true)
-
+      if (nextProps.letterCredit.catalog_info && nextProps.letterCredit.catalog_info.vehicles_referenceds) {
+        this.props.getVehiclesByIds(nextProps.letterCredit.catalog_info.vehicles_referenceds.top)
+        this.props.getVehiclesByIds(nextProps.letterCredit.catalog_info.vehicles_referenceds.others, true)
+      }
       if (nextProps.params.id) {
         this.props.searchLettersCredit('value', nextProps.letterCredit.full_value, 4, nextProps.params.id)
       }

@@ -50,6 +50,8 @@ class Form extends React.Component {
   _submit = (event) => {
     event.preventDefault()
 
+    this.userName = event.target.name.value
+
     const form = {
       letter_of_credit_id: this.props.letter_of_credit_id,
       name: event.target.name.value,
@@ -79,7 +81,7 @@ class Form extends React.Component {
           <InputCpf label='*CPF/CNPJ' name='cpf' />
           <label className={styles.conditions}>Escolha as condições de sua parcela:</label>
           <RadioButtonGroup name='choice_of_plan'>
-            <RadioButton value='normal' label='Parcela normal' />
+            <RadioButton value='regular' label='Parcela normal' />
             <RadioButton value='flex' label='Parcela flex' />
           </RadioButtonGroup>
           <RadioButtonGroup name='insurance'>
@@ -87,15 +89,17 @@ class Form extends React.Component {
             <RadioButton value={false} label='Sem seguro' />
           </RadioButtonGroup>
           <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
-          <button type='submit' className={styles.button}>ME LIGUE</button>
+          <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
           <Alert
+            userName={this.userName}
             show={this.props.formResult.send}
             onConfirm={() => {
               this.props.closeAlert()
-              this.props.redirect('https://www.webmotors.com.br')
+              window.location = 'https://www.webmotors.com.br'
             }}
             onCancel={() => {
-              window.location = '/'
+              this.props.closeAlert()
+              this.props.redirect('/')
             }} />
         </form>
       </section>
@@ -106,7 +110,7 @@ class Form extends React.Component {
 const InitializeFromStateForm = reduxForm({
   validate,
   form: 'form',
-  initialValues: { validate: true, choice_of_plan: 'normal', insurance: true }
+  initialValues: { validate: true, choice_of_plan: 'regular', insurance: true }
 })(Form)
 
 const mapStateToProps = state => {

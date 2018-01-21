@@ -10,6 +10,7 @@ import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
 import Alert from '../Alert/Alert'
+import { isEmail } from 'validator'
 import styles from './formMobile.css'
 import { sendForm, closeAlert, redirect } from '../../../actions/interestedActions'
 
@@ -26,6 +27,8 @@ const validate = values => {
 
   if (!values.email) {
     errors.email = 'Preencha seu e-mail'
+  } else if (!isEmail(values.email)) {
+    errors.email = 'E-mail inválido'
   }
 
   if (!values.cpf) {
@@ -46,6 +49,8 @@ const validate = values => {
 class FormMobile extends React.Component {
   _submit = (event) => {
     event.preventDefault()
+
+    this.userName = event.target.name.value
 
     const form = {
       letter_of_credit_id: this.props.letter_of_credit_id,
@@ -76,16 +81,28 @@ class FormMobile extends React.Component {
             <InputPhone label='Seu telefone' name='telephone' />
             <Input label='Seu e-mail' name='email' />
             <InputCpf label='*CPF/CNPJ' name='cpf' />
+            <label className={styles.conditions}>Escolha as condições de sua parcela:</label>
             <RadioButtonGroup name='choice_of_plan'>
-              <RadioButton value='normal' label='Parcela normal' />
+              <RadioButton value='regular' label='Parcela normal' />
               <RadioButton value='flex' label='Parcela flex' />
             </RadioButtonGroup>
+            <RadioButtonGroup name='insurance'>
+              <RadioButton value={true} label='Com seguro' />
+              <RadioButton value={false} label='Sem seguro' />
+            </RadioButtonGroup>
             <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
-            <Alert show={this.props.formResult.send} onConfirm={() => {
-              this.props.closeAlert()
-              this.props.redirect('/')
-            }} />
             <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
+            <Alert
+              userName={this.userName}
+              show={this.props.formResult.send}
+              onConfirm={() => {
+                this.props.closeAlert()
+                window.location = 'https://www.webmotors.com.br'
+              }}
+              onCancel={() => {
+                this.props.closeAlert()
+                this.props.redirect('/')
+              }} />
           </form>
         </div>
       </section>
@@ -95,7 +112,8 @@ class FormMobile extends React.Component {
 
 const InitializeFromStateForm = reduxForm({
   validate,
-  form: 'formMobile'
+  form: 'formMobile',
+  initialValues: { validate: true, choice_of_plan: 'regular', insurance: true }
 })(FormMobile)
 
 const mapStateToProps = state => {

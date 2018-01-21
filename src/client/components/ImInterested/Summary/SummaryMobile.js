@@ -56,16 +56,16 @@ const SummaryMobile = props => {
             <div className={styles.valuesContainer}>
               <div className={styles.reserveFundContainer}>
                 <span className={styles.labelsLight}>Fundo de reserva </span>
-                <span className={styles.value}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% am</span>
+                <span className={styles.value}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% ao período</span>
               </div>
               <div className={styles.insuranceContainer}>
                 <span className={styles.labelsLight}>Seguro </span>
-                <span className={styles.value}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% am</span>
+                <span className={styles.value}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% ao período</span>
               </div>
             </div>
             <p>
               <span className={styles.labelsLight}>Taxa de gestão </span>
-              <span className={styles.value}><NumberFormat value={letterCredit.administration_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% am</span>
+              <span className={styles.value}><NumberFormat value={letterCredit.administration_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% ao período</span>
             </p>
           </div>
         )

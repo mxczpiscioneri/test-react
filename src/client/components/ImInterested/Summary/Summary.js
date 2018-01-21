@@ -38,15 +38,15 @@ const Summary = props => {
             </p>
             <p>
               <span className={styles.labels}>Taxa de administração </span>
-              <span className={styles.percents}><NumberFormat value={letterCredit.administration_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% am</span>
+              <span className={styles.percents}><NumberFormat value={letterCredit.administration_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
             </p>
             <p>
               <span className={styles.labels}>Fundo de reserva </span>
-              <span className={styles.percents}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% am</span>
+              <span className={styles.percents}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
             </p>
             <p>
               <span className={styles.labels}>Seguro prestamista (opcional) </span>
-              <span className={styles.percents}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% am</span>
+              <span className={styles.percents}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
             </p>
 
             <div className={styles.info} title='clique aqui e veja os detalhes'>
@@ -80,22 +80,22 @@ const Summary = props => {
               </Info>
             </div>
 
-            <div className={styles.car}>
-              <div className={styles.carInfo}>
-                <p className={styles.carReference}>Veículo de referência</p>
-                {letterCredit.vehicle && letterCredit.vehicle.Marca && letterCredit.vehicle.Marca.nome &&
+            {letterCredit.vehicle &&
+              <div className={styles.car}>
+                <div className={styles.carInfo}>
+                  <p className={styles.carReference}>Veículo de referência</p>
                   <p className={styles.carModel}>{letterCredit.vehicle.Marca.nome} {letterCredit.vehicle.Modelo.nome}</p>
-                }
-                <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
+                  <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
+                </div>
+                <div className={styles.carImg}>
+                  {letterCredit.vehicle && letterCredit.Fotos && letterCredit.vehicle.Fotos[0].caminho &&
+                    <img
+                      src={letterCredit.vehicle.Fotos[0].caminho}
+                      alt={'veiculo'} />
+                  }
+                </div>
               </div>
-              <div className={styles.carImg}>
-                {letterCredit.vehicle && letterCredit.Fotos && letterCredit.vehicle.Fotos[0].caminho &&
-                  <img
-                    src={letterCredit.vehicle.Fotos[0].caminho}
-                    alt={'veiculo'} />
-                }
-              </div>
-            </div>
+            }
 
             <p className={styles.advice}>
               Precisamos atrelar sua carta à um veículo e, sempre que o valor deste for corrigido junto à montadora, ela será reajustada. Isso garante que a carta de crédito que você esta comprando hoje tenha a valorização até a contemplação.

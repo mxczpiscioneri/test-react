@@ -14,8 +14,8 @@ import styles from './imInterested.css'
 
 class ImInterested extends React.Component {
   componentWillMount() {
-    const id = this.props.params.id
-    this.props.getLetterCreditById(id)
+    this.letter_of_credit_id = this.props.params.id
+    this.props.getLetterCreditById(this.letter_of_credit_id)
   }
 
   render() {
@@ -51,7 +51,7 @@ class ImInterested extends React.Component {
                       <Summary letterCredit={letterCredit} />
                     </Col>
                     <Col xs={12} md={6}>
-                      <Form letter_of_credit_id={1} />
+                      <Form letter_of_credit_id={this.letter_of_credit_id} />
                     </Col>
                   </Row>
                 </Col>
@@ -60,7 +60,7 @@ class ImInterested extends React.Component {
                 <Col xs={12} md={10} offset={{ md: 1 }}>
                   <Row>
                     <Col xs={12} md={6}>
-                      <FormMobile letter_of_credit_id={1} />
+                      <FormMobile letter_of_credit_id={this.letter_of_credit_id} />
                     </Col>
                     <Col xs={12} md={6}>
                       <SummaryMobile letterCredit={letterCredit} />
