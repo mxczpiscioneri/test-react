@@ -36,9 +36,12 @@ class SimulateFast extends Component {
             <Col xs={12} md={3} offset={{ md: 1 }}>
               <div>
                 <div className={styles.title}>QUERO SIMULAR OUTRO VALOR</div>
-                <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
+                {
+                  this.props.showTitle &&
+                  <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
                     <span className={styles.titleXsStrong}> você precisa :)</span>
-                </div>
+                  </div>
+                }
               </div>
 
               <div className={blockClass}>

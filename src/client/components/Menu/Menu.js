@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import routePaths from '../../constants/routes'
 import { Link } from 'react-router'
 import classNames from 'classnames'
@@ -10,8 +12,9 @@ import SimulateFast from '../SimulateFast/SimulateFast'
 import styles from './menu.css'
 import logoImg from './logo-wm-white.svg'
 import menuImg from './menu.svg'
+import { redirect } from '../../actions/resultActions'
 
-class Menu extends React.Component {
+class Menu extends Component {
   constructor() {
     super()
 
@@ -22,7 +25,7 @@ class Menu extends React.Component {
 
   goResult = (e) => {
     e.preventDefault()
-    window.location = '/resultado'
+    this.props.redirect('/resultado/parcela/1200')
   }
 
   render() {
@@ -91,4 +94,9 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu
+const mapStateToProps = state => ({})
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ redirect }, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu)
