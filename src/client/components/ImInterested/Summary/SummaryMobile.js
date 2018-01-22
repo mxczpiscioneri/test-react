@@ -22,11 +22,11 @@ const SummaryMobile = props => {
             <div className={styles.installments}>
               <div className={styles.installmentBlock}>
                 <div className={styles.labels}>Parcela normal</div>
-                <div className={styles.installment}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}</div>
+                <div className={styles.installment}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></div>
               </div>
               <div className={styles.installmentBlock}>
                 <div className={styles.labels}>Parcela flex </div>
-                <div className={styles.installmentFlex}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}</div>
+                <div className={styles.installmentFlex}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></div>
               </div>
             </div>
 
@@ -51,21 +51,21 @@ const SummaryMobile = props => {
 
             <p>
               <span className={styles.labelsLight}>Valor da carta de crédito total </span>
-              <span className={styles.value}>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}</span>
+              <span className={styles.value}>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <div className={styles.valuesContainer}>
               <div className={styles.reserveFundContainer}>
                 <span className={styles.labelsLight}>Fundo de reserva </span>
-                <span className={styles.value}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% ao período</span>
+                <span className={styles.value}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
               </div>
               <div className={styles.insuranceContainer}>
                 <span className={styles.labelsLight}>Seguro </span>
-                <span className={styles.value}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% ao período</span>
+                <span className={styles.value}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
               </div>
             </div>
             <p>
               <span className={styles.labelsLight}>Taxa de gestão </span>
-              <span className={styles.value}><NumberFormat value={letterCredit.administration_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}% ao período</span>
+              <span className={styles.value}><NumberFormat value={letterCredit.administration_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
             </p>
           </div>
         )
@@ -83,3 +83,4 @@ const mapStateToProps = state => ({})
 const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(SummaryMobile)
+
