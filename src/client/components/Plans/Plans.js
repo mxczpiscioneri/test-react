@@ -21,11 +21,11 @@ export default class Plans extends React.Component {
             <Row>
               <Col xs={6} className={styles.normal}>
                 <label>Parcela normal</label>
-                <span>${letterCredit.duration} x R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+                <span>${letterCredit.duration} x R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
               </Col>
               <Col xs={6} className={styles.flex}>
                 <label>Parcela flex</label>
-                <span>{letterCredit.duration} x R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+                <span>{letterCredit.duration} x R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
               </Col>
               <Col xs={12}>
                 <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
@@ -45,10 +45,8 @@ export default class Plans extends React.Component {
             </Row>
             <Row>
               <Col xs={12} sm={5} offset={{ sm: 1 }}>
-                <p className={styles.textResult}>Você terá uma carta de crédito de <span>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> pagando apenas <span>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> por <span>{letterCredit.duration}</span> meses.</p>
-                <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> nos primeiros meses, não deixe de optar pelo plano Flex!</p>
-                <p className={styles.textResult}>Valor do veículo <span>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> <span className={styles.light}>Prazo {letterCredit.duration} Meses</span></p>
-                <p className={styles.textResult}>Parcela Normal com seguro <span>R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span><br />Parcela Flex com seguro <span>R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></p>
+                <p className={styles.textResult}>Você terá uma carta de crédito de <span className={styles.large}>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> pagando apenas <span className={styles.large}>R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> por <span className={styles.large}>{letterCredit.duration}</span> meses.<br /><small>Valor da parcela sem seguro <span>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></small></p>
+                <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> nos primeiros meses, não deixe de optar pelo plano Flex!<br /><small>Valor da parcela sem seguro <span>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></small></p>
                 <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
               </Col>
               <Col xs={12} sm={4}>

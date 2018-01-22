@@ -22,11 +22,11 @@ const SummaryMobile = props => {
             <div className={styles.installments}>
               <div className={styles.installmentBlock}>
                 <div className={styles.labels}>Parcela normal</div>
-                <div className={styles.installment}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}</div>
+                <div className={styles.installment}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}</div>
               </div>
               <div className={styles.installmentBlock}>
                 <div className={styles.labels}>Parcela flex </div>
-                <div className={styles.installmentFlex}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}</div>
+                <div className={styles.installmentFlex}>{letterCredit.duration} <span className={styles.labels}>x</span> R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />}</div>
               </div>
             </div>
 

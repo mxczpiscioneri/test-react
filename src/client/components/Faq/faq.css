@@ -56,7 +56,7 @@
           padding: 18px 45px 18px 15px;
         }
 
-        &:after {
+        /* &:after {
           transition: all 0.3s ease;
           position: absolute;
           content: url('./triangle-down.svg');
@@ -67,7 +67,7 @@
             right: 15px;
             top: 20px;
           }
-        }
+        } */
       }
 
       .react-sanfona-item-body-wrapper {
@@ -87,11 +87,12 @@
         }
 
         .question {
+          padding-top: 20px;
           margin-bottom: 10px;
           font-weight: 500;
         } 
         .answer {
-          margin-bottom: 30px;
+          margin-bottom: 10px;
         }
 
       }
@@ -103,9 +104,9 @@
         border-radius: 4px 4px 0 0;
         box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
       
-        &:after {
+        /* &:after {
           content: url('./triangle-up.svg');
-        }
+        } */
       }
     }
   }

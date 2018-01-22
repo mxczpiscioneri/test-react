@@ -14,8 +14,8 @@ const ListDesktop = props => {
             <Col xs={12} md={12 / (props.list.length < props.count ? props.list.length : props.count)} key={item.id}>
               <Item
                 value={item.full_value}
-                installment={item.regular_installment_value}
-                installmentFlex={item.flex_installment_value}
+                installment={item.regular_installment_safe_value}
+                installmentFlex={item.flex_installment_safe_value}
                 deadline={item.duration}
                 selected={item.selected}
                 onClick={() => props.onClick(item.id)} />

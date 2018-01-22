@@ -34,15 +34,12 @@ class SimulateFast extends Component {
         <Container>
           <Row>
             <Col xs={12} md={3} offset={{ md: 1 }}>
-              {
-                this.props.showTitle &&
-                <div>
-                  <div className={styles.title}>QUERO SIMULAR OUTRO</div>
-                  <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
+              <div>
+                <div className={styles.title}>QUERO SIMULAR OUTRO VALOR</div>
+                <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
                     <span className={styles.titleXsStrong}> você precisa :)</span>
-                  </div>
                 </div>
-              }
+              </div>
 
               <div className={blockClass}>
                 <div
@@ -58,7 +55,7 @@ class SimulateFast extends Component {
               </div>
             </Col>
             <Col xs={12} md={5}>
-              <div className={(this.props.padding) ? styles.sliderPadding : styles.slider}>
+              <div className={styles.slider}>
                 <div className='slider custom-labels'>
                   <Slider
                     min={(simulateFast.type === 1) ? simulateFast.installmentValue.min : simulateFast.fullValue.min}

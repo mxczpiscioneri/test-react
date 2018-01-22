@@ -26,11 +26,11 @@ const Summary = props => {
             </p>
             <p>
               <span className={styles.labels}>Valor da parcela </span>
-              <span className={styles.installment}>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+              <span className={styles.installment}>R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <p>
               <span className={styles.labels}>Valor da parcela flex </span>
-              <span className={styles.installmentFlex}>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+              <span className={styles.installmentFlex}>R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <p>
               <span className={styles.labels}>Prazo </span>

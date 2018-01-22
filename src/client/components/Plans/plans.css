@@ -162,12 +162,17 @@
     }
 
     .green {
+      font-size: 20px;
       color: #68C1A9;
     }
 
     .light{
       font-weight: 300;
       margin-left: 20px;
+    }
+
+    .large {
+      font-size: 20px;
     }
 
     @media (max-width: 768px) {

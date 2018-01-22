@@ -19,13 +19,13 @@ const Item = props => {
           <span className={styles.valueSymbol}>R$ </span>
           <span className={styles.value}><NumberFormat value={props.value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
         </p>
-        <p>
-          <span className={styles.labels}>Valor da Parcela </span>
+        <p className={styles.itemValue}>
           <span className={styles.installment}>R$ <NumberFormat value={props.installment} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+          <span className={styles.labels}>Valor da Parcela</span>
         </p>
-        <p>
-          <span className={styles.labels}>Parcela Flex </span>
+        <p className={styles.itemValue}>
           <span className={styles.installmentFlex}>R$ <NumberFormat value={props.installmentFlex} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+          <span className={styles.labels}>Parcela Flex</span>
           <Hidden xs>
             <Info
               icon={IconInfo}
@@ -53,7 +53,7 @@ const Item = props => {
         </p>
       </div>
       <div className={styles.button} onClick={props.onClick}>
-        <span className={styles.buttonText}>TENHO INTERESSE</span>
+        <span className={styles.buttonText}>VER DETALHES</span>
       </div>
     </div>
   )

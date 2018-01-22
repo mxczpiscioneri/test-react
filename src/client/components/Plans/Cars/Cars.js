@@ -19,7 +19,8 @@ const Cars = props => {
   ))
 
   const settings = {
-    dots: false,
+    dots: true,
+    dotsClass: 'dots',
     arrows: true,
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,

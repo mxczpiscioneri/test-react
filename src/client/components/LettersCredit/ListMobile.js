@@ -25,8 +25,8 @@ const ListMobile = props => {
             <Item
               key={item.id}
               value={item.full_value}
-              installment={item.regular_installment_value}
-              installmentFlex={item.flex_installment_value}
+              installment={item.regular_installment_safe_value}
+              installmentFlex={item.flex_installment_safe_value}
               deadline={item.duration}
               selected={item.selected}
               onClick={() => props.onClick(item.id)} />

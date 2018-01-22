@@ -142,11 +142,16 @@ p {
   }
 }
 
+.itemValue {
+  margin-bottom: 10px;
+}
+
 .installment {
   font-family: Poppins;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
+  display: block;
 
   @media (max-width: 768px) {
     font-size: 13px;	
@@ -159,6 +164,7 @@ p {
   font-size: 14px;
   color: #5EBFA8;
   line-height: 19px;
+  display: block;
 }
 
 .deadline {
