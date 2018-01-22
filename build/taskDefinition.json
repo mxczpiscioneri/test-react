@@ -1,0 +1,33 @@
+{
+    "family": "consorcio-client-task-definition",
+    "executionRoleArn": "arn:aws:iam::900266424485:role/ecs-consorcio-santander",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "900266424485.dkr.ecr.us-east-1.amazonaws.com/consorcio-santander-client:production-COMMITID",
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-region": "us-east-1",
+                    "awslogs-group": "/aws/ecs/consorcio",
+                    "awslogs-stream-prefix": "client"
+                }
+            },
+            "workingDirectory": "/usr/src/app"
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024"
+}

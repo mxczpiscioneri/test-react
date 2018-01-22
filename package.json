@@ -12,7 +12,7 @@
     "publish": "npm run build:client && npm run build:server",
     "postinstall": "if [ $NPM_CONFIG_PRODUCTION ]; then npm run publish; fi",
     "start": "pm2 start dist -i max",
-    "start-docker": "pm2-docker start server -i max",
+    "start-docker": "pm2-docker start dist/server -i max",
     "deploy:stage": "heroku builds:create -a <APP_NAME>"
   },
   "author": "",

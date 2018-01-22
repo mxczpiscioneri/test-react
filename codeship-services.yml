@@ -1,0 +1,29 @@
+client:
+  build:
+    image: 900266424485.dkr.ecr.us-east-1.amazonaws.com/consorcio-santander-client
+    dockerfile: build/Dockerfile
+  environment:
+    ENV NPM_CONFIG_PRODUCTION: 1
+    ENV ENV: production
+    ENV NODE_ENV: production
+
+aws_generator:
+  image: codeship/aws-ecr-dockercfg-generator
+  encrypted_env_file: build/deployment.env.encrypted
+  add_docker: true
+
+aws_deployment:
+  image: codeship/aws-deployment
+  encrypted_env_file: build/deployment.env.encrypted
+  environment:
+    - AWS_DEFAULT_REGION=us-east-1
+  volumes:
+    - ./build:/deploy
+  volumes_from:
+    - client
+
+slack_message_staging:
+  image: reesilva/slack-ecs-deploy-message
+  encrypted_env_file: build/deployment.env.encrypted
+  environment:
+    - AWS_REGION=us-east-1

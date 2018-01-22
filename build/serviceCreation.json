@@ -1,0 +1,33 @@
+{
+    "cluster": "consorcio-santander-client-prd",
+    "serviceName": "client",
+    "launchType": "FARGATE",
+    "taskDefinition": "consorcio-client-task-definition",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:900266424485:targetgroup/consorcio-client/3ff8484a55b13aec",
+            "containerName": "client",
+            "containerPort": 8080
+        }
+    ],
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-d9a04e91",
+                "subnet-d9a04e91",
+                "subnet-73625c5e",
+                "subnet-8d8fefb1",
+                "subnet-5af2d156"
+            ], 
+            "securityGroups": [
+                "sg-db2f2aaf"
+            ], 
+            "assignPublicIp": "DISABLED"
+        }
+    },
+    "desiredCount": 1,
+    "deploymentConfiguration": {
+        "maximumPercent": 200,
+        "minimumHealthyPercent": 50
+    }
+}

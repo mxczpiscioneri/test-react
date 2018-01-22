@@ -1,0 +1,10 @@
+{
+    "cluster": "consorcio-santander-client-prd",
+    "service": "client",
+    "taskDefinition": "consorcio-client-task-definition",
+    "deploymentConfiguration": {
+      "maximumPercent": 200,
+      "minimumHealthyPercent": 50
+    },
+    "desiredCount": 3
+}

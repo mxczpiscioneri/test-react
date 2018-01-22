@@ -1,0 +1,33 @@
+- name: push
+  type: push
+  service: client
+  tag: master
+  registry: https://900266424485.dkr.ecr.us-east-1.amazonaws.com
+  image_name: 900266424485.dkr.ecr.us-east-1.amazonaws.com/consorcio-santander-client
+  image_tag: "production-{{.CommitID}}"
+  dockercfg_service: aws_generator
+
+- name: put tag and vars on task definition
+  tag: master
+  service: aws_deployment
+  command: /deploy/prepare.sh
+
+- name: deploy assets to s3
+  tag: master
+  service: aws_deployment
+  command: aws s3 cp /usr/src/app/dist/assets s3://consorcio-assets/assets --recursive --acl public-read
+
+- name: update task definition
+  tag: master
+  service: aws_deployment
+  command: aws ecs register-task-definition --cli-input-json file:///deploy/taskDefinition.json
+
+- name: update service
+  tag: master
+  service: aws_deployment
+  command: aws ecs update-service --cli-input-json file:///deploy/service.json
+
+- name: deploy alert
+  tag: master
+  service: slack_message_staging
+  command: node index.js consorcio-santander-client-prd client
