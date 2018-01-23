@@ -84,7 +84,10 @@ const Summary = props => {
               <div className={styles.car}>
                 <div className={styles.carInfo}>
                   <p className={styles.carReference}>Veículo de referência</p>
-                  <p className={styles.carModel}>{letterCredit.vehicle.Marca.nome} {letterCredit.vehicle.Modelo.nome}</p>
+                  {
+                    (letterCredit.vehicle.Marca && letterCredit.vehicle.Modelo) &&
+                    <p className={styles.carModel}>{letterCredit.vehicle.Marca.nome} {letterCredit.vehicle.Modelo.nome}</p>
+                  }
                   <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
                 </div>
                 <div className={styles.carImg}>

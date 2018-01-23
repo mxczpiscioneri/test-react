@@ -10,6 +10,7 @@ import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
 import Alert from '../Alert/Alert'
+import AlertError from '../AlertError/AlertError'
 import { isEmail } from 'validator'
 import styles from './form.css'
 import { sendForm, closeAlert, redirect } from '../../../actions/interestedActions'
@@ -90,7 +91,7 @@ class Form extends React.Component {
             <RadioButton value={'0'} label='Sem seguro' />
           </RadioButtonGroup>
           <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
-          <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
+          <button type='submit' className={styles.button}>ME LIGUE</button>
           <Alert
             userName={this.userName}
             show={this.props.formResult.send}
@@ -101,6 +102,16 @@ class Form extends React.Component {
             onCancel={() => {
               this.props.closeAlert()
               this.props.redirect('/')
+            }} />
+          <AlertError
+            userName={this.userName}
+            show={this.props.formResult.send && this.props.formResult.error !== ''}
+            message={this.props.formResult.error}
+            onConfirm={() => {
+              this.props.closeAlert()
+            }}
+            onCancel={() => {
+              this.props.closeAlert()
             }} />
         </form>
       </section>

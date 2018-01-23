@@ -46,8 +46,8 @@ export const sendForm = (form) => {
       })
       .catch(err => {
         const data = {
-          send: false,
-          error: 'Erro!!!'
+          send: true,
+          error: (err.response && err.response.status === 400) ? 'A validação falhou! preencha todos os campos' : 'Erro!!!'
         }
         dispatch(receiveForm(data))
       })
