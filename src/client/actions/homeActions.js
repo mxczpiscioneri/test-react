@@ -42,7 +42,7 @@ export const getLettersCredit = () => {
       .then(config => {
         if (config.data && config.data.length > 0) {
           const ids = config.data[0].references_id
-          let promises = [];
+          let promises = []
 
           _.forEach(ids, id => {
             promises.push(getLetterCredit(id))
@@ -50,7 +50,8 @@ export const getLettersCredit = () => {
 
           Promise.all(promises)
             .then(result => {
-              dispatch(receiveLettersCredit(result))
+              const resultClean = _.filter(result)
+              dispatch(receiveLettersCredit(resultClean))
             })
         } else {
           dispatch(receiveLettersCredit([]))
