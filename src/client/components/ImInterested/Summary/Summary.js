@@ -46,7 +46,7 @@ const Summary = props => {
             </p>
             <p>
               <span className={styles.labels}>Seguro prestamista (opcional) </span>
-              <span className={styles.percents}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
+              <span className={styles.percents}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao mês</span>
             </p>
 
             <div className={styles.info} title='clique aqui e veja os detalhes'>
@@ -54,13 +54,13 @@ const Summary = props => {
                 icon={InfoImg}
                 alt={'clique aqui e veja os detalhes'}
                 classImg={styles.infoImg}
-                title='Leia todos os detalhes das taxas e seguros'
+                title='Leia todos os detalhes das taxas e seguro'
                 body={
                   <div>
                     <h4 className={styles.modalSubtitle}>Valor da Parcela</h4>
                     <p className={styles.modalText}></p>
 
-                    <h4 className={styles.modalSubtitle}>Valor da Parcela Flex</h4>
+                    <h4 className={styles.modalSubtitle}>Plano Flex</h4>
                     <p className={styles.modalText}>Você pode reduzir o valor das suas parcelas em até 30%. Vale até a contemplação ou até a metade do plano (o que ocorrer primeiro). Após isso, suas parcelas serão reajustadas somando-se o valor que você pagou a menos.</p>
 
                     <h4 className={styles.modalSubtitle}>Prazo</h4>
@@ -76,7 +76,7 @@ const Summary = props => {
                     <p className={styles.modalText}>Garante o pagamento do saldo devedor do consorciado em caso de imprevistos, como morte ou invalidez permanente, evitando que a dívida seja repassada à família.</p>
                   </div>
                 }>
-                <span className={styles.infoText}>Leia todos os detalhes das taxas e seguros</span>
+                <span className={styles.infoText}>Leia todos os detalhes das taxas e seguro</span>
               </Info>
             </div>
 

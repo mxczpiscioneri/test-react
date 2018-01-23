@@ -10,8 +10,6 @@ import { redirect } from '../../actions/resultActions'
 
 class SimulateFast extends Component {
 
-  format = value => `R$ ${value.toLocaleString('pt-BR')}`
-
   render() {
     const blockClass = classNames(
       styles.block,
@@ -28,6 +26,12 @@ class SimulateFast extends Component {
     )
 
     const simulateFast = this.props.simulateFast
+
+    const formatReal = (value) => {
+      let c, d, t, s, i, j
+      c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "," : d, t = t == undefined ? "." : t, s = value < 0 ? "-" : "", i = parseInt(value = Math.abs(+value || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0
+      return 'R$ ' + s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(value - i).toFixed(c).slice(2) : "")
+    }
 
     return (
       <section className={styles.simulateFast}>
@@ -65,20 +69,16 @@ class SimulateFast extends Component {
                     max={(simulateFast.type === 1) ? simulateFast.installmentValue.max : simulateFast.fullValue.max}
                     value={(simulateFast.type === 1) ? parseFloat(simulateFast.installmentValue.value) : parseFloat(simulateFast.fullValue.value)}
                     labels={(simulateFast.type === 1) ? simulateFast.installmentValue.labels : simulateFast.fullValue.labels}
-                    format={this.format}
                     step={10}
-                    handleLabel={(simulateFast.type === 1) ? this.format(simulateFast.installmentValue.value) : this.format(simulateFast.fullValue.value)}
                     onChange={(value) => {
-                      // value = value.toFixed(2)
-                      value = parseFloat(value.toFixed(2))
                       if (simulateFast.type === 1) {
-                        this.props.changeInstallmentValue(value)
+                        this.props.changeInstallmentValue(parseFloat(value))
                       } else {
-                        this.props.changeFullValue(value)
+                        this.props.changeFullValue(parseFloat(value))
                       }
                     }}
                   />
-                  <div className='value'>{this.format((simulateFast.type === 1) ? simulateFast.installmentValue.value : simulateFast.fullValue.value)}</div>
+                  <div className='value'>{formatReal((simulateFast.type === 1) ? simulateFast.installmentValue.value : simulateFast.fullValue.value)}</div>
                 </div>
               </div>
             </Col>
