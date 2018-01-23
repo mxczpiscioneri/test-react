@@ -890,7 +890,7 @@ body.stop-scrolling {
 
 @media(max-width: 768px) {
   .sweet-alert {
-    width: 90%;
+    width: 75%;
     margin-left: 1%;
     height: 213px;
   }
