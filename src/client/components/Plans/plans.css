@@ -179,4 +179,9 @@
       padding: 0;
     }
   }
+
+  .info {
+    vertical-align: sub;
+    margin-left: 5px !important;
+  }
 }

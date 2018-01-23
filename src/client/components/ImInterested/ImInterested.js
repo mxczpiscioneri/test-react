@@ -33,7 +33,7 @@ class ImInterested extends React.Component {
               <Hidden xs>
                 <Col xs={12} md={10} offset={{ md: 1 }}>
                   <h3 className={styles.title}>Legal, agora falta pouco!</h3>
-                  <h2 className={styles.subTitle}>Por favor, deixe seus dados para ligamos para você.</h2>
+                  <h2 className={styles.subTitle}>Por favor, deixe seus dados para ligarmos para você.</h2>
                 </Col>
               </Hidden>
               <Hidden sm md lg xl>

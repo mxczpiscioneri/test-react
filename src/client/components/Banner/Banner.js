@@ -45,7 +45,7 @@ class Banner extends Component {
                 <Container>
                   <Row>
                     <Col xs={12} lg={8} offset={{ lg: 2 }}>
-                      <p className={styles.title}>{banner.page === "home" ? "Já pensou em comprar seu carro sem juros?" : ""}</p>
+                      <p className={styles.title}>{banner.page === "home" ? "Já pensou em comprar seu carro sem pagar juros?" : ""}</p>
                       {
                         this.props.hiddenSubTitleXS
                           ?

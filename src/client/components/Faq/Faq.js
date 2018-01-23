@@ -26,7 +26,7 @@ const Faq = props => {
           <Row>
             <Col xs={12} sm={10} offset={{ sm: 1 }}>
               <Accordion>
-                <AccordionItem title={'DÚVIDAS SOBRE O CONSÓRCIO'} expanded>
+                <AccordionItem title={'DÚVIDAS SOBRE O CONSÓRCIO'}>
                   <div>
                     <p className={"question"}>1) O que é consórcio?</p>
                     <p className={"answer"}>Consórcio é a união de pessoas físicas e/ou jurídicas que se reúnem com a finalidade de adquirir um bem por meio de autofinanciamento. Os participantes adquirem uma cota e pagam prestações mensais, gerando recursos para a contemplação dos consorciados, que ocorrem por meio de sorteios e, se houver saldo de caixa, por lances. Ao final do prazo do grupo, todos os participantes terão recebido a sua carta de crédito.</p>
