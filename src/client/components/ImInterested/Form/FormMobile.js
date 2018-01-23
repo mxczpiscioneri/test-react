@@ -10,6 +10,7 @@ import RadioButtonGroup from '../../RadioButtonGroup/RadioButtonGroup'
 import RadioButton from '../../RadioButton/RadioButton'
 import Checkbox from '../../Checkbox/Checkbox'
 import Alert from '../Alert/Alert'
+import AlertError from '../AlertError/AlertError'
 import { isEmail } from 'validator'
 import styles from './formMobile.css'
 import { sendForm, closeAlert, redirect } from '../../../actions/interestedActions'
@@ -103,6 +104,16 @@ class FormMobile extends React.Component {
               onCancel={() => {
                 this.props.closeAlert()
                 this.props.redirect('/')
+              }} />
+            <AlertError
+              userName={this.userName}
+              show={this.props.formResult.send && this.props.formResult.error !== ''}
+              message={this.props.formResult.error}
+              onConfirm={() => {
+                this.props.closeAlert()
+              }}
+              onCancel={() => {
+                this.props.closeAlert()
               }} />
           </form>
         </div>
