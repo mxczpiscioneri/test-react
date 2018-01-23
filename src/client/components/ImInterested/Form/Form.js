@@ -76,10 +76,10 @@ class Form extends React.Component {
     return (
       <section className={styles.container}>
         <form onSubmit={this._submit} name="form">
-          <Input label='Nome' name='name' />
-          <InputPhone label='Telefone' name='telephone' />
-          <Input label='E-mail' name='email' />
-          <InputCpf label='*CPF/CNPJ' name='cpf' />
+          <Input label='Nome' name='name' required />
+          <InputPhone label='Telefone' name='telephone' required />
+          <Input label='E-mail' name='email' required />
+          <InputCpf label='*CPF/CNPJ' name='cpf' required />
           <label className={styles.conditions}>Escolha as condições de sua parcela:</label>
           <RadioButtonGroup name='choice_of_plan'>
             <RadioButton value='regular' label='Parcela normal' />
@@ -89,8 +89,8 @@ class Form extends React.Component {
             <RadioButton value={'1'} label='Com seguro' />
             <RadioButton value={'0'} label='Sem seguro' />
           </RadioButtonGroup>
-          <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
-          <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
+          <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' required />
+          <button type='submit' className={styles.button}>ME LIGUE</button>
           <Alert
             userName={this.userName}
             show={this.props.formResult.send}

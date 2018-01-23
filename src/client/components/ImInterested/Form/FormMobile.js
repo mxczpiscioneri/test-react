@@ -78,10 +78,10 @@ class FormMobile extends React.Component {
         <div className={styles.container}>
           <h4 className={styles.formOrientation}>Preencha os campos do formulário abaixo:</h4>
           <form onSubmit={this._submit} name='formMobile'>
-            <Input label='Seu nome' name='name' />
-            <InputPhone label='Seu telefone' name='telephone' />
-            <Input label='Seu e-mail' name='email' />
-            <InputCpf label='*CPF/CNPJ' name='cpf' />
+            <Input label='Seu nome' name='name' required />
+            <InputPhone label='Seu telefone' name='telephone' required />
+            <Input label='Seu e-mail' name='email' required />
+            <InputCpf label='*CPF/CNPJ' name='cpf' required />
             <label className={styles.conditions}>Escolha as condições de sua parcela:</label>
             <RadioButtonGroup name='choice_of_plan'>
               <RadioButton value='regular' label='Parcela normal' />
@@ -91,8 +91,8 @@ class FormMobile extends React.Component {
               <RadioButton value={1} label='Com seguro' />
               <RadioButton value={0} label='Sem seguro' />
             </RadioButtonGroup>
-            <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' />
-            <button type='submit' className={styles.button} disabled={this.props.invalid}>ME LIGUE</button>
+            <Checkbox name='validate' label='*Ao enviar o formulário eu concordo com a validação do meu CPF.' required />
+            <button type='submit' className={styles.button}>ME LIGUE</button>
             <Alert
               userName={this.userName}
               show={this.props.formResult.send}

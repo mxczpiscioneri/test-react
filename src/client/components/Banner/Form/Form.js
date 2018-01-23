@@ -82,6 +82,7 @@ class Form extends Component {
         <div className={styles.form_content}>
           <div className={styles.form_group}>
             <InputDecimal
+              required
               name='value'
               label={
                 this.state.valueChecked === "installmentValue" ?
