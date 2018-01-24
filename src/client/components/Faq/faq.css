@@ -32,7 +32,9 @@
   .react-sanfona {
 
     .react-sanfona-item {
+      position: relative;
       margin-bottom: 30px;
+      border: none !important;
 
       @media (max-width: 768px) {
         margin-bottom: 20px;

@@ -157,7 +157,7 @@ const Footer = props => {
                       APLICATIVO SANTANDER
                   </div>
                   </div>
-                }>
+                } expanded>
                   <Central />
                 </AccordionItem>
               </Accordion>
@@ -175,7 +175,7 @@ const Footer = props => {
                       SANTANDER.COM.BR
                     </div>
                   </div>
-                }>
+                } expanded>
                   <SAC />
                 </AccordionItem>
               </Accordion>
@@ -193,7 +193,7 @@ const Footer = props => {
                       CHAT NO SITE
                     </div>
                   </div>
-                }>
+                } expanded>
                   <Ouvidoria />
                 </AccordionItem>
               </Accordion>
