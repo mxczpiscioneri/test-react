@@ -11,6 +11,11 @@ const muiTheme = getMuiTheme({
 
 })
 
+objDataLayer = {
+  'pageName': `/webmotors/consorcio/${window.location.pathname == '/' ? 'home' : window.location.pathname.split('/')[1]}`,
+  'usrID': 'md5'
+}
+
 const App = props => (
   <MuiThemeProvider muiTheme={muiTheme}>
     <StickyContainer>

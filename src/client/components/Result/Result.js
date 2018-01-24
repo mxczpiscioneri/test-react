@@ -37,6 +37,12 @@ class Result extends Component {
         this.props.changeInstallmentValue(value)
       }
 
+      objDataLayer = {
+        pageName: '/webmotors/home/resultado',
+        usrID: 'md5',
+        valorConsorcio: value
+      }
+
       this.props.searchLettersCredit(type, value, 4)
     }
   }

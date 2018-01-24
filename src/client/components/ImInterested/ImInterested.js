@@ -21,6 +21,12 @@ class ImInterested extends React.Component {
   render() {
     const letterCredit = this.props.letterCredit
 
+    objDataLayer = {
+      pageName: '/webmotors/home/tenho-interesse',
+      usrID: 'md5',
+      valorConsorcio: letterCredit.full_value
+    }
+
     return (
       <div>
         <Header />

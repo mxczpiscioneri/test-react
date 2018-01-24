@@ -18,23 +18,33 @@ import Why from '../Why/Why'
 import Faq from '../Faq/Faq'
 import ImInterested from '../ImInterested/ImInterested'
 
-const Routes = props => (
-  <Router history={history} onUpdate={() => window.scrollTo(0, 0)}>
-    <Route component={RouteTransition} >
-      <Route component={DefaultLayout}>
-        <Route path={routePaths.root.path}>
-          <IndexRoute component={Home} />
+const Routes = props => {
+  const onChange = () => {
+    objDataLayer = {
+      'pageName': `/webmotors/consorcio/${window.location.pathname == '/' ? 'home' : window.location.pathname.split('/')[1]}`,
+      'usrID': 'md5'
+    }
+    _satellite.track('customPageView')
+  }
+
+  return (
+    <Router history={history} onUpdate={() => window.scrollTo(0, 0)}>
+      <Route component={RouteTransition} >
+        <Route component={DefaultLayout} onChange={onChange}>
+          <Route path={routePaths.root.path}>
+            <IndexRoute component={Home} />
+          </Route>
+          <Route path={routePaths.result.path} component={Result} />
+          <Route path={routePaths.resultValue.path} component={Result} />
+          <Route path={routePaths.resultInstallment.path} component={Result} />
+          <Route path={routePaths.about.path} component={About} />
+          <Route path={routePaths.why.path} component={Why} />
+          <Route path={routePaths.faq.path} component={Faq} />
+          <Route path={routePaths.imInterested.path} component={ImInterested} />
         </Route>
-        <Route path={routePaths.result.path} component={Result} />
-        <Route path={routePaths.resultValue.path} component={Result} />
-        <Route path={routePaths.resultInstallment.path} component={Result} />
-        <Route path={routePaths.about.path} component={About} />
-        <Route path={routePaths.why.path} component={Why} />
-        <Route path={routePaths.faq.path} component={Faq} />
-        <Route path={routePaths.imInterested.path} component={ImInterested} />
       </Route>
-    </Route>
-  </Router>
-)
+    </Router>
+  )
+}
 
 export default Routes

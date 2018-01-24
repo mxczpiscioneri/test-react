@@ -70,6 +70,7 @@ class SimulateFast extends Component {
                     value={(simulateFast.type === 1) ? parseFloat(simulateFast.installmentValue.value) : parseFloat(simulateFast.fullValue.value)}
                     labels={(simulateFast.type === 1) ? simulateFast.installmentValue.labels : simulateFast.fullValue.labels}
                     step={10}
+                    onChangeStart={_satellite.track('barraValores')}
                     onChange={(value) => {
                       if (simulateFast.type === 1) {
                         this.props.changeInstallmentValue(parseFloat(value))

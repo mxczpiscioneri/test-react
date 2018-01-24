@@ -51,6 +51,8 @@ class Form extends React.Component {
   _submit = (event) => {
     event.preventDefault()
 
+    _satellite.track('propostaConsorcioEnviada')
+
     this.userName = event.target.name.value
 
     const form = {

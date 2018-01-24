@@ -49,7 +49,7 @@ const Summary = props => {
               <span className={styles.percents}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao mês</span>
             </p>
 
-            <div className={styles.info} title='clique aqui e veja os detalhes'>
+            <div className={styles.info} title='clique aqui e veja os detalhes' onClick={() => _satellite.track('detalhesTaxasSeguros')}>
               <Info
                 icon={InfoImg}
                 alt={'clique aqui e veja os detalhes'}

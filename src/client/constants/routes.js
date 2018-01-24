@@ -4,7 +4,7 @@ export default {
     title: 'Home'
   },
   about: {
-    path: '/o-que-e',
+    path: '/oque-e',
     title: 'O que é?'
   },
   why: {

@@ -6,6 +6,8 @@ import Navigation from './Navigation/Navigation';
 import Copy from './Copy/Copy';
 import styles from './footer.css'
 
+_satellite.pageBottom()
+
 const Footer = props => {
   return (
     <footer className={styles.footer}>

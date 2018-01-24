@@ -33,6 +33,8 @@ class Form extends Component {
   submitForm = (e) => {
     e.preventDefault()
 
+    _satellite.track('queroSimularAgora')
+
     let value = e.target.value.value
     value = value.replace('R$ ', '').replace('.', '').replace(',', '.')
 
@@ -50,6 +52,11 @@ class Form extends Component {
   }
 
   handleOptionChange = (changeEvent) => {
+    if (changeEvent.target.value === "installmentValue") {
+      _satellite.track('valorParcela')
+    } else {
+      _satellite.track('valorVeiculo')
+    }
     this.setState({ valueChecked: changeEvent.target.value })
   }
 

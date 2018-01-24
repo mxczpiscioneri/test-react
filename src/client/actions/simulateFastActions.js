@@ -20,6 +20,11 @@ const setInstallmentValue = value => ({
 })
 
 export const changeType = value => {
+  if (value === 1) {
+    _satellite.track('valorParcela')
+  } else {
+    _satellite.track('valorVeiculo')
+  }
   return dispatch => {
     dispatch(setType(value))
   }
