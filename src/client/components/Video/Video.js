@@ -7,11 +7,15 @@ import playImg from './icone-play.svg'
 import styles from './video.css'
 
 class Video extends React.Component {
-  constructor() {
+  constructor(props) {
     super()
 
+    const parts = (props.source || '').split('/')
+    let source = parts[parts.length - 1]
+
     this.state = {
-      isOpen: false
+      isOpen: false,
+      source
     }
   }
 
@@ -27,7 +31,7 @@ class Video extends React.Component {
             <ModalVideo
               channel='youtube'
               isOpen={this.state.isOpen}
-              videoId='o0k4IypRBgk'
+              videoId={this.state.source}
               onClose={() => this.setState({ isOpen: false })} />
             <p className={styles.playTitle}>Saiba mais sobre o <span>Cónsórcio Santander</span></p>
           </div>

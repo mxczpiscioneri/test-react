@@ -4,7 +4,8 @@ import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
 import {
   getLettersCredit,
-  getVehicles
+  getVehicles,
+  getVideo
 } from '../../actions/homeActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
@@ -21,6 +22,7 @@ class Home extends Component {
   componentWillMount() {
     this.props.getLettersCredit()
     this.props.getVehicles()
+    this.props.getVideo()
   }
 
   render() {
@@ -34,7 +36,10 @@ class Home extends Component {
 
         <WhyBuy />
 
-        <Video />
+        {
+          this.props.video &&
+          <Video source={this.props.video} />
+        }
 
         <Testimonial type={'home'} />
 
@@ -55,12 +60,14 @@ class Home extends Component {
 
 const mapStateToProps = store => ({
   lettersCredit: store.homeReducer.lettersCredit.content,
-  vehicles: store.homeReducer.vehicles.content
+  vehicles: store.homeReducer.vehicles.content,
+  video: store.homeReducer.video.content
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   getLettersCredit,
-  getVehicles
+  getVehicles,
+  getVideo
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

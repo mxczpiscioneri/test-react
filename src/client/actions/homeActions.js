@@ -5,7 +5,9 @@ import {
   FETCH_LETTERS_CREDIT_HOME,
   RECEIVE_LETTERS_CREDIT_HOME,
   FETCH_VEHICLES_HOME,
-  RECEIVE_VEHICLES_HOME
+  RECEIVE_VEHICLES_HOME,
+  FETCH_VIDEO,
+  RECEIVE_VIDEO
 } from '../constants/actionTypes'
 import {
   receiveProgressLinear,
@@ -107,6 +109,42 @@ export const getVehicles = () => {
       .catch(err => {
         console.log(err)
         dispatch(fetchVehicles(false))
+      })
+  }
+}
+
+const fetchVideo = (value = true) => [
+  value ? receiveProgressLinear() : forceFinished(),
+  {
+    type: FETCH_VIDEO,
+    payload: value
+  }
+]
+
+const receiveVideo = data => [
+  forceFinished(),
+  {
+    type: RECEIVE_VIDEO,
+    payload: data
+  }
+]
+
+export const getVideo = () => {
+  return dispatch => {
+    dispatch(fetchVideo())
+
+    api.get('/config_pages?page=home&config_type=highlighted_video_url')
+      .then(config => {
+        if (config.data && config.data.length > 0) {
+          const videoUrl = config.data[0].references_string
+          dispatch(receiveVideo(videoUrl))
+        } else {
+          dispatch(receiveVideo(null))
+        }
+      })
+      .catch(err => {
+        console.log(err)
+        dispatch(fetchVideo(false))
       })
   }
 }
