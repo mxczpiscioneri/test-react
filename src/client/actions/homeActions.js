@@ -82,7 +82,7 @@ const receiveVehicles = (data, others) => [
 
 const getVehicle = id => {
   return axios.get(`https://catalogo.webmotors.com.br/api/version/specification/${id}`)
-    .then(result => result.data)
+    .then(result => result.data.result[0])
     .catch(err => console.log(err))
 }
 

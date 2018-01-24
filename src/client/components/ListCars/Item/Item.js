@@ -10,7 +10,10 @@ const Item = props => {
   return (
     <div className={styles.container}>
       <div className={styles.boxImage}>
-        <img src={props.image} alt={props.name} />
+        <img
+          src={props.image}
+          alt={`Consórcio Santander - Foto Veículo ${props.brand} ${props.name}`}
+          title={`Foto Veículo ${props.brand} ${props.name}`} />
       </div>
       <p className={styles.name}>{props.name}</p>
       <p className={styles.value}>

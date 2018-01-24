@@ -10,7 +10,11 @@ const Cars = props => {
   const cars = props.vehicles.map((car, i) => (
     <section key={i} className={styles.car}>
       {car && car.Fotos &&
-        <img className={styles.picture} src={car.Fotos[0].caminho} alt={car.Modelo.nome} />
+        <img
+          className={styles.picture}
+          src={car.Fotos[0].caminho}
+          alt={`Consórcio Santander - Foto Veículo ${car.Marca.nome} ${car.Modelo.nome}`}
+          title={`Foto Veículo ${car.Marca.nome} ${car.Modelo.nome}`} />
       }
       {car && car.Modelo &&
         <p className={styles.name}>{car.Modelo.nome}</p>

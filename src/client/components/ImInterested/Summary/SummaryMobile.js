@@ -42,7 +42,9 @@ const SummaryMobile = props => {
                 {letterCredit.vehicle && letterCredit.Fotos && letterCredit.vehicle.Fotos[0].caminho &&
                   <img
                     src={letterCredit.vehicle.Fotos[0].caminho}
-                    alt={'veiculo'} />
+                    alt={`Consórcio Santander - Foto Veículo ${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`}
+                    title={`Foto Veículo ${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`} />
+                }
                 }
               </div>
             </div>

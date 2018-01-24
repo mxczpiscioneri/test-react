@@ -10,10 +10,11 @@ const ListDesktop = props => {
     <Row>
       {
         props.list.map((item, index) => {
-          item && item.Modelo && item.DadosPreco && item.Fotos &&
+          item &&
             <Col xs={6} md={3} key={index}>
               <Item
                 key={index}
+                brand={item.Marca.nome}
                 name={item.Modelo.nome}
                 value={item.DadosPreco.ValorFipe}
                 image={item.Fotos[0].caminho} />

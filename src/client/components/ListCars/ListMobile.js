@@ -21,9 +21,10 @@ const ListMobile = props => {
     <Slider {...settings}>
       {
         props.list.map((item, index) => {
-          item && item.Modelo && item.DadosPreco && item.Fotos &&
+          item &&
             <Item
               key={index}
+              brand={item.Marca.nome}
               name={item.Modelo.nome}
               value={item.DadosPreco.ValorFipe}
               image={item.Fotos[0].caminho} />
