@@ -9,7 +9,7 @@ const ListDesktop = props => {
   return (
     <Row>
       {
-        props.list.map((item, index) => {
+        props.list.map((item, index) => (
           item &&
             <Col xs={6} md={3} key={index}>
               <Item
@@ -19,8 +19,7 @@ const ListDesktop = props => {
                 value={item.DadosPreco.ValorFipe}
                 image={item.Fotos[0].caminho} />
             </Col>
-        }
-        )
+        ))
       }
     </Row>
   )

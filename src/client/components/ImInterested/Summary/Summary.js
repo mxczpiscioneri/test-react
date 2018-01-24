@@ -80,22 +80,22 @@ const Summary = props => {
               </Info>
             </div>
 
-            {letterCredit.vehicle &&
+            {letterCredit.vehicle.result[0] &&
               <div className={styles.car}>
                 <div className={styles.carInfo}>
                   <p className={styles.carReference}>Veículo de referência</p>
                   {
-                    (letterCredit.vehicle.Marca && letterCredit.vehicle.Modelo) &&
-                    <p className={styles.carModel}>{letterCredit.vehicle.Marca.nome} {letterCredit.vehicle.Modelo.nome}</p>
+                    (letterCredit.vehicle.result[0].Marca && letterCredit.vehicle.result[0].Modelo) &&
+                    <p className={styles.carModel}>{letterCredit.vehicle.result[0].Marca.nome} {letterCredit.vehicle.result[0].Modelo.nome}</p>
                   }
                   <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
                 </div>
                 <div className={styles.carImg}>
-                  {letterCredit.vehicle && letterCredit.Fotos && letterCredit.vehicle.Fotos[0].caminho &&
+                  {letterCredit.vehicle.result[0].Fotos &&
                     <img
-                      src={letterCredit.vehicle.Fotos[0].caminho}
-                      alt={`Consórcio Santander - Foto Veículo ${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`}
-                      title={`Foto Veículo ${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`} />
+                      src={letterCredit.vehicle.result[0].Fotos[0].caminho}
+                      alt={`Consórcio Santander - Foto Veículo ${letterCredit.vehicle.result[0].Marca.nome} ${letterCredit.vehicle.result[0].Modelo.nome}`}
+                      title={`Foto Veículo ${letterCredit.vehicle.result[0].Marca.nome} ${letterCredit.vehicle.result[0].Modelo.nome}`} />
                   }
                 </div>
               </div>
