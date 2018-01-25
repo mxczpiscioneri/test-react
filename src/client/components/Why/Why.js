@@ -5,6 +5,7 @@ import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
+import Title from '../Title/Title'
 import Testimonial from '../Testimonial/Testimonial'
 import Footer from '../Footer/Footer'
 import styles from './why.css'
@@ -25,7 +26,7 @@ const Why = props => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h3 className={styles.title}>Vantagens do <span>Cónsórcio</span></h3>
+              <Title className={styles.title}>Vantagens do Cónsórcio</Title>
             </Col>
           </Row>
           <Row>
@@ -53,7 +54,7 @@ const Why = props => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h3 className={styles.title}>Vantagens do <span>Banco Santander</span></h3>
+              <Title className={styles.title}>Vantagens do Banco Santander</Title>
             </Col>
           </Row>
           <Row>

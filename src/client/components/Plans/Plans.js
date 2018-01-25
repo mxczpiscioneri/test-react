@@ -2,6 +2,7 @@ import React from 'react'
 import NumberFormat from 'react-number-format'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import Cars from './Cars/Cars'
+import Title from '../Title/Title'
 import Info from '../Info/Info'
 import IconInfo from './info.svg'
 import styles from './plans.css'
@@ -42,7 +43,7 @@ export default class Plans extends React.Component {
           <Hidden xs>
             <Row>
               <Col xs={12}>
-                <h3 className={styles.title}>Resultado da sua simulação</h3>
+                <Title className={styles.title}>Resultado da sua simulação</Title>
               </Col>
             </Row>
             <Row>

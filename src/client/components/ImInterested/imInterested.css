@@ -4,25 +4,7 @@
 }
 
 .title {
-  color: #4D4C59;	
-  font-family: Poppins;	
-  font-size: 21px;
-  line-height: 27px;
-  font-weight: 300;	
-  text-align: center;
-  margin-top: 55px;
-  margin-bottom: 0px;
-}
-
-.subTitle {
-  color: #4D4C59;	
-  font-family: Poppins;	
-  font-size: 21px;
-  line-height: 27px;
-  font-weight: 300;	
-  text-align: center;
-  margin-bottom: 50px; 
-  margin-top: 5px;
+  margin: 50px 0;
 }
 
 @media(max-width: 750px) {

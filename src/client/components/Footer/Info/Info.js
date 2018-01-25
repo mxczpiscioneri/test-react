@@ -2,12 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../../Grid/Grid'
-import { Accordion, AccordionItem } from 'react-sanfona';
+import { Accordion, AccordionItem } from 'react-sanfona'
+import Title from '../../Title/Title'
 import styles from './info.css'
 import ImgApp from './icon-app.svg'
 import ImgChat from './icon-chat.svg'
 import ImgSite from './icon-site.svg'
-import { Hidden } from 'react-grid-system';
+import { Hidden } from 'react-grid-system'
 
 const Central = props => {
   return (
@@ -90,7 +91,7 @@ const Footer = props => {
       <Container>
 
         <Hidden xs>
-          <h3 className={styles.title}>Estamos conectados 24 horas por dia, 7 dias por semana</h3>
+          <Title className={styles.title}>Estamos conectados 24 horas por dia, 7 dias por semana</Title>
         </Hidden>
 
         <Hidden sm md lg xl>

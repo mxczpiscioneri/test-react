@@ -2,22 +2,10 @@
   border-bottom: 1px solid rgba(223, 224, 230, .55);
 
   .title {
-    color: #4D4C59;	
-    font-family: Poppins;	
-    font-size: 21px;	
-    line-height: 27px;
-    font-weight: 300;	
-    text-align: center;
     padding: 50px 0;
 
     @media (max-width: 768px) {
       padding: 35px 0;
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-    span {
-      font-weight: 500;
     }
   }
 

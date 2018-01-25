@@ -6,6 +6,7 @@ import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
 import Footer from '../Footer/Footer'
+import Title from '../Title/Title'
 import styles from './about.css'
 import iconeAdesao from './icone-adesao.svg'
 import iconeContemplacao from './icone-contemplacao.svg'
@@ -70,7 +71,7 @@ const About = props => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h3 className={styles.title}>Entenda as etapas para você contratar sua <span>carta de crédito</span></h3>
+              <Title className={styles.title}>Entenda as etapas para você contratar sua carta de crédito</Title>
             </Col>
           </Row>
 

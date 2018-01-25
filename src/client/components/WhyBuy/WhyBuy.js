@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import Item from './Item/Item';
+import Title from '../Title/Title'
 import economy from './icone-economia.svg';
 import bureaucracy from './icone-burocracia.svg';
 import freedom from './icone-liberdade.svg';
@@ -16,11 +17,11 @@ const WhyBuy = props => {
         <Row>
           <Col xs={12} sm={8} offset={{ sm: 2 }}>
             <Hidden xs>
-              <h3 className={styles.title}>Por que escolher o Consórcio do Santander?</h3>
+              <Title className={styles.title}>Por que escolher o Consórcio do Santander?</Title>
               <h3 className={styles.subTitle}>Entenda o que a gente pode fazer hoje para você comprar o seu carro novo!</h3>
             </Hidden>
             <Hidden sm md lg xl>
-              <h3 className={styles.title}>Por que adiquirir o <span className={styles.strong}>Consórcio Santander?</span></h3>
+              <Title className={styles.title}>Por que adiquirir o Consórcio Santander?</Title>
             </Hidden>
           </Col>
         </Row>

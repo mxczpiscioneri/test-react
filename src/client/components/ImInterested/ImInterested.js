@@ -5,6 +5,7 @@ import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import { getLetterCreditById } from '../../actions/interestedActions'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
+import Title from '../Title/Title'
 import Footer from '../Footer/Footer'
 import Summary from './Summary/Summary'
 import SummaryMobile from './Summary/SummaryMobile'
@@ -38,14 +39,12 @@ class ImInterested extends React.Component {
             <Row>
               <Hidden xs>
                 <Col xs={12} md={10} offset={{ md: 1 }}>
-                  <h3 className={styles.title}>Legal, agora falta pouco!</h3>
-                  <h2 className={styles.subTitle}>Por favor, deixe seus dados para ligarmos para você.</h2>
+                  <Title className={styles.title}>Legal, agora falta pouco!<br />Por favor, deixe seus dados para ligarmos para você.</Title>
                 </Col>
               </Hidden>
               <Hidden sm md lg xl>
                 <Col xs={12} md={10} offset={{ md: 1 }}>
-                  <h2 className={styles.title}>Ótima escolha! <span className={styles.subTitle}>Envie seus</span></h2>
-                  <h2 className={styles.subTitle}>dados e ligamos pra você</h2>
+                  <Title className={styles.title}>Ótima escolha!<br />Envie seus dados e ligamos pra você</Title>
                 </Col>
               </Hidden>
             </Row>

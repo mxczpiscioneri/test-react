@@ -15,6 +15,7 @@ import Menu from '../Menu/Menu'
 import Plans from '../Plans/Plans'
 import LettersCredit from '../LettersCredit/LettersCredit'
 import ListCars from '../ListCars/ListCars'
+import Title from '../Title/Title'
 import Footer from '../Footer/Footer'
 import styles from './result.css'
 import SimulateFast from '../SimulateFast/SimulateFast'
@@ -76,7 +77,7 @@ class Result extends Component {
 
         <LettersCredit
           title={
-            <h3 className={styles.lettersTitle}>Com base na sua simulação,<br /> preparamos outras opções pra você</h3>
+            <Title className={styles.lettersTitle}>Com base na sua simulação,<br />preparamos outras opções pra você</Title>
           }
           list={this.props.lettersCredit}
           count={3}

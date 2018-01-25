@@ -1,15 +1,7 @@
 .lettersTitle {
-  color: #4D4C59;	
-  font-family: Poppins;	
-  font-size: 21px;	
-  line-height: 27px;
-  font-weight: 300;	
-  text-align: center;
   margin: 50px 0;
 
   @media (max-width: 768px) {
     margin: 35px 0;
-    font-size: 16px;
-    line-height: 20px;
   }
 }

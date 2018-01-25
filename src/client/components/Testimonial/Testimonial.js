@@ -5,6 +5,7 @@ import Slider from 'react-slick'
 import { Container, Row, Col } from '../Grid/Grid'
 import ArrowLeft from '../ArrowLeft/ArrowLeft'
 import ArrowRight from '../ArrowRight/ArrowRight'
+import Title from '../Title/Title'
 import icon from './icone-quote.svg'
 import styles from './testimonial.css'
 import { getTestimonials } from '../../actions/testimonialActions'
@@ -52,7 +53,7 @@ class Testimonial extends Component {
           <div>
             <Row>
               <Col xs={12}>
-                <h3 className={styles.title}>Depoimentos de quem já tem uma <span>carta do Santander</span></h3>
+                <Title className={styles.title}>Depoimentos de quem já tem uma carta do Santander</Title>
               </Col>
             </Row>
             <Row>

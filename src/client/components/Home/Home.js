@@ -16,6 +16,7 @@ import Testimonial from '../Testimonial/Testimonial'
 import LettersCredit from '../LettersCredit/LettersCredit'
 import ListCars from '../ListCars/ListCars'
 import Footer from '../Footer/Footer'
+import Title from '../Title/Title'
 import styles from './home.css'
 
 class Home extends Component {
@@ -44,7 +45,7 @@ class Home extends Component {
         <Testimonial type={'home'} />
 
         <LettersCredit title={
-          <h3 className={styles.lettersTitle}>Veja algumas das nossas cartas de crédito</h3>
+          <Title className={styles.lettersTitle}>Veja algumas das nossas cartas de crédito</Title>
         }
           list={this.props.lettersCredit}
           onClick={(id) => this.props.router.push(`/resultado/${id}`)}

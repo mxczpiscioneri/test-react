@@ -5,6 +5,7 @@ import { Accordion, AccordionItem } from 'react-sanfona';
 import { Container, Row, Col } from '../Grid/Grid'
 import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
+import Title from '../Title/Title'
 import Testimonial from '../Testimonial/Testimonial'
 import Footer from '../Footer/Footer'
 import styles from './faq.css'
@@ -20,7 +21,7 @@ const Faq = props => {
         <Container>
           <Row>
             <Col xs={12}>
-              <h1 className={styles.title}>Encontre respostas rápidas para as principais dúvidas</h1>
+              <Title className={styles.title}>Encontre respostas rápidas para as principais dúvidas</Title>
             </Col>
           </Row>
           <Row>

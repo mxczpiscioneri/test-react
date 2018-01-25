@@ -3,6 +3,7 @@ import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import styles from './listCars.css'
 import ListDesktop from './ListDesktop'
 import ListMobile from './ListMobile'
+import Title from '../Title/Title'
 
 const ListCars = props => {
   const cars = props.vehicles
@@ -14,7 +15,7 @@ const ListCars = props => {
         <Container>
           <Row>
             <Col xs={12} md={6} offset={{ md: 3 }}>
-              <h3 className={styles.title}>Confira algumas sugestões de carros que você pode <span>comprar</span> com a carta escolhida</h3>
+              <Title className={styles.title}>Confira algumas sugestões de carros que você pode comprar com a carta escolhida</Title>
             </Col>
           </Row>
 
