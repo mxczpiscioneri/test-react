@@ -119,16 +119,3 @@ p {
   font-weight: 600;
   line-height: 25px;
 }
-
-.valuesContainer {
-  display: inline-flex;
-  width: 100%;
-}
-
-.reserveFundContainer {
-  width: 60%;
-}
-
-.insuranceContainer {
-  width: 40%;
-}

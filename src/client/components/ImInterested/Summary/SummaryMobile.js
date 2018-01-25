@@ -39,12 +39,11 @@ const SummaryMobile = props => {
                 <p className={styles.carAdvice}>*O veículo é referência para a carta de crédito escolhida. * </p>
               </div>
               <div className={styles.carImg}>
-                {letterCredit.vehicle && letterCredit.Fotos && letterCredit.vehicle.Fotos[0].caminho &&
+                {letterCredit.vehicle &&
                   <img
                     src={letterCredit.vehicle.Fotos[0].caminho}
                     alt={`Consórcio Santander - Foto Veículo ${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`}
                     title={`Foto Veículo ${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`} />
-                }
                 }
               </div>
             </div>
@@ -55,12 +54,12 @@ const SummaryMobile = props => {
               <span className={styles.labelsLight}>Valor da carta de crédito total </span>
               <span className={styles.value}>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
-            <div className={styles.valuesContainer}>
-              <div className={styles.reserveFundContainer}>
+            <div>
+              <div>
                 <span className={styles.labelsLight}>Fundo de reserva </span>
                 <span className={styles.value}><NumberFormat value={letterCredit.reserve_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
               </div>
-              <div className={styles.insuranceContainer}>
+              <div>
                 <span className={styles.labelsLight}>Seguro </span>
                 <span className={styles.value}><NumberFormat value={letterCredit.insurance_fee} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} />% ao período</span>
               </div>
