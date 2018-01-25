@@ -67,7 +67,6 @@ p {
 .content {
   text-align: center;
   padding-top: 0; 
-  cursor: pointer;
 
   @media (max-width: 768px) {
     padding: 0 10px 20px 10px;

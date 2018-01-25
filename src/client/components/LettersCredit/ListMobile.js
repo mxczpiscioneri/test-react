@@ -29,6 +29,7 @@ const ListMobile = props => {
               installmentFlex={item.flex_installment_safe_value}
               deadline={item.duration}
               selected={item.selected}
+              clickMobile={true}
               onClick={() => props.onClick(item.id)} />
           )
         )

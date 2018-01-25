@@ -13,7 +13,7 @@ const Item = props => {
       <div className={styles.top}>
         <span className={styles.star} />
       </div>
-      <div className={styles.content} onClick={props.onClick}>
+      <div className={styles.content} onClick={props.clickMobile ? props.onClick : null}>
         <div className={styles.retancle}></div>
         <p>
           <span className={styles.valueSymbol}>R$ </span>

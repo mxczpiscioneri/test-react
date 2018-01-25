@@ -28,7 +28,7 @@ const Cars = props => {
     arrows: true,
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1

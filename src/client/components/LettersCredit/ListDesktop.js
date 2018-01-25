@@ -18,6 +18,7 @@ const ListDesktop = props => {
                 installmentFlex={item.flex_installment_safe_value}
                 deadline={item.duration}
                 selected={item.selected}
+                clickMobile={false}
                 onClick={() => props.onClick(item.id)} />
             </Col>
           )
