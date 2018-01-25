@@ -6,7 +6,7 @@ export default {
   },
   production: {
     api: {
-      baseURL: 'https://consorcio-api-stg.herokuapp.com/api'
+      baseURL: 'https://consorcio.webmotors.com.br/api'
     }
   },
   stage: {

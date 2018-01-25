@@ -18,7 +18,8 @@ export default (state = INITIAL_STATE, action) => {
       return merge({}, state, {
         banners: {
           fetching: action.payload,
-          received: !action.payload
+          received: !action.payload,
+          content: []
         }
       })
 
