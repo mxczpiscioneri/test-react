@@ -53,43 +53,43 @@ const validate = values => {
 }
 
 class FormMobile extends React.Component {
-  _submit = (event) => {
-    event.preventDefault()
+  _submit = (values) => {
+    _satellite.track('propostaConsorcioEnviada')
 
-    this.userName = event.target.name.value
+    this.userName = values.name
 
     const form = {
       letter_of_credit_id: this.props.letter_of_credit_id,
-      name: event.target.name.value,
-      telephone: event.target.telephone.value,
-      email: event.target.email.value,
-      cpf: event.target.cpf.value,
-      cnpj: event.target.cpf.value,
-      choice_of_plan: event.target.choice_of_plan.value,
-      opt_for_insurance: event.target.opt_for_insurance.value,
+      name: values.name,
+      telephone: values.telephone.replace(/[^a-zA-Z0-9]/g, ''),
+      email: values.email,
+      cpf: values.cpf.replace(/[^a-zA-Z0-9]/g, ''),
+      cnpj: values.cpf.replace(/[^a-zA-Z0-9]/g, ''),
+      choice_of_plan: values.choice_of_plan,
+      opt_for_insurance: values.opt_for_insurance,
     }
 
-    if (event.target.cpf.value.length === 14) {
-      delete form.cnpj
-    } else {
+    if (form.cpf.length === 14) {
       delete form.cpf
+    } else {
+      delete form.cnpj
     }
 
-    if (!this.props.invalid) {
-      this.props.sendForm(form)
-    }
+    this.props.sendForm(form)
   }
 
   render() {
+    const { handleSubmit } = this.props
+
     return (
       <section>
         <div className={styles.container}>
           <h4 className={styles.formOrientation}>Preencha os campos do formulário abaixo:</h4>
-          <form onSubmit={this._submit} name='formMobile'>
-            <Input label='Seu nome' name='name' required />
-            <InputPhone label='Seu telefone' name='telephone' required />
-            <Input label='Seu e-mail' name='email' required />
-            <InputCpf label='*CPF/CNPJ' name='cpf' required />
+          <form onSubmit={handleSubmit(this._submit)} name='formMobile'>
+            <Input label='Seu nome' name='name' />
+            <InputPhone label='Seu telefone' name='telephone' />
+            <Input label='Seu e-mail' name='email' />
+            <InputCpf label='*CPF/CNPJ' name='cpf' />
             <label className={styles.conditions}>Escolha as condições de sua parcela:</label>
             <RadioButtonGroup name='choice_of_plan'>
               <RadioButton value='regular' label='Parcela normal' />
