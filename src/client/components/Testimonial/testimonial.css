@@ -18,6 +18,10 @@
   }
 }
 
+.containerTestimonial {
+  overflow: hidden;
+}
+
 .testimonial {
   text-align: center;
 
@@ -123,6 +127,10 @@
         }
       }
     }
+  }
+
+  .slick-list, .slick-slider, .slick-track {
+    position: inherit;
   }
 
   .slick-arrow {

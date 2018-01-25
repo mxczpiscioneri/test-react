@@ -17,17 +17,19 @@ class Testimonial extends Component {
   render() {
     const listTestimonials = this.props.testimonials.map((testimonial, i) => (
       <section key={i} className={styles.testimonial}>
-        {testimonial.picture ?
-          <img src={testimonial.picture} className={styles.picture} alt={testimonial.name} />
-          :
-          <img src={icon} className={styles.emptyPicture} alt={testimonial.name} />
-        }
+        <Col xs={12} sm={10} md={8} lg={6} offset={{ sm: 1, md: 2, lg: 3 }}>
+          {testimonial.picture ?
+            <img src={testimonial.picture} className={styles.picture} alt={testimonial.name} />
+            :
+            <img src={icon} className={styles.emptyPicture} alt={testimonial.name} />
+          }
 
-        <p className={styles.message}>"{testimonial.message}"</p>
-        <p className={styles.name}>{testimonial.name}</p>
-        {testimonial.picture &&
-          <img className={styles.icon} src={icon} alt={testimonial.name} />
-        }
+          <p className={styles.message}>"{testimonial.message}"</p>
+          <p className={styles.name}>{testimonial.name}</p>
+          {testimonial.picture &&
+            <img className={styles.icon} src={icon} alt={testimonial.name} />
+          }
+        </Col>
       </section>
     ))
 
@@ -54,11 +56,11 @@ class Testimonial extends Component {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} sm={10} md={8} lg={6} offset={{ sm: 1, md: 2, lg: 3 }}>
+              <div className={styles.containerTestimonial}>
                 <Slider className={styles.slider} {...settings}>
                   {listTestimonials}
                 </Slider>
-              </Col>
+              </div>
             </Row>
           </div>
         }
