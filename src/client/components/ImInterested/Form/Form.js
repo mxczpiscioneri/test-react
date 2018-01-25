@@ -24,6 +24,8 @@ const validate = values => {
 
   if (!values.telephone) {
     errors.telephone = 'Preencha seu telefone'
+  } else if (values.telephone.replace(/[^a-zA-Z0-9]/g, '').length < 10) {
+    errors.telephone = 'Preencha um telefone válido'
   }
 
   if (!values.email) {
@@ -34,6 +36,9 @@ const validate = values => {
 
   if (!values.cpf) {
     errors.cpf = 'Preencha seu CPF/CNPJ'
+  } else if ((values.cpf.replace(/[^a-zA-Z0-9]/g, '').length !== 11)
+    && (values.cpf.replace(/[^a-zA-Z0-9]/g, '').length !== 14)) {
+    errors.cpf = 'Preencha um CPF/CNPJ válido'
   }
 
   if (!values.choice_of_plan) {
@@ -72,7 +77,9 @@ class Form extends React.Component {
       delete form.cpf
     }
 
-    this.props.sendForm(form)
+    if (!this.props.invalid) {
+      this.props.sendForm(form)
+    }
   }
 
   render() {
