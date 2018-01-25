@@ -21,7 +21,7 @@
 .testimonial {
   text-align: center;
 
-  img {
+  .picture {
     box-sizing: border-box;	
     height: 90px;	
     width: 90px;	
@@ -32,6 +32,19 @@
       height: 64px;	
       width: 64px;	
     }
+  }
+
+  .emptyPicture {
+    box-sizing: border-box;	
+    height: 80px;	
+    width: 80px;
+    border-radius: none;
+    display: inline-block;
+
+    @media (max-width: 768px) {
+      height: 50px;	
+      width: 50px;	
+    }	
   }
   
   .message {

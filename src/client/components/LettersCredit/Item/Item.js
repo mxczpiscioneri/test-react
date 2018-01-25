@@ -47,7 +47,7 @@ const Item = props => {
               className={styles.info}
               title='Prazo'
               body={
-                <p>Prazo igual a 72 meses: trata-se de um grupo em formação, onde ainda não foi inaugurado. No prazo máximo de 90 dias, será inaugurado e você poderá ofertar lances e participar dos sorteios mensais. Prazo menor que 72 meses: são grupos em andamento, onde já ocorrem assembleias para oferta de lances e sorteios mensais.</p>
+                <p><b>Prazo igual a 72 meses:</b> trata-se de um grupo em formação, onde ainda não foi inaugurado. No prazo máximo de 90 dias, será inaugurado e você poderá ofertar lances e participar dos sorteios mensais.<br /><b>Prazo menor que 72 meses:</b> são grupos em andamento, onde já ocorrem assembleias para oferta de lances e sorteios mensais.</p>
               } />
           </Hidden>
         </p>

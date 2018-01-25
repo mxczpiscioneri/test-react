@@ -7,6 +7,7 @@ import { Container, Row, Col } from '../../Grid/Grid'
 import Info from '../../Info/Info'
 import styles from './summary.css'
 import InfoImg from './info.svg'
+import InfoImgSmall from './infoSmall.svg'
 
 const Summary = props => {
   const letterCredit = props.letterCredit
@@ -35,6 +36,14 @@ const Summary = props => {
             <p>
               <span className={styles.labels}>Prazo </span>
               <span className={styles.deadline}>{letterCredit.duration} meses</span>
+              <Info
+                icon={InfoImgSmall}
+                alt='clique aqui e veja os detalhes'
+                className={styles.infoSmall}
+                title='Prazo'
+                body={
+                  <p><b>Prazo igual a 72 meses:</b> trata-se de um grupo em formação, onde ainda não foi inaugurado. No prazo máximo de 90 dias, será inaugurado e você poderá ofertar lances e participar dos sorteios mensais.<br /><b>Prazo menor que 72 meses:</b> são grupos em andamento, onde já ocorrem assembleias para oferta de lances e sorteios mensais.</p>
+                } />
             </p>
             <p>
               <span className={styles.labels}>Taxa de administração </span>
@@ -57,14 +66,11 @@ const Summary = props => {
                 title='Leia todos os detalhes das taxas e seguro'
                 body={
                   <div>
-                    <h4 className={styles.modalSubtitle}>Valor da Parcela</h4>
-                    <p className={styles.modalText}></p>
-
                     <h4 className={styles.modalSubtitle}>Plano Flex</h4>
                     <p className={styles.modalText}>Você pode reduzir o valor das suas parcelas em até 30%. Vale até a contemplação ou até a metade do plano (o que ocorrer primeiro). Após isso, suas parcelas serão reajustadas somando-se o valor que você pagou a menos.</p>
 
                     <h4 className={styles.modalSubtitle}>Prazo</h4>
-                    <p className={styles.modalText}></p>
+                    <p className={styles.modalText}><b>Prazo igual a 72 meses:</b> trata-se de um grupo em formação, onde ainda não foi inaugurado. No prazo máximo de 90 dias, será inaugurado e você poderá ofertar lances e participar dos sorteios mensais.<br /><b>Prazo menor que 72 meses:</b> são grupos em andamento, onde já ocorrem assembleias para oferta de lances e sorteios mensais.</p>
 
                     <h4 className={styles.modalSubtitle}>Taxa de administração</h4>
                     <p className={styles.modalText}>É a remuneração da administradora, responsável pelos serviços prestados na formação, organização e administração, desde o início do grupo até o seu encerramento.</p>

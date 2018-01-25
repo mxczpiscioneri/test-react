@@ -13,7 +13,7 @@
   &.fixed {
     position: fixed;
     top: 0;
-    z-index: 9999999;
+    z-index: 1000;
     width: 100%;
     animation: slide-down 0.7s;
     transform: translateY(0);
