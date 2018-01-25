@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Accordion, AccordionItem } from 'react-sanfona';
 import { Container, Row, Col } from '../Grid/Grid'
-import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Title from '../Title/Title'
 import Testimonial from '../Testimonial/Testimonial'
@@ -13,8 +12,6 @@ import styles from './faq.css'
 const Faq = props => {
   return (
     <div>
-      <Header />
-
       <Menu />
 
       <section className={styles.content}>

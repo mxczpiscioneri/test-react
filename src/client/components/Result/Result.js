@@ -10,7 +10,6 @@ import {
   changeFullValue,
   changeInstallmentValue
 } from '../../actions/simulateFastActions'
-import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Plans from '../Plans/Plans'
 import LettersCredit from '../LettersCredit/LettersCredit'
@@ -61,8 +60,6 @@ class Result extends Component {
   render() {
     return (
       <div>
-        <Header />
-
         <Menu />
 
         <SimulateFast showTitle padding />

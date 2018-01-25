@@ -7,7 +7,6 @@ import {
   getVehicles,
   getVideo
 } from '../../actions/homeActions'
-import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
 import WhyBuy from '../WhyBuy/WhyBuy'
@@ -29,8 +28,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Header />
-
         <Menu transparent notSticky />
 
         <Banner form mask hiddenSubTitleXS type={'home'} />

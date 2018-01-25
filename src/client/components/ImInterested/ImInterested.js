@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
 import { getLetterCreditById } from '../../actions/interestedActions'
-import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Title from '../Title/Title'
 import Footer from '../Footer/Footer'
@@ -30,8 +29,6 @@ class ImInterested extends React.Component {
 
     return (
       <div>
-        <Header />
-
         <Menu notSticky />
 
         <section className={styles.container}>

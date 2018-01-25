@@ -23,7 +23,13 @@
       min-height: 45px;
 
       .logo {
-        width: 110px;
+        height: 24px;
+      }
+
+      .lineLogo {
+        margin: 0 20px;
+        height: 31px;
+        width: 1px;
       }
 
       .navagation a {
@@ -65,10 +71,24 @@
 
   .logo {
     transition: all 0.3s ease;
+    height: 31px;
+    vertical-align: middle;
+  }
 
-    @media (max-width: 768px){
-      max-width: 83px;
-    }
+  .lineLogo {
+    margin: 0 30px;
+    vertical-align: middle;
+  }
+
+  .title {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+
+  .logoSantander {
+    vertical-align: middle;
   }
 
   .navagation {
@@ -76,14 +96,14 @@
       display: none;
     }
 
-    & > a {
+    .itemMenu {
       display: inline-block;
       transition: all 0.3s ease;
       color: white;
       font-size: 15px;
       font-weight: 100;
       line-height: 18px;
-      padding: 0 25px;
+      padding: 0 20px;
 
       &:hover {
         opacity: .5;
@@ -95,6 +115,17 @@
         padding: 0 10px;
       }
     }
+
+    .logoSantander {
+      display: inline-block;
+      transition: all 0.3s ease;
+      padding: 0 25px;
+
+      @media (max-width: 768px) {
+        padding: 0 10px;
+      }
+    }
+
   }
 }
 

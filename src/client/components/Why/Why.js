@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col, Hidden } from '../Grid/Grid'
-import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
 import Title from '../Title/Title'
@@ -16,8 +15,6 @@ import iconChecked from './icon-check-red.svg'
 const Why = props => {
   return (
     <div>
-      <Header />
-
       <Menu transparent />
 
       <Banner type={'porque_vale_a_pena'} />

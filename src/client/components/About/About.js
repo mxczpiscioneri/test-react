@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Container, Row, Col } from '../Grid/Grid'
-import Header from '../Header/Header'
 import Menu from '../Menu/Menu'
 import Banner from '../Banner/Banner'
 import Footer from '../Footer/Footer'
@@ -61,8 +60,6 @@ const steps = listSteps.map((step, index) => (
 const About = props => {
   return (
     <div>
-      <Header />
-
       <Menu transparent />
 
       <Banner type={'o_que_eh'} />

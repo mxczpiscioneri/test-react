@@ -10,7 +10,9 @@ import { Container } from '../Grid/Grid'
 import ProgressLinear from '../ProgressLoading/ProgressLinear'
 import SimulateFast from '../SimulateFast/SimulateFast'
 import styles from './menu.css'
-import logoImg from './logo-wm-white.svg'
+import logoWM from './logo-wm-transparent.png'
+import logoSantander from './logo-santander.svg'
+import lineLogo from './line-logo.png'
 import menuImg from './menu.svg'
 import { redirect } from '../../actions/resultActions'
 
@@ -41,7 +43,7 @@ class Menu extends Component {
           onStateChange={isMenuOpen}
           customBurgerIcon={<img src={menuImg} />}
           customCrossIcon={<img src={menuImg} />}>
-          <img src={logoImg} alt='webmotors' />
+          <img src={logoWM} alt='webmotors' />
           <Link to={routePaths.root.path}>{routePaths.root.title}</Link>
           <Link to={routePaths.about.path}>{routePaths.about.title}</Link>
           <Link to={routePaths.why.path}>{routePaths.why.title}</Link>
@@ -71,12 +73,15 @@ class Menu extends Component {
                 <Container>
                   <div className={styles.content}>
                     <Link to={routePaths.root.path}>
-                      <img src={logoImg} alt='webmotors' className={styles.logo} />
+                      <img src={logoWM} alt='webmotors' className={styles.logo} />
+                      <img src={lineLogo} className={styles.lineLogo} />
+                      <span className={styles.title}>Consórcio.</span>
                     </Link>
                     <div className={styles.navagation}>
-                      <Link to={routePaths.about.path}>{routePaths.about.title}</Link>
-                      <Link to={routePaths.why.path}>{routePaths.why.title}</Link>
-                      <Link to={routePaths.faq.path}>{routePaths.faq.title}</Link>
+                      <Link className={styles.itemMenu} to={routePaths.about.path}>{routePaths.about.title}</Link>
+                      <Link className={styles.itemMenu} to={routePaths.why.path}>{routePaths.why.title}</Link>
+                      <Link className={styles.itemMenu} to={routePaths.faq.path}>{routePaths.faq.title}</Link>
+                      <Link className={styles.logoSantander} to='https://www.santander.com.br' target={'new'}><img src={logoSantander} alt='Santander' /></Link>
                     </div>
                   </div>
                 </Container>
