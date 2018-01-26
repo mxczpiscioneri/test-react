@@ -38,7 +38,9 @@ const styles = {
   },
   errorStyle: {
     color: '#f44336',
-    bottom: '10px'
+    position: 'absolute',
+    bottom: '4px',
+    left: '15px'
   }
 }
 

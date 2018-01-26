@@ -9,6 +9,16 @@ import Info from '../../Info/Info'
 import IconInfo from './info.svg'
 import { redirect } from '../../../actions/resultActions'
 
+const validate = values => {
+  const errors = {}
+
+  if (!values.value) {
+    errors.value = 'Preencha o valor'
+  }
+
+  return errors
+}
+
 class Form extends Component {
   constructor() {
     super()
@@ -30,15 +40,13 @@ class Form extends Component {
     }
   }
 
-  submitForm = (e) => {
-    e.preventDefault()
-
+  _submit = (values) => {
     _satellite.track('queroSimularAgora')
 
-    let value = e.target.value.value
-    value = value.replace('R$ ', '').replace('.', '').replace(',', '.')
-
+    let value = values.value
     if (!value) return false
+
+    value = value.replace('R$ ', '').replace('.', '').replace(',', '.')
 
     if (this.state.valueChecked === "installmentValue") {
       if (value < this.state.installmentValue.min) value = this.state.installmentValue.min
@@ -61,8 +69,10 @@ class Form extends Component {
   }
 
   render() {
+    const { handleSubmit } = this.props
+
     return (
-      <form className={styles.form} onSubmit={this.submitForm} name="form">
+      <form className={styles.form} onSubmit={handleSubmit(this._submit)} name="form">
         <div className={styles.tab}>
           <div className={styles.radio}>
             <input type="radio" id="installmentValue" name="radio-group" value="installmentValue" onChange={this.handleOptionChange} defaultChecked />
@@ -89,7 +99,6 @@ class Form extends Component {
         <div className={styles.form_content}>
           <div className={styles.form_group}>
             <InputDecimal
-              required
               name='value'
               label={
                 this.state.valueChecked === "installmentValue" ?
@@ -106,8 +115,6 @@ class Form extends Component {
     )
   }
 }
-
-const validate = (values) => { }
 
 const InitializeFromStateForm = reduxForm({
   validate,
