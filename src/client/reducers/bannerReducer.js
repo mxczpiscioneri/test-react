@@ -15,13 +15,17 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_BANNERS:
-      return merge({}, state, {
+      let newState = merge({}, state, {
         banners: {
           fetching: action.payload,
           received: !action.payload,
           content: []
         }
       })
+
+      newState.banners.content = INITIAL_STATE.banners.content
+
+      return newState
 
     case RECEIVE_BANNERS:
       return merge({}, state, {
