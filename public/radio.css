@@ -1,3 +1,9 @@
 .radio-button > div > div {
   width: 50% !important;
 }
+
+@media(max-width: 780px) {
+  .radio-button > div > div > div > label {
+    font-size: 11px;
+  }
+}
