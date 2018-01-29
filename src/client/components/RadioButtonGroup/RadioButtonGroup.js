@@ -14,12 +14,14 @@ const styles = {
 
 const RadioButtonGroup = (props) => {
   return (
-    <Field component={Group}
-      style={styles.style}
-      labelStyle={{ color: 'red' }}
-      {...props}>
-      {props.children}
-    </Field>
+    <div className="radio-button">
+      <Field component={Group}
+        style={styles.style}
+        labelStyle={{ color: 'red' }}
+        {...props}>
+        {props.children}
+      </Field>
+    </div>
   )
 }
 
