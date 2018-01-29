@@ -30,8 +30,16 @@ const Summary = props => {
               <span className={styles.installment}>R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <p>
+              <span className={styles.labels}>Valor da parcela sem seguro </span>
+              <span className={styles.installment}>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+            </p>
+            <p>
               <span className={styles.labels}>Valor da parcela flex </span>
               <span className={styles.installmentFlex}>R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+            </p>
+            <p>
+              <span className={styles.labels}>Valor da parcela flex sem seguro </span>
+              <span className={styles.installmentFlex}>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
             </p>
             <p>
               <span className={styles.labels}>Prazo </span>
@@ -88,14 +96,8 @@ const Summary = props => {
 
             {letterCredit.vehicle &&
               <div className={styles.car}>
-                <div className={styles.carInfo}>
-                  <p className={styles.carReference}>Veículo de referência</p>
-                  {
-                    (letterCredit.vehicle.Marca && letterCredit.vehicle.Modelo) &&
-                    <p className={styles.carModel}>{letterCredit.vehicle.Marca.nome} {letterCredit.vehicle.Modelo.nome}</p>
-                  }
-                  <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
-                </div>
+                <p className={styles.carReference}>Veículo de referência</p>
+                <p className={styles.carAdvice}>O veículo é referência do bem adquirido. </p>
                 <div className={styles.carImg}>
                   {letterCredit.vehicle.Fotos &&
                     <img
@@ -104,6 +106,10 @@ const Summary = props => {
                       title={`Foto Veículo ${letterCredit.vehicle.Marca.nome} ${letterCredit.vehicle.Modelo.nome}`} />
                   }
                 </div>
+                {
+                  (letterCredit.vehicle.Marca && letterCredit.vehicle.Modelo) &&
+                  <p className={styles.carModel}>{letterCredit.vehicle.Marca.nome} {letterCredit.vehicle.Modelo.nome}</p>
+                }
               </div>
             }
 

@@ -75,7 +75,7 @@ class Menu extends Component {
                     <Link to={routePaths.root.path}>
                       <img src={logoWM} alt='webmotors' className={styles.logo} />
                       <img src={lineLogo} className={styles.lineLogo} />
-                      <span className={styles.title}>Consórcio.</span>
+                      <span className={styles.title}>CONSÓRCIO.</span>
                     </Link>
                     <div className={styles.navagation}>
                       <Link className={styles.itemMenu} to={routePaths.about.path}>{routePaths.about.title}</Link>

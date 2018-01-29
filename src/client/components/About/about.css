@@ -16,8 +16,8 @@
 
   .boxIcon {
     border-radius: 2px 0 0 2px;	
-    background-color: #FFFFFF;	
-    box-shadow: 0 0 0 0 rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
     text-align: center;
     min-height: 100px;
     padding: 20px 0 15px 0;
@@ -35,19 +35,19 @@
 
     span {
       display: block;
-      color: #787987;	
+      margin-top: 8px;
+      color: #8B8C9A;	
       font-family: Poppins;	
       font-size: 14px;	
-      font-weight: 600;	
-      line-height: 20px;
-      margin-top: 8px;
+      line-height: 18px;
+      font-weight: 600;
     }
   }
 
   .boxText {
     border-radius: 0 2px 2px 0;	
-    background-color: #FFFFFF;	
-    box-shadow: 0 0 0 0 rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
     border-left: 3px solid #F3123C;
     min-height: 100px;
     display: flex;
@@ -57,7 +57,6 @@
     padding: 0 20px;
 
     @media (max-width: 768px) {
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
       border-radius: 0 0 4px 4px;
       border: none;
       margin-bottom: 20px;
@@ -68,6 +67,7 @@
       font-family: Poppins;	
       font-size: 14px;	
       line-height: 18px;
+      font-weight: 300;
 
       @media (max-width: 768px) {
         font-size: 13px;

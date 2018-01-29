@@ -8,6 +8,7 @@
 
 .containerTestimonial {
   overflow: hidden;
+  margin-bottom: 45px;
 }
 
 .testimonial {
@@ -28,9 +29,7 @@
 
   .emptyPicture {
     box-sizing: border-box;	
-    height: 80px;	
-    width: 80px;
-    border-radius: none;
+    height: 32px;	
     display: inline-block;
 
     @media (max-width: 768px) {
@@ -45,7 +44,7 @@
     font-size: 15px;	
     line-height: 20px;
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 35px;
     padding: 0 15px;
 
     @media (max-width: 768px) {
@@ -61,6 +60,8 @@
     font-size: 14px;	
     font-weight: 600;	
     line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 
     @media (max-width: 768px) {
       color: #4D4C59;
@@ -90,7 +91,7 @@
   .dots {
     text-align: center;
     padding: 0;
-    margin: 40px 0 30px 0;
+    margin: 40px 0 45px 0;
 
     li {
       display: inline-block;
@@ -102,6 +103,7 @@
         border-radius: 50px;	
         background-color: #C5C6D0;
         margin: 8px;
+        padding: 0;
         border: none;
         color: #FFF;
         outline: none;

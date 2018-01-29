@@ -62,7 +62,7 @@ const About = props => {
     <div>
       <Menu transparent />
 
-      <Banner type={'o_que_eh'} />
+      <Banner mask type={'o_que_eh'} />
 
       <section className={styles.content}>
         <Container>

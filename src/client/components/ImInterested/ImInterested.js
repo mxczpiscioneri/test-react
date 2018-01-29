@@ -23,8 +23,7 @@ class ImInterested extends React.Component {
 
     objDataLayer = {
       pageName: '/webmotors/home/tenho-interesse',
-      usrID: 'md5',
-      valorConsorcio: letterCredit.full_value
+      usrID: 'md5'
     }
 
     return (
@@ -36,7 +35,8 @@ class ImInterested extends React.Component {
             <Row>
               <Hidden xs>
                 <Col xs={12} md={10} offset={{ md: 1 }}>
-                  <Title className={styles.title}>Legal, agora falta pouco!<br />Por favor, deixe seus dados para ligarmos para você.</Title>
+                  <Title className={styles.title}>Legal, agora falta pouco!</Title>
+                  <h4 className={styles.subTitle}>Por favor, deixe seus dados para ligarmos para você</h4>
                 </Col>
               </Hidden>
               <Hidden sm md lg xl>

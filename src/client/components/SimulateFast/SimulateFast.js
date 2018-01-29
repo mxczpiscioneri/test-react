@@ -11,13 +11,6 @@ import { redirect } from '../../actions/resultActions'
 class SimulateFast extends Component {
 
   render() {
-    const blockClass = classNames(
-      styles.block,
-      {
-        [styles.blockMargin]: !this.props.padding,
-      }
-    )
-
     const buttonClass = classNames(
       styles.button,
       {
@@ -37,9 +30,8 @@ class SimulateFast extends Component {
       <section className={styles.simulateFast}>
         <Container>
           <Row>
-            <Col xs={12} md={3} offset={{ md: 1 }}>
+            <Col xs={12} md={4}>
               <div>
-                <div className={styles.title}>QUERO SIMULAR OUTRO VALOR</div>
                 {
                   this.props.showTitle &&
                   <div className={styles.titleXs}>Já consigo ter uma ideia<br /> do que
@@ -48,7 +40,7 @@ class SimulateFast extends Component {
                 }
               </div>
 
-              <div className={blockClass}>
+              <div className={styles.block}>
                 <div
                   className={(simulateFast.type === 1) ? styles.blockItemSelected : ''}
                   onClick={() => this.props.changeType(1)}>
@@ -70,7 +62,6 @@ class SimulateFast extends Component {
                     value={(simulateFast.type === 1) ? parseFloat(simulateFast.installmentValue.value) : parseFloat(simulateFast.fullValue.value)}
                     labels={(simulateFast.type === 1) ? simulateFast.installmentValue.labels : simulateFast.fullValue.labels}
                     step={10}
-                    onChangeStart={_satellite.track('barraValores')}
                     onChange={(value) => {
                       if (simulateFast.type === 1) {
                         this.props.changeInstallmentValue(parseFloat(value))
@@ -83,14 +74,15 @@ class SimulateFast extends Component {
                 </div>
               </div>
             </Col>
-            <Col xs={12} md={2}>
+            <Col xs={12} md={3}>
               <button className={buttonClass} onClick={() => {
+                _satellite.track('simularOutro')
                 if (simulateFast.type === 1) {
                   this.props.redirect(`/resultado/parcela/${simulateFast.installmentValue.value}`)
                 } else {
                   this.props.redirect(`/resultado/veiculo/${simulateFast.fullValue.value}`)
                 }
-              }}>SIMULAR</button>
+              }}>QUERO SIMULAR OUTRO</button>
             </Col>
           </Row>
         </Container>

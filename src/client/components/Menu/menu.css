@@ -87,10 +87,6 @@
     line-height: 18px;
   }
 
-  .logoSantander {
-    vertical-align: middle;
-  }
-
   .navagation {
     @media (max-width: 768px){
       display: none;
@@ -119,10 +115,14 @@
     .logoSantander {
       display: inline-block;
       transition: all 0.3s ease;
-      padding: 0 25px;
+      padding-left: 25px;
 
       @media (max-width: 768px) {
-        padding: 0 10px;
+        padding-left: 10px;
+      }
+
+      img {
+        vertical-align: middle;
       }
     }
 

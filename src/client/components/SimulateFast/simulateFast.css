@@ -31,6 +31,7 @@
 .block {
   display: flex;
   width: 100%;
+  margin-top: 8px;
 }
 
 .block > div {
@@ -42,12 +43,13 @@
   border-radius: 2px 0 0 2px;
   font-family: Poppins;	
   font-size: 13px;
-  font-weight: 500;	
+  font-weight: 300;	
   line-height: 44px;
   cursor: pointer;
 }
 
 .block > div:last-child {
+  border-radius: 0 2px 2px 0;
   border-left: none;
 }
 
@@ -55,38 +57,35 @@
   opacity: .8;
 }
 
-.blockMargin {
-  margin-top: 8px;
-}
-
 .blockItemSelected {
   background-color: #43BCCD;
+  border-color: #43BCCD !important;
   color: #FFF;
 }
 
 .slider {
-  padding-top: 20px;
-  padding-left: 25px;
+  padding: 20px 20px 0 20px;
 }
 
-.button {
-  padding: 13px 0;
-  border-radius: 4px;
-  background-color: #F3123C;
-  color: #FFFFFF;
+.button {	
+  width: 100%;
+  border: 1px solid #BEC0D1;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #8B8C99;
   font-family: Poppins;
   font-size: 13px;
-  line-height: 21px;
-  border: none;
-  vertical-align: middle;
-  outline: none;
   cursor: pointer;
-  width: calc(100% - 30px);
+  outline: none;
+  transition: all 0.3s ease;
   margin-top: 6px;
+  padding: 13px 0;
 }
 
 .button:hover {
-  background-color: #f75977
+  background-color: #bec0d1;
+  border-color: #bec0d1;
+  color: #FFFFFF;
 }
 
 .buttonTitle {

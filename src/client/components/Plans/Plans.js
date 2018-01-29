@@ -43,12 +43,13 @@ export default class Plans extends React.Component {
           <Hidden xs>
             <Row>
               <Col xs={12}>
-                <Title className={styles.title}>Resultado da sua simulação</Title>
+                <Title className={styles.title}>Veja o que encontramos para você :)</Title>
               </Col>
             </Row>
             <Row>
               <Col xs={12} sm={5} offset={{ sm: 1 }}>
-                <p className={styles.textResult}>Você terá uma carta de crédito de <span className={styles.large}>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> pagando apenas <span className={styles.large}>R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> por <span className={styles.large}>{letterCredit.duration}</span> meses.<br /><small>Valor da parcela sem seguro <span>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></small></p>
+                <p className={styles.textResult}>Você terá uma carta de crédito de <span className={styles.large}>R$ <NumberFormat value={letterCredit.full_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> pagando apenas <span className={styles.large}>R$ <NumberFormat value={letterCredit.regular_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> por <span className={styles.large}>{letterCredit.duration}</span> meses.</p>
+                <p className={styles.textResultSmall}>Valor da parcela sem seguro <span>R$ <NumberFormat value={letterCredit.regular_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></p>
                 <p className={styles.textResult}>Caso queira pagar só <span className={styles.green}>R$ <NumberFormat value={letterCredit.flex_installment_safe_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span> nos primeiros meses, não deixe de optar pelo plano Flex!
                   <Info
                     icon={IconInfo}
@@ -58,14 +59,17 @@ export default class Plans extends React.Component {
                     body={
                       <p>Você pode reduzir o valor das suas parcelas em até 30%. Este desconto vale até a contemplação ou até a metade do seu plano (o que ocorrer primeiro). Depois disso, suas parcelas serão reajustadas somando-se o valor do desconto.</p>
                     } />
-                    <br />
-                    <small>Valor da parcela sem seguro <span>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></small>
-              </p>
+                </p>
+                <p className={styles.textResultSmall}>Valor da parcela sem seguro <span>R$ <NumberFormat value={letterCredit.flex_installment_value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span></p>
                 <button onClick={this.submitForm} className={styles.btn}>TENHO INTERESSE</button>
               </Col>
               <Col xs={12} sm={4}>
-                <p className={styles.suggestions}>Sugestão de <span>veículos</span> que você poderá comprar com a carta escolhida.</p>
                 <Cars vehicles={this.props.vehicles} />
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12}>
+                <p className={styles.suggestions}>Sugestão de <span>veículos</span> que você poderá comprar com a carta escolhida.</p>
               </Col>
             </Row>
           </Hidden>

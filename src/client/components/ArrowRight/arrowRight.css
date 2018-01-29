@@ -6,11 +6,11 @@
 
   .slick-next:before {
     opacity: 1;
-    content: url('./angle-right.png');
+    content: url('./arrow-right-gray.svg');
     transition: all 0.3s ease;
   }
 
   .slick-next:hover:before {
-    content: url('./angle-right-active.png');
+    content: url('./arrow-right-red.svg');
   }
 }

@@ -71,6 +71,7 @@
         font-family: Poppins;
         font-size: 14px;
         line-height: 22px;
+        font-weight: 300;
         padding: 22px 32px;
         background: #FFF;
         border-top: 1px solid rgba(223, 224, 230, .55);
@@ -85,7 +86,8 @@
         .question {
           padding-top: 20px;
           margin-bottom: 10px;
-          font-weight: 500;
+          font-weight: 400;
+          color: #F3123C;
         } 
         .answer {
           margin-bottom: 10px;

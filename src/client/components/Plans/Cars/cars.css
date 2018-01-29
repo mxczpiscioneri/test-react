@@ -9,24 +9,27 @@
   }
   
   .name {
-    color: #8B8C99;
+    color: #4D4C59;
     font-family: Poppins;	
     font-size: 14px;	
     font-weight: 500;	
     line-height: 20px;
-    margin: 10px 0 0 0;
+    margin: 10px 0 45px 0;
   }
 }
 
 :global {
   .dots {
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 0;
   }
   .slick-arrow {
     &.slick-prev {
+      top: 40%;
       left: 0;
     }
     &.slick-next {
+      top: 40%;
       right: 0;
     }
   }

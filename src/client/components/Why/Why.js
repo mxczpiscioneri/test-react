@@ -8,7 +8,7 @@ import Title from '../Title/Title'
 import Testimonial from '../Testimonial/Testimonial'
 import Footer from '../Footer/Footer'
 import styles from './why.css'
-import imgCars from './img-carros.png'
+import imgCar from './img-carro.png'
 import imgMacbook from './img-macbook.png'
 import iconChecked from './icon-check-red.svg'
 
@@ -17,7 +17,7 @@ const Why = props => {
     <div>
       <Menu transparent />
 
-      <Banner type={'porque_vale_a_pena'} />
+      <Banner mask type={'porque_vale_a_pena'} />
 
       <section className={styles.contentConsortium}>
         <Container>
@@ -39,7 +39,7 @@ const Why = props => {
             </Col>
             <Col xs={12} sm={6} md={5}>
               <div className={styles.imgBox}>
-                <img src={imgCars} alt={'Vantagens do Cónsórcio'} />
+                <img src={imgCar} alt={'Vantagens do Cónsórcio'} />
               </div>
             </Col>
           </Row>

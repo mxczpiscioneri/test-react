@@ -7,11 +7,11 @@
 
   .slick-prev:before {
     opacity: 1;
-    content: url('./angle-left.png');
+    content: url('./arrow-left-gray.svg');
     transition: all 0.3s ease;
   }
 
   .slick-prev:hover:before {
-    content: url('./angle-left-active.png');
+    content: url('./arrow-left-red.svg');
   }
 }

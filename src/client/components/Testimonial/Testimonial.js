@@ -27,9 +27,6 @@ class Testimonial extends Component {
 
           <p className={styles.message}>"{testimonial.message}"</p>
           <p className={styles.name}>{testimonial.name}</p>
-          {testimonial.picture &&
-            <img className={styles.icon} src={icon} alt={testimonial.name} />
-          }
         </Col>
       </section>
     ))

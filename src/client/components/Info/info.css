@@ -2,3 +2,8 @@
   cursor: pointer;
   margin-left: 0px !important;
 }
+
+.container:hover {
+  opacity: .7;
+  transition: all 0.3s ease;
+}

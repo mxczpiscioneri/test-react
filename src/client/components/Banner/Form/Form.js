@@ -9,15 +9,7 @@ import Info from '../../Info/Info'
 import IconInfo from './info.svg'
 import { redirect } from '../../../actions/resultActions'
 
-const validate = values => {
-  const errors = {}
-
-  if (!values.value) {
-    errors.value = 'Preencha o valor'
-  }
-
-  return errors
-}
+const validate = values => { }
 
 class Form extends Component {
   constructor() {
@@ -41,8 +33,6 @@ class Form extends Component {
   }
 
   _submit = (values) => {
-    _satellite.track('queroSimularAgora')
-
     let value = values.value
     if (!value) return false
 
@@ -99,6 +89,7 @@ class Form extends Component {
         <div className={styles.form_content}>
           <div className={styles.form_group}>
             <InputDecimal
+              required
               name='value'
               label={
                 this.state.valueChecked === "installmentValue" ?
