@@ -17,7 +17,7 @@ const Cars = props => {
           title={`Foto Veículo ${car.Marca.nome} ${car.Modelo.nome}`} />
       }
       {car && car.Modelo &&
-        <p className={styles.name}>{car.Modelo.nome}</p>
+        <p className={styles.name}>* {car.Modelo.nome}</p>
       }
     </section>
   ))

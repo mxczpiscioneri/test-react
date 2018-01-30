@@ -69,7 +69,7 @@ export default class Plans extends React.Component {
             </Row>
             <Row>
               <Col xs={12}>
-                <p className={styles.suggestions}>Sugestão de <span>veículos</span> que você poderá comprar com a carta escolhida.</p>
+                <p className={styles.suggestions}>* Sugestão de <span>veículos</span> que você poderá comprar com a carta escolhida.</p>
               </Col>
             </Row>
           </Hidden>
