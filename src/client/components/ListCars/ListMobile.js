@@ -6,6 +6,22 @@ import Slider from 'react-slick'
 import { Row, Col } from '../Grid/Grid'
 import Item from './Item/Item'
 
+const getValue = (precos) => {
+  let value = 0
+
+  if (precos.ValorFipe > 0) {
+    value = precos.ValorFipe
+  } else if (precos.ValorMedio > 0) {
+    value = precos.ValorMedio
+  } else if (precos.ValorMenor > 0) {
+    value = precos.ValorMenor
+  } else if (precos.ValorMaior > 0) {
+    value = precos.ValorMaior
+  }
+
+  return value
+}
+
 const ListMobile = props => {
   const settings = {
     className: 'center',
@@ -26,7 +42,7 @@ const ListMobile = props => {
               key={index}
               brand={item.Marca.nome}
               name={item.Modelo.nome}
-              value={item.DadosPreco.ValorFipe}
+              value={getValue(item.DadosPreco)}
               image={item.Fotos[0].caminho} />
         }
         )

@@ -18,7 +18,11 @@ const Item = props => {
       <p className={styles.name}>{props.name}</p>
       <p className={styles.value}>
         <img src={iconPrice} />
-        Preço: <span>R$ <NumberFormat value={props.value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+        {
+          (props.value && props.value > 0)
+            ? <span>Preço: R$ <NumberFormat value={props.value} displayType={'text'} decimalSeparator={','} thousandSeparator={'.'} fixedDecimalScale={true} decimalScale={2} /></span>
+            : <span>Preço não disponível</span>
+        }
       </p>
     </div>
   )
