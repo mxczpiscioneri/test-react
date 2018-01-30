@@ -36,11 +36,14 @@ const receiveForm = data => {
 
 export const sendForm = (form) => {
   return dispatch => {
+    dispatch(receiveForm({ isSubmitting: true }))
+
     api.post('/leads', form)
       .then(result => {
         const data = {
           send: true,
-          error: ''
+          error: '',
+          isSubmitting: false
         }
         dispatch(receiveForm(data))
       })
@@ -54,7 +57,8 @@ export const sendForm = (form) => {
 
         const data = {
           send: true,
-          error: message
+          error: message,
+          isSubmitting: false
         }
         dispatch(receiveForm(data))
       })

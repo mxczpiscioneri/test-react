@@ -13,7 +13,8 @@ const INITIAL_STATE = {
   },
   form: {
     send: false,
-    error: ''
+    error: '',
+    isSubmitting: false
   }
 }
 
@@ -41,6 +42,7 @@ export default (state = INITIAL_STATE, action) => {
         form: {
           send: action.payload.send,
           error: action.payload.error,
+          isSubmitting: action.payload.isSubmitting
         }
       })
 

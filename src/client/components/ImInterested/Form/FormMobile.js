@@ -80,6 +80,7 @@ class FormMobile extends React.Component {
 
   render() {
     const { handleSubmit } = this.props
+    const isSubmitting = this.props.formResult.isSubmitting
 
     return (
       <section>
@@ -100,7 +101,7 @@ class FormMobile extends React.Component {
               <RadioButton value={0} label='Sem seguro' />
             </RadioButtonGroup>
             <Checkbox name='validate' label='*Ao clicar em ME LIGUE, eu concordo em compartilhar estes dados com a Webmotors e Santander Brasil Administradora de Consórcio, bem como autorizo o contato telefônico e validação do meu CPF.' required />
-            <button type='submit' className={styles.button}>ME LIGUE</button>
+            <button type='submit' className={styles.button} disabled={isSubmitting}>ME LIGUE</button>
             <Alert
               userName={this.userName}
               show={this.props.formResult.send}
